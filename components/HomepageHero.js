@@ -15,14 +15,7 @@ export default function HomepageHero() {
       <div className="overlay">
         <div className="overlay-container">
           <ImageContainer>
-            <Image
-              // // height="200"
-              // width="700"
-              layout="responsive"
-              src={WhiteTextLogo}
-              // priority
-              // alt=""
-            />
+            <Image layout="responsive" src={WhiteTextLogo} priority />
           </ImageContainer>
           <p>
             We’re a <span>Digital Marketing Agency in Coventry</span>, made up
@@ -71,7 +64,7 @@ const StyledHero = styled.div`
       p {
         font-weight: 500;
         font-size: 1.5rem;
-        max-width: 80%;
+        max-width: 75%;
         line-height: 2;
       }
       span {

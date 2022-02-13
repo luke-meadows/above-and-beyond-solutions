@@ -7,21 +7,20 @@ export const ServicesPage = styled.div`
 `;
 export const ServicesHero = styled.div`
   height: 80vh;
-
   position: relative;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10rem 5rem 0 5rem;
+  padding: 5rem 5rem 0 5rem;
   .image-container {
-    height: calc(100% - 7rem);
+    height: 100%;
     width: 100%;
-    filter: brightness(0.7);
+    filter: brightness(0.6);
     z-index: -1;
     position: absolute;
     left: 0;
-    top: 7rem;
+    top: 0rem;
   }
   img {
     object-fit: cover;

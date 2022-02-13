@@ -11,7 +11,7 @@ export default function Header() {
           <Image
             priority
             height="100px"
-            width="90px"
+            width="60px"
             src={thumbnailLogo}
             alt=""
           />
@@ -56,7 +56,7 @@ export default function Header() {
 const StyledHeader = styled.header`
   color: var(--white);
   /* background: var(--black); */
-  height: 8rem;
+  height: 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
