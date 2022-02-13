@@ -2,13 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 import logo from '../public/assets/image2vector.svg';
+import logo2 from '../svgs/Above and beyond email footer 1.svg';
 
 export default function Header() {
   return (
     <StyledHeader>
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <Link href="/">
-          <Image priority height="160px" width="354px" src={logo} alt="" />
+          <Image priority height="300px" width="300px" src={logo2} alt="" />
         </Link>
         <nav>
           <ul>
@@ -49,7 +50,7 @@ export default function Header() {
 
 const StyledHeader = styled.header`
   color: var(--white);
-  background: var(--black);
+  /* background: var(--black); */
   height: 10rem;
   display: flex;
   justify-content: space-between;

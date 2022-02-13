@@ -25,9 +25,9 @@ export default function HomepageHero() {
 }
 
 const StyledHero = styled.div`
-  height: calc(100vh - 10rem);
+  height: calc(100vh);
   position: relative;
-  margin-top: 10rem;
+  /* margin-top: 10rem; */
   video {
     height: 100%;
     width: 100%;
