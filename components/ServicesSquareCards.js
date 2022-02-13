@@ -4,69 +4,78 @@ import exhibition from '../public/assets/servicesCardImgs/event.jpg';
 import event from '../public/assets/servicesCardImgs/event.jpg';
 import activation from '../public/assets/servicesCardImgs/social.jpg';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ServicesSquareCards() {
   return (
     <CardContainer>
       <Card>
-        <a href="/services/marketing">
-          <h3>Marketing</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-            quo nesciunt enim ut expedita, perferendis provident quas placeat
-            deleniti eius? enim ut expedita, perferendis provident quas placeat
-            deleniti eius?
-          </p>
-          <button>Start</button>
-          <div className="img-container">
-            <Image layout="fill" src={marketing} alt="" />
-          </div>
-        </a>
+        <Link href="/services/marketing">
+          <>
+            <h3>Marketing</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
+              quo nesciunt enim ut expedita, perferendis provident quas placeat
+              deleniti eius? enim ut expedita, perferendis provident quas
+              placeat deleniti eius?
+            </p>
+            <button>Start</button>
+            <div className="img-container">
+              <Image layout="fill" src={marketing} alt="" />
+            </div>
+          </>
+        </Link>
       </Card>
       <Card>
-        <a href="/services/exhibitions">
-          <h3>Exhibitions</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-            quo nesciunt enim ut expedita, perferendis provident quas placeat
-            deleniti eius? enim ut expedita, perferendis provident quas placeat
-            deleniti eius?
-          </p>
-          <button>Start</button>
-          <div className="img-container">
-            <Image layout="fill" src={exhibition} alt="" />
-          </div>
-        </a>
+        <Link href="/services/exhibitions">
+          <>
+            <h3>Exhibitions</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
+              quo nesciunt enim ut expedita, perferendis provident quas placeat
+              deleniti eius? enim ut expedita, perferendis provident quas
+              placeat deleniti eius?
+            </p>
+            <button>Start</button>
+            <div className="img-container">
+              <Image layout="fill" src={exhibition} alt="" />
+            </div>
+          </>
+        </Link>
       </Card>
       <Card>
-        <a href="/services/live-events">
-          <h3>Live Events</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-            quo nesciunt enim ut expedita, perferendis provident quas placeat
-            deleniti eius? enim ut expedita, perferendis provident quas placeat
-            deleniti eius?
-          </p>
-          <button>Start</button>
-          <div className="img-container">
-            <Image layout="fill" src={event} alt="" />
-          </div>
-        </a>
+        <Link href="/services/live-events">
+          <>
+            <h3>Live Events</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
+              quo nesciunt enim ut expedita, perferendis provident quas placeat
+              deleniti eius? enim ut expedita, perferendis provident quas
+              placeat deleniti eius?
+            </p>
+            <button>Start</button>
+            <div className="img-container">
+              <Image layout="fill" src={event} alt="" />
+            </div>
+          </>
+        </Link>
       </Card>
       <Card>
-        <a href="/services/activation">
-          <h3>Activation</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-            quo nesciunt enim ut expedita, perferendis provident quas placeat
-            deleniti eius? enim ut expedita, perferendis provident quas placeat
-            deleniti eius?
-          </p>
-          <button>Start</button>
-          <div className="img-container">
-            <Image layout="fill" src={activation} alt="" />
-          </div>
-        </a>
+        <Link href="/services/activation">
+          <>
+            <h3>Activation</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
+              quo nesciunt enim ut expedita, perferendis provident quas placeat
+              deleniti eius? enim ut expedita, perferendis provident quas
+              placeat deleniti eius?
+            </p>
+            <button>Start</button>
+            <div className="img-container">
+              <Image layout="fill" src={activation} alt="" />
+            </div>
+          </>
+        </Link>
       </Card>
     </CardContainer>
   );

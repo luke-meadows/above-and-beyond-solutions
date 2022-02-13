@@ -21,7 +21,7 @@ export default function Partners() {
 
 const StyledPartners = styled.div`
   height: fit-content;
-  margin: 2rem 5rem;
+  margin: 3rem 5rem;
 
   h3 {
     text-transform: uppercase;
@@ -29,15 +29,13 @@ const StyledPartners = styled.div`
     text-align: center;
     font-weight: 300;
     font-size: 2rem;
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
   }
 
   .container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-
     gap: 6rem;
-
     .img-container {
       display: flex;
     }

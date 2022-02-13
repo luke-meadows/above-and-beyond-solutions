@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import Hero from '../../public/assets/service-heros/services-hero.jpeg';
 import ServicesSquareCards from '../../components/ServicesSquareCards';
 import {
@@ -64,16 +63,3 @@ export default function Services() {
     </ServicesPage>
   );
 }
-
-// const StyledServices = styled.div`
-//   background: black;
-//   color: white;
-//   height: 100vh;
-//   padding: 5rem;
-//   h2 {
-//     font-size: 3rem;
-//     text-align: center;
-//     line-height: initial;
-//     margin: 2rem 0;
-//   }
-// `;

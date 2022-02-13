@@ -1,10 +1,17 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import WhiteTextLogo from '../public/assets/logos/white-text-logo.svg';
-
+import { useContext, useEffect, useRef } from 'react';
+import { Ctx } from '../lib/ctxProvider';
 export default function HomepageHero() {
+  const heroRef = useRef();
+  const { setStickyNavCoords } = useContext(Ctx);
+  useEffect(() => {
+    const rectHeight = heroRef.current.getBoundingClientRect().height;
+    setStickyNavCoords(rectHeight);
+  }, []);
   return (
-    <StyledHero>
+    <StyledHero ref={heroRef}>
       <video
         autoPlay
         muted

@@ -1,28 +1,55 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useRef, useState, useContext } from 'react';
 import styled from 'styled-components';
 import thumbnailLogo from '../public/assets/logos/thumbnail-white-logo.svg';
 import logo from '../public/assets/logos/white-text-logo.svg';
+import { Ctx } from '../lib/ctxProvider';
+
 export default function Header() {
+  const [headerHeight, setHeaderHeight] = useState(0);
+  const [shouldStick, setShouldStick] = useState(false);
+  const headerRef = useRef();
+  const { stickyNavCoords } = useContext(Ctx);
+
+  function isSticky() {
+    const stickPoint = stickyNavCoords - headerHeight;
+    if (window.scrollY >= stickPoint) {
+      setShouldStick(true);
+    } else {
+      setShouldStick(false);
+    }
+  }
+  // Sticky Menu Area
+  useEffect(() => {
+    window.addEventListener('scroll', isSticky);
+    return () => {
+      window.removeEventListener('scroll', isSticky);
+    };
+  });
+
+  useEffect(() => {
+    const rectHeight = headerRef.current.getBoundingClientRect().height;
+    setHeaderHeight(rectHeight);
+  }, [headerRef]);
+
   return (
-    <StyledHeader>
+    <StyledHeader shouldStick={shouldStick} ref={headerRef}>
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <Link href="/">
-          <Image
-            priority
-            height="100px"
-            width="60px"
-            src={thumbnailLogo}
-            alt=""
-          />
+          <ImageContainer shouldStick={shouldStick}>
+            {shouldStick && (
+              <Image priority layout="responsive" src={logo} alt="" />
+            )}
+            {!shouldStick && (
+              <Image priority layout="responsive" src={thumbnailLogo} />
+            )}
+          </ImageContainer>
         </Link>
         <nav>
           <ul>
             <Link href="/services">
-              <li>
-                Services
-                {/* <div className="arrow">{'>'}</div> */}
-              </li>
+              <li>Services</li>
             </Link>
             <li>About Us</li>
             <li>Partners</li>
@@ -54,13 +81,13 @@ export default function Header() {
 }
 
 const StyledHeader = styled.header`
+  position: ${(props) => (props.shouldStick ? 'fixed' : 'absolute')};
+  background: ${(props) => (props.shouldStick ? 'black' : 'none')};
   color: var(--white);
-  /* background: var(--black); */
   height: 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
   top: 0;
   z-index: 1;
   width: 100%;
@@ -68,10 +95,8 @@ const StyledHeader = styled.header`
   padding: 0 5rem;
   a {
     line-height: 0;
-    color: white
+    color: white;
   }
-
-
   .contact {
     font-size: 0.8rem;
     color: rgb(157, 157, 157);
@@ -88,9 +113,6 @@ const StyledHeader = styled.header`
       &:hover {
         color: var(--pink);
       }
-    }
-    .icon-mobile {
-      /* margin-left: -0.2rem; */
     }
     .left {
       margin-right: 2rem;
@@ -116,5 +138,14 @@ const StyledHeader = styled.header`
       transform: rotate(90deg);
       margin-left: 5px;
     }
+  }
+`;
+
+const ImageContainer = styled.div`
+  width: ${(props) => (props.shouldStick ? '10rem' : '3rem')};
+
+  img {
+    object-fit: cover;
+    margin: 0;
   }
 `;
