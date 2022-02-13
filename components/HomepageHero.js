@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import styled from 'styled-components';
+import WhiteTextLogo from '../public/assets/logos/white-text-logo.svg';
 
 export default function HomepageHero() {
   return (
@@ -12,7 +14,16 @@ export default function HomepageHero() {
       />
       <div className="overlay">
         <div className="overlay-container">
-          <h2>Get Creative</h2>
+          <ImageContainer>
+            <Image
+              // // height="200"
+              // width="700"
+              layout="responsive"
+              src={WhiteTextLogo}
+              // priority
+              // alt=""
+            />
+          </ImageContainer>
           <p>
             We’re a <span>Digital Marketing Agency in Coventry</span>, made up
             of a group of passionate individuals who get excited about helping
@@ -25,7 +36,7 @@ export default function HomepageHero() {
 }
 
 const StyledHero = styled.div`
-  height: calc(100vh);
+  height: 100vh;
   position: relative;
   /* margin-top: 10rem; */
   video {
@@ -44,7 +55,7 @@ const StyledHero = styled.div`
     width: 100%;
     .overlay-container {
       position: absolute;
-      top: 40%;
+      top: 50%;
       left: 5rem;
       transform: translateY(-50%);
       display: flex;
@@ -69,18 +80,15 @@ const StyledHero = styled.div`
       a {
         text-decoration: none;
       }
-      .explore {
-        background: rgba(0, 0, 0, 0.8);
-        color: white;
-        width: fit-content;
-        padding: 1.5rem;
-        margin-top: 2rem;
-        cursor: pointer;
-        i {
-          margin-left: 0.1rem;
-          font-size: 1.2rem;
-        }
-      }
     }
+  }
+`;
+
+const ImageContainer = styled.div`
+  width: 60rem;
+  margin-bottom: 2rem;
+  img {
+    object-fit: cover;
+    margin: 0;
   }
 `;

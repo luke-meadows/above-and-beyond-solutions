@@ -1,15 +1,20 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
-import logo from '../public/assets/image2vector.svg';
-import logo2 from '../svgs/Above and beyond email footer 1.svg';
-
+import thumbnailLogo from '../public/assets/logos/thumbnail-white-logo.svg';
+import logo from '../public/assets/logos/white-text-logo.svg';
 export default function Header() {
   return (
     <StyledHeader>
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <Link href="/">
-          <Image priority height="300px" width="300px" src={logo2} alt="" />
+          <Image
+            priority
+            height="100px"
+            width="90px"
+            src={thumbnailLogo}
+            alt=""
+          />
         </Link>
         <nav>
           <ul>
@@ -51,16 +56,16 @@ export default function Header() {
 const StyledHeader = styled.header`
   color: var(--white);
   /* background: var(--black); */
-  height: 10rem;
+  height: 8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 1;
   width: 100%;
   max-width: 100vw;
-  padding: 0 5rem 0 0;
+  padding: 0 5rem;
   a {
     line-height: 0;
     color: white
@@ -70,11 +75,11 @@ const StyledHeader = styled.header`
   .contact {
     font-size: 0.8rem;
     color: rgb(157, 157, 157);
+    color: white;
     line-height: 1.5;
     display: flex;
     align-items: center;
     font-weight: 300;
-    rgb(157, 157, 157);
 
     .icon {
       font-size: 1.2rem;
@@ -93,6 +98,8 @@ const StyledHeader = styled.header`
     }
   }
   nav {
+  padding-left: 2.5rem;
+
     ul {
       display: flex;
       align-items: center;
