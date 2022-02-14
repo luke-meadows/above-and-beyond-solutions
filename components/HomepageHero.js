@@ -25,9 +25,9 @@ export default function HomepageHero() {
             <Image layout="responsive" src={WhiteTextLogo} priority />
           </ImageContainer>
           <p>
-            We’re a <span>Digital Marketing Agency in Coventry</span>, made up
-            of a group of passionate individuals who get excited about helping
-            small to medium sized businesses create impact with their customers.
+            Small agency care, with <span>big agency capabilities</span>. Always
+            delivering and going the <span>extra mile</span> to impress, impact
+            and stand out.
           </p>
         </div>
       </div>

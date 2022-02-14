@@ -143,7 +143,7 @@ const StyledHeader = styled.header`
 `;
 
 const ImageContainer = styled.div`
-  width: ${(props) => (props.shouldStick ? '12rem' : '3rem')};
+  width: ${(props) => (props.shouldStick ? '10rem' : '3rem')};
 
   img {
     object-fit: cover;
