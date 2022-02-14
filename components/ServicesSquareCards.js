@@ -10,71 +10,62 @@ export default function ServicesSquareCards() {
   return (
     <CardContainer>
       <Card>
+        <h3>Marketing</h3>
+        <p>
+          From building your brand to taking a stagnated entity back to the
+          forefront of peoples imagination. We will achieve the success you want
+          through activations and complimentary socials.
+        </p>
         <Link href="/services/marketing">
-          <>
-            <h3>Marketing</h3>
-            <p>
-              From building your brand to taking a stagnated entity back to the
-              forefront of peoples imagination. We will achieve the success you
-              want through activations and complimentary socials.
-            </p>
-            <button>Start</button>
-            <div className="img-container">
-              <Image layout="fill" src={marketing} alt="" />
-            </div>
-          </>
+          <button>Learn More</button>
         </Link>
+        <div className="img-container">
+          <Image layout="fill" src={marketing} alt="" />
+        </div>
       </Card>
       <Card>
+        <h3>Exhibitions</h3>
+        <p>
+          The mainstay of face to face marketing, how to present your business,
+          your team, what customers do you want, with planning and exquisite
+          delivery we will deliver the results in a fuss free methodology.
+        </p>
         <Link href="/services/exhibitions">
-          <>
-            <h3>Exhibitions</h3>
-            <p>
-              The mainstay of face to face marketing, how to present your
-              business, your team, what customers do you want, with planning and
-              exquisite delivery we will deliver the results in a fuss free
-              methodology.
-            </p>
-            <button>Start</button>
-            <div className="img-container">
-              <Image layout="fill" src={exhibition} alt="" />
-            </div>
-          </>
+          <button>Learn More</button>
         </Link>
+        <div className="img-container">
+          <Image layout="fill" src={exhibition} alt="" />
+        </div>
       </Card>
       <Card>
+        <h3>Live Events</h3>
+        <p>
+          We work with promoters to deliver first class acts. We also have
+          excellent people to manage and look after the artist and fantastic
+          connections for the logistical side of the deal.
+        </p>
         <Link href="/services/live-events">
-          <>
-            <h3>Live Events</h3>
-            <p>
-              We work with promoters to deliver first class acts. We also have
-              excellent people to manage and look after the artist and fantastic
-              connections for the logistical side of the deal.
-            </p>
-            <button>Start</button>
-            <div className="img-container">
-              <Image layout="fill" src={event} alt="" />
-            </div>
-          </>
+          <button>Learn More</button>
         </Link>
+        <div className="img-container">
+          <Image layout="fill" src={event} alt="" />
+        </div>
       </Card>
       <Card>
+        <h3>Activation</h3>
+        <p>
+          These are the look at me moments that get you free national press. We
+          specialise in different, we celebrate the different, partly through
+          our neurodiverse culture and staff. Coming up with unique attention
+          grabbing ideas that create talking points by those outside of your
+          standard community.
+        </p>
         <Link href="/services/activation">
-          <>
-            <h3>Activation</h3>
-            <p>
-              These are the look at me moments that get you free national press.
-              We specialise in different, we celebrate the different, partly
-              through our neurodiverse culture and staff. Coming up with unique
-              attention grabbing ideas that create talking points by those
-              outside of your standard community.
-            </p>
-            <button>Start</button>
-            <div className="img-container">
-              <Image layout="fill" src={activation} alt="" />
-            </div>
-          </>
+          <button>Learn More</button>
         </Link>
+        <div className="img-container">
+          <Image layout="fill" src={activation} alt="" />
+        </div>
       </Card>
     </CardContainer>
   );

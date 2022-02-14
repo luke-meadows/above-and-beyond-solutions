@@ -4,17 +4,16 @@ import {
   ServicesHeader,
   ServicesPage,
   ServicesSummary,
-} from '../styles/ServicesStyles';
-import Hero from '../assets/service-heros/marketing.jpeg';
-import SummaryImg from '../assets/webdev-summary-bg.jpg';
+} from '../../styles/ServicesStyles';
+import Hero from '../../public/assets/service-heros/marketing-hero.jpeg';
+import SummaryImg from '../../public/assets/service-summary-imgs/marketing-summary.jpeg';
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
 export default function MarketingPage() {
   return (
     <ServicesPage>
       <ServicesHero>
-        <ServiceBackgroundImage img={Hero} position="top" brightness="0.2" />
-
+        <ServiceBackgroundImage img={Hero} position="top" brightness="0.35" />
         <h2>
           Marketing Agency <br /> <span>Coventry</span>
         </h2>

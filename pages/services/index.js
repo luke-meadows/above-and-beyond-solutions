@@ -1,24 +1,16 @@
 import Hero from '../../public/assets/service-heros/services-hero.jpeg';
 import ServicesSquareCards from '../../components/ServicesSquareCards';
+import ServicesHero from '../../components/ServicesHero';
 import {
   ServicesPage,
-  ServicesHero,
   ServicesHeader,
   ServicesSummary,
 } from '../../styles/ServicesStyles.js';
-import { useContext, useEffect, useRef } from 'react';
-import { Ctx } from '../../lib/ctxProvider';
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 export default function Services() {
-  const heroRef = useRef();
-  const { setStickyNavCoords } = useContext(Ctx);
-  useEffect(() => {
-    const rectHeight = heroRef.current.getBoundingClientRect().height;
-    setStickyNavCoords(rectHeight);
-  }, []);
   return (
     <ServicesPage>
-      <ServicesHero ref={heroRef}>
+      <ServicesHero>
         <ServiceBackgroundImage img={Hero} position="center" brightness="0.4" />
         <h2>What we can do for you</h2>
         <p className="small">
