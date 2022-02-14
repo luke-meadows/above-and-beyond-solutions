@@ -96,6 +96,7 @@ const StyledHeader = styled.header`
   a {
     line-height: 0;
     color: white;
+    cursor: pointer;
   }
   .contact {
     font-size: 0.8rem;
@@ -142,10 +143,11 @@ const StyledHeader = styled.header`
 `;
 
 const ImageContainer = styled.div`
-  width: ${(props) => (props.shouldStick ? '10rem' : '3rem')};
+  width: ${(props) => (props.shouldStick ? '12rem' : '3rem')};
 
   img {
     object-fit: cover;
     margin: 0;
+    cursor: pointer;
   }
 `;

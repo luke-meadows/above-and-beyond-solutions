@@ -14,10 +14,9 @@ export default function ServicesSquareCards() {
           <>
             <h3>Marketing</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-              quo nesciunt enim ut expedita, perferendis provident quas placeat
-              deleniti eius? enim ut expedita, perferendis provident quas
-              placeat deleniti eius?
+              From building your brand to taking a stagnated entity back to the
+              forefront of peoples imagination. We will achieve the success you
+              want through activations and complimentary socials.
             </p>
             <button>Start</button>
             <div className="img-container">
@@ -31,10 +30,10 @@ export default function ServicesSquareCards() {
           <>
             <h3>Exhibitions</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-              quo nesciunt enim ut expedita, perferendis provident quas placeat
-              deleniti eius? enim ut expedita, perferendis provident quas
-              placeat deleniti eius?
+              The mainstay of face to face marketing, how to present your
+              business, your team, what customers do you want, with planning and
+              exquisite delivery we will deliver the results in a fuss free
+              methodology.
             </p>
             <button>Start</button>
             <div className="img-container">
@@ -48,10 +47,9 @@ export default function ServicesSquareCards() {
           <>
             <h3>Live Events</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-              quo nesciunt enim ut expedita, perferendis provident quas placeat
-              deleniti eius? enim ut expedita, perferendis provident quas
-              placeat deleniti eius?
+              We work with promoters to deliver first class acts. We also have
+              excellent people to manage and look after the artist and fantastic
+              connections for the logistical side of the deal.
             </p>
             <button>Start</button>
             <div className="img-container">
@@ -65,10 +63,11 @@ export default function ServicesSquareCards() {
           <>
             <h3>Activation</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-              quo nesciunt enim ut expedita, perferendis provident quas placeat
-              deleniti eius? enim ut expedita, perferendis provident quas
-              placeat deleniti eius?
+              These are the look at me moments that get you free national press.
+              We specialise in different, we celebrate the different, partly
+              through our neuro diverse culture and staff. Coming up with unique
+              attention grabbing ideas that create talking points by those
+              outside of your standard community.
             </p>
             <button>Start</button>
             <div className="img-container">
@@ -97,7 +96,7 @@ const Card = styled.div`
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   a {
     color: var(--white);
@@ -109,7 +108,7 @@ const Card = styled.div`
   }
   p {
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: 300;
   }
   button {
     width: 30%;
@@ -126,7 +125,7 @@ const Card = styled.div`
       height: 100%;
       width: 100%;
       object-fit: cover;
-      filter: brightness(0.3);
+      filter: brightness(0.2);
     }
   }
 `;

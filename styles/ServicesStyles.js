@@ -16,7 +16,7 @@ export const ServicesHero = styled.div`
   .image-container {
     height: 100%;
     width: 100%;
-    filter: brightness(0.6);
+    filter: brightness(0.4);
     z-index: -1;
     position: absolute;
     left: 0;
@@ -48,7 +48,6 @@ export const ServicesHero = styled.div`
   .small {
     line-height: 1.8;
     font-size: 1.4rem;
-    max-width: 70%;
   }
   button {
     margin-top: 1rem;
@@ -65,8 +64,6 @@ export const ServicesHeader = styled.div`
   margin-top: 1rem;
   h4 {
     color: var(--pink);
-    /* color: white; */
-
     font-weight: 500;
     font-size: 2.1rem;
     margin-bottom: 1rem;

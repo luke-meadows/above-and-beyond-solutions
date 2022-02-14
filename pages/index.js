@@ -1,4 +1,5 @@
 import HomepageHero from '../components/HomepageHero';
+import HomeServicesSection from '../components/HomeServicesSection';
 import Partners from '../components/Partners';
 import ServicesSquareCards from '../components/ServicesSquareCards';
 
@@ -8,7 +9,7 @@ export default function Home() {
     <>
       <HomepageHero />
       <Partners />
-      <ServicesSquareCards />
+      <HomeServicesSection />
     </>
   );
 }

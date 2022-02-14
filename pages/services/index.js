@@ -7,10 +7,18 @@ import {
   ServicesSummary,
 } from '../../styles/ServicesStyles.js';
 import Image from 'next/image';
+import { useContext, useEffect, useRef } from 'react';
+import { Ctx } from '../../lib/ctxProvider';
 export default function Services() {
+  const heroRef = useRef();
+  const { setStickyNavCoords } = useContext(Ctx);
+  useEffect(() => {
+    const rectHeight = heroRef.current.getBoundingClientRect().height;
+    setStickyNavCoords(rectHeight);
+  }, []);
   return (
     <ServicesPage>
-      <ServicesHero>
+      <ServicesHero ref={heroRef}>
         <div className="image-container">
           <Image
             layout="fill"
@@ -19,15 +27,15 @@ export default function Services() {
             style={{ filter: 'brightness(0.5)', objectPosition: 'center' }}
           />
         </div>
-        <h2>What We Do</h2>
+        <h2>What we can do for you</h2>
         <p className="small">
-          Reach audiences on new, lucrative channels, strengthen your website or
-          build your marketing from the ground up with Above and Beyond
-          Solutions.
+          Our service offering reflects the talent within Above and Beyond
+          Solutions, which is a collective of live event professionals and tech
+          and social advocates.
           <div style={{ marginBottom: '1rem' }} />
-          All services are tailored to propel your business. We make the most of
-          trends but believe in achieving fantastic results, whatever your goals
-          and whatever channel we’re working on.
+          We connect the brands, the artist and the audience through multi
+          channel marketing and activations. With our commercially astute team
+          Above and Beyond Solutions will maximise the return on engagement.
         </p>
         <button>
           <i class="icon-mobile" />
@@ -47,15 +55,19 @@ export default function Services() {
           }}
         >
           <p>
-            Although we’re an experienced team, we’re not stuck in our ways.
-            We’ll always present new ideas to help you grow as we don’t believe
-            in letting things plateau. We’re always thinking ‘what’s next’. We
-            pride ourselves on being a team of experts, with in-house
-            specialists in all areas of digital marketing. All our services will
-            be communicated in a language you can understand and we’ll handle
-            the tricky stuff so you can focus on running your business. So,
-            whether you know where you need help or you’re not sure what you’re
-            looking for, get in touch to speak to an expert.{' '}
+            Our digital marketing prowess tied to exhibition stand planning and
+            delivery through to artist liaison, logistics and event promotion.
+            Highlights our diverse yet in sync offering that not many other
+            agencies can boast. We have the competencies, contacts and drive to
+            provide organisers and venues a unique selection of revenue streams.
+            We create Feel good moments going Above and Beyond to ensure long
+            lasting happy memories and human impressions.
+            <br />
+            <br />
+            We compliment all the live work with web site builds, ensuring your
+            best sales tool feels, acts and works as well as any live
+            engagement. With our social media marketing, we use each channel to
+            maximise your investment.
           </p>
         </ServicesSummary>
         <ServicesSquareCards />

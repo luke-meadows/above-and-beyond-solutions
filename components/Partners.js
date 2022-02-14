@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Partners() {
   return (
     <StyledPartners>
-      <h3>Our Partners</h3>
+      <h2>Our Partners</h2>
       <div className="container">
         {partnerImgs.map((img, i) => (
           <div key={i} className="hello">
@@ -21,15 +21,15 @@ export default function Partners() {
 
 const StyledPartners = styled.div`
   height: fit-content;
-  margin: 3rem 5rem;
+  margin: 2rem 5rem;
 
-  h3 {
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
+  h2 {
+    line-height: 1;
+    font-weight: 500;
+    padding: 2rem 5rem 3rem 5rem;
     text-align: center;
-    font-weight: 300;
-    font-size: 2rem;
-    margin-bottom: 3rem;
+    font-size: 2.1rem;
+    color: var(--pink);
   }
 
   .container {
