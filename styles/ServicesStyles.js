@@ -79,7 +79,7 @@ export const ServicesSummary = styled.div`
   p {
     font-size: 1.2rem;
     text-align: center;
-    font-weight: 200;
+    font-weight: 300;
     padding: 2rem 5rem;
   }
   strong {

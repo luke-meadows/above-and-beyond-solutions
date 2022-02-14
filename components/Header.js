@@ -5,14 +5,18 @@ import styled from 'styled-components';
 import thumbnailLogo from '../public/assets/logos/thumbnail-white-logo.svg';
 import logo from '../public/assets/logos/white-text-logo.svg';
 import { Ctx } from '../lib/ctxProvider';
+import Router from 'next/router';
 
 export default function Header() {
   const [headerHeight, setHeaderHeight] = useState(0);
   const [shouldStick, setShouldStick] = useState(false);
   const headerRef = useRef();
   const { stickyNavCoords } = useContext(Ctx);
+  const router = Router;
+  const onAbout = router?.router?.asPath === '/about-us';
 
   function isSticky() {
+    if (onAbout) return;
     const stickPoint = stickyNavCoords - headerHeight;
     if (window.scrollY >= stickPoint) {
       setShouldStick(true);
@@ -29,6 +33,7 @@ export default function Header() {
   });
 
   useEffect(() => {
+    if (onAbout) setShouldStick(true);
     const rectHeight = headerRef.current.getBoundingClientRect().height;
     setHeaderHeight(rectHeight);
   }, [headerRef]);
@@ -51,7 +56,9 @@ export default function Header() {
             <Link href="/services">
               <li>Services</li>
             </Link>
-            <li>About Us</li>
+            <Link href="/about-us">
+              <li>About Us</li>
+            </Link>
             <li>Partners</li>
             <li>Contact Us</li>
           </ul>
