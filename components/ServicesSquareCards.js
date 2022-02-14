@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import marketing from '../public/assets/servicesCardImgs/marketing.jpg';
-import exhibition from '../public/assets/servicesCardImgs/event.jpg';
-import event from '../public/assets/servicesCardImgs/event.jpg';
-import activation from '../public/assets/servicesCardImgs/social.jpg';
+import exhibition from '../public/assets/servicesCardImgs/exhibition.jpg';
+import event from '../public/assets/servicesCardImgs/live-events.jpg';
+import activation from '../public/assets/servicesCardImgs/activation.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -89,6 +89,13 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+  &:hover {
+    .img-container {
+      img {
+        filter: brightness(0.8);
+      }
+    }
+  }
   a {
     color: var(--white);
   }
@@ -102,7 +109,6 @@ const Card = styled.div`
     font-weight: 300;
   }
   button {
-    width: 30%;
     margin: 1rem auto;
   }
   .img-container {

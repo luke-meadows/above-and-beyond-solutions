@@ -46,7 +46,7 @@ export default function Header() {
             )}
           </ImageContainer>
         </Link>
-        <nav>
+        <Nav>
           <ul>
             <Link href="/services">
               <li>Services</li>
@@ -55,7 +55,7 @@ export default function Header() {
             <li>Partners</li>
             <li>Contact Us</li>
           </ul>
-        </nav>
+        </Nav>
       </div>
 
       <div className="contact">
@@ -121,26 +121,7 @@ const StyledHeader = styled.header`
       display: flex;
     }
   }
-  nav {
-  padding-left: 2.5rem;
-
-    ul {
-      display: flex;
-      align-items: center;
-      li {
-        list-style: none;
-        font-size: 0.8rem;
-        margin: 0 1rem;
-        font-weight: 300;
-        display: flex;
-        cursor: pointer;
-      }
-    }
-    .arrow {
-      transform: rotate(90deg);
-      margin-left: 5px;
-    }
-  }
+  
 `;
 
 const ImageContainer = styled.div`
@@ -150,5 +131,25 @@ const ImageContainer = styled.div`
     object-fit: cover;
     margin: 0;
     cursor: pointer;
+  }
+`;
+
+export const Nav = styled.nav`
+  padding-left: 2.5rem;
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      list-style: none;
+      font-size: 0.8rem;
+      margin: 0 1rem;
+      font-weight: 300;
+      display: flex;
+      cursor: pointer;
+    }
+  }
+  .arrow {
+    transform: rotate(90deg);
+    margin-left: 5px;
   }
 `;

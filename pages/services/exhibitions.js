@@ -5,15 +5,15 @@ import {
   ServicesPage,
   ServicesSummary,
 } from '../../styles/ServicesStyles';
-import Hero from '../../public/assets/service-heros/exhibition-hero.jpg';
-import SummaryImg from '../../public/assets/service-summary-imgs/exhibition-summary.jpg';
+import Hero from '../../public/assets/service-heros/exhibitions-hero.jpg';
+import SummaryImg from '../../public/assets/service-summary-imgs/exhibitions-summary.jpg';
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
 export default function Exhibitions() {
   return (
     <ServicesPage>
       <ServicesHero>
-        <ServiceBackgroundImage img={Hero} position="top" brightness="0.2" />
+        <ServiceBackgroundImage img={Hero} position="center" brightness="0.2" />
         <h2>
           Exhibitions <br />
         </h2>
@@ -108,7 +108,7 @@ export default function Exhibitions() {
             brightness="0.3"
           />
 
-          <h4>Industry Leading Events Management</h4>
+          <h4>Industry Leading Exhibitions</h4>
           <h5>How Can We Help?</h5>
           <p>
             We're The Web Development Agency For You How Can We Help? Website

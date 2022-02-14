@@ -5,7 +5,7 @@ import {
   ServicesPage,
   ServicesSummary,
 } from '../../styles/ServicesStyles';
-import Hero from '../../public/assets/service-heros/marketing-hero.jpeg';
+import Hero from '../../public/assets/service-heros/marketing-hero.jpg';
 import SummaryImg from '../../public/assets/service-summary-imgs/marketing-summary.jpeg';
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
@@ -14,12 +14,11 @@ export default function MarketingPage() {
     <ServicesPage>
       <ServicesHero>
         <ServiceBackgroundImage img={Hero} position="top" brightness="0.35" />
-        <h2>
-          Marketing Agency <br /> <span>Coventry</span>
-        </h2>
+        <h2>Marketing</h2>
         <p>
-          An effective digital strategy is the blueprint for your business’
-          success.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
+          quam nesciunt eveniet ex eum voluptatibus, aliquid dolore autem
+          debitis numquam.
         </p>
         <button>
           <i class="icon-mobile" />

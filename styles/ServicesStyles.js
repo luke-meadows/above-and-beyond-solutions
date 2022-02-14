@@ -50,6 +50,8 @@ export const IconCard = styled.div`
     font-size: 1rem;
     text-align: center;
     font-weight: 300;
+    margin: auto;
+    /* border: 1px solid blue; */
   }
   a {
     margin-top: 0.5rem;

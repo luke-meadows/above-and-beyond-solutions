@@ -11,7 +11,7 @@ export default function Services() {
   return (
     <ServicesPage>
       <ServicesHero>
-        <ServiceBackgroundImage img={Hero} position="center" brightness="0.4" />
+        <ServiceBackgroundImage img={Hero} position="center" brightness="0.3" />
         <h2>What we can do for you</h2>
         <p className="small">
           Our service offering reflects the talent within Above and Beyond
