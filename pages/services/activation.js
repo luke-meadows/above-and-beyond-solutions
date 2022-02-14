@@ -1,28 +1,20 @@
-import { useContext, useEffect, useRef } from 'react';
-import { Ctx } from '../../lib/ctxProvider';
 import {
   IconCard,
   IconCards,
   ServicesHeader,
-  ServicesHero,
+  // ServicesHero,
   ServicesPage,
   ServicesSummary,
 } from '../../styles/ServicesStyles';
 import Hero from '../../public/assets/service-heros/activation-hero.jpg';
 import SummaryImg from '../../public/assets/service-summary-imgs/activation-summary.jpg';
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
+import ServicesHero from '../../components/ServicesHero';
 export default function Activation() {
-  const heroRef = useRef();
-  const { setStickyNavCoords } = useContext(Ctx);
-  useEffect(() => {
-    const rectHeight = heroRef.current.getBoundingClientRect().height;
-    setStickyNavCoords(rectHeight);
-  }, []);
   return (
     <ServicesPage>
-      <ServicesHero ref={heroRef}>
+      <ServicesHero>
         <ServiceBackgroundImage img={Hero} position="center" brightness="0.3" />
-
         <h2>
           Activation <br />
         </h2>

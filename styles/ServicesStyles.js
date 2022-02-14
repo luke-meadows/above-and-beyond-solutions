@@ -6,51 +6,6 @@ export const ServicesPage = styled.div`
     padding-top: 2rem;
   }
 `;
-export const ServicesHero = styled.div`
-  height: 80vh;
-  position: relative;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5rem 5rem 0 5rem;
-
-  img {
-    object-fit: cover;
-    object-position: top;
-    width: 100%;
-    height: 100%;
-  }
-  h2 {
-    font-size: 3.5rem;
-    font-weight: 500;
-    color: white;
-    line-height: initial;
-    span {
-      color: var(--pink);
-    }
-  }
-  p {
-    color: white;
-    margin: 1rem 0;
-    font-weight: 300;
-    font-size: 1.5rem;
-    max-width: 80%;
-    line-height: 2;
-  }
-  .small {
-    line-height: 1.8;
-    font-size: 1.4rem;
-  }
-  button {
-    margin-top: 1rem;
-    width: 10rem;
-    border: none;
-    i {
-      margin-right: 0.2rem;
-    }
-  }
-`;
 
 export const ServicesHeader = styled.div`
   text-align: center;
