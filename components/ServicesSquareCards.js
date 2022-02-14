@@ -65,7 +65,7 @@ export default function ServicesSquareCards() {
             <p>
               These are the look at me moments that get you free national press.
               We specialise in different, we celebrate the different, partly
-              through our neuro diverse culture and staff. Coming up with unique
+              through our neurodiverse culture and staff. Coming up with unique
               attention grabbing ideas that create talking points by those
               outside of your standard community.
             </p>

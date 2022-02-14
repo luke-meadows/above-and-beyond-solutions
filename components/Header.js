@@ -83,6 +83,7 @@ export default function Header() {
 const StyledHeader = styled.header`
   position: ${(props) => (props.shouldStick ? 'fixed' : 'absolute')};
   background: ${(props) => (props.shouldStick ? 'black' : 'none')};
+  transition: all 0.1s ease-out;
   color: var(--white);
   height: 6rem;
   display: flex;

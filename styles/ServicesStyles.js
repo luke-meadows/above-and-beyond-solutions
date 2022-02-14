@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import SummaryBackgroundImage from '../public/assets/service-summary-imgs/activation-summary.jpg';
 
 export const ServicesPage = styled.div`
   main {
@@ -13,15 +14,7 @@ export const ServicesHero = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 5rem 5rem 0 5rem;
-  .image-container {
-    height: 100%;
-    width: 100%;
-    filter: brightness(0.4);
-    z-index: -1;
-    position: absolute;
-    left: 0;
-    top: 0rem;
-  }
+
   img {
     object-fit: cover;
     object-position: top;
@@ -95,6 +88,7 @@ export const IconCard = styled.div`
   }
   h5 {
     padding: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
   }
   p {
@@ -111,12 +105,7 @@ export const IconCard = styled.div`
 
 export const ServicesSummary = styled.div`
   min-height: calc(100vh - 5rem);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgba(0, 0, 0, 0.85);
-  background-blend-mode: multiply;
+  position: relative;
   text-align: center;
   padding: 2rem;
   color: white;
