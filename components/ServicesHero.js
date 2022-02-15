@@ -7,7 +7,7 @@ export default function ServicesHero({ children }) {
   useEffect(() => {
     const rectHeight = heroRef.current.getBoundingClientRect().height;
     setStickyNavCoords(rectHeight);
-  }, []);
+  });
   return <Styles ref={heroRef}>{children}</Styles>;
 }
 

@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import { useContext, useEffect } from 'react';
-import styled from 'styled-components';
 import { Ctx } from '../lib/ctxProvider';
+import styled from 'styled-components';
 import img from '../public/assets/profile-imgs/alice.webp';
 export default function AboutUs() {
-  const { setShouldStick } = useContext(Ctx);
+  const { setShouldStick, setStickyNavCoords } = useContext(Ctx);
   useEffect(() => {
     setShouldStick(true);
+    setStickyNavCoords(0);
     return () => {
       setShouldStick(false);
     };
@@ -144,17 +145,24 @@ const AboutTheBusiness = styled.div`
 const TeamRow = styled.div`
   display: grid;
   grid-template-columns: ${(props) => `repeat(${props.cols}, 1fr)`};
-  gap: 6rem;
+  gap: 12rem;
   justify-items: center;
   margin: auto;
   width: fit-content;
   margin-bottom: 6rem;
+  @media only screen and (max-width: 1600px) {
+    gap: 6rem;
+  }
   .img-container {
     border-radius: 50rem;
     overflow: hidden;
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
     position: relative;
+    @media only screen and (max-width: 1600px) {
+      height: 300px;
+      width: 300px;
+    }
 
     img {
       height: 100%;

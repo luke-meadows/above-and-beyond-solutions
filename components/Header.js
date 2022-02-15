@@ -33,10 +33,9 @@ export default function Header() {
   });
 
   useEffect(() => {
-    if (onAbout) setShouldStick(true);
     const rectHeight = headerRef.current.getBoundingClientRect().height;
     setHeaderHeight(rectHeight);
-  }, [router]);
+  }, []);
 
   return (
     <StyledHeader shouldStick={shouldStick} ref={headerRef}>
@@ -47,7 +46,7 @@ export default function Header() {
               <Image priority layout="responsive" src={logo} alt="" />
             )}
             {!shouldStick && (
-              <Image priority layout="responsive" src={thumbnailLogo} />
+              <Image priority layout="responsive" src={thumbnailLogo} alt="" />
             )}
           </ImageContainer>
         </Link>
@@ -59,8 +58,12 @@ export default function Header() {
             <Link href="/about-us">
               <li>About Us</li>
             </Link>
-            <li>Partners</li>
-            <li>Contact Us</li>
+            <Link href="/partners">
+              <li>Partners</li>
+            </Link>
+            <Link href="/contact-us">
+              <li>Contact Us</li>
+            </Link>
           </ul>
         </Nav>
       </div>
@@ -69,7 +72,7 @@ export default function Header() {
         <div className="left">
           <a
             target="blank"
-            href="https://www.instagram.com/aboveandbeyond_solutions/"
+            href="https://www.linkedin.com/company/aboveandbeyondsolutions/"
           >
             <i className="icon icon-linkedin" />
           </a>
@@ -84,15 +87,15 @@ export default function Header() {
           </a>
         </div>
         <div className="right">
-          <span>
-            <i className="icon-mobile"></i>
+          {/* <span>
+            <i className="icon-mobile" />
           </span>{' '}
           +447 949 442844
-          <br />
+          <br /> */}
           <span>
-            <i className="icon-mail"></i>
+            <i className="icon-mail" />
           </span>{' '}
-          info@aboveandbeyond.co.uk
+          hello@aboveandbeyondsolutions.co.uk
         </div>
       </div>
     </StyledHeader>
@@ -124,7 +127,9 @@ const StyledHeader = styled.header`
     color: white;
     line-height: 1.5;
     display: flex;
+    /* flex-direction: column; */
     align-items: center;
+/* justify-content: center; */
     font-weight: 300;
 
     .icon {
@@ -137,6 +142,7 @@ const StyledHeader = styled.header`
     }
     .left {
       margin-right: 2rem;
+      /* margin-bottom: 0.5rem; */
       display: flex;
       a{
 

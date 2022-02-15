@@ -4,9 +4,11 @@ import { Ctx } from '../lib/ctxProvider';
 import Partners from '../components/Partners';
 
 export default function PartnersPage() {
-  const { setShouldStick } = useContext(Ctx);
+  const { setShouldStick, setStickyNavCoords } = useContext(Ctx);
   useEffect(() => {
     setShouldStick(true);
+    setStickyNavCoords(0);
+
     return () => {
       setShouldStick(false);
     };
@@ -38,7 +40,7 @@ export default function PartnersPage() {
 }
 
 const StyledAbout = styled.div`
-  padding-top: 6rem;
+  padding: 6rem 0 3rem 0;
   h2 {
     line-height: 1;
     font-weight: 500;

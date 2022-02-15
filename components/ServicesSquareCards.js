@@ -48,7 +48,7 @@ export default function ServicesSquareCards() {
           <button>Learn More</button>
         </Link>
         <div className="img-container">
-          <Image layout="fill" src={event} alt="" />
+          <Image layout="fill" objectPosition="bottom" src={event} alt="" />
         </div>
       </Card>
       <Card>
@@ -64,7 +64,12 @@ export default function ServicesSquareCards() {
           <button>Learn More</button>
         </Link>
         <div className="img-container">
-          <Image layout="fill" src={activation} alt="" />
+          <Image
+            layout="fill"
+            objectPosition="bottom"
+            src={activation}
+            alt=""
+          />
         </div>
       </Card>
     </CardContainer>
@@ -89,6 +94,9 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+  @media only screen and (min-width: 1600px) {
+    min-height: 25rem;
+  }
   &:hover {
     .img-container {
       img {
@@ -103,13 +111,22 @@ const Card = styled.div`
   h3 {
     font-weight: 400;
     font-size: 1.5rem;
+    @media only screen and (min-width: 1600px) {
+      font-size: 2rem;
+    }
   }
   p {
     font-size: 1rem;
     font-weight: 300;
+    @media only screen and (min-width: 1600px) {
+      font-size: 1.1rem;
+    }
   }
   button {
     margin: 1rem auto;
+    @media only screen and (min-width: 1600px) {
+      font-size: 1rem;
+    }
   }
   .img-container {
     z-index: -1;

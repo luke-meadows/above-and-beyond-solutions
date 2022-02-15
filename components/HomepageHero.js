@@ -43,6 +43,7 @@ const StyledHero = styled.div`
     height: 100%;
     width: 100%;
     object-fit: cover;
+    pointer-events: none;
   }
   .overlay {
     background: rgba(0, 0, 0, 0.5);
@@ -71,7 +72,7 @@ const StyledHero = styled.div`
       p {
         font-weight: 500;
         font-size: 1.5rem;
-        max-width: 75%;
+        max-width: 1000px;
         line-height: 2;
       }
       span {
@@ -84,6 +85,5 @@ const StyledHero = styled.div`
   }
 `;
 
-const ImageContainer = styled.div`
-  width: 60rem;
+const ImageContainer = styled.div`ß
 `;

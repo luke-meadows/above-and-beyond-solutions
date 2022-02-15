@@ -5,18 +5,36 @@ export default function Footer() {
   return (
     <StyledFooter>
       <div className="social-media">
-        <i className="icon social icon-linkedin" />
-        <i className="icon social icon-facebook" />
-        <i className="icon social icon-instagram" />
+        <a
+          target="blank"
+          href="https://www.instagram.com/aboveandbeyond_solutions/"
+        >
+          <i className="icon social icon-linkedin" />
+        </a>
+        <a target="blank" nphref="">
+          <i className="icon social icon-facebook" />
+        </a>
+        <a
+          target="blank"
+          href="https://www.instagram.com/aboveandbeyond_solutions/"
+        >
+          <i className="icon social icon-instagram" />
+        </a>
       </div>
       <FooterNav>
         <ul>
           <Link href="/services">
             <li>Services</li>
           </Link>
-          <li>About Us</li>
-          <li>Partners</li>
-          <li>Contact Us</li>
+          <Link href="/about-us">
+            <li>About Us</li>
+          </Link>
+          <Link href="/partners">
+            <li>Partners</li>
+          </Link>
+          <Link href="/contact-us">
+            <li>Contact Us</li>
+          </Link>
         </ul>
       </FooterNav>
       <p>Above and Beyond Solutions &copy; {new Date().getFullYear()}</p>
@@ -27,32 +45,19 @@ export default function Footer() {
 const StyledFooter = styled.div`
   color: white;
   background: black;
-
   padding: 3rem 0;
   .social-media {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--pink);
     font-size: 1.5rem;
-
     .social {
-      margin-right: 1rem;
-    }
-  }
-  a {
-    color: white;
-  }
-  button {
-    border: 1px solid var(--pink);
-    background: none;
-    color: var(--white);
-    text-align: center;
-    margin-right: 0rem;
-    i {
       color: var(--pink);
-      font-size: 1rem;
-      margin-right: 0rem;
+      margin-right: 1rem;
+      cursor: pointer;
+      &:hover {
+        color: var(--white);
+      }
     }
   }
   p {

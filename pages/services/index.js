@@ -23,7 +23,7 @@ export default function Services() {
           Above and Beyond Solutions will maximise the return on engagement.
         </p>
         <button>
-          <i class="icon-mobile" />
+          <i className="icon-mobile" />
           BOOK A CALL
         </button>
       </ServicesHero>
