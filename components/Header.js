@@ -9,9 +9,9 @@ import Router from 'next/router';
 
 export default function Header() {
   const [headerHeight, setHeaderHeight] = useState(0);
-  const [shouldStick, setShouldStick] = useState(false);
+
   const headerRef = useRef();
-  const { stickyNavCoords } = useContext(Ctx);
+  const { stickyNavCoords, shouldStick, setShouldStick } = useContext(Ctx);
   const router = Router;
   const onAbout = router?.router?.asPath === '/about-us';
 
@@ -36,7 +36,7 @@ export default function Header() {
     if (onAbout) setShouldStick(true);
     const rectHeight = headerRef.current.getBoundingClientRect().height;
     setHeaderHeight(rectHeight);
-  }, [headerRef]);
+  }, [router]);
 
   return (
     <StyledHeader shouldStick={shouldStick} ref={headerRef}>
@@ -67,9 +67,21 @@ export default function Header() {
 
       <div className="contact">
         <div className="left">
-          <i className="icon icon-linkedin"></i>
-          <i className="icon icon-facebook"></i>
-          <i className="icon icon-instagram"></i>
+          <a
+            target="blank"
+            href="https://www.instagram.com/aboveandbeyond_solutions/"
+          >
+            <i className="icon icon-linkedin" />
+          </a>
+          <a target="blank" href="">
+            <i className="icon icon-facebook" />
+          </a>
+          <a
+            target="blank"
+            href="https://www.instagram.com/aboveandbeyond_solutions/"
+          >
+            <i className="icon icon-instagram" />
+          </a>
         </div>
         <div className="right">
           <span>
@@ -126,6 +138,12 @@ const StyledHeader = styled.header`
     .left {
       margin-right: 2rem;
       display: flex;
+      a{
+
+        display: flex; 
+        align-items: center;
+
+      }
     }
   }
   

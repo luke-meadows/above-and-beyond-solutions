@@ -2,10 +2,10 @@ import { partnerImgs } from '../lib/partnerImgs';
 import styled from 'styled-components';
 import Image from 'next/image';
 
-export default function Partners() {
+export default function Partners({ noTitle }) {
   return (
     <StyledPartners>
-      <h2>Our Partners</h2>
+      {!noTitle && <h2>Our Partners</h2>}
       <div className="container">
         {partnerImgs.map((img, i) => (
           <div key={i} className="hello">

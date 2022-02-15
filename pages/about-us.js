@@ -1,7 +1,16 @@
 import Image from 'next/image';
+import { useContext, useEffect } from 'react';
 import styled from 'styled-components';
+import { Ctx } from '../lib/ctxProvider';
 import img from '../public/assets/profile-imgs/alice.webp';
 export default function AboutUs() {
+  const { setShouldStick } = useContext(Ctx);
+  useEffect(() => {
+    setShouldStick(true);
+    return () => {
+      setShouldStick(false);
+    };
+  });
   return (
     <StyledAbout>
       <h2>About Us</h2>
@@ -24,7 +33,7 @@ export default function AboutUs() {
       <h2>Meet the Team</h2>
       <TeamRow cols={2}>
         <div className="img-container">
-          <Image objectFit="cover" objectPosition="center" src={img} />
+          <Image objectPosition="center" src={img} />
           <div className="info">
             <h6>Sam Stockmans</h6>
             <p>Founder / CEO</p>
@@ -159,7 +168,7 @@ const TeamRow = styled.div`
     .info {
       position: absolute;
       visibility: hidden;
-      z-index: 2;
+      z-index: 0;
       color: black;
       top: 0;
       left: 0;

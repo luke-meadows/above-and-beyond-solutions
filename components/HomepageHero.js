@@ -22,7 +22,7 @@ export default function HomepageHero() {
       <div className="overlay">
         <div className="overlay-container">
           <ImageContainer>
-            <Image layout="responsive" src={WhiteTextLogo} priority />
+            <Image width="1000" height="150" src={WhiteTextLogo} priority />
           </ImageContainer>
           <p>
             Small agency care, with <span>big agency capabilities</span>. Always
@@ -38,7 +38,7 @@ export default function HomepageHero() {
 const StyledHero = styled.div`
   height: 100vh;
   position: relative;
-  /* margin-top: 10rem; */
+
   video {
     height: 100%;
     width: 100%;
@@ -86,9 +86,4 @@ const StyledHero = styled.div`
 
 const ImageContainer = styled.div`
   width: 60rem;
-  margin-bottom: 2rem;
-  img {
-    object-fit: cover;
-    margin: 0;
-  }
 `;

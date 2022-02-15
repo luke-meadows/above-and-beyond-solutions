@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import marketing from '../public/assets/servicesCardImgs/marketing.jpg';
+import marketing from '../public/assets/servicesCardImgs/marketing.png';
 import exhibition from '../public/assets/servicesCardImgs/exhibition.jpg';
 import event from '../public/assets/servicesCardImgs/live-events.jpg';
 import activation from '../public/assets/servicesCardImgs/activation.jpg';
