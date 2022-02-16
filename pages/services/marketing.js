@@ -3,10 +3,8 @@ import {
   IconCards,
   ServicesHeader,
   ServicesPage,
-  ServicesSummary,
 } from '../../styles/ServicesStyles';
-import Hero from '../../public/assets/service-heros/marketing-hero.jpg';
-import SummaryImg from '../../public/assets/service-summary-imgs/marketing-summary.jpeg';
+import Hero from '../../public/assets/service-heros/marketing-hero.png';
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
 export default function MarketingPage() {
@@ -62,7 +60,7 @@ export default function MarketingPage() {
             <a href="/services/marketing/branding">Learn More</a>
           </IconCard>
           <IconCard>
-            <i className="icon-pencil card-icon" />
+            <i className="icon-edit card-icon" />
             <h5>Graphics</h5>
             <p>
               Unlike other web development agencies, we’re able to provide

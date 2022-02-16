@@ -2,12 +2,9 @@ import {
   IconCard,
   IconCards,
   ServicesHeader,
-  // ServicesHero,
   ServicesPage,
-  ServicesSummary,
 } from '../../styles/ServicesStyles';
-import Hero from '../../public/assets/service-heros/activation-hero.jpg';
-import SummaryImg from '../../public/assets/service-summary-imgs/activation-summary.jpg';
+import Hero from '../../public/assets/service-heros/activation-hero.png';
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
 export default function Activation() {

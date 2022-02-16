@@ -1,4 +1,4 @@
-import Hero from '../../public/assets/service-heros/services-hero.jpeg';
+import Hero from '../../public/assets/service-heros/services-hero.png';
 import ServicesSquareCards from '../../components/ServicesSquareCards';
 import ServicesHero from '../../components/ServicesHero';
 import {

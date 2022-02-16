@@ -3,10 +3,8 @@ import {
   IconCards,
   ServicesHeader,
   ServicesPage,
-  ServicesSummary,
 } from '../../styles/ServicesStyles';
-import Hero from '../../public/assets/service-heros/live-events-hero.jpg';
-import SummaryImg from '../../public/assets/service-summary-imgs/events-summary.jpg';
+import Hero from '../../public/assets/service-heros/live-events-hero.png';
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
 export default function LiveEvents() {

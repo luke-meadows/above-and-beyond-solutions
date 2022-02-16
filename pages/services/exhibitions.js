@@ -3,10 +3,8 @@ import {
   IconCards,
   ServicesHeader,
   ServicesPage,
-  ServicesSummary,
 } from '../../styles/ServicesStyles';
-import Hero from '../../public/assets/service-heros/exhibitions-hero.jpg';
-import SummaryImg from '../../public/assets/service-summary-imgs/exhibitions-summary.jpg';
+import Hero from '../../public/assets/service-heros/exhibitions-hero.png';
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
 export default function Exhibitions() {
