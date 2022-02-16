@@ -1,4 +1,4 @@
-import Hero from '../../public/assets/service-heros/services-hero.png';
+import hero from '../../public/assets/service-heros/services-hero.jpg';
 import ServicesSquareCards from '../../components/ServicesSquareCards';
 import ServicesHero from '../../components/ServicesHero';
 import {
@@ -11,16 +11,15 @@ export default function Services() {
   return (
     <ServicesPage>
       <ServicesHero>
-        <ServiceBackgroundImage img={Hero} position="center" brightness="0.3" />
+        <ServiceBackgroundImage img={hero} position="center" brightness="0.3" />
         <h2>What we can do for you</h2>
         <p className="small">
           Our service offering reflects the talent within Above and Beyond
           Solutions, which is a collective of live event professionals and tech
-          and social advocates.
-          <div style={{ marginBottom: '1rem' }} />
-          We connect the brands, the artist and the audience through multi
-          channel marketing and activations. With our commercially astute team
-          Above and Beyond Solutions will maximise the return on engagement.
+          and social advocates. We connect the brands, the artist and the
+          audience through multi channel marketing and activations. With our
+          commercially astute team Above and Beyond Solutions will maximise the
+          return on engagement.
         </p>
         <button>
           <i className="icon-mobile" />

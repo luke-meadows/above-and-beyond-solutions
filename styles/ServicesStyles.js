@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import SummaryBackgroundImage from '../public/assets/service-summary-imgs/activation-summary.jpg';
 
 export const ServicesPage = styled.div`
   main {
@@ -63,9 +62,9 @@ export const IconCard = styled.div`
 export const ServicesSummary = styled.div`
   min-height: calc(100vh - 5rem);
   position: relative;
-  text-align: center;
   padding: 2rem;
-  color: white;
+  color: black;
+  background: var(--white);
   h4 {
     color: var(--pink);
     font-weight: 500;

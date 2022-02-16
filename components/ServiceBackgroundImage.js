@@ -6,7 +6,7 @@ export default function ServiceBackgroundImage({ img, brightness, position }) {
       <Image
         layout="fill"
         src={img}
-        alt=""
+        alt="services-img"
         objectPosition={position}
         objectFit="cover"
       />
@@ -21,5 +21,4 @@ const ImageContainer = styled.div`
   z-index: -1;
   position: absolute;
   left: 0;
-  top: 0rem;
 `;
