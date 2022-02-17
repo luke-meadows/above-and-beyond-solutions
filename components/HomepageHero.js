@@ -5,6 +5,7 @@ import { useContext, useEffect, useRef } from 'react';
 import { Ctx } from '../lib/ctxProvider';
 export default function HomepageHero() {
   const heroRef = useRef();
+  const videoRef = useRef();
   const { setStickyNavCoords } = useContext(Ctx);
   useEffect(() => {
     const rectHeight = heroRef.current.getBoundingClientRect().height;
@@ -13,16 +14,19 @@ export default function HomepageHero() {
   return (
     <StyledHero ref={heroRef}>
       <video
-        autoPlay
+        // autoPlay
         muted
         loop
+        // webkit-playsinline="true"
+        // playsinline="true"
         src={require('../public/assets/HERO-NO-SWEARING.mp4')}
         type="video/mp4"
       />
       <div className="overlay">
         <div className="overlay-container">
           <ImageContainer>
-            <Image width="1000" height="150" src={WhiteTextLogo} priority />
+            {/* <Image width="1000" height="150" src={WhiteTextLogo} priority /> */}
+            <Image layout="responsive" src={WhiteTextLogo} priority />
           </ImageContainer>
           <p>
             Small agency care, with <span>big agency capabilities</span>. Always
@@ -36,6 +40,7 @@ export default function HomepageHero() {
 }
 
 const StyledHero = styled.div`
+  min-height: 100vh;
   height: 100vh;
   position: relative;
 
@@ -57,7 +62,7 @@ const StyledHero = styled.div`
     .overlay-container {
       position: absolute;
       top: 50%;
-      left: 5rem;
+      left: var(--padding);
       transform: translateY(-50%);
       display: flex;
       flex-direction: column;
@@ -71,7 +76,8 @@ const StyledHero = styled.div`
       }
       p {
         font-weight: 500;
-        font-size: 1.5rem;
+        font-size: var(--hero-text);
+        width: 85vw;
         max-width: 1000px;
         line-height: 2;
       }
@@ -85,5 +91,9 @@ const StyledHero = styled.div`
   }
 `;
 
-const ImageContainer = styled.div`ß
+const ImageContainer = styled.div`
+  display: block;
+  width: 85vw;
+  margin-bottom: 1rem;
+  max-width: 1000px;
 `;

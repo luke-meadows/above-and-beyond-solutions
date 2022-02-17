@@ -18,10 +18,10 @@ export const Styles = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 5rem;
+  padding: 0 var(--padding);
 
   h2 {
-    font-size: 3.5rem;
+    font-size: var(--service-hero-header);
     font-weight: 500;
     color: white;
     line-height: initial;
@@ -33,13 +33,16 @@ export const Styles = styled.div`
     color: white;
     margin: 1rem 0;
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: var(--service-hero-text);
     max-width: 80%;
     line-height: 2;
+    @media only screen and (max-width: 415px) {
+      max-width: 100%;
+    }
   }
   .small {
-    line-height: 1.8;
-    font-size: 1.4rem;
+    /* line-height: 1.8; */
+    font-size: var(--service-hero-text);
   }
   button {
     margin-top: 1rem;

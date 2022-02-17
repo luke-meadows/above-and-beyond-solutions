@@ -87,16 +87,14 @@ export default function Header() {
           </a>
         </div>
         <div className="right">
-          {/* <span>
-            <i className="icon-mobile" />
-          </span>{' '}
-          +447 949 442844
-          <br /> */}
           <span>
             <i className="icon-mail" />
           </span>{' '}
           hello@aboveandbeyondsolutions.co.uk
         </div>
+      </div>
+      <div className="mobile-menu">
+        <i className="icon-menu" />
       </div>
     </StyledHeader>
   );
@@ -107,15 +105,17 @@ const StyledHeader = styled.header`
   background: ${(props) => (props.shouldStick ? 'black' : 'none')};
   transition: all 0.1s ease-out;
   color: var(--white);
-  height: 6rem;
+  height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
   top: 0;
+  left:0;
   z-index: 1;
-  width: 100%;
+  width: 100vw;
   max-width: 100vw;
-  padding: 0 5rem;
+  padding: 0 var(--padding);
+  overflow: hidden;
   a {
     line-height: 0;
     color: white;
@@ -127,11 +127,9 @@ const StyledHeader = styled.header`
     color: white;
     line-height: 1.5;
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
-/* justify-content: center; */
     font-weight: 300;
-
+    display: var(--header-contact-display);
     .icon {
       font-size: 1.2rem;
       rgb(157, 157, 157);
@@ -145,19 +143,22 @@ const StyledHeader = styled.header`
       /* margin-bottom: 0.5rem; */
       display: flex;
       a{
-
         display: flex; 
         align-items: center;
-
       }
     }
   }
-  
+  .mobile-menu{
+    display: var(--mobile-menu-icon-display);
+    i{
+      font-size: 1.8rem;
+    }
+  }
 `;
 
 const ImageContainer = styled.div`
   width: ${(props) => (props.shouldStick ? '10rem' : '3rem')};
-
+  margin-left: ${(props) => (props.shouldStick ? '0.5rem' : '0')};
   img {
     object-fit: cover;
     margin: 0;
@@ -167,6 +168,7 @@ const ImageContainer = styled.div`
 
 export const Nav = styled.nav`
   padding-left: 2.5rem;
+  display: var(--header-nav-display);
   ul {
     display: flex;
     align-items: center;
@@ -178,9 +180,5 @@ export const Nav = styled.nav`
       display: flex;
       cursor: pointer;
     }
-  }
-  .arrow {
-    transform: rotate(90deg);
-    margin-left: 5px;
   }
 `;

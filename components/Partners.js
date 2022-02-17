@@ -8,7 +8,7 @@ export default function Partners({ noTitle }) {
       {!noTitle && <h2>Our Partners</h2>}
       <div className="container">
         {partnerImgs.map((img, i) => (
-          <div key={i} className="hello">
+          <div key={i} className="img-container">
             <div data-number={i + 1} className="image-container">
               <Image src={img} />
             </div>
@@ -21,25 +21,22 @@ export default function Partners({ noTitle }) {
 
 const StyledPartners = styled.div`
   height: fit-content;
-  margin: 2rem 5rem;
+  padding: 0 var(--padding);
 
   h2 {
     line-height: 1;
     font-weight: 500;
-    padding: 2rem 5rem 3rem 5rem;
+    padding: var(--section-heading-padding);
     text-align: center;
-    font-size: 2.1rem;
+    font-size: var(--section-heading-text);
     color: var(--pink);
   }
 
   .container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 6rem;
+    gap: var(--partners-grid-gap);
     .img-container {
-      display: flex;
-    }
-    .hello {
       display: flex;
       align-items: center;
     }

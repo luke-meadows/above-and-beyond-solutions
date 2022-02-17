@@ -72,14 +72,18 @@ const StyledFooter = styled.div`
 const FooterNav = styled(Nav)`
   flex-direction: row;
   color: white;
+  display: block;
   ul {
     align-items: center;
     justify-content: center;
     li {
       margin: 0 2rem;
+      @media only screen and (max-width: 415px) {
+        margin: 0 0.5rem;
+      }
     }
   }
-  width: 60rem;
   margin: 3rem auto;
+  width: var(--footer-nav-width);
   padding-left: 0;
 `;

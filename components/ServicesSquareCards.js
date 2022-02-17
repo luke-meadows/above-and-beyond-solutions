@@ -78,7 +78,7 @@ export default function ServicesSquareCards() {
 
 const CardContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: var(--service-card-grid-cols);
   margin: 0 1rem 5rem 1rem;
   grid-auto-rows: 1fr;
   grid-column-gap: 1rem;
@@ -104,13 +104,23 @@ const Card = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 415px) {
+    &:hover {
+      .img-container {
+        img {
+          filter: brightness(0.2);
+        }
+      }
+    }
+  }
+
   a {
     color: var(--white);
   }
 
   h3 {
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: var(--service-card-header);
     @media only screen and (min-width: 1600px) {
       font-size: 2rem;
     }

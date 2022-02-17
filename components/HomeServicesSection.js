@@ -10,14 +10,17 @@ export default function HomeServicesSection() {
 }
 
 const StyledServicesSection = styled.div`
-  color: black;
-  /* background: var(--white); */
+  margin-top: -2rem;
+  @media only screen and (max-width: 415px) {
+    margin-top: -1rem;
+    margin-bottom: -4rem;
+  }
   h2 {
     line-height: 1;
     font-weight: 500;
-    padding: 2rem 5rem 3rem 5rem;
+    padding: var(--section-heading-padding);
     text-align: center;
-    font-size: 2.1rem;
+    font-size: var(--section-heading-text);
     color: var(--pink);
   }
 `;
