@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useContext, useEffect } from 'react';
 import { Ctx } from '../lib/ctxProvider';
 import styled from 'styled-components';
-import img from '../public/assets/profile-imgs/alice.webp';
+import img from '../public/assets/profile-imgs/profile.png';
 export default function AboutUs() {
   const { setShouldStick, setStickyNavCoords } = useContext(Ctx);
   useEffect(() => {
