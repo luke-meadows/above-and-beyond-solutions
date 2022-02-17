@@ -1,17 +1,22 @@
 import {
   IconCard,
   IconCards,
+  ImageContainer,
   ServicesHeader,
   ServicesPage,
+  ServicesSummary,
 } from '../../styles/ServicesStyles';
 import Hero from '../../public/assets/service-heros/marketing-hero.png';
+import SummaryImg from '../../public/assets/service-summary-imgs/marketing-summary-img.png';
+
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
+import Image from 'next/image';
 export default function MarketingPage() {
   return (
     <ServicesPage>
       <ServicesHero size={22}>
-        <ServiceBackgroundImage img={Hero} position="top" brightness="0.35" />
+        <ServiceBackgroundImage img={Hero} position="top" brightness="0.3" />
         <h2>Marketing</h2>
         <p>
           Stop wasting your time and money on marketing that doesn’t work. Let
@@ -98,6 +103,23 @@ export default function MarketingPage() {
             </p>
           </IconCard>
         </IconCards>
+        <ServicesSummary>
+          <ImageContainer>
+            <Image layout="fill" objectFit="cover" src={SummaryImg} />
+          </ImageContainer>
+          <h4>Why Choose Us?</h4>
+          <p>
+            So you're looking for a full 360&#176; marketing agency that you can
+            actually trust without having to sift through countless websites
+            you've found from Google? We know the pain.
+            <br />
+            <br />
+            It's exactly why we've created a one stop shop to support you with
+            all of your marketing requirements. We pride ourselves in working
+            with individuals who have had a plethora of experience in supporting
+            all types of business.
+          </p>
+        </ServicesSummary>
       </main>
     </ServicesPage>
   );

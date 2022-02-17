@@ -1,27 +1,27 @@
 import {
   IconCard,
   IconCards,
+  ImageContainer,
   ServicesHeader,
   ServicesPage,
+  ServicesSummary,
 } from '../../styles/ServicesStyles';
 import Hero from '../../public/assets/service-heros/exhibitions-hero.png';
+import SummaryImg from '../../public/assets/service-summary-imgs/exhibitions-summary-img.png';
+
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
+import Image from 'next/image';
 export default function Exhibitions() {
   return (
     <ServicesPage>
       <ServicesHero>
-        <ServiceBackgroundImage img={Hero} position="center" brightness="0.2" />
-        <h2>
-          Exhibitions <br />
-        </h2>
+        <ServiceBackgroundImage img={Hero} position="center" brightness="0.4" />
+        <h2>Exhibitions</h2>
         <p>
-          Above and Beyond Solutions will be a sounding board for your marketing
-          team to get the most out of your Exhibition budget.
-          <br />
-          Exhibiting is still the best face to face marketing available. Your
-          Brand, your product, your passionate staff representing the company at
-          the industry event.
+          With over 20 years of experience creating bespoke stands and a full
+          knowledge of exhibitions, we’re experts at creating a visionary space
+          tailored to your needs.
         </p>
         <button>
           <i className="icon-mobile" />
@@ -99,6 +99,25 @@ export default function Exhibitions() {
             </p>
           </IconCard>
         </IconCards>
+        <ServicesSummary>
+          <ImageContainer>
+            <Image layout="fill" objectFit="cover" src={SummaryImg} />
+          </ImageContainer>
+          <h4>Why Choose Us?</h4>
+          <p>
+            Our innovative and unique stand designs bring your brand to life and
+            help you to engage with your customers.
+            <br /> <br />
+            Our key focus is to deliver high quality, immersive exhibition
+            solutions that successfully deliver your brand messaging, create
+            engagment and increase footfall.
+            <br /> <br />
+            At Above and Beyond Solutions, we believe in forming a strong
+            partnership. We advise you on the best solution for your project, be
+            that a bespoke or modular solution. Then we will work with you all
+            the way from concept to realisation of your exhibition stand.
+          </p>
+        </ServicesSummary>
       </main>
     </ServicesPage>
   );

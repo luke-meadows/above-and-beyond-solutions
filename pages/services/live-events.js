@@ -1,24 +1,27 @@
 import {
   IconCard,
   IconCards,
+  ImageContainer,
   ServicesHeader,
   ServicesPage,
+  ServicesSummary,
 } from '../../styles/ServicesStyles';
 import Hero from '../../public/assets/service-heros/live-events-hero.png';
+import SummaryImg from '../../public/assets/service-summary-imgs/events-summary-img.png';
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
+import Image from 'next/image';
 export default function LiveEvents() {
   return (
     <ServicesPage>
       <ServicesHero>
         <ServiceBackgroundImage img={Hero} position="center" brightness="0.3" />
 
-        <h2>
-          Live Events <br />
-        </h2>
+        <h2>Live Events</h2>
         <p>
-          An effective digital strategy is the blueprint for your business’
-          success.
+          Live events provide an opportunity to interact with brands or
+          customers in a very personal and tangible way that is almost
+          impoissible to acheive through digital marketing.
         </p>
         <button>
           <i className="icon-mobile" />
@@ -91,6 +94,29 @@ export default function LiveEvents() {
             </p>
           </IconCard>
         </IconCards>
+        <ServicesSummary>
+          <ImageContainer>
+            <Image layout="fill" objectFit="cover" src={SummaryImg} />
+          </ImageContainer>
+          <h4>Why Choose Us?</h4>
+          <p>
+            Live brand experiences are more capable of engaging audiences
+            effectively in a big world which is full of digital, sometimes
+            impersonal marketing.
+            <br />
+            <br />
+            Pulling off a music festival, concert tour, or small scale gig takes
+            knowhow, expertise and the right industry contacts.
+            <br />
+            <br />
+            Our 15 years live event experience means we’re proficient in not
+            only building and delivering the event but also organising
+            everything from logistics to technical delivery, promotions to
+            talent booking, licensing to ticket sales. To put it simply; we’ll
+            take care of everything and put your music festival, concert or
+            event on the map.
+          </p>
+        </ServicesSummary>
       </main>
     </ServicesPage>
   );
