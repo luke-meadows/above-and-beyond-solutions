@@ -3,6 +3,9 @@ import Footer from './Footer';
 import Header from './Header';
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
+import MobileNav from './MobileNav';
+import { useContext } from 'react';
+import { Ctx } from '../lib/ctxProvider';
 export default function Page({ children }) {
   return (
     <StyledPage>
@@ -12,6 +15,7 @@ export default function Page({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <GlobalStyle />
+      <MobileNav />
       <>
         <Header />
         {children}
@@ -34,6 +38,7 @@ html {
   box-sizing: border-box;
   background: white;
   min-width: 100vw;
+  min-height: 100vh;
   --pink: #e4526f;
   --white: white;
   --black: #040404;
@@ -146,4 +151,11 @@ a {
   color: black;
 }
 
+`;
+
+const InnerScrollContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
 `;

@@ -11,7 +11,13 @@ export default function Header() {
   const [headerHeight, setHeaderHeight] = useState(0);
 
   const headerRef = useRef();
-  const { stickyNavCoords, shouldStick, setShouldStick } = useContext(Ctx);
+  const {
+    stickyNavCoords,
+    shouldStick,
+    setShouldStick,
+    setMobileNavActive,
+    mobileNavActive,
+  } = useContext(Ctx);
   const router = Router;
   const onAbout = router?.router?.asPath === '/about-us';
 
@@ -93,7 +99,10 @@ export default function Header() {
           hello@aboveandbeyondsolutions.co.uk
         </div>
       </div>
-      <div className="mobile-menu">
+      <div
+        className="mobile-menu"
+        onClick={() => setMobileNavActive(!mobileNavActive)}
+      >
         <i className="icon-menu" />
       </div>
     </StyledHeader>
@@ -111,7 +120,7 @@ const StyledHeader = styled.header`
   align-items: center;
   top: 0;
   left:0;
-  z-index: 1;
+  z-index: 2;
   width: 100vw;
   max-width: 100vw;
   padding: 0 var(--padding);
