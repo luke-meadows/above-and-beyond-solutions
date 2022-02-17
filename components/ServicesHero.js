@@ -46,6 +46,9 @@ export const Styles = styled.div`
       max-width: 100%;
     }
   }
+  .small {
+    font-size: var(--service-hero-text);
+  }
   button {
     margin-top: 1rem;
     width: 10rem;

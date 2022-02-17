@@ -5,7 +5,7 @@ export const ServicesPage = styled.div`
     padding-top: 2rem;
     @media only screen and (max-width: 415px) {
       padding-top: 0;
-      margin-bottom: -4rem;
+      /* margin-bottom: -4rem; */
     }
   }
 `;
@@ -13,6 +13,7 @@ export const ServicesPage = styled.div`
 export const ServicesHeader = styled.div`
   text-align: center;
   margin-top: 1rem;
+  padding: 0 var(--padding);
   h4 {
     color: var(--pink);
     font-weight: 500;
@@ -37,7 +38,7 @@ export const IconCards = styled.div`
     margin-top: 1rem;
     padding: 0 1rem 3rem 1rem;
     grid-row-gap: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: -1rem;
   }
 `;
 
@@ -80,9 +81,7 @@ export const ServicesSummary = styled.div`
   position: relative;
   padding: 2rem;
   color: white;
-  /* background: var(--white); */
   text-align: center;
-
   h4 {
     color: var(--pink);
     font-weight: 500;
@@ -100,7 +99,7 @@ export const ServicesSummary = styled.div`
     padding: 2rem var(--padding);
   }
   @media only screen and (max-width: 415px) {
-    padding: 0;
+    padding: 1rem 0;
     p {
       font-size: 1rem;
     }

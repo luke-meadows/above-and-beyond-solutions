@@ -11,9 +11,9 @@ export default function Footer() {
         >
           <i className="icon social icon-linkedin" />
         </a>
-        <a target="blank" nphref="">
+        {/* <a target="blank" href="">
           <i className="icon social icon-facebook" />
-        </a>
+        </a> */}
         <a
           target="blank"
           href="https://www.instagram.com/aboveandbeyond_solutions/"

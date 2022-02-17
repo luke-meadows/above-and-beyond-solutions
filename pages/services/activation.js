@@ -15,11 +15,9 @@ export default function Activation() {
     <ServicesPage>
       <ServicesHero size={25}>
         <ServiceBackgroundImage img={Hero} position="center" brightness="0.3" />
-        <h2>
-          Activation <br />
-        </h2>
+        <h2>Brand Activations</h2>
         <p>
-          From huge PR stunts to UK wide sampling campaigns… Brand activations
+          From huge PR stunts to UK wide sampling campaigns. Brand activations
           are a series of WOW moments that you deliver throughout the year.
         </p>
         <button>
@@ -35,29 +33,29 @@ export default function Activation() {
         <IconCards>
           <IconCard>
             <i className="icon-network card-icon" />
-            <h5>Sponsorship and Partnership</h5>
+            <h5>Sponsorship & Partnership</h5>
             <p>
-              Websites that do not work, do not convert. We’ll audit and ensure
-              your website is functioning flawlessly so that every click
-              satisfies user expectations. <br />
+              Help ernhance your brands impage by partnering / collaborating
+              with Brands and People who share the same vision and can help
+              boost impact across campaigns
             </p>
           </IconCard>
           <IconCard>
             <i className="icon-gauge card-icon" />
             <h5>Sampling</h5>
             <p>
-              Unlike other web development agencies, we’re able to provide
-              ongoing optimisations and development as best practices evolve to
-              suit your marketing and sales goals.
+              Brand to hand sampling is one of the most traditional methods of
+              marketing but still to this day is one of the most impactful ways
+              to drive trial, which in turn will lead to repeat custom.
             </p>
           </IconCard>
           <IconCard>
             <i className="icon-ok card-icon" />
-            <h5>Brand Activations and Big Events</h5>
             <p>
-              Unlike other web development agencies, we’re able to provide
-              ongoing optimisations and development as best practices evolve to
-              suit your marketing and sales goals.
+              These are defining moments that create organic growth across
+              social media campaigns. These are impactful moments or events.
+              From driving tanks to flying hot air balloons across cities, no
+              activation is too big or too crazy!
             </p>
           </IconCard>
         </IconCards>
@@ -92,7 +90,7 @@ const ImageContainer = styled.div`
   display: absolute;
   left: 0;
   top: 0;
-  height: 100%;
+  height: fit-content;
   width: 100%;
   z-index: -1;
   img {
