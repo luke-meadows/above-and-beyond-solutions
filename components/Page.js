@@ -72,7 +72,7 @@ html {
     --mobile-menu-icon-display: initial;
 
     --hero-header-text: 2rem;
-    --hero-text: 1rem;
+    --hero-text: 1.3rem;
 
     --service-hero-header: 2rem;
     --service-hero-text: 1rem;

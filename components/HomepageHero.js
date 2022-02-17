@@ -77,7 +77,6 @@ const StyledHero = styled.div`
       p {
         font-weight: 500;
         font-size: var(--hero-text);
-        width: 85vw;
         max-width: 1000px;
         line-height: 2;
       }
@@ -93,7 +92,8 @@ const StyledHero = styled.div`
 
 const ImageContainer = styled.div`
   display: block;
-  width: 85vw;
+  width: calc(100vw - 2rem);
+  /* border: 1px solid blue; */
   margin-bottom: 1rem;
   max-width: 1000px;
 `;
