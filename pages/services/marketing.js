@@ -51,10 +51,10 @@ export default function MarketingPage() {
             <i className="icon-video card-icon" />
             <h5>Videography</h5>
             <p>
-              Producing fresh ideas, impactful conent and imaginative show
-              reels, we can support with any element of videographiy for your
+              Producing fresh ideas, impactful content and imaginative show
+              reels, we can support with any element of videography for your
               business needs. Not only will video grab and capture attention of
-              your custiomers but also is used as a tool to help influence
+              your customers but also is used as a tool to help influence
               decision making and boost your sales / conversions.
             </p>
             {/* <a href="/services/marketing/videography">Learn More</a> */}
@@ -109,15 +109,15 @@ export default function MarketingPage() {
           </ImageContainer>
           <h4>Why Choose Us?</h4>
           <p>
-            So you're looking for a full 360 marketing agency that you can
+            So you&apos;re looking for a full 360 marketing agency that you can
             actually trust without having to sift through countless websites
-            you've found from Google? We know the pain.
+            you&apos;ve found from Google? We know the pain.
             <br />
             <br />
-            It's exactly why we've created a one stop shop to support you with
-            all of your marketing requirements. We pride ourselves in working
-            with individuals who have had a plethora of experience in supporting
-            all types of business.
+            It&apos;s exactly why we&apos;ve created a one stop shop to support
+            you with all of your marketing requirements. We pride ourselves in
+            working with individuals who have had a plethora of experience in
+            supporting all types of business.
           </p>
         </ServicesSummary>
       </main>
