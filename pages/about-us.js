@@ -23,9 +23,11 @@ export default function AboutUs() {
           client expectations.
           <br />
           <br />
-          We make it our priority to understand our client’s objectives, working
-          alongside clients from concept to completion to create a unique and
-          memorable event.
+          <strong>
+            We make it our priority to understand our client’s objectives,
+            working alongside clients from concept to completion to create a
+            unique and memorable event.
+          </strong>
           <br />
           <br />
           We rarely see a client just once. Most of our clients come to us again
