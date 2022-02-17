@@ -30,6 +30,9 @@ const StyledPartners = styled.div`
     text-align: center;
     font-size: var(--section-heading-text);
     color: var(--pink);
+    @media only screen and (max-width: 415px) {
+      padding: var(--section-heading-padding);
+    }
   }
 
   .container {
