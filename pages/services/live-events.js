@@ -21,7 +21,7 @@ export default function LiveEvents() {
         <p>
           Live events provide an opportunity to interact with brands or
           customers in a very personal and tangible way that is almost
-          impoissible to acheive through digital marketing.
+          impossible to achieve through digital marketing.
         </p>
         <button>
           <i className="icon-mobile" />
@@ -50,8 +50,8 @@ export default function LiveEvents() {
             <p>
               We can help secure you some of the biggest names in the industry
               to really add the wow factor to your line up of entertainment.
-              Whether it’s a guest speaker for an exhibition or a headline A
-              list artist to headline a festival - we can support.
+              Whether it&apos;s a guest speaker for an exhibition or a headline
+              A list artist to headline a festival - we can support.
             </p>
           </IconCard>
           <IconCard>
@@ -90,7 +90,7 @@ export default function LiveEvents() {
               Creating high impact visual marketing campaigns that resonate with
               your customers to help enhance and uplift ticket sales. We are
               experts in this field and would love to share some previous
-              sucesses with you.
+              successes with you.
             </p>
           </IconCard>
         </IconCards>
@@ -109,12 +109,11 @@ export default function LiveEvents() {
             knowhow, expertise and the right industry contacts.
             <br />
             <br />
-            Our 15 years live event experience means we&apos;re proficient in
-            not only building and delivering the event but also organising
-            everything from logistics to technical delivery, promotions to
-            talent booking, licensing to ticket sales. To put it simply:
-            we&apos;ll take care of everything and put your music festival,
-            concert or event on the map.
+            Our 15 years live event experience means were proficient in not only
+            building and delivering the event but also organising everything
+            from logistics to technical delivery, promotions to talent booking,
+            licensing to ticket sales. To put it simply; we&apos;ll take care of
+            everything and put your music festival, concert or event on the map.
           </p>
         </ServicesSummary>
       </main>
