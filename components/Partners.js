@@ -26,7 +26,7 @@ const StyledPartners = styled.div`
   h2 {
     line-height: 1;
     font-weight: 500;
-    padding: var(--section-heading-padding);
+    padding: 4rem var(--padding) 2rem var(--padding);
     text-align: center;
     font-size: var(--section-heading-text);
     color: var(--pink);

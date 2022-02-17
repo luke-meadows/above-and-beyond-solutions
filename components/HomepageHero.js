@@ -14,11 +14,11 @@ export default function HomepageHero() {
   return (
     <StyledHero ref={heroRef}>
       <video
-        // autoPlay
+        autoPlay
         muted
         loop
-        // webkit-playsinline="true"
-        // playsinline="true"
+        webkit-playsinline="true"
+        playsinline="true"
         src={require('../public/assets/HERO-NO-SWEARING.mp4')}
         type="video/mp4"
       />
