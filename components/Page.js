@@ -89,7 +89,7 @@ html {
     --footer-nav-width: 100%;
 
     --microservice-grid-cols: repeat(1, 1fr);
-    
+
     }
     @media(max-width: 375px) and (max-height: 667px) {
       --service-hero-header: 1.8rem;

@@ -17,131 +17,155 @@ export default function AboutUs() {
       <h2>About Us</h2>
       <AboutTheBusiness>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam
-          pariatur tenetur nisi corporis porro! Molestiae, ipsam vero accusamus
-          provident eius, reiciendis necessitatibus odio enim beatae quibusdam
-          quos temporibus magnam, exercitationem recusandae. Blanditiis illum
-          perspiciatis hic eos tempore quasi, ipsa suscipit repellat cumque
-          eaque expedita inventore dolore ab labore placeat sunt odit quam illo.
-          Asperiores dignissimos, dolores vitae dolorum commodi laborum ipsa,
-          reiciendis explicabo dolor deserunt architecto totam! Maiores, porro
-          sed? Minima laborum inventore quidem libero, excepturi quod. Porro,
-          beatae ullam a neque, ab accusamus dolor perferendis officiis
-          molestiae rerum sed, corporis quos sapiente tenetur mollitia quae qui
-          reprehenderit! Distinctio, impedit.
+          Above & Beyond Solutions love events. We are passionate about them and
+          take each one personally. Our passion and dedication, combined with
+          the experience of our in-house event specialists enables us to exceed
+          client expectations.
+          <br />
+          <br />
+          We make it our priority to understand our client’s objectives, working
+          alongside clients from concept to completion to create a unique and
+          memorable event.
+          <br />
+          <br />
+          We rarely see a client just once. Most of our clients come to us again
+          and again, enabling us to develop a solid understanding of their
+          business objectives. Virtually all of our new customers arrive by
+          personal recommendation.
+          <br />
+          <br />
+          Small agency care with big agency capabilities. Always delivering and
+          going the extra mile to impress and stand out.
+          <br />
         </p>
       </AboutTheBusiness>
       <h2>Meet the Team</h2>
-      <TeamRow cols={2}>
-        <div className="img-container">
-          <Image objectPosition="center" src={img} />
-          <div className="info">
-            <h6>Sam Stockmans</h6>
-            <p>Founder / CEO</p>
+      <TeamRowsContainer>
+        <TeamRow cols={2}>
+          <div className="img-container">
+            <Image objectPosition="center" src={img} />
+            <div className="info">
+              <h6>Sam Stockmans</h6>
+              <p>Founder / CEO</p>
+            </div>
           </div>
-        </div>
-        <div className="img-container">
-          <Image objectFit="cover" objectPosition="center" src={img} />
-          <div className="info">
-            <h6>Mark Haverly</h6>
-            <p>Founder / Managing Director</p>
+          <div className="img-container">
+            <Image objectFit="cover" objectPosition="center" src={img} />
+            <div className="info">
+              <h6>Mark Haverly</h6>
+              <p>Founder / Managing Director</p>
+            </div>
           </div>
-        </div>
-      </TeamRow>
-      <TeamRow cols={3}>
-        <div className="img-container">
-          <Image objectFit="cover" objectPosition="center" src={img} />
-          <div className="info">
-            <h6>Malik Mattu</h6>
-            <p>Event Activation Executive</p>
+        </TeamRow>
+        <TeamRow cols={3}>
+          <div className="img-container">
+            <Image objectFit="cover" objectPosition="center" src={img} />
+            <div className="info">
+              <h6>Malik Mattu</h6>
+              <p>Event Activation Executive</p>
+            </div>
           </div>
-        </div>
-        <div className="img-container">
-          <Image objectFit="cover" objectPosition="center" src={img} />
-          <div className="info">
-            <h6>Erin Brown</h6>
-            <p>PR / Head of Artist Liaison</p>
+          <div className="img-container">
+            <Image objectFit="cover" objectPosition="center" src={img} />
+            <div className="info">
+              <h6>Erin Brown</h6>
+              <p>PR / Head of Artist Liaison</p>
+            </div>
           </div>
-        </div>
-        <div className="img-container">
-          <Image objectFit="cover" objectPosition="center" src={img} />
-          <div className="info">
-            <h6>Luke Meadows</h6>
-            <p>Web Development Manager</p>
+          <div className="img-container">
+            <Image objectFit="cover" objectPosition="center" src={img} />
+            <div className="info">
+              <h6>Luke Meadows</h6>
+              <p>Web Development Manager</p>
+            </div>
           </div>
-        </div>
-      </TeamRow>
-      <TeamRow cols={3}>
-        <div className="img-container">
-          <Image objectFit="cover" objectPosition="center" src={img} />
-          <div className="info">
-            <h6>Cameron Cox</h6>
-            <p>Videographer</p>
+        </TeamRow>
+        <TeamRow cols={3}>
+          <div className="img-container">
+            <Image objectFit="cover" objectPosition="center" src={img} />
+            <div className="info">
+              <h6>Cameron Cox</h6>
+              <p>Videographer</p>
+            </div>
           </div>
-        </div>
-        <div className="img-container">
-          <Image objectFit="cover" objectPosition="center" src={img} />
-          <div className="info">
-            <h6>Rich Phillips</h6>
-            <p>Photographer</p>
+          <div className="img-container">
+            <Image objectFit="cover" objectPosition="center" src={img} />
+            <div className="info">
+              <h6>Rich Phillips</h6>
+              <p>Photographer</p>
+            </div>
           </div>
-        </div>
-        <div className="img-container">
-          <Image objectFit="cover" objectPosition="center" src={img} />
-          <div className="info">
-            <h6>Frankie</h6>
-            <p>Head of Customer Experience </p>
+          <div className="img-container">
+            <Image objectFit="cover" objectPosition="center" src={img} />
+            <div className="info">
+              <h6>Frankie</h6>
+              <p>Head of Customer Experience </p>
+            </div>
           </div>
-        </div>
-      </TeamRow>
-      <TeamRow cols={3}>
-        <div className="img-container">
-          <Image objectFit="cover" objectPosition="center" src={img} />
-          <div className="info">
-            <h6>Jenny Forbes</h6>
-            <p>Sponsorship & Partnership</p>
+        </TeamRow>
+        <TeamRow cols={3}>
+          <div className="img-container">
+            <Image objectFit="cover" objectPosition="center" src={img} />
+            <div className="info">
+              <h6>Jenny Forbes</h6>
+              <p>Sponsorship & Partnership</p>
+            </div>
           </div>
-        </div>
-        <div className="img-container">
-          <Image objectFit="cover" objectPosition="center" src={img} />
-          <div className="info">
-            <h6>Dan Connolly</h6>
-            <p>Web Developer</p>
+          <div className="img-container">
+            <Image objectFit="cover" objectPosition="center" src={img} />
+            <div className="info">
+              <h6>Dan Connolly</h6>
+              <p>Web Developer</p>
+            </div>
           </div>
-        </div>
-        <div className="img-container">
-          <Image objectFit="cover" objectPosition="center" src={img} />
-          <div className="info">
-            <h6>Darren New</h6>
-            <p>Production / Events</p>
+          <div className="img-container">
+            <Image objectFit="cover" objectPosition="center" src={img} />
+            <div className="info">
+              <h6>Darren New</h6>
+              <p>Production / Events</p>
+            </div>
           </div>
-        </div>
-      </TeamRow>
+        </TeamRow>
+      </TeamRowsContainer>
     </StyledAbout>
   );
 }
 
 const StyledAbout = styled.div`
   padding-top: 6rem;
+  max-width: 90rem;
+  margin: auto;
+  @media only screen and (max-width: 415px) {
+    padding-top: 5rem;
+  }
   h2 {
     line-height: 1;
     font-weight: 500;
-    padding: 4rem 5rem;
+    padding: 4rem var(--padding);
     text-align: center;
-    font-size: 2.1rem;
+    font-size: var(--section-heading-text);
     color: var(--pink);
+    @media only screen and (max-width: 415px) {
+      padding: 1rem var(--padding);
+    }
   }
 `;
 
 const AboutTheBusiness = styled.div`
   p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-align: center;
     font-weight: 300;
-    padding: 0 5rem;
+    padding: 0 var(--padding);
+    @media only screen and (max-width: 415px) {
+      font-size: 1rem;
   }
 `;
-
+const TeamRowsContainer = styled.div`
+  @media only screen and (max-width: 415px) {
+    margin-top: 1rem;
+  }
+`;
 const TeamRow = styled.div`
   display: grid;
   grid-template-columns: ${(props) => `repeat(${props.cols}, 1fr)`};
@@ -153,20 +177,27 @@ const TeamRow = styled.div`
   @media only screen and (max-width: 1600px) {
     gap: 6rem;
   }
+  @media only screen and (max-width: 415px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
   .img-container {
     border-radius: 50rem;
     overflow: hidden;
     height: 400px;
     width: 400px;
     position: relative;
+    @media only screen and (max-width: 415px) {
+      overflow: initial;
+      min-height: 350px;
+    }
     @media only screen and (max-width: 1600px) {
       height: 300px;
       width: 300px;
     }
-
     img {
       height: 100%;
       weight: 100%;
+      border-radius: 50rem;
     }
     &:hover {
       .info {
@@ -194,6 +225,12 @@ const TeamRow = styled.div`
       }
       p {
         color: var(--white);
+      }
+      @media only screen and (max-width: 415px) {
+        position: relative;
+        visibility: initial;
+        height: fit-content;
+        padding: 1rem;
       }
     }
   }
