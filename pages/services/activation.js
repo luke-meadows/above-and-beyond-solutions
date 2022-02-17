@@ -28,7 +28,7 @@ export default function Activation() {
       </ServicesHero>
       <main>
         <ServicesHeader>
-          <h4>Brand Activations and Big Events</h4>
+          <h4>Brand Activations</h4>
           <h5>What We Can Help With:</h5>
         </ServicesHeader>
         <IconCards>

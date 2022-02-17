@@ -54,6 +54,7 @@ export const IconCard = styled.div`
     padding: 1rem;
     font-size: 1.2rem;
     font-weight: 500;
+    text-align: center;
     @media only screen and (max-width: 415px) {
       margin: -1rem 0 0rem 0;
     }
