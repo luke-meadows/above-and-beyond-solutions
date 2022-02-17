@@ -8,11 +8,7 @@ export default function ServicesHero({ children, size }) {
     const rectHeight = heroRef.current.getBoundingClientRect().height;
     setStickyNavCoords(rectHeight);
   });
-  return (
-    <Styles size={size} ref={heroRef}>
-      {children}
-    </Styles>
-  );
+  return <Styles ref={heroRef}>{children}</Styles>;
 }
 
 export const Styles = styled.div`
@@ -37,17 +33,13 @@ export const Styles = styled.div`
     color: white;
     margin: 1rem 0;
     font-weight: 300;
-    font-size: ${(props) =>
-      props.size ? props.size + 'px' : 'var(--service-hero-text)'};
+    font-size: var(--service-hero-text);
 
     max-width: 80%;
     line-height: 2;
     @media only screen and (max-width: 415px) {
       max-width: 100%;
     }
-  }
-  .small {
-    font-size: var(--service-hero-text);
   }
   button {
     margin-top: 1rem;

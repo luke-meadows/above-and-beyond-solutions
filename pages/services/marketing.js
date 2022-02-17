@@ -10,13 +10,13 @@ import ServicesHero from '../../components/ServicesHero';
 export default function MarketingPage() {
   return (
     <ServicesPage>
-      <ServicesHero size={10}>
+      <ServicesHero size={22}>
         <ServiceBackgroundImage img={Hero} position="top" brightness="0.35" />
         <h2>Marketing</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
-          quam nesciunt eveniet ex eum voluptatibus, aliquid dolore autem
-          debitis numquam.
+          Stop wasting your time and money on marketing that doesn’t work. Let
+          us know your business goals and we’ll create you a free personalised
+          marketing plan.
         </p>
         <button>
           <i className="icon-mobile" />
@@ -80,9 +80,11 @@ export default function MarketingPage() {
             <i className="icon-camera card-icon" />
             <h5>Photography</h5>
             <p>
-              Teaming you up with our in house photography experts, making sure
-              the visual aspect of your business is among many of the marketing
-              services we can provide.
+              Our in-house photographer Rich, is a master of his field. With his
+              years of experience photographing a variety of artistic genres, we
+              can offer a complete photography package that will capture the
+              very best of your events. From crowd engagement down to brand
+              placement, nothing is missed.
             </p>
           </IconCard>
           <IconCard>

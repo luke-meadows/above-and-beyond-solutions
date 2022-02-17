@@ -1,14 +1,15 @@
 import {
   IconCard,
   IconCards,
+  ImageContainer,
   ServicesHeader,
   ServicesPage,
   ServicesSummary,
 } from '../../styles/ServicesStyles';
-import Hero from '../../public/assets/service-heros/activation-hero.png';
+import Hero from '../../public/assets/service-heros/activations-hero.png';
+import SummaryImg from '../../public/assets/service-summary-imgs/activations-summary-img.png';
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
-import styled from 'styled-components';
 import Image from 'next/image';
 export default function Activation() {
   return (
@@ -35,9 +36,9 @@ export default function Activation() {
             <i className="icon-network card-icon" />
             <h5>Sponsorship & Partnership</h5>
             <p>
-              Help ernhance your brands impage by partnering / collaborating
-              with Brands and People who share the same vision and can help
-              boost impact across campaigns
+              Help enhance your brands impact by partnering / collaborating with
+              Brands and People who share the same vision and can help boost
+              impact across campaigns
             </p>
           </IconCard>
           <IconCard>
@@ -51,6 +52,7 @@ export default function Activation() {
           </IconCard>
           <IconCard>
             <i className="icon-ok card-icon" />
+            <h5>Brand Activation and WOW moments</h5>
             <p>
               These are defining moments that create organic growth across
               social media campaigns. These are impactful moments or events.
@@ -61,12 +63,16 @@ export default function Activation() {
         </IconCards>
         <ServicesSummary>
           <ImageContainer>
-            <Image layout="fill" objectFit="cover" src={Hero} />
+            <Image
+              layout="fill"
+              objectPosition="bottom"
+              objectFit="cover"
+              src={SummaryImg}
+            />
           </ImageContainer>
-          <h4>Summary Heading</h4>
-          <h5>Summary Subheading</h5>
+          <h4>Why Choose Us?</h4>
           <p>
-            We are well adverse to producing and creating eye catching, high
+            We are well versed in producing and creating eye catching, high
             impact, creative campaigns bringing your brand to the forefront of
             the consumers eye.
             <br />
@@ -85,16 +91,3 @@ export default function Activation() {
     </ServicesPage>
   );
 }
-
-const ImageContainer = styled.div`
-  display: absolute;
-  left: 0;
-  top: 0;
-  height: fit-content;
-  width: 100%;
-  z-index: -1;
-  img {
-    filter: brightness(0.3);
-    z-index: -1;
-  }
-`;

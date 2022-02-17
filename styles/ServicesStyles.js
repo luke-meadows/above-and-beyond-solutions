@@ -82,17 +82,19 @@ export const ServicesSummary = styled.div`
   padding: 2rem;
   color: white;
   text-align: center;
+  min-height: 45vh;
   h4 {
     color: var(--pink);
     font-weight: 500;
     font-size: 2.1rem;
-    margin-bottom: 1rem;
   }
   h5 {
     font-weight: 400;
     font-size: 1.5rem;
   }
   p {
+    max-width: 120ch;
+    margin: 0 auto;
     font-size: 1.2rem;
     text-align: center;
     font-weight: 300;
@@ -103,5 +105,18 @@ export const ServicesSummary = styled.div`
     p {
       font-size: 1rem;
     }
+  }
+`;
+
+export const ImageContainer = styled.div`
+  display: absolute;
+  left: 0;
+  top: 0;
+  height: fit-content;
+  width: 100%;
+  z-index: -1;
+  img {
+    filter: brightness(0.3);
+    z-index: -1;
   }
 `;
