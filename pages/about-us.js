@@ -24,7 +24,7 @@ export default function AboutUs() {
           <br />
           <br />
           <strong>
-            We make it our priority to understand our client’s objectives,
+            We make it our priority to understand our client&apos;s objectives,
             working alongside clients from concept to completion to create a
             unique and memorable event.
           </strong>

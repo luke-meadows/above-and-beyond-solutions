@@ -19,9 +19,9 @@ export default function MarketingPage() {
         <ServiceBackgroundImage img={Hero} position="top" brightness="0.3" />
         <h2>Marketing</h2>
         <p>
-          Stop wasting your time and money on marketing that doesn’t work. Let
-          us know your business goals and we’ll create you a free personalised
-          marketing plan.
+          Stop wasting your time and money on marketing that doesn&apos;t work.
+          Let us know your business goals and we&apos;ll create you a free
+          personalised marketing plan.
         </p>
         <button>
           <i className="icon-mobile" />
@@ -40,9 +40,9 @@ export default function MarketingPage() {
             <p>
               Servicing over 50+ clients across the UK and growing we boast an
               in house UK based team available 24 hours a day. We can take care
-              of the design, hosting and maintenance of your business’ website.
-              Ensuring your audience sees a clean, impactful and professional
-              digital shopfront.
+              of the design, hosting and maintenance of your business&apos;
+              website. Ensuring your audience sees a clean, impactful and
+              professional digital shopfront.
               <br />
             </p>
             {/* <a href="/services/marketing/web-development">Learn More</a> */}
