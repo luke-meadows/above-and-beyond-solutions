@@ -10,7 +10,7 @@ import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 export default function Services() {
   return (
     <ServicesPage>
-      <ServicesHero>
+      <ServicesHero size={22}>
         <ServiceBackgroundImage img={hero} position="center" brightness="0.3" />
         <h2>What we can do for you</h2>
         <p className="small">
@@ -29,7 +29,7 @@ export default function Services() {
       <main>
         <ServicesHeader>
           <h4>Our Services</h4>
-          <h5>Designed to (.......)</h5>
+          <h5>Big impact, creative campaigns with small agency care. </h5>
         </ServicesHeader>
         <ServicesSummary
           style={{

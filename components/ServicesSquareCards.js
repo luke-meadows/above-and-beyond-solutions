@@ -12,9 +12,9 @@ export default function ServicesSquareCards() {
       <Card>
         <h3>Marketing</h3>
         <p>
-          From building your brand to taking a stagnated entity back to the
-          forefront of peoples imagination. We will achieve the success you want
-          through activations and complimentary socials.
+          Stop wasting your time and money on marketing that doesn’t work. Let
+          us know your business goals and we’ll create you a free personalised
+          marketing plan.
         </p>
         <Link href="/services/marketing">
           <button>Learn More</button>
@@ -26,9 +26,10 @@ export default function ServicesSquareCards() {
       <Card>
         <h3>Exhibitions</h3>
         <p>
-          The mainstay of face to face marketing, how to present your business,
-          your team, what customers do you want, with planning and exquisite
-          delivery we will deliver the results in a fuss free methodology.
+          Delivering high quality, immersive exhibition solutions that
+          successfully deliver your brand messaging, create engagment and
+          increase footfall. Our innovative and unique stand designs bring your
+          brand to life and help you to engage with your customers.
         </p>
         <Link href="/services/exhibitions">
           <button>Learn More</button>
@@ -40,9 +41,10 @@ export default function ServicesSquareCards() {
       <Card>
         <h3>Live Events</h3>
         <p>
-          We work with promoters to deliver first class acts. We also have
-          excellent people to manage and look after the artist and fantastic
-          connections for the logistical side of the deal.
+          Our 15 years live event experience means we’re proficient in not only
+          building and delivering the event but also organising everything from
+          logistics to technical delivery, promotions to talent booking,
+          licensing to ticket sales.
         </p>
         <Link href="/services/live-events">
           <button>Learn More</button>
@@ -52,13 +54,12 @@ export default function ServicesSquareCards() {
         </div>
       </Card>
       <Card>
-        <h3>Activation</h3>
+        <h3>Brand Activations</h3>
         <p>
-          These are the look at me moments that get you free national press. We
-          specialise in different, we celebrate the different, partly through
-          our neurodiverse culture and staff. Coming up with unique attention
-          grabbing ideas that create talking points by those outside of your
-          standard community.
+          From huge PR stunts to UK wide sampling campaigns. Brand activations
+          are a series of WOW moments that you deliver throughout the year. We
+          are well versed in producing eye catching, high impact campaigns.
+          Bringing your brand to the consumers eye.
         </p>
         <Link href="/services/activation">
           <button>Learn More</button>

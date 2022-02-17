@@ -55,6 +55,7 @@ html {
   --service-section-tagline: 1.5rem;
 
   --partners-grid-gap: 6rem;
+  --partners-grid-template-cols: repeat(6, 1fr);
 
   --service-card-grid-cols: repeat(4, 1fr);
   --service-card-header: 1.5rem;
@@ -82,6 +83,8 @@ html {
     --section-heading-padding: 2rem 1rem;
 
     --partners-grid-gap: 1rem;
+  --partners-grid-template-cols: repeat(4, 1fr);
+
 
     --service-card-grid-cols: repeat(1, 1fr);
     --service-card-header: 1.2rem;

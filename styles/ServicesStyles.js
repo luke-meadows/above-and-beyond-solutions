@@ -61,6 +61,10 @@ export const IconCard = styled.div`
     font-size: 1rem;
     text-align: center;
     font-weight: 300;
+    margin: auto;
+    @media only screen and (max-width: 415px) {
+      margin: 0;
+    }
   }
   a {
     margin-top: 0.5rem;
@@ -73,12 +77,22 @@ export const IconCard = styled.div`
 `;
 
 export const ServicesSummary = styled.div`
-  min-height: calc(100vh - 5rem);
   position: relative;
   padding: 2rem;
-  color: black;
-  background: var(--white);
+  color: white;
+  /* background: var(--white); */
+  text-align: center;
 
+  h4 {
+    color: var(--pink);
+    font-weight: 500;
+    font-size: 2.1rem;
+    margin-bottom: 1rem;
+  }
+  h5 {
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
   p {
     font-size: 1.2rem;
     text-align: center;

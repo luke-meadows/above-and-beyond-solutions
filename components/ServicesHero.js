@@ -1,14 +1,18 @@
 import styled from 'styled-components';
 import { useContext, useEffect, useRef } from 'react';
 import { Ctx } from '../lib/ctxProvider';
-export default function ServicesHero({ children }) {
+export default function ServicesHero({ children, size }) {
   const heroRef = useRef();
   const { setStickyNavCoords } = useContext(Ctx);
   useEffect(() => {
     const rectHeight = heroRef.current.getBoundingClientRect().height;
     setStickyNavCoords(rectHeight);
   });
-  return <Styles ref={heroRef}>{children}</Styles>;
+  return (
+    <Styles size={size} ref={heroRef}>
+      {children}
+    </Styles>
+  );
 }
 
 export const Styles = styled.div`
@@ -33,16 +37,14 @@ export const Styles = styled.div`
     color: white;
     margin: 1rem 0;
     font-weight: 300;
-    font-size: var(--service-hero-text);
+    font-size: ${(props) =>
+      props.size ? props.size + 'px' : 'var(--service-hero-text)'};
+
     max-width: 80%;
     line-height: 2;
     @media only screen and (max-width: 415px) {
       max-width: 100%;
     }
-  }
-  .small {
-    /* line-height: 1.8; */
-    font-size: var(--service-hero-text);
   }
   button {
     margin-top: 1rem;

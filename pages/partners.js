@@ -18,20 +18,8 @@ export default function PartnersPage() {
       <h2>Our Partners</h2>
       <AboutPartners>
         <p>
-          <strong>
-            {' '}
-            We work with a range of different companies in a diverse set of
-            industries.... etc etc
-          </strong>{' '}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda id
-          iure ipsam dolorem, asperiores, eligendi excepturi exercitationem
-          soluta quibusdam delectus praesentium nostrum cumque, nihil dolore?
-          Perferendis inventore aperiam error repellendus modi voluptatum quam
-          illum. Sunt dolore nemo alias reprehenderit ipsam expedita animi!
-          Aperiam, quasi necessitatibus ipsum cum mollitia, tempore perspiciatis
-          ratione quos, at nemo voluptatibus odio beatae nihil. Mollitia
-          laboriosam atque ipsa ab provident repellendus doloremque nemo! Quidem
-          dolor nihil eaque mollitia similique nesciunt iure!
+          Brands who have experienced the creative impact of working with Above
+          and Beyond:
         </p>
       </AboutPartners>
       <Partners noTitle={true} />
@@ -53,9 +41,10 @@ const StyledAbout = styled.div`
 
 const AboutPartners = styled.div`
   p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-align: center;
-    font-weight: 300;
+    font-weight: 400;
     padding: 0 5rem;
   }
+  margin-bottom: 4rem;
 `;
