@@ -103,29 +103,6 @@ export default function AboutUs() {
             </div>
           </div>
         </TeamRow>
-        <TeamRow cols={3}>
-          <div className="img-container">
-            <Image objectFit="cover" objectPosition="center" src={img} />
-            <div className="info">
-              <h6>Jenny Forbes</h6>
-              <p>Sponsorship & Partnership</p>
-            </div>
-          </div>
-          <div className="img-container">
-            <Image objectFit="cover" objectPosition="center" src={img} />
-            <div className="info">
-              <h6>Dan Connolly</h6>
-              <p>Web Developer</p>
-            </div>
-          </div>
-          <div className="img-container">
-            <Image objectFit="cover" objectPosition="center" src={img} />
-            <div className="info">
-              <h6>Darren New</h6>
-              <p>Production / Events</p>
-            </div>
-          </div>
-        </TeamRow>
       </TeamRowsContainer>
     </StyledAbout>
   );
