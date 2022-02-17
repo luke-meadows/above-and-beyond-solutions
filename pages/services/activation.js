@@ -80,11 +80,11 @@ export default function Activation() {
             From rolling a bright orange tank through central London and parking
             it outside of the houses of Parliament to protest the closure of
             gyms during lock down, to flying a 100ft tall hot air balloon across
-            Liverpool to celebrate the Semi Final EURO’s win, to delivering a
-            100 store tesco sampling campaign, to producing and creating a short
-            feature length film - Above and Beyond’s creativity and can do
-            attitude can enable your brand to bring even the craziest of ideas
-            to life
+            Liverpool to celebrate the Semi Final EURO&apos;s win, to delivering
+            a 100 store tesco sampling campaign, to producing and creating a
+            short feature length film - Above and Beyond&apos;s creativity and
+            can do attitude can enable your brand to bring even the craziest of
+            ideas to life
           </p>
         </ServicesSummary>
       </main>

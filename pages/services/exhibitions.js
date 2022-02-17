@@ -20,8 +20,8 @@ export default function Exhibitions() {
         <h2>Exhibitions</h2>
         <p>
           With over 20 years of experience creating bespoke stands and a full
-          knowledge of exhibitions, we’re experts at creating a visionary space
-          tailored to your needs.
+          knowledge of exhibitions, we&apos;re experts at creating a visionary
+          space tailored to your needs.
         </p>
         <button>
           <i className="icon-mobile" />

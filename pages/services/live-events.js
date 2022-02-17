@@ -77,10 +77,10 @@ export default function LiveEvents() {
             <i className="icon-retweet card-icon" />
             <h5>Production & Back of House</h5>
             <p>
-              Back of house / festival management takes the ‘on the day’ stress
-              away from the organiser. We can manage everything back of house
-              from crew catering, to artist riders, to stage managers and
-              security.
+              Back of house / festival management takes the &apos;on the
+              day&apos; stress away from the organiser. We can manage everything
+              back of house from crew catering, to artist riders, to stage
+              managers and security.
             </p>
           </IconCard>
           <IconCard>
@@ -109,12 +109,12 @@ export default function LiveEvents() {
             knowhow, expertise and the right industry contacts.
             <br />
             <br />
-            Our 15 years live event experience means we’re proficient in not
-            only building and delivering the event but also organising
+            Our 15 years live event experience means we&apos;re proficient in
+            not only building and delivering the event but also organising
             everything from logistics to technical delivery, promotions to
-            talent booking, licensing to ticket sales. To put it simply; we’ll
-            take care of everything and put your music festival, concert or
-            event on the map.
+            talent booking, licensing to ticket sales. To put it simply:
+            we&apos;ll take care of everything and put your music festival,
+            concert or event on the map.
           </p>
         </ServicesSummary>
       </main>
