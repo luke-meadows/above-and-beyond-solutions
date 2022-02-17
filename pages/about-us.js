@@ -159,6 +159,7 @@ const AboutTheBusiness = styled.div`
     padding: 0 var(--padding);
     @media only screen and (max-width: 415px) {
       font-size: 1rem;
+      margin-bottom: 1rem;
   }
 `;
 const TeamRowsContainer = styled.div`
@@ -231,6 +232,7 @@ const TeamRow = styled.div`
         visibility: initial;
         height: fit-content;
         padding: 1rem;
+        background: black;
       }
     }
   }
