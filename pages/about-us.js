@@ -23,7 +23,7 @@ export default function AboutUs() {
           client expectations.
           <br />
           <br />
-          <strong>
+          <strong style={{ fontWeight: '500' }}>
             We make it our priority to understand our client&apos;s objectives,
             working alongside clients from concept to completion to create a
             unique and memorable event.
@@ -78,7 +78,7 @@ export default function AboutUs() {
             <Image objectFit="cover" objectPosition="center" src={img} />
             <div className="info">
               <h6>Luke Meadows</h6>
-              <p>Web Development Manager</p>
+              <p>Web Developer</p>
             </div>
           </div>
         </TeamRow>

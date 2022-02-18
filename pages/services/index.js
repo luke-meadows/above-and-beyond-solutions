@@ -38,7 +38,7 @@ export default function Services() {
             minHeight: '5rem',
           }}
         >
-          <p>
+          <p class="service-home-p">
             Our digital marketing prowess tied to exhibition stand planning and
             delivery through to artist liaison, logistics and event promotion.
             Highlights our diverse yet in sync offering that not many other

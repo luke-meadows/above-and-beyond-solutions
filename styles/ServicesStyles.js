@@ -22,7 +22,7 @@ export const ServicesHeader = styled.div`
     padding: 0 var(--padding);
   }
   h5 {
-    font-weight: 400;
+    font-weight: 500;
     font-size: var(--service-section-tagline);
   }
 `;
@@ -108,6 +108,9 @@ export const ServicesSummary = styled.div`
     }
     h4 {
       margin-top: 1rem;
+    }
+    .service-home-p {
+      margin-top: -1rem;
     }
   }
 `;
