@@ -23,7 +23,7 @@ export default function AboutUs() {
           client expectations.
           <br />
           <br />
-          <strong style={{ fontWeight: '500' }}>
+          <strong>
             We make it our priority to understand our client&apos;s objectives,
             working alongside clients from concept to completion to create a
             unique and memorable event.
