@@ -109,10 +109,11 @@ const StyledMobileNav = styled.div`
         padding: 0.5rem 0;
       }
       span {
-        margin-left: 0.5rem;
+        margin-left: 1rem;
       }
       i {
         font-size: 1rem;
+        color: var(--pink);
       }
     }
   }
@@ -128,6 +129,11 @@ const StyledMobileNav = styled.div`
   }
   .rotate {
     transform: rotate(-180deg);
+    * {
+      color: white;
+    }
+    i {
+    }
   }
 `;
 
