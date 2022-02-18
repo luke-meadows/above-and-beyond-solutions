@@ -9,7 +9,6 @@ import Router from 'next/router';
 
 export default function Header() {
   const [headerHeight, setHeaderHeight] = useState(0);
-
   const headerRef = useRef();
   const {
     stickyNavCoords,
@@ -30,6 +29,7 @@ export default function Header() {
       setShouldStick(false);
     }
   }
+
   // Sticky Menu Area
   useEffect(() => {
     window.addEventListener('scroll', isSticky);
@@ -120,7 +120,7 @@ const StyledHeader = styled.header`
   align-items: center;
   top: 0;
   left:0;
-  z-index: 2;
+  z-index: 3;
   width: 100vw;
   max-width: 100vw;
   padding: 0 var(--padding);
