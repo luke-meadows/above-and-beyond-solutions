@@ -39,7 +39,7 @@ const StyledPage = styled.div`
 const GlobalStyle = createGlobalStyle`
 html {
   box-sizing: border-box;
-  background: white;
+  background: black;
   min-width: 100vw;
   min-height: 100vh;
   overscroll-behavior: none;

@@ -10,7 +10,7 @@ export default function HomeServicesSection() {
 }
 
 const StyledServicesSection = styled.div`
-  margin-top: -2rem;
+  background: white;
   @media only screen and (max-width: 415px) {
     margin-top: -1rem;
     margin-bottom: -4rem;

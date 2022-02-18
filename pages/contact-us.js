@@ -53,6 +53,7 @@ export default function ContactUs() {
 }
 
 const StyledContact = styled.div`
+  background: white;
   padding: 6rem 0 4rem 0;
   color: black;
   max-width: 100vw;

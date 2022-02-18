@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const ServicesPage = styled.div`
   main {
-    padding-top: 2rem;
     @media only screen and (max-width: 415px) {
       padding-top: 0;
       /* margin-bottom: -4rem; */
@@ -11,9 +10,10 @@ export const ServicesPage = styled.div`
 `;
 
 export const ServicesHeader = styled.div`
+  background: white;
   text-align: center;
-  margin-top: 1rem;
-  padding: 0 var(--padding);
+
+  padding: 1rem var(--padding) 0 var(--padding);
   h4 {
     color: var(--pink);
     font-weight: 500;
@@ -28,15 +28,15 @@ export const ServicesHeader = styled.div`
 `;
 
 export const IconCards = styled.div`
+  background: white;
+
   display: grid;
   grid-template-columns: var(--microservice-grid-cols);
   grid-column-gap: 4rem;
   grid-row-gap: 4rem;
-  padding: 0 4rem 3rem 4rem;
-  margin-top: 2rem;
+  padding: 2rem 4rem 3rem 4rem;
   @media only screen and (max-width: 415px) {
-    margin-top: 1rem;
-    padding: 0 1rem 3rem 1rem;
+    padding: 1rem 1rem 3rem 1rem;
     grid-row-gap: 2rem;
     margin-bottom: -1rem;
   }
@@ -106,16 +106,21 @@ export const ServicesSummary = styled.div`
     p {
       font-size: 1rem;
     }
+    h4 {
+      margin-top: 1rem;
+    }
   }
 `;
 
 export const ImageContainer = styled.div`
+  background: black;
   display: absolute;
   left: 0;
   top: 0;
   height: fit-content;
   width: 100%;
   z-index: -1;
+
   img {
     filter: brightness(0.3);
     z-index: -1;

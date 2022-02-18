@@ -111,9 +111,9 @@ export default function AboutUs() {
 }
 
 const StyledAbout = styled.div`
+  background: white;
   padding-top: 6rem;
-  max-width: 90rem;
-  margin: auto;
+  max-width: 100%;
   @media only screen and (max-width: 415px) {
     padding-top: 5rem;
   }
@@ -136,6 +136,8 @@ const AboutTheBusiness = styled.div`
     text-align: center;
     font-weight: 300;
     padding: 0 var(--padding);
+    max-width: 1500px;
+    margin:auto;
     @media only screen and (max-width: 415px) {
       font-size: 1rem;
       margin-bottom: 1rem;

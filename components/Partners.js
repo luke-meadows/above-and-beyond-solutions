@@ -22,7 +22,7 @@ export default function Partners({ noTitle }) {
 const StyledPartners = styled.div`
   height: fit-content;
   padding: 0 var(--padding);
-
+  background: white;
   h2 {
     line-height: 1;
     font-weight: 500;
