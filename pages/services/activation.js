@@ -72,19 +72,18 @@ export default function Activation() {
           </ImageContainer>
           <h4>Why Choose Us?</h4>
           <p>
-            We are well versed in producing and creating eye catching, high
-            impact, creative campaigns bringing your brand to the forefront of
-            the consumers eye.
+            We are well versed in producing eye catching, high impact, creative
+            campaigns which bring your brand to the the consumers eye.
             <br />
             <br />
             From rolling a bright orange tank through central London and parking
-            it outside of the houses of Parliament to protest the closure of
-            gyms during lock down, to flying a 100ft tall hot air balloon across
-            Liverpool to celebrate the Semi Final EURO&apos;s win, to delivering
-            a 100 store tesco sampling campaign, to producing and creating a
-            short feature length film - Above and Beyond&apos;s creativity and
-            can do attitude can enable your brand to bring even the craziest of
-            ideas to life
+            it outside of the houses of Parliament, to protesting the closure of
+            gyms during lock down. From flying a 100ft tall hot air balloon
+            across Liverpool to celebrate the Semi Final EURO&apos;s win, to
+            delivering a 100 store tesco sampling campaign. From producing and
+            creating a short feature length film - Above and Beyond&apos;s
+            creativity and can do attitude can enable your brand to bring even
+            the craziest of ideas to life.
           </p>
         </ServicesSummary>
       </main>

@@ -27,6 +27,15 @@ export default function MobileNav() {
         <Link href="/services">
           <li onClick={() => setMobileNavActive(false)}>Services</li>
         </Link>
+        <Link href="/about-us">
+          <li onClick={() => setMobileNavActive(false)}>About Us</li>
+        </Link>
+        <Link href="/partners">
+          <li onClick={() => setMobileNavActive(false)}>Partners</li>
+        </Link>
+        <Link href="/contact-us">
+          <li onClick={() => setMobileNavActive(false)}>Contact Us</li>
+        </Link>
       </ul>
     </StyledMobileNav>
   );
