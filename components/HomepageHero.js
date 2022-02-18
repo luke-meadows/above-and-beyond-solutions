@@ -18,7 +18,7 @@ export default function HomepageHero() {
         muted
         loop
         webkit-playsinline="true"
-        playsinline="true"
+        playsInline={true}
         src={require('../public/assets/HERO-NO-SWEARING.mp4')}
         type="video/mp4"
       />
@@ -93,7 +93,7 @@ const StyledHero = styled.div`
 const ImageContainer = styled.div`
   display: block;
   width: calc(100vw - 2rem);
-  /* border: 1px solid blue; */
+
   margin-bottom: 1rem;
   max-width: 1000px;
 `;

@@ -38,11 +38,11 @@ export default function MarketingPage() {
             <i className="icon-window card-icon" />
             <h5>Web Development</h5>
             <p>
-              Servicing over 50+ clients across the UK and growing we boast an
-              in house UK based team available 24 hours a day. We can take care
-              of the design, hosting and maintenance of your business&apos;
-              website. Ensuring your audience sees a clean, impactful and
-              professional digital shopfront.
+              Servicing over 50 clients across the UK and growing we boast an in
+              house UK based team, available 24 hours a day. We take care of the
+              design, hosting and maintenance of your business&apos; website. We
+              provide a clean, impactful and professional digital shopfront for
+              you and your audience.
               <br />
             </p>
             {/* <a href="/services/marketing/web-development">Learn More</a> */}

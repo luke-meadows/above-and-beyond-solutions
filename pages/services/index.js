@@ -15,11 +15,11 @@ export default function Services() {
         <h2>What we can do for you</h2>
         <p className="small">
           Our service offering reflects the talent within Above and Beyond
-          Solutions, which is a collective of live event professionals and tech
-          and social advocates. We connect the brands, the artist and the
-          audience through multi channel marketing and activations. With our
-          commercially astute team Above and Beyond Solutions will maximise the
-          return on engagement.
+          Solutions, which is a collective of live event professionals, tech
+          specialists and social advocates. <br /> We connect the brand, the
+          artist and the audience through multi channel marketing and
+          activations. With our commercially astute team Above and Beyond
+          Solutions will maximise the return on engagement.
         </p>
         <button>
           <i className="icon-mobile" />

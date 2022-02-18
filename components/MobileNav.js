@@ -37,7 +37,7 @@ const StyledMobileNav = styled.div`
   position: fixed;
   background: none;
   color: white;
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
   z-index: 4;
   transition: all 0.5s ease-out;
@@ -45,7 +45,7 @@ const StyledMobileNav = styled.div`
     opacity: 0;
   }
   &.mobile-nav-active {
-    background: black;
+    /* background: black; */
     opacity: 1;
     pointer-events: all;
     * {
