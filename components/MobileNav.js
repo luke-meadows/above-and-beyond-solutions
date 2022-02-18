@@ -4,7 +4,6 @@ import { useContext } from 'react';
 import styled from 'styled-components';
 import { Ctx } from '../lib/ctxProvider';
 import thumbnailLogo from '../public/assets/logos/thumbnail-white-logo.svg';
-import Router from 'next/router';
 
 export default function MobileNav() {
   const { mobileNavActive, setMobileNavActive } = useContext(Ctx);
@@ -21,7 +20,7 @@ export default function MobileNav() {
           }
           onClick={() => setMobileNavActive(!mobileNavActive)}
         >
-          <i className="icon-cancel" />
+          <i className="icon-cancel-1" />
         </div>
       </MobileHeader>
       <ul>

@@ -25,11 +25,10 @@ export default function Page({ children }) {
 }
 
 const StyledPage = styled.div`
-  min-height: 100vh;
+  min-height: 70vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 `;
 
 const GlobalStyle = createGlobalStyle`
