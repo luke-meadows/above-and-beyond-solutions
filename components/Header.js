@@ -99,12 +99,14 @@ export default function Header() {
           hello@aboveandbeyondsolutions.co.uk
         </div>
       </div>
-      <div
-        className="mobile-menu"
-        onClick={() => setMobileNavActive(!mobileNavActive)}
-      >
-        <i className="icon-menu" />
-      </div>
+      {!mobileNavActive && (
+        <div
+          className="mobile-menu"
+          onClick={() => setMobileNavActive(!mobileNavActive)}
+        >
+          <i className="icon-menu" />
+        </div>
+      )}
     </StyledHeader>
   );
 }
@@ -158,10 +160,12 @@ const StyledHeader = styled.header`
     }
   }
   .mobile-menu{
+
     display: var(--mobile-menu-icon-display);
     i{
       font-size: 1.8rem;
     }
+
   }
 `;
 
