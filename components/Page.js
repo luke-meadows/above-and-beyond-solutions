@@ -24,7 +24,7 @@ export default function Page({ children }) {
         <Header />
         {children}
       </>
-      <Footer />
+      <Footer withNav={true} />
     </StyledPage>
   );
 }
@@ -116,6 +116,7 @@ body {
   margin: 0;
   padding: 0;
   overscroll-behavior: none;
+  box-sizing: inherit;
 }
 *,
 *:before,

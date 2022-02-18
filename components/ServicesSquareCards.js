@@ -61,7 +61,7 @@ export default function ServicesSquareCards() {
           are well versed in producing eye catching, high impact campaigns.
           Bringing your brand to the consumers eye.
         </p>
-        <Link href="/services/activation">
+        <Link href="/services/brand-activations">
           <button>Learn More</button>
         </Link>
         <div className="img-container">

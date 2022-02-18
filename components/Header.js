@@ -82,9 +82,6 @@ export default function Header() {
           >
             <i className="icon icon-linkedin" />
           </a>
-          {/* <a target="blank" href="">
-            <i className="icon icon-facebook" />
-          </a> */}
           <a
             target="blank"
             href="https://www.instagram.com/aboveandbeyond_solutions/"
@@ -171,7 +168,6 @@ const StyledHeader = styled.header`
 
 const ImageContainer = styled.div`
   width: ${(props) => (props.shouldStick ? '10rem' : '3rem')};
-  margin-left: ${(props) => (props.shouldStick ? '0.5rem' : '0')};
   img {
     object-fit: cover;
     margin: 0;

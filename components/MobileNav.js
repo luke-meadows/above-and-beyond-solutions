@@ -1,42 +1,72 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import styled from 'styled-components';
 import { Ctx } from '../lib/ctxProvider';
 import thumbnailLogo from '../public/assets/logos/thumbnail-white-logo.svg';
+import Footer from '../components/Footer';
+import MobileServicesDropdown from './MobileServicesDropdown';
 
 export default function MobileNav() {
   const { mobileNavActive, setMobileNavActive } = useContext(Ctx);
-
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
     <StyledMobileNav className={mobileNavActive ? 'mobile-nav-active' : ''}>
-      <MobileHeader>
-        <ImageContainer>
-          <Image priority layout="responsive" src={thumbnailLogo} alt="" />
-        </ImageContainer>
-        <div
-          className={
-            mobileNavActive ? '  mobile-menu mobile-nav-active' : 'mobile-menu'
-          }
-          onClick={() => setMobileNavActive(!mobileNavActive)}
-        >
-          <i className="icon-cancel-1" />
-        </div>
-      </MobileHeader>
-      <ul>
-        <Link href="/services">
-          <li onClick={() => setMobileNavActive(false)}>Services</li>
-        </Link>
-        <Link href="/about-us">
-          <li onClick={() => setMobileNavActive(false)}>About Us</li>
-        </Link>
-        <Link href="/partners">
-          <li onClick={() => setMobileNavActive(false)}>Partners</li>
-        </Link>
-        <Link href="/contact-us">
-          <li onClick={() => setMobileNavActive(false)}>Contact Us</li>
-        </Link>
-      </ul>
+      <div className="top-section">
+        <MobileHeader>
+          <ImageContainer>
+            <Image priority layout="responsive" src={thumbnailLogo} alt="" />
+          </ImageContainer>
+          <div
+            className={
+              mobileNavActive
+                ? '  mobile-menu mobile-nav-active'
+                : 'mobile-menu'
+            }
+            onClick={() => setMobileNavActive(!mobileNavActive)}
+          >
+            <i className="icon-cancel-1" />
+          </div>
+        </MobileHeader>
+        <ul>
+          <Link href="/services">
+            <div className="li-container">
+              <li onClick={() => setMobileNavActive(false)}>Services</li>
+              <span
+                className={dropdownOpen ? 'rotate' : ''}
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+              >
+                <i className="icon-down-open-big" />
+              </span>
+            </div>
+          </Link>
+          <MobileServicesDropdown
+            mobileNavActive={mobileNavActive}
+            setDropdownOpen={setDropdownOpen}
+            dropdownOpen={dropdownOpen}
+          />
+          <Link href="/about-us">
+            <li onClick={() => setMobileNavActive(false)}>About Us</li>
+          </Link>
+          <Link href="/partners">
+            <li
+              style={{ marginTop: '1px' }}
+              onClick={() => setMobileNavActive(false)}
+            >
+              Partners
+            </li>
+          </Link>
+          <Link href="/contact-us">
+            <li
+              style={{ marginTop: '1px' }}
+              onClick={() => setMobileNavActive(false)}
+            >
+              Contact Us
+            </li>
+          </Link>
+        </ul>
+      </div>
+      <Footer />
     </StyledMobileNav>
   );
 }
@@ -46,10 +76,15 @@ const StyledMobileNav = styled.div`
   position: fixed;
   background: none;
   color: white;
-  height: 120vh;
-  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: scroll;
+  min-width: 100vw;
   z-index: 4;
   transition: all 0.5s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   * {
     opacity: 0;
   }
@@ -61,8 +96,25 @@ const StyledMobileNav = styled.div`
       opacity: 1;
     }
   }
-  ul {
-    padding: 0 var(--padding);
+  .top-section {
+    ul {
+      margin-top: 3rem;
+      padding: 0 var(--padding);
+      .li-container {
+        display: flex;
+        align-items: center;
+      }
+      li {
+        font-size: 1.5rem;
+        padding: 0.5rem 0;
+      }
+      span {
+        margin-left: 0.5rem;
+      }
+      i {
+        font-size: 1rem;
+      }
+    }
   }
   .mobile-menu {
     opacity: 0;
@@ -73,6 +125,9 @@ const StyledMobileNav = styled.div`
       opacity: 1;
       transition: all 0s ease;
     }
+  }
+  .rotate {
+    transform: rotate(-180deg);
   }
 `;
 

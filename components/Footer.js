@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 import { Nav } from './Header';
-export default function Footer() {
+export default function Footer({ withNav }) {
   return (
     <StyledFooter>
       <div className="social-media">
@@ -21,22 +21,24 @@ export default function Footer() {
           <i className="icon social icon-instagram" />
         </a>
       </div>
-      <FooterNav>
-        <ul>
-          <Link href="/services">
-            <li>Services</li>
-          </Link>
-          <Link href="/about-us">
-            <li>About Us</li>
-          </Link>
-          <Link href="/partners">
-            <li>Partners</li>
-          </Link>
-          <Link href="/contact-us">
-            <li>Contact Us</li>
-          </Link>
-        </ul>
-      </FooterNav>
+      {withNav && (
+        <FooterNav>
+          <ul>
+            <Link href="/services">
+              <li>Services</li>
+            </Link>
+            <Link href="/about-us">
+              <li>About Us</li>
+            </Link>
+            <Link href="/partners">
+              <li>Partners</li>
+            </Link>
+            <Link href="/contact-us">
+              <li>Contact Us</li>
+            </Link>
+          </ul>
+        </FooterNav>
+      )}
       <p>Above and Beyond Solutions &copy; {new Date().getFullYear()}</p>
     </StyledFooter>
   );
@@ -51,6 +53,7 @@ const StyledFooter = styled.div`
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
+    margin-bottom: 1.5rem;
     .social {
       color: var(--pink);
       margin-right: 1rem;
@@ -61,7 +64,7 @@ const StyledFooter = styled.div`
     }
   }
   p {
-    margin: 0 auto;
+    margin: 1.5rem auto 0 auto;
     width: fit-content;
     font-size: 0.8rem;
     font-weight: 300;
@@ -83,7 +86,7 @@ const FooterNav = styled(Nav)`
       }
     }
   }
-  margin: 3rem auto;
+  margin: 0 auto;
   width: var(--footer-nav-width);
   padding-left: 0;
 `;
