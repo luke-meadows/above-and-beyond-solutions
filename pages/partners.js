@@ -33,12 +33,12 @@ const StyledAbout = styled.div`
   h2 {
     line-height: 1;
     font-weight: 500;
-    padding: 4rem var(--padding);
+    padding: 4rem var(--padding) 2rem 4rem;
     text-align: center;
     font-size: var(--section-heading-text);
     color: var(--pink);
     @media only screen and (max-width: 415px) {
-      padding: 1rem var(--padding);
+      padding: 0 var(--padding) 1rem var(--padding);
     }
   }
 `;

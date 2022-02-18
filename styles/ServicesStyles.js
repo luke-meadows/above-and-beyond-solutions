@@ -92,6 +92,7 @@ export const ServicesSummary = styled.div`
   h5 {
     font-weight: 400;
     font-size: 1.5rem;
+    color: red;
   }
   p {
     max-width: 120ch;

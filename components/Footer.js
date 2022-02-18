@@ -7,7 +7,7 @@ export default function Footer({ withNav }) {
       <div className="social-media">
         <a
           target="blank"
-          href="https://www.instagram.com/aboveandbeyond_solutions/"
+          href="https://www.linkedin.com/company/aboveandbeyondsolutions/"
         >
           <i className="icon social icon-linkedin" />
         </a>

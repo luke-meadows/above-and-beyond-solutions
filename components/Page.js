@@ -43,23 +43,28 @@ html {
   min-width: 100vw;
   min-height: 100vh;
   overscroll-behavior: none;
+  --padding: 5rem;
+
+  // --- COLORS ---
   --white: white;
   --pink: #e4526f;
   --black: #040404;
   --gray: #505050;
-  --padding: 5rem;
+
+  // --- FONTSIZES --
+  --hero-header-text: 3.5rem;
+  --hero-text: 1.4rem;
+  --service-hero-header: 3.5rem;
+  --service-hero-text: 1.5rem;
+  --section-heading-text: 2.2rem;
+
   --header-height: 6rem;
   --header-nav-display: block;
   --header-contact-display: flex;
   --mobile-menu-icon-display: none;
 
-  --hero-header-text: 3.5rem;
-  --hero-text: 1.4rem;
 
-  --service-hero-header: 3.5rem;
-  --service-hero-text: 1.5rem;
 
-  --section-heading-text: 2.1rem;
   --section-heading-padding: 2rem 5rem;
   --service-section-tagline: 1.5rem;
 

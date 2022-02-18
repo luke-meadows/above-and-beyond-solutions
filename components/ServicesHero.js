@@ -34,7 +34,7 @@ export const Styles = styled.div`
     margin: 1rem 0;
     font-weight: 300;
     font-size: var(--service-hero-text);
-    max-width: 1300px;
+    max-width: 1100px;
     line-height: 2;
     @media only screen and (max-width: 415px) {
       max-width: 100%;
