@@ -3,8 +3,11 @@ import { useContext, useEffect } from 'react';
 import { Ctx } from '../lib/ctxProvider';
 import styled from 'styled-components';
 import img from '../public/assets/profile-imgs/profile.png';
+
 import sam from '../public/assets/profile-imgs/sam.png';
 import dan from '../public/assets/profile-imgs/dan.png';
+import cam from '../public/assets/profile-imgs/cam.png';
+
 export default function AboutUs() {
   const { setShouldStick, setStickyNavCoords } = useContext(Ctx);
   useEffect(() => {
@@ -54,7 +57,7 @@ export default function AboutUs() {
             </div>
           </div>
           <div className="img-container">
-            <Image objectFit="cover" objectPosition="center" src={dan} />
+            <Image objectFit="cover" objectPosition="center" src={img} />
             <div className="info">
               <h6>Mark Haverly</h6>
               <p>Founder / Managing Director</p>
@@ -86,7 +89,7 @@ export default function AboutUs() {
         </TeamRow>
         <TeamRow cols={3}>
           <div className="img-container">
-            <Image objectFit="cover" objectPosition="center" src={img} />
+            <Image objectFit="cover" objectPosition="center" src={cam} />
             <div className="info">
               <h6>Cameron Cox</h6>
               <p>Videographer</p>
@@ -104,6 +107,29 @@ export default function AboutUs() {
             <div className="info">
               <h6>Frankie</h6>
               <p>Head of Customer Experience </p>
+            </div>
+          </div>
+        </TeamRow>
+        <TeamRow cols={3}>
+          <div className="img-container">
+            <Image objectFit="cover" objectPosition="center" src={img} />
+            <div className="info">
+              <h6>Jenny Forbes</h6>
+              <p>Sponsorship & Partnership</p>
+            </div>
+          </div>
+          <div className="img-container">
+            <Image objectFit="cover" objectPosition="center" src={dan} />
+            <div className="info">
+              <h6>Dan Connolly</h6>
+              <p>Web Developer</p>
+            </div>
+          </div>
+          <div className="img-container">
+            <Image objectFit="cover" objectPosition="center" src={img} />
+            <div className="info">
+              <h6>Darren New</h6>
+              <p>Production / Events</p>
             </div>
           </div>
         </TeamRow>
@@ -157,12 +183,14 @@ const TeamRow = styled.div`
   justify-items: center;
   margin: auto;
   width: fit-content;
-  margin-bottom: 6rem;
+  /* margin-bottom: 6rem; */
   @media only screen and (max-width: 1600px) {
-    gap: 6rem;
+    gap: 4rem;
+    margin-bottom: 4rem;
   }
   @media only screen and (max-width: 415px) {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: none;
+    grid-template-rows: repeat(1, 1fr);
   }
   .img-container {
     border-radius: 50rem;
@@ -214,8 +242,12 @@ const TeamRow = styled.div`
         position: relative;
         visibility: initial;
         height: fit-content;
-        padding: 1rem;
-        background: black;
+        /* border: 1px solid black; */
+        background: none;
+        color: black;
+        p {
+          color: black;
+        }
       }
     }
   }
