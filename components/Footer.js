@@ -69,7 +69,7 @@ const StyledFooter = styled.div`
   }
   .lower {
     display: flex;
-    margin: 2rem auto 0 auto;
+    margin: 1.5rem auto 0 auto;
     width: fit-content;
     font-size: 0.8rem;
     font-weight: 300;
