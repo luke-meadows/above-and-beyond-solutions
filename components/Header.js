@@ -19,9 +19,11 @@ export default function Header() {
   } = useContext(Ctx);
   const router = Router;
   const onAbout = router?.router?.asPath === '/about-us';
+  const onContact = router?.router?.asPath === '/contact-us';
+  const onPartners = router?.router?.asPath === '/partners';
 
   function isSticky() {
-    if (onAbout) return;
+    if (onAbout || onContact || onPartners) return;
     const stickPoint = stickyNavCoords - headerHeight;
     if (window.scrollY >= stickPoint) {
       setShouldStick(true);
