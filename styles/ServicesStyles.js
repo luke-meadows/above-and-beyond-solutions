@@ -4,7 +4,6 @@ export const ServicesPage = styled.div`
   main {
     @media only screen and (max-width: 415px) {
       padding-top: 0;
-      margin-bottom: -4rem;
     }
   }
 `;

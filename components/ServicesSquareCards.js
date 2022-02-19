@@ -6,9 +6,9 @@ import activation from '../public/assets/servicesCardImgs/activation.png';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function ServicesSquareCards() {
+export default function ServicesSquareCards({ margin }) {
   return (
-    <CardContainer>
+    <CardContainer style={{ marginBottom: `${margin}rem` }}>
       <Card>
         <h3>Marketing</h3>
         <p>
