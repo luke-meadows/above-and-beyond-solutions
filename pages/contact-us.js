@@ -41,11 +41,11 @@ const StyledContact = styled.div`
   h2 {
     line-height: 1;
     font-weight: 500;
-    padding: 4rem 5rem;
+    padding: 4rem var(--padding);
     text-align: center;
     font-size: var(--section-heading-text);
     color: var(--pink);
-    @media only screen and (max-width: 415px) {
+    @media only screen and (max-width: 768px) {
       padding: 0;
       margin-bottom: 2rem;
     }
@@ -91,7 +91,7 @@ const ContactInfoContainer = styled.div`
     font-weight: 300;
   }
   @media only screen and (max-width: 900px) {
-    margin: 0 0 2rem 0;
+    margin: 0 0 1rem 0;
     i {
       color: var(--pink);
       font-size: 2rem;
@@ -99,6 +99,7 @@ const ContactInfoContainer = styled.div`
     .icon-mobile {
       font-size: 3rem;
       margin: 0;
+      margin-bottom: -0.8rem;
     }
     .contact-row {
       font-size: 1rem;

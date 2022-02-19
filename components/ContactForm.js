@@ -92,7 +92,7 @@ const StyledContactForm = styled.div`
     font-size: 1.4rem;
     text-align: center;
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   form {
     display: flex;
