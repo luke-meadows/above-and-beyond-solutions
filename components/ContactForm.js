@@ -21,10 +21,8 @@ export default function ContactForm() {
     heard: '',
     message: '',
   });
-  console.log({ inputs });
   const checkboxRef = useRef();
-
-  function checkifRequiredInputMissing(inputs) {
+  function checkIfRequiredInputMissing(inputs) {
     return (
       !inputs.name ||
       !inputs.email ||
@@ -38,7 +36,7 @@ export default function ContactForm() {
     e.preventDefault();
     updateSending(true);
     // hover over inputs that havent been filled out
-    const missing = checkifRequiredInputMissing(inputs);
+    const missing = checkIfRequiredInputMissing(inputs);
     if (missing) {
       const blankState = Object.fromEntries(
         Object.entries(inputs).map(([key, value]) => [
@@ -60,7 +58,7 @@ export default function ContactForm() {
       )
       .then(
         (response) => {
-          console.log('SUCCESS!', response.status, response.text);
+          // console.log('SUCCESS!', response.status, response.text);
           updateSending(false);
           clearForm();
           setSent(true);
