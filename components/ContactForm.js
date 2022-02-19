@@ -196,15 +196,21 @@ const StyledContactForm = styled.div`
     input,
     select,
     textarea {
-      font-family: 'Poppins';
       padding: 0.5rem;
+      font-family: 'Poppins';
       margin-bottom: 1rem;
       font-weight: 300;
       box-sizing: border-box;
+      @media only screen and (max-width: 415px) {
+        font-size: 16px;
+      }
       &:focus {
         outline: none;
         border: 2px solid var(--pink);
       }
+    }
+    textarea {
+      height: 6rem;
     }
     button[disabled] {
       filter: brightness(0.5);

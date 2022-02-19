@@ -109,9 +109,9 @@ export default function MarketingPage() {
           </ImageContainer>
           <h4>Why Choose Us?</h4>
           <p>
-            So you&apos;re looking for a full 360 marketing agency that you can
-            actually trust without having to sift through countless websites
-            you&apos;ve found from Google? We know the pain.
+            So you&apos;re looking for a full 360 &#176; marketing agency that
+            you can actually trust without having to sift through countless
+            websites you&apos;ve found from Google? We know the pain.
             <br />
             <br />
             It&apos;s exactly why we&apos;ve created a one stop shop to support
