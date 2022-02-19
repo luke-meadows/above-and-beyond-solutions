@@ -63,15 +63,16 @@ const StyledDropdown = styled.div`
   overflow: hidden;
   &.open {
     max-height: 40rem;
+    margin-bottom: 1rem;
   }
   .link-container {
     /* margin: 10px 0; */
-    max-width: 20rem;
-    padding: 0.5rem;
+    width: 50%;
+    padding: 1rem 0.5rem;
     margin-left: 1rem;
     font-size: 1rem;
     color: var(--white);
-    border-bottom: 1px solid var(--pink);
+    border-bottom: 1px solid #e4526f9f;
     span {
       color: white;
       color: black;

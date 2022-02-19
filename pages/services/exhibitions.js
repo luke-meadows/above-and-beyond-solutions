@@ -19,7 +19,7 @@ export default function Exhibitions() {
         <ServiceBackgroundImage img={Hero} position="center" brightness="0.4" />
         <h2>Exhibitions</h2>
         <p>
-          With over 20 years of experience creating bespoke stands and a full
+          With over 20 years of experience in creating bespoke stands and a full
           knowledge of exhibitions, we&apos;re experts at creating a visionary
           space tailored to your needs.
         </p>

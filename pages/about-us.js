@@ -3,6 +3,8 @@ import { useContext, useEffect } from 'react';
 import { Ctx } from '../lib/ctxProvider';
 import styled from 'styled-components';
 import img from '../public/assets/profile-imgs/profile.png';
+import sam from '../public/assets/profile-imgs/sam.png';
+import dan from '../public/assets/profile-imgs/dan.png';
 export default function AboutUs() {
   const { setShouldStick, setStickyNavCoords } = useContext(Ctx);
   useEffect(() => {
@@ -45,14 +47,14 @@ export default function AboutUs() {
       <TeamRowsContainer>
         <TeamRow cols={2}>
           <div className="img-container">
-            <Image objectPosition="center" src={img} />
+            <Image objectPosition="center" src={sam} />
             <div className="info">
               <h6>Sam Stockmans</h6>
               <p>Founder / CEO</p>
             </div>
           </div>
           <div className="img-container">
-            <Image objectFit="cover" objectPosition="center" src={img} />
+            <Image objectFit="cover" objectPosition="center" src={dan} />
             <div className="info">
               <h6>Mark Haverly</h6>
               <p>Founder / Managing Director</p>
