@@ -7,6 +7,8 @@ import img from '../public/assets/profile-imgs/profile.png';
 import sam from '../public/assets/profile-imgs/sam.png';
 import dan from '../public/assets/profile-imgs/dan.png';
 import cam from '../public/assets/profile-imgs/cam.png';
+import mark from '../public/assets/profile-imgs/mark.png';
+import malik from '../public/assets/profile-imgs/malik.png';
 
 export default function AboutUs() {
   const { setShouldStick, setStickyNavCoords } = useContext(Ctx);
@@ -57,7 +59,7 @@ export default function AboutUs() {
             </div>
           </div>
           <div className="img-container">
-            <Image objectFit="cover" objectPosition="center" src={img} />
+            <Image objectFit="cover" objectPosition="center" src={mark} />
             <div className="info">
               <h6>Mark Haverly</h6>
               <p>Founder / Managing Director</p>
@@ -66,7 +68,7 @@ export default function AboutUs() {
         </TeamRow>
         <TeamRow cols={3}>
           <div className="img-container">
-            <Image objectFit="cover" objectPosition="center" src={img} />
+            <Image objectFit="cover" objectPosition="center" src={malik} />
             <div className="info">
               <h6>Malik Mattu</h6>
               <p>Event Activation Executive</p>
@@ -179,16 +181,17 @@ const TeamRowsContainer = styled.div`
 const TeamRow = styled.div`
   display: grid;
   grid-template-columns: ${(props) => `repeat(${props.cols}, 1fr)`};
-  gap: 12rem;
+  gap: 4rem;
   justify-items: center;
   margin: auto;
   width: fit-content;
-  /* margin-bottom: 6rem; */
-  @media only screen and (max-width: 1600px) {
-    gap: 4rem;
-    margin-bottom: 4rem;
+  margin-bottom: 6rem;
+    gap: 6rem;
+
   }
   @media only screen and (max-width: 415px) {
+  margin-bottom: 4rem;
+  gap: 4rem;
     grid-template-columns: none;
     grid-template-rows: repeat(1, 1fr);
   }
