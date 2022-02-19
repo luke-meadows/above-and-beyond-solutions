@@ -5,22 +5,16 @@ import { useState, useRef } from 'react';
 export default function ContactForm() {
   const [sending, updateSending] = useState(false);
   const [sent, setSent] = useState(false);
-  const [outlineRed, setOutlineRed] = useState({
+  const initial = {
     name: '',
     email: '',
     tel: '',
     checkbox: '',
     heard: '',
     message: '',
-  });
-  const { inputs, handleChange, clearForm } = useForm({
-    name: '',
-    email: '',
-    tel: '',
-    checkbox: '',
-    heard: '',
-    message: '',
-  });
+  };
+  const [outlineRed, setOutlineRed] = useState(initial);
+  const { inputs, handleChange, clearForm } = useForm(initial);
   const checkboxRef = useRef();
   function checkIfRequiredInputMissing(inputs) {
     return (
@@ -35,7 +29,6 @@ export default function ContactForm() {
   function handleSubmit(e) {
     e.preventDefault();
     updateSending(true);
-    // hover over inputs that havent been filled out
     const missing = checkIfRequiredInputMissing(inputs);
     if (missing) {
       const blankState = Object.fromEntries(
@@ -58,7 +51,6 @@ export default function ContactForm() {
       )
       .then(
         (response) => {
-          // console.log('SUCCESS!', response.status, response.text);
           updateSending(false);
           clearForm();
           setSent(true);
