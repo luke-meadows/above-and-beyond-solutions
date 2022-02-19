@@ -53,10 +53,10 @@ export default function ContactForm() {
 
     emailjs
       .send(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        'service_1lrcs1r',
+        'Form_hxtxe76',
         inputs,
-        process.env.NEXT_PUBLIC_USER_ID
+        'user_tUEeIDH4Mdq7YlVipFLGr'
       )
       .then(
         (response) => {
