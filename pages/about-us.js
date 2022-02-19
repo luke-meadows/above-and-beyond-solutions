@@ -153,7 +153,7 @@ const StyledAbout = styled.div`
     font-size: var(--section-heading-text);
     color: var(--pink);
     @media only screen and (max-width: 415px) {
-      padding: 1rem var(--padding);
+      padding: 1rem var(--padding) 2rem var(--padding);
     }
   }
 `;

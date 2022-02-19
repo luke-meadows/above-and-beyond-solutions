@@ -1,17 +1,56 @@
 import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
 import useForm from '../lib/useForm';
+import { useState, useRef } from 'react';
 export default function ContactForm() {
-  const { inputs, handleChange } = useForm({
+  const [sending, updateSending] = useState(false);
+  const [outlineRed, setOutlineRed] = useState({
     name: '',
     email: '',
     tel: '',
+    checkbox: '',
     heard: '',
     message: '',
   });
+  const { inputs, handleChange, clearForm } = useForm({
+    name: '',
+    email: '',
+    tel: '',
+    checkbox: '',
+    heard: '',
+    message: '',
+  });
+  console.log({ inputs });
+  const checkboxRef = useRef();
+
+  function checkifRequiredInputMissing(inputs) {
+    return (
+      !inputs.name ||
+      !inputs.email ||
+      !inputs.tel ||
+      !inputs.checkbox ||
+      !inputs.message
+    );
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
+    updateSending(true);
+
+    // hover over inputs that havent been filled out
+    updateSending(false);
+    const missing = checkifRequiredInputMissing(inputs);
+    if (missing) {
+      const blankState = Object.fromEntries(
+        Object.entries(inputs).map(([key, value]) => [
+          key,
+          `${value === '' ? 'red' : ''}`,
+        ])
+      );
+      setOutlineRed(blankState);
+      return;
+    }
+
     emailjs
       .send(
         process.env.NEXT_PUBLIC_SERVICE_ID,
@@ -22,6 +61,16 @@ export default function ContactForm() {
       .then(
         (response) => {
           console.log('SUCCESS!', response.status, response.text);
+          updateSending(false);
+          clearForm();
+          setOutlineRed({
+            name: '',
+            email: '',
+            tel: '',
+            checkbox: '',
+            heard: '',
+            message: '',
+          });
         },
         (err) => {
           console.log('FAILED...', err);
@@ -34,6 +83,7 @@ export default function ContactForm() {
       <h4>Say Hello! 👋</h4>
       <form action="submit" onSubmit={handleSubmit}>
         <input
+          className={outlineRed.name}
           type="text"
           name="name"
           value={inputs.name}
@@ -41,6 +91,7 @@ export default function ContactForm() {
           placeholder="Your Name (Required)"
         />
         <input
+          className={outlineRed.email}
           type="email"
           name="email"
           value={inputs.email}
@@ -48,6 +99,7 @@ export default function ContactForm() {
           placeholder="Your Email (Required)"
         />
         <input
+          className={outlineRed.tel}
           type="tel"
           name="tel"
           value={inputs.tel}
@@ -69,17 +121,37 @@ export default function ContactForm() {
             <option value="instagram">Instagram</option>
             <option value="google">Google</option>
             <option value="word of">Word of Mouth</option>
-            <option value="">Other</option>
+            <option value="other">Other</option>
           </select>
         </div>
         <textarea
+          className={outlineRed.message}
           type="text"
           name="message"
           value={inputs.message}
           onChange={handleChange}
           placeholder="Your Message (Required)"
         />
-        <button type="submit">Send</button>
+        <div className="checkbox">
+          <input
+            ref={checkboxRef}
+            name="checkbox"
+            type="checkbox"
+            value={inputs.checkbox}
+            checked={inputs.checkbox}
+            onChange={(e) => {
+              handleChange(e);
+              console.log(e.target.checked);
+            }}
+          />
+          <label className={outlineRed.checkbox} htmlFor="checkbox">
+            By ticking this box, I understand and accept Above and Beyond
+            Solutions&apos; privacy policy.
+          </label>
+        </div>
+        <button disabled={sending ? true : false} type="submit">
+          Send
+        </button>
       </form>
     </StyledContactForm>
   );
@@ -87,7 +159,12 @@ export default function ContactForm() {
 
 const StyledContactForm = styled.div`
   width: 25rem;
-
+  .red {
+    color: var(--red);
+    ::-webkit-input-placeholder {
+      color: var(--red);
+    }
+  }
   h4 {
     font-size: 1.4rem;
     text-align: center;
@@ -109,6 +186,25 @@ const StyledContactForm = styled.div`
       &:focus {
         outline: none;
         border: 2px solid var(--pink);
+      }
+    }
+    button[disabled] {
+      filter: brightness(0.5);
+    }
+    .checkbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0.7rem;
+    }
+    label[for='checkbox'] {
+      margin-left: 1rem;
+      margin-top: -5px;
+      font-size: 0.55rem;
+      color: var(--gray);
+      display: block;
+      &.red {
+        color: var(--red);
       }
     }
     select {
@@ -142,6 +238,7 @@ const StyledContactForm = styled.div`
     button {
       font-size: 1rem;
     }
+
     select {
       height: 2.7rem;
       -webkit-appearance: none;

@@ -39,7 +39,11 @@ export default function Footer({ withNav }) {
           </ul>
         </FooterNav>
       )}
-      <p>Above and Beyond Solutions &copy; {new Date().getFullYear()}</p>
+      <div className="lower">
+        <p>Above and Beyond Solutions &copy; {new Date().getFullYear()} </p>
+        <p className="line"> | </p>
+        <Link href="/privacy-policy">Privacy Policy</Link>
+      </div>
     </StyledFooter>
   );
 }
@@ -63,12 +67,20 @@ const StyledFooter = styled.div`
       }
     }
   }
-  p {
+  .lower {
+    display: flex;
     margin: 1.5rem auto 0 auto;
     width: fit-content;
     font-size: 0.8rem;
     font-weight: 300;
     color: var(--gray);
+    .line {
+      padding: 0 0.5rem;
+    }
+    a {
+      color: var(--gray);
+      text-decoration: underline;
+    }
   }
 `;
 

@@ -50,6 +50,7 @@ html {
   --pink: #e4526f;
   --black: #040404;
   --gray: #505050;
+  --red: rgb(255, 81, 81);
 
   // --- FONTSIZES --
   --hero-header-text: 3.5rem;
