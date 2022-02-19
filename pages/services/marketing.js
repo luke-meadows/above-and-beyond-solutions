@@ -8,6 +8,7 @@ import {
 } from '../../styles/ServicesStyles';
 import Hero from '../../public/assets/service-heros/marketing-hero.png';
 import SummaryImg from '../../public/assets/service-summary-imgs/marketing-summary-img.png';
+import Link from 'next/link';
 
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
@@ -23,10 +24,9 @@ export default function MarketingPage() {
           Let us know your business goals and we&apos;ll create you a free
           personalised marketing plan.
         </p>
-        <button>
-          <i className="icon-mobile" />
-          BOOK A CALL
-        </button>
+        <Link href="/contact-us">
+          <button>BOOK A CALL</button>
+        </Link>
       </ServicesHero>
       <main>
         <ServicesHeader>

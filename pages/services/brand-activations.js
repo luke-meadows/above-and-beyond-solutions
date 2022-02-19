@@ -11,6 +11,7 @@ import SummaryImg from '../../public/assets/service-summary-imgs/activations-sum
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
 import Image from 'next/image';
+import Link from 'next/link';
 export default function Activation() {
   return (
     <ServicesPage>
@@ -21,10 +22,9 @@ export default function Activation() {
           From huge PR stunts to UK wide sampling campaigns. Brand activations
           are a series of WOW moments that you deliver throughout the year.
         </p>
-        <button>
-          <i className="icon-mobile" />
-          BOOK A CALL
-        </button>
+        <Link href="/contact-us">
+          <button>BOOK A CALL</button>
+        </Link>
       </ServicesHero>
       <main>
         <ServicesHeader>

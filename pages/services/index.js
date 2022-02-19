@@ -7,6 +7,8 @@ import {
   ServicesSummary,
 } from '../../styles/ServicesStyles.js';
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
+import Link from 'next/link';
+
 export default function Services() {
   return (
     <ServicesPage>
@@ -21,10 +23,9 @@ export default function Services() {
           activations. With our commercially astute team Above and Beyond
           Solutions will maximise the return on engagement.
         </p>
-        <button>
-          <i className="icon-mobile" />
-          BOOK A CALL
-        </button>
+        <Link href="/contact-us">
+          <button>BOOK A CALL</button>
+        </Link>
       </ServicesHero>
       <main>
         <ServicesHeader>

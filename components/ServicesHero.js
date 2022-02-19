@@ -44,8 +44,11 @@ export const Styles = styled.div`
     margin-top: 1rem;
     width: 10rem;
     border: none;
-    i {
-      margin-right: 0.2rem;
+    font-weight: 500;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    @media only screen and (max-width: 415px) {
+      font-size: 0.8rem;
     }
   }
 `;

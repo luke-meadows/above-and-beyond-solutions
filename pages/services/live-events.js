@@ -11,6 +11,8 @@ import SummaryImg from '../../public/assets/service-summary-imgs/events-summary-
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
 import Image from 'next/image';
+import Link from 'next/link';
+
 export default function LiveEvents() {
   return (
     <ServicesPage>
@@ -23,10 +25,9 @@ export default function LiveEvents() {
           customers in a very personal and tangible way that is almost
           impossible to achieve through digital marketing.
         </p>
-        <button>
-          <i className="icon-mobile" />
-          BOOK A CALL
-        </button>
+        <Link href="/contact-us">
+          <button>BOOK A CALL</button>
+        </Link>
       </ServicesHero>
       <main>
         <ServicesHeader>

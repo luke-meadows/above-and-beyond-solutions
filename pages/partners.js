@@ -41,6 +41,9 @@ const StyledAbout = styled.div`
       padding: 0 var(--padding) 1rem var(--padding);
     }
   }
+  @media only screen and (max-width: 415px) {
+    padding: 6rem 0 0rem 0;
+  }
 `;
 
 const AboutPartners = styled.div`
@@ -50,7 +53,7 @@ const AboutPartners = styled.div`
     font-weight: 400;
     padding: 0 var(--padding);
     @media only screen and (max-width: 415px) {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
   }
   margin-bottom: 2rem;

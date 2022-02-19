@@ -99,7 +99,7 @@ const ContactInfoContainer = styled.div`
     .icon-mobile {
       font-size: 3rem;
       margin: 0;
-      margin-bottom: -0.8rem;
+      margin-bottom: -0.5rem;
     }
     .contact-row {
       font-size: 1rem;

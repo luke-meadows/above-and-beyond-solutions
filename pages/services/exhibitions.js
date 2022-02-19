@@ -12,6 +12,8 @@ import SummaryImg from '../../public/assets/service-summary-imgs/exhibitions-sum
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
 import Image from 'next/image';
+import Link from 'next/link';
+
 export default function Exhibitions() {
   return (
     <ServicesPage>
@@ -23,10 +25,9 @@ export default function Exhibitions() {
           knowledge of exhibitions, we&apos;re experts at creating a visionary
           space tailored to your needs.
         </p>
-        <button>
-          <i className="icon-mobile" />
-          BOOK A CALL
-        </button>
+        <Link href="/contact-us">
+          <button>BOOK A CALL</button>
+        </Link>
       </ServicesHero>
       <main>
         <ServicesHeader>
