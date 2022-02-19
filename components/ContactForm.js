@@ -4,6 +4,7 @@ import useForm from '../lib/useForm';
 import { useState, useRef } from 'react';
 export default function ContactForm() {
   const [sending, updateSending] = useState(false);
+  const [sent, setSent] = useState(false);
   const [outlineRed, setOutlineRed] = useState({
     name: '',
     email: '',
@@ -36,9 +37,7 @@ export default function ContactForm() {
   function handleSubmit(e) {
     e.preventDefault();
     updateSending(true);
-
     // hover over inputs that havent been filled out
-    updateSending(false);
     const missing = checkifRequiredInputMissing(inputs);
     if (missing) {
       const blankState = Object.fromEntries(
@@ -48,6 +47,7 @@ export default function ContactForm() {
         ])
       );
       setOutlineRed(blankState);
+      updateSending(false);
       return;
     }
 
@@ -63,6 +63,7 @@ export default function ContactForm() {
           console.log('SUCCESS!', response.status, response.text);
           updateSending(false);
           clearForm();
+          setSent(true);
           setOutlineRed({
             name: '',
             email: '',
@@ -80,6 +81,10 @@ export default function ContactForm() {
 
   return (
     <StyledContactForm>
+      <div className={sent ? 'done success' : 'done'}>
+        <i className="icon-ok" />
+        <p>Success</p>
+      </div>
       <h4>Say Hello! 👋</h4>
       <form action="submit" onSubmit={handleSubmit}>
         <input
@@ -159,6 +164,29 @@ export default function ContactForm() {
 
 const StyledContactForm = styled.div`
   width: 25rem;
+  position: relative;
+
+  .done {
+    opacity: 0;
+    pointer-events: none;
+    background: var(--white);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    i {
+      color: var(--pink);
+      font-size: 6rem;
+    }
+  }
+  .success {
+    opacity: 1;
+    pointer-events: all;
+  }
   .red {
     color: var(--red);
     ::-webkit-input-placeholder {
