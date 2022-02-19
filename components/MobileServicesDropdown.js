@@ -61,16 +61,17 @@ export default function MobileServicesDropdown({
 const StyledDropdown = styled.div`
   max-height: 0;
   overflow: hidden;
-  /* transition: max-height 0.5s ease-out; */
   &.open {
     max-height: 40rem;
-    /* transition: max-height 0.5s ease-in; */
-    margin-top: -1rem;
   }
   .link-container {
-    margin: 10px 0;
-    padding-left: 3rem;
-    color: var(--pink);
+    /* margin: 10px 0; */
+    max-width: 20rem;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    font-size: 1rem;
+    color: var(--white);
+    border-bottom: 1px solid var(--pink);
     span {
       color: white;
       color: black;

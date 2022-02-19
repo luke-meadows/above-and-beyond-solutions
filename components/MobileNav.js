@@ -107,6 +107,7 @@ const StyledMobileNav = styled.div`
       li {
         font-size: 1.5rem;
         padding: 0.5rem 0;
+        width: fit-content;
       }
       span {
         margin-left: 1rem;
