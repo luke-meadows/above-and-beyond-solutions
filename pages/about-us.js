@@ -9,6 +9,8 @@ import dan from '../public/assets/profile-imgs/dan.png';
 import cam from '../public/assets/profile-imgs/cam.png';
 import mark from '../public/assets/profile-imgs/mark.png';
 import malik from '../public/assets/profile-imgs/malik.png';
+import luke from '../public/assets/profile-imgs/luke.png';
+import erin from '../public/assets/profile-imgs/erin.png';
 
 export default function AboutUs() {
   const { setShouldStick, setStickyNavCoords } = useContext(Ctx);
@@ -75,14 +77,14 @@ export default function AboutUs() {
             </div>
           </div>
           <div className="img-container">
-            <Image objectFit="cover" objectPosition="center" src={img} />
+            <Image objectFit="cover" objectPosition="center" src={erin} />
             <div className="info">
               <h6>Erin Brown</h6>
               <p>PR / Head of Artist Liaison</p>
             </div>
           </div>
           <div className="img-container">
-            <Image objectFit="cover" objectPosition="center" src={img} />
+            <Image objectFit="cover" objectPosition="center" src={luke} />
             <div className="info">
               <h6>Luke Meadows</h6>
               <p>Web Developer</p>
