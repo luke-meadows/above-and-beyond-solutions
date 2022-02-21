@@ -140,7 +140,7 @@ const Card = styled.div`
     margin: 1rem auto;
     width: 10rem;
     @media only screen and (min-width: 1600px) {
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
   }
   .img-container {
