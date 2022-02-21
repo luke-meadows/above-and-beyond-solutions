@@ -51,7 +51,7 @@ html {
   --section-heading-padding: 2rem 5rem;
   --service-section-tagline: 1.5rem;
   --partners-grid-gap: 2rem;
-  --partners-grid-template-cols: repeat(8, 1fr);
+  --partners-grid-template-cols: repeat(10, 1fr);
   --service-card-grid-cols: repeat(4, 1fr);
   --service-card-header: 1.5rem;
   --footer-nav-width: 60rem;
@@ -73,7 +73,7 @@ html {
     --service-section-tagline: 1rem;
     --section-heading-padding: 2rem 1rem;
     --partners-grid-gap: 1rem;
-    --partners-grid-template-cols: repeat(6, 1fr);
+    --partners-grid-template-cols: repeat(5, 1fr);
     --service-card-grid-cols: repeat(1, 1fr);
     --service-card-header: 1.2rem;
     --footer-nav-width: 100%;
@@ -139,7 +139,7 @@ export const SectionHeading = styled.h2`
   font-weight: 300;
   font-size: var(--section-heading-text);
   color: var(--pink);
-  padding: 2rem var(--padding) 1rem var(--padding);
+  padding: 1rem var(--padding) 1rem var(--padding);
   text-align: ${(props) => props.align};
   text-align: center;
   @media only screen and (max-width: 415px) {

@@ -22,7 +22,6 @@ const StyledPartners = styled.div`
   height: fit-content;
   padding: 0 var(--padding);
   background: white;
-
   .container {
     display: grid;
     grid-template-columns: var(--partners-grid-template-cols);

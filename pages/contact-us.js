@@ -19,10 +19,6 @@ export default function ContactUs() {
       <SectionHeading>Contact us</SectionHeading>
       <ContactContainer>
         <ContactInfoContainer>
-          {/* <div className="contact-row">
-            <i className="icon-mobile" />
-            <p className="contact-info">+447 949 442844</p>
-          </div> */}
           <div className="contact-row">
             <i className="icon-mail" />
             <p className="contact-info">hello@aboveandbeyondsolutions.co.uk</p>
