@@ -122,7 +122,7 @@ const Card = styled.div`
   }
 
   h3 {
-    font-weight: 400;
+    font-weight: 300;
     font-size: var(--service-card-header);
     @media only screen and (min-width: 1600px) {
       font-size: 2rem;
@@ -130,13 +130,15 @@ const Card = styled.div`
   }
   p {
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 100;
+    line-height: 1.2;
     @media only screen and (min-width: 1600px) {
       font-size: 1.1rem;
     }
   }
   button {
     margin: 1rem auto;
+    width: 10rem;
     @media only screen and (min-width: 1600px) {
       font-size: 1rem;
     }

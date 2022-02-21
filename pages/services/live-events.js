@@ -22,9 +22,10 @@ export default function LiveEvents() {
 
         <h2>Live Events</h2>
         <p>
-          Live events provide an opportunity to interact with brands or
-          customers in a very personal and tangible way that is almost
-          impossible to achieve through digital marketing.
+          Our 15 years of live event experience means we&apos;re proficient in
+          not only building and delivering the event but also organising
+          everything from logistics to technical delivery, promotions to talent
+          booking, licensing to ticket sales.
         </p>
         <Link href="/contact-us">
           <button>BOOK A CALL</button>
@@ -32,18 +33,18 @@ export default function LiveEvents() {
       </ServicesHero>
       <main>
         <ServicesHeader>
-          <SectionHeading>Host an Amazing Event</SectionHeading>
-          <SectionBlurb>What We Can Help With:</SectionBlurb>
+          <SectionHeading>Host an amazing event</SectionHeading>
+          <SectionBlurb>What we can help with:</SectionBlurb>
         </ServicesHeader>
         <IconCards>
           <IconCard>
             <i className="icon-tools card-icon" />
-            <h5>Design & Build</h5>
+            <h5>Design and Build</h5>
             <p>
-              Using a elite team of designers and event builders, no project is
+              Using an elite team of designers and event builders, no project is
               too big or small for us to deliver. From large scale festivals of
-              up to 100k people to smaller scale events up to 1000 - we can help
-              with a solution.
+              up to 100k people to smaller scale events up to 1000 &#45; we can
+              help with a solution.
             </p>
           </IconCard>
           <IconCard>
@@ -51,9 +52,9 @@ export default function LiveEvents() {
             <h5>Artist Booking</h5>
             <p>
               We can help secure you some of the biggest names in the industry
-              to really add the wow factor to your line up of entertainment.
-              Whether it&apos;s a guest speaker for an exhibition or a headline
-              A list artist to headline a festival - we can support.
+              to really add the wow factor to your line&#45;up of entertainment.
+              Whether it&apos;s a guest speaker for an exhibition or an A list
+              artist to headline a festival &#45; we can support.
             </p>
           </IconCard>
           <IconCard>
@@ -68,18 +69,18 @@ export default function LiveEvents() {
           </IconCard>
           <IconCard>
             <i className="icon-truck card-icon" />
-            <h5>Transport & Logistics</h5>
+            <h5>Transport and Logistics</h5>
             <p>
-              Let us take the headache out of Transport and Logistics for your
+              Let us take the headache out of transport and logistics for your
               event. With approved suppliers we can support with the movement of
               your stock, goods, and staff across the UK and Europe.
             </p>
           </IconCard>
           <IconCard>
             <i className="icon-retweet card-icon" />
-            <h5>Production & Back of House</h5>
+            <h5>Production and Back of House</h5>
             <p>
-              Back of house / festival management takes the &apos;on the
+              Back of house&#47;festival management takes the &apos;on the
               day&apos; stress away from the organiser. We can manage everything
               back of house from crew catering, to artist riders, to stage
               managers and security.
@@ -87,12 +88,12 @@ export default function LiveEvents() {
           </IconCard>
           <IconCard>
             <i className="icon-megaphone card-icon" />
-            <h5>Marketing & Promotion</h5>
+            <h5>Marketing and Promotion</h5>
             <p>
               Creating high impact visual marketing campaigns that resonate with
-              your customers to help enhance and uplift ticket sales. We are
-              experts in this field and would love to share some previous
-              successes with you.
+              your customers to enhance and uplift ticket sales. We are experts
+              in this field and would love to share some previous successes with
+              you.
             </p>
           </IconCard>
         </IconCards>
@@ -100,7 +101,7 @@ export default function LiveEvents() {
           <ImageContainer>
             <Image layout="fill" objectFit="cover" src={SummaryImg} />
           </ImageContainer>
-          <h4>Why Choose Us?</h4>
+          <h4>Why choose us?</h4>
           <p>
             Live brand experiences are more capable of engaging audiences
             effectively in a big world which is full of digital, sometimes

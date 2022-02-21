@@ -21,7 +21,9 @@ export default function Activation() {
         <h2>Brand Activations</h2>
         <p>
           From huge PR stunts to UK wide sampling campaigns. Brand activations
-          are a series of WOW moments that you deliver throughout the year.
+          are a series of WOW moments that you deliver throughout the year. We
+          are well versed in producing eye catching, high impact campaigns.
+          Bringing your brand to the consumer&apos;s eye.
         </p>
         <Link href="/contact-us">
           <button>BOOK A CALL</button>
@@ -29,17 +31,17 @@ export default function Activation() {
       </ServicesHero>
       <main>
         <ServicesHeader>
-          <SectionHeading align="center">Brand Activations</SectionHeading>
-          <SectionBlurb align="center">What We Can Help With:</SectionBlurb>
+          <SectionHeading align="center">Brand activations</SectionHeading>
+          <SectionBlurb align="center">What we can help with:</SectionBlurb>
         </ServicesHeader>
         <IconCards>
           <IconCard>
             <i className="icon-network card-icon" />
-            <h5>Sponsorship & Partnership</h5>
+            <h5>Sponsorship and Partnership</h5>
             <p>
-              Help enhance your brands impact by partnering / collaborating with
-              Brands and People who share the same vision and can help boost
-              impact across campaigns
+              Help enhance your brand&apos;s impact by partnering &#47;
+              collaborating with brands and people who share the same vision and
+              can help boost impact across campaigns.
             </p>
           </IconCard>
           <IconCard>
@@ -71,17 +73,18 @@ export default function Activation() {
               src={SummaryImg}
             />
           </ImageContainer>
-          <h4>Why Choose Us?</h4>
+          <SectionHeading>Why choose us?</SectionHeading>
+
           <p>
             We are well versed in producing eye catching, high impact, creative
-            campaigns which bring your brand to the the consumers eye.
+            campaigns which bring your brand to the the consumer&apos;s eye.
             <br />
             <br />
             From rolling a bright orange tank through central London and parking
-            it outside of the houses of Parliament, to protesting the closure of
-            gyms during lock down. From flying a 100ft tall hot air balloon
-            across Liverpool to celebrate the Semi Final EURO&apos;s win, to
-            delivering a 100 store tesco sampling campaign. From producing and
+            it outside the houses of Parliament, to protesting the closure of
+            gyms during lockdown. From flying a 100ft tall hot air balloon
+            across Liverpool to celebrating the semi final Euros win, to
+            delivering a 100 store Tesco sampling campaign. From producing and
             creating a short feature length film - Above and Beyond&apos;s
             creativity and can do attitude can enable your brand to bring even
             the craziest of ideas to life.

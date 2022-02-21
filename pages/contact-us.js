@@ -19,10 +19,10 @@ export default function ContactUs() {
       <SectionHeading>Contact Us</SectionHeading>
       <ContactContainer>
         <ContactInfoContainer>
-          <div className="contact-row">
+          {/* <div className="contact-row">
             <i className="icon-mobile" />
             <p className="contact-info">+447 949 442844</p>
-          </div>
+          </div> */}
           <div className="contact-row">
             <i className="icon-mail" />
             <p className="contact-info">hello@aboveandbeyondsolutions.co.uk</p>
@@ -45,7 +45,11 @@ const StyledContact = styled.div`
 const ContactContainer = styled.div`
   margin: auto 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+
+  padding-top: 1rem;
   @media only screen and (max-width: 768px) {
     flex-direction: column;
     padding: 0 var(--padding);
@@ -59,11 +63,10 @@ const ContactInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 3rem;
+
   .contact-row {
+    flex-direction: column;
     display: flex;
-    margin-bottom: 1rem;
-    margin-right: 2rem;
     font-size: 1rem;
     align-items: center;
     margin-bottom: 1rem;
@@ -79,13 +82,14 @@ const ContactInfoContainer = styled.div`
   }
   .contact-info {
     margin-left: 1rem;
-    font-weight: 300;
+    font-weight: 100;
   }
   @media only screen and (max-width: 900px) {
-    margin: 0 0 1rem 0;
+    margin: 0;
+    margin-top: 1rem;
     i {
       color: var(--pink);
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
     .icon-mobile {
       font-size: 3rem;

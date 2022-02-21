@@ -32,21 +32,20 @@ export default function MarketingPage() {
       <main>
         <ServicesHeader>
           <SectionHeading>Marketing for your business</SectionHeading>
-          <SectionBlurb>What We Can Help With:</SectionBlurb>
+          <SectionBlurb>What we can help with:</SectionBlurb>
         </ServicesHeader>
         <IconCards>
           <IconCard>
             <i className="icon-window card-icon" />
             <h5>Web Development</h5>
             <p>
-              Servicing over 50 clients across the UK and growing we boast an in
-              house UK based team, available 24 hours a day. We take care of the
-              design, hosting and maintenance of your business&apos; website. We
-              provide a clean, impactful and professional digital shopfront for
-              you and your audience.
+              Servicing 50&#43; clients across the UK, we boast an in&#45;house
+              UK based team, available 24 hours a day. We take care of the
+              design, hosting and maintenance of your business&apos;s website.
+              We provide a clean, impactful and professional digital shopfront
+              for you and your audience.
               <br />
             </p>
-            {/* <a href="/services/marketing/web-development">Learn More</a> */}
           </IconCard>
           <IconCard>
             <i className="icon-video card-icon" />
@@ -54,11 +53,10 @@ export default function MarketingPage() {
             <p>
               Producing fresh ideas, impactful content and imaginative show
               reels, we can support with any element of videography for your
-              business needs. Not only will video grab and capture attention of
-              your customers but also is used as a tool to help influence
-              decision making and boost your sales / conversions.
+              business needs. Not only will video grab and capture the attention
+              of your customers but it can also be used as a tool to help
+              influence decision making and boost your sales&#47;conversions.
             </p>
-            {/* <a href="/services/marketing/videography">Learn More</a> */}
           </IconCard>
           <IconCard>
             <i className="icon-megaphone card-icon" />
@@ -75,11 +73,10 @@ export default function MarketingPage() {
             <i className="icon-edit card-icon" />
             <h5>Graphics</h5>
             <p>
-              Our in house team can provide you with digital art and graphic
+              Our in&#45;house team can provide you with digital art and graphic
               design services to guarantee your business has the most
               aesthetically beneficial graphic elements such as logos, colour
-              schemes and everything you need to look the part for your
-              customers.
+              schemes and everything you need to impress your customers.
             </p>
           </IconCard>
           <IconCard>
@@ -97,10 +94,9 @@ export default function MarketingPage() {
             <i className="icon-money card-icon" />
             <h5>Influencer Marketing</h5>
             <p>
-              Connecting you with social media influencers that can help boost
-              the speed at which the word of your brand spreads and secures you
-              more potential customers and better engagement with your current
-              customers
+              Connecting you with social media influencers to boost awareness of
+              your brand to entice potential customers and better engage with
+              your current customers.
             </p>
           </IconCard>
         </IconCards>
@@ -108,7 +104,7 @@ export default function MarketingPage() {
           <ImageContainer>
             <Image layout="fill" objectFit="cover" src={SummaryImg} />
           </ImageContainer>
-          <SectionHeading>Why choose us</SectionHeading>
+          <SectionHeading>Why choose us?</SectionHeading>
           <p>
             So you&apos;re looking for a full 360 &#176; marketing agency that
             you can actually trust without having to sift through countless

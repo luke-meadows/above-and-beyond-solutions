@@ -63,7 +63,7 @@ html {
     --hero-text: 1.3rem;
     --service-hero-header: 2rem;
     --service-hero-text: 1rem;
-    --section-heading-text: 1.5rem;
+    --section-heading-text: 1.8rem;
   --section-main-font-size: 1rem;
     --padding: 1rem;
     --header-height: 4rem;
@@ -115,7 +115,7 @@ button {
   text-transform: uppercase;
   font-family: 'Nimbus Sans', sans-serif;
   background: var(--pink);
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   color: black;
   display: block;
   outline: none;

@@ -30,7 +30,7 @@ export default function Services() {
       </ServicesHero>
       <main>
         <ServicesHeader>
-          <SectionHeading>Our Services</SectionHeading>
+          <SectionHeading>Our services</SectionHeading>
           <SectionBlurb>
             Big impact, creative campaigns with small agency care.{' '}
           </SectionBlurb>

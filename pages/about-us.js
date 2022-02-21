@@ -13,6 +13,7 @@ import mark from '../public/assets/profile-imgs/mark.png';
 import malik from '../public/assets/profile-imgs/malik.png';
 import luke from '../public/assets/profile-imgs/luke.png';
 import erin from '../public/assets/profile-imgs/erin.png';
+import frankie from '../public/assets/profile-imgs/frankie.png';
 
 export default function AboutUs() {
   const { setShouldStick, setStickyNavCoords } = useContext(Ctx);
@@ -108,22 +109,7 @@ export default function AboutUs() {
               <p>Photographer</p>
             </div>
           </div>
-          <div className="img-container">
-            <Image objectFit="cover" objectPosition="center" src={img} />
-            <div className="info">
-              <h6>Frankie</h6>
-              <p>Head of Customer Experience </p>
-            </div>
-          </div>
-        </TeamRow>
-        <TeamRow cols={3}>
-          <div className="img-container">
-            <Image objectFit="cover" objectPosition="center" src={img} />
-            <div className="info">
-              <h6>Jenny Forbes</h6>
-              <p>Sponsorship & Partnership</p>
-            </div>
-          </div>
+
           <div className="img-container">
             <Image objectFit="cover" objectPosition="center" src={dan} />
             <div className="info">
@@ -131,11 +117,13 @@ export default function AboutUs() {
               <p>Web Developer</p>
             </div>
           </div>
+        </TeamRow>
+        <TeamRow cols={1}>
           <div className="img-container">
-            <Image objectFit="cover" objectPosition="center" src={img} />
+            <Image objectFit="cover" objectPosition="center" src={frankie} />
             <div className="info">
-              <h6>Darren New</h6>
-              <p>Production / Events</p>
+              <h6>Frankie</h6>
+              <p>Head of Customer Experience </p>
             </div>
           </div>
         </TeamRow>
@@ -234,6 +222,7 @@ const TeamRow = styled.div`
       }
       p {
         color: var(--white);
+        font-weight:100;
       }
       @media only screen and (max-width: 415px) {
         position: relative;

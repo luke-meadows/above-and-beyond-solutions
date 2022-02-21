@@ -154,6 +154,7 @@ export default function ContactForm() {
 
 const StyledContactForm = styled.div`
   width: 25rem;
+  margin-top: 1rem;
   position: relative;
 
   .done {

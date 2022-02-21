@@ -18,7 +18,7 @@ export const IconCards = styled.div`
   grid-template-columns: var(--microservice-grid-cols);
   grid-column-gap: 4rem;
   grid-row-gap: 4rem;
-  padding: 2rem 4rem 3rem 4rem;
+  padding: 2rem 4rem 4rem 4rem;
   @media only screen and (max-width: 415px) {
     padding: 2rem 1rem 3rem 1rem;
   }
@@ -65,18 +65,21 @@ export const ServicesHomeSummary = styled.div`
   color: white;
   background: var(--white);
   color: black;
+  padding-bottom: 2rem;
+
   p {
     max-width: 120ch;
     font-size: var(--section-main-font-size);
     font-weight: 100;
     padding: 0 var(--padding) 2rem var(--padding);
     text-align: center;
+    margin: 0 auto;
   }
 `;
 export const ServicesSummary = styled.div`
   position: relative;
   color: white;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   text-align: center;
   h4 {
     color: var(--pink);
@@ -97,6 +100,8 @@ export const ServicesSummary = styled.div`
     font-size: var(--section-main-font-size);
     font-weight: 100;
     padding: 0rem var(--padding) 1rem var(--padding);
+    margin: 0 auto;
+    line-height: 1.5;
   }
   @media only screen and (max-width: 415px) {
     p {
