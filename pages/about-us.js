@@ -14,6 +14,8 @@ import malik from '../public/assets/profile-imgs/malik.png';
 import luke from '../public/assets/profile-imgs/luke.png';
 import erin from '../public/assets/profile-imgs/erin.png';
 import frankie from '../public/assets/profile-imgs/frankie.png';
+import rich from '../public/assets/profile-imgs/rich.png';
+import avatar from '../public/assets/profile-imgs/avatar.png';
 
 export default function AboutUs() {
   const { setShouldStick, setStickyNavCoords } = useContext(Ctx);
@@ -103,7 +105,7 @@ export default function AboutUs() {
             </div>
           </div>
           <div className="img-container">
-            <Image objectFit="cover" objectPosition="center" src={img} />
+            <Image objectFit="cover" objectPosition="center" src={rich} />
             <div className="info">
               <h6>Rich Phillips</h6>
               <p>Photographer</p>
@@ -118,12 +120,26 @@ export default function AboutUs() {
             </div>
           </div>
         </TeamRow>
-        <TeamRow cols={1}>
+        <TeamRow cols={3}>
           <div className="img-container">
             <Image objectFit="cover" objectPosition="center" src={frankie} />
             <div className="info">
               <h6>Frankie</h6>
               <p>Head of Customer Experience </p>
+            </div>
+          </div>
+          <div className="img-container">
+            <Image objectFit="cover" objectPosition="center" src={avatar} />
+            <div className="info">
+              <h6>Vacancy</h6>
+              <p>Business Development Executive</p>
+            </div>
+          </div>
+          <div className="img-container">
+            <Image objectFit="cover" objectPosition="center" src={avatar} />
+            <div className="info">
+              <h6>Vacancy</h6>
+              <p>Social Media Marketing Executive </p>
             </div>
           </div>
         </TeamRow>
