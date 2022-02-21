@@ -42,7 +42,9 @@ export default function Footer({ withNav }) {
       <div className="lower">
         <p>Above and Beyond Solutions &copy; {new Date().getFullYear()} </p>
         <p className="line"> | </p>
-        <Link href="/privacy-policy">Privacy Policy</Link>
+        <Link href="/privacy-policy" className="privacy">
+          Privacy Policy
+        </Link>
       </div>
     </StyledFooter>
   );
@@ -81,6 +83,12 @@ const StyledFooter = styled.div`
       color: var(--gray);
       text-decoration: underline;
     }
+    @media only screen and (max-width: 325px) {
+      font-size: 0.6rem;
+      .privacy {
+        font-size: 0.6rem;
+      }
+    }
   }
 `;
 
@@ -95,6 +103,9 @@ const FooterNav = styled(Nav)`
       margin: 0 2rem;
       @media only screen and (max-width: 415px) {
         margin: 0 0.5rem;
+      }
+      @media only screen and (max-width: 325px) {
+        margin: 0 0.3rem;
       }
     }
   }

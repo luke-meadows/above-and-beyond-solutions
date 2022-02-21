@@ -65,8 +65,7 @@ export const ServicesHomeSummary = styled.div`
   color: white;
   background: var(--white);
   color: black;
-  padding-bottom: 2rem;
-
+  padding-bottom: 1rem;
   p {
     max-width: 120ch;
     font-size: var(--section-main-font-size);
