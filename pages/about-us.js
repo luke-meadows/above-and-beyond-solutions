@@ -26,7 +26,7 @@ export default function AboutUs() {
   });
   return (
     <StyledAbout>
-      <SectionHeading>About Us</SectionHeading>
+      <SectionHeading>About us</SectionHeading>
       <AboutTheBusiness>
         <p>
           Above & Beyond Solutions love events. We are passionate about them and
@@ -53,7 +53,7 @@ export default function AboutUs() {
           <br />
         </p>
       </AboutTheBusiness>
-      <SectionHeading>Meet the Team</SectionHeading>
+      <SectionHeading>Meet the team</SectionHeading>
       <TeamRowsContainer>
         <TeamRow cols={2}>
           <div className="img-container">

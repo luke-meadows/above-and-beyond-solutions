@@ -16,7 +16,7 @@ export default function ContactUs() {
 
   return (
     <StyledContact>
-      <SectionHeading>Contact Us</SectionHeading>
+      <SectionHeading>Contact us</SectionHeading>
       <ContactContainer>
         <ContactInfoContainer>
           {/* <div className="contact-row">
