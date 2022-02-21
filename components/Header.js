@@ -149,8 +149,7 @@ const StyledHeader = styled.header`
       }
     }
     .left {
-      margin-right: 2rem;
-      /* margin-bottom: 0.5rem; */
+      margin-right: 1rem;
       display: flex;
       a{
         display: flex; 
@@ -185,11 +184,14 @@ export const Nav = styled.nav`
     align-items: center;
     li {
       list-style: none;
-      font-size: 0.8rem;
+      font-size: 1rem;
       margin: 0 1rem;
       font-weight: 300;
       display: flex;
       cursor: pointer;
+      &:hover {
+        color: var(--pink);
+      }
     }
   }
 `;

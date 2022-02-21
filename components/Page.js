@@ -37,6 +37,27 @@ const StyledPage = styled.div`
 `;
 
 const GlobalStyle = createGlobalStyle`
+
+@font-face {
+  font-family: 'Nimbus Sans';
+  src: url('/static/Nimbus-Sans-D-OT-Light-Extended_32750.ttf') format('woff2');
+  font-weight: 100;
+
+} 
+ 
+@font-face {
+  font-family: 'Nimbus Sans';
+  src: url('/static/Nimbus-Sans-D-OT-Regular-Extended_32755.ttf') format('woff2');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Nimbus Sans';
+  src: url('/static/Nimbus-Sans-D-OT-Bold-Extended_32745.ttf') format('woff2');
+  font-weight: 500;
+} 
+
+
 html {
   box-sizing: border-box;
   background: black;
@@ -53,61 +74,44 @@ html {
   --red: rgb(255, 81, 81);
 
   // --- FONTSIZES --
-  --hero-header-text: 3.5rem;
-  --hero-text: 1.4rem;
-  --service-hero-header: 3.5rem;
-  --service-hero-text: 1.5rem;
+  --hero-header-text: 3rem;
+  --hero-text: 1.6rem;
+  --service-hero-header: 3rem;
+  --service-hero-text: 1.4rem;
   --section-heading-text: 2.2rem;
-
   --header-height: 6rem;
   --header-nav-display: block;
   --header-contact-display: flex;
   --mobile-menu-icon-display: none;
-
-
-
   --section-heading-padding: 2rem 5rem;
   --service-section-tagline: 1.5rem;
-
   --partners-grid-gap: 6rem;
   --partners-grid-template-cols: repeat(6, 1fr);
-
   --service-card-grid-cols: repeat(4, 1fr);
   --service-card-header: 1.5rem;
-
   --footer-nav-width: 60rem;
-
   --microservice-grid-cols: repeat(3, 1fr);
 
   
   @media only screen and (max-width: 415px) {
+    --hero-header-text: 2rem;
+    --hero-text: 1.3rem;
+    --service-hero-header: 2rem;
+    --service-hero-text: 1rem;
+    --section-heading-text: 1.5rem;
     --padding: 1rem;
     --header-height: 4rem;
     --header-nav-display: none;
     --header-contact-display: none;
     --mobile-menu-icon-display: initial;
-
-    --hero-header-text: 2rem;
-    --hero-text: 1.3rem;
-
-    --service-hero-header: 2rem;
-    --service-hero-text: 1rem;
     --service-section-tagline: 1rem;
-
-    --section-heading-text: 1.5rem;
     --section-heading-padding: 2rem 1rem;
-
     --partners-grid-gap: 1rem;
-  --partners-grid-template-cols: repeat(4, 1fr);
-
-
+    --partners-grid-template-cols: repeat(4, 1fr);
     --service-card-grid-cols: repeat(1, 1fr);
     --service-card-header: 1.2rem;
-
     --footer-nav-width: 100%;
-
     --microservice-grid-cols: repeat(1, 1fr);
-
     }
     @media(max-width: 375px) and (max-height: 667px) {
       --service-hero-header: 1.8rem;
@@ -118,7 +122,7 @@ html {
     }
 }
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Nimbus Sans';
   margin: 0;
   padding: 0;
   overscroll-behavior: none;
@@ -143,7 +147,7 @@ li {
 }
 button {
   text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Nimbus Sans';
   background: var(--pink);
   padding: 0.5rem;
   color: black;
@@ -152,7 +156,8 @@ button {
   border: none;
   min-width: 6rem;
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 300;
+
 }
 
 a {

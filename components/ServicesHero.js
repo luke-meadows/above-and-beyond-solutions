@@ -32,7 +32,7 @@ export const Styles = styled.div`
   p {
     color: white;
     margin: 1rem 0;
-    font-weight: 300;
+    font-weight: 100;
     font-size: var(--service-hero-text);
     max-width: 1100px;
     line-height: 2;
@@ -44,7 +44,6 @@ export const Styles = styled.div`
     margin-top: 1rem;
     width: 10rem;
     border: none;
-    font-weight: 500;
     width: fit-content;
     padding: 0.5rem 1rem;
     @media only screen and (max-width: 415px) {
