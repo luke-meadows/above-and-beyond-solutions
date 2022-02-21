@@ -1,11 +1,12 @@
 import { partnerImgs } from '../lib/partnerImgs';
 import styled from 'styled-components';
 import Image from 'next/image';
+import { SectionHeading } from '../styles/GlobalStyles';
 
 export default function Partners({ noTitle }) {
   return (
     <StyledPartners>
-      {!noTitle && <h2>Our Partners</h2>}
+      {!noTitle && <SectionHeading>Our Partners</SectionHeading>}
       <div className="container">
         {partnerImgs.map((img, i) => (
           <div key={i} className="img-container">
@@ -23,18 +24,6 @@ const StyledPartners = styled.div`
   height: fit-content;
   padding: 0 var(--padding);
   background: white;
-  h2 {
-    line-height: 1;
-    font-weight: 500;
-    padding: 4rem var(--padding) 2rem var(--padding);
-    text-align: center;
-    font-size: var(--section-heading-text);
-    color: var(--pink);
-    @media only screen and (max-width: 415px) {
-      padding: var(--section-heading-padding);
-    }
-  }
-
   .container {
     display: grid;
     grid-template-columns: var(--partners-grid-template-cols);
