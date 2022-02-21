@@ -247,6 +247,7 @@ const TeamRow = styled.div`
         /* border: 1px solid black; */
         background: none;
         color: black;
+        margin-top: 0.5rem;
         p {
           color: black;
         }
