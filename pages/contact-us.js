@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { useContext, useEffect } from 'react';
 import { Ctx } from '../lib/ctxProvider';
 import ContactForm from '../components/ContactForm';
+import { SectionBlurb, SectionHeading } from '../styles/GlobalStyles';
+
 export default function ContactUs() {
   const { setShouldStick, setStickyNavCoords } = useContext(Ctx);
   useEffect(() => {
@@ -14,7 +16,7 @@ export default function ContactUs() {
 
   return (
     <StyledContact>
-      <h2>Contact Us</h2>
+      <SectionHeading>Contact Us</SectionHeading>
       <ContactContainer>
         <ContactInfoContainer>
           <div className="contact-row">
@@ -34,22 +36,10 @@ export default function ContactUs() {
 
 const StyledContact = styled.div`
   background: white;
-  padding: 6rem 0 4rem 0;
+  padding: 5rem 0 4rem 0;
   color: black;
   max-width: 100vw;
   overflow: hidden;
-  h2 {
-    line-height: 1;
-    font-weight: 500;
-    padding: 4rem var(--padding);
-    text-align: center;
-    font-size: var(--section-heading-text);
-    color: var(--pink);
-    @media only screen and (max-width: 768px) {
-      padding: 0;
-      margin-bottom: 2rem;
-    }
-  }
 `;
 
 const ContactContainer = styled.div`
@@ -76,6 +66,7 @@ const ContactInfoContainer = styled.div`
     margin-right: 2rem;
     font-size: 1rem;
     align-items: center;
+    margin-bottom: 1rem;
   }
   i {
     color: var(--pink);

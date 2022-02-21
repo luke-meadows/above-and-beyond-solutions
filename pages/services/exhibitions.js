@@ -13,6 +13,7 @@ import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
 import Image from 'next/image';
 import Link from 'next/link';
+import { SectionBlurb, SectionHeading } from '../../styles/GlobalStyles';
 
 export default function Exhibitions() {
   return (
@@ -31,8 +32,8 @@ export default function Exhibitions() {
       </ServicesHero>
       <main>
         <ServicesHeader>
-          <h4>Capture Attention at an Exhibition</h4>
-          <h5>What We Can Help With:</h5>
+          <SectionHeading>Capture Attention at an Exhibition</SectionHeading>
+          <SectionBlurb>What We Can Help With:</SectionBlurb>
         </ServicesHeader>
         <IconCards>
           <IconCard>

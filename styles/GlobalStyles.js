@@ -42,15 +42,16 @@ html {
   --hero-text: 1.6rem;
   --service-hero-header: 3rem;
   --service-hero-text: 1.4rem;
-  --section-heading-text: 3rem;
+  --section-heading-text: 2.5rem;
+  --section-main-font-size: 1.2rem;
   --header-height: 6rem;
   --header-nav-display: block;
   --header-contact-display: flex;
   --mobile-menu-icon-display: none;
   --section-heading-padding: 2rem 5rem;
   --service-section-tagline: 1.5rem;
-  --partners-grid-gap: 6rem;
-  --partners-grid-template-cols: repeat(6, 1fr);
+  --partners-grid-gap: 2rem;
+  --partners-grid-template-cols: repeat(8, 1fr);
   --service-card-grid-cols: repeat(4, 1fr);
   --service-card-header: 1.5rem;
   --footer-nav-width: 60rem;
@@ -63,6 +64,7 @@ html {
     --service-hero-header: 2rem;
     --service-hero-text: 1rem;
     --section-heading-text: 1.5rem;
+  --section-main-font-size: 1rem;
     --padding: 1rem;
     --header-height: 4rem;
     --header-nav-display: none;
@@ -71,7 +73,7 @@ html {
     --service-section-tagline: 1rem;
     --section-heading-padding: 2rem 1rem;
     --partners-grid-gap: 1rem;
-    --partners-grid-template-cols: repeat(4, 1fr);
+    --partners-grid-template-cols: repeat(6, 1fr);
     --service-card-grid-cols: repeat(1, 1fr);
     --service-card-header: 1.2rem;
     --footer-nav-width: 100%;
@@ -137,8 +139,27 @@ export const SectionHeading = styled.h2`
   font-weight: 500;
   font-size: var(--section-heading-text);
   color: var(--pink);
-  margin: 2rem 0;
-  /* text-align: center; */
+  padding: 2rem var(--padding) 1rem var(--padding);
+  text-align: ${(props) => props.align};
+  text-align: center;
   @media only screen and (max-width: 415px) {
+    padding: 1rem var(--padding) 1rem var(--padding);
+    line-height: 1.5;
   }
+`;
+
+export const SectionBlurb = styled.h5`
+  font-weight: 300;
+  font-size: var(--service-section-tagline);
+  padding: 0 var(--padding) 2rem var(--padding);
+  text-align: ${(props) => props.align};
+  text-align: center;
+  @media only screen and (max-width: 415px) {
+    padding: 0rem var(--padding) 1rem var(--padding);
+  }
+`;
+
+export const MainText = styled.p`
+  font-size: var(--section-main-font-size);
+  font-weight: 100;
 `;

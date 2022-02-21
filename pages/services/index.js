@@ -4,18 +4,19 @@ import ServicesHero from '../../components/ServicesHero';
 import {
   ServicesPage,
   ServicesHeader,
-  ServicesSummary,
+  ServicesHomeSummary,
 } from '../../styles/ServicesStyles.js';
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import Link from 'next/link';
+import { SectionBlurb, SectionHeading } from '../../styles/GlobalStyles';
 
 export default function Services() {
   return (
     <ServicesPage>
-      <ServicesHero size={22}>
+      <ServicesHero>
         <ServiceBackgroundImage img={hero} position="center" brightness="0.3" />
         <h2>What we can do for you</h2>
-        <p className="small">
+        <p>
           Our service offering reflects the talent within Above and Beyond
           Solutions, which is a collective of live event professionals, tech
           specialists and social advocates. <br /> We connect the brand, the
@@ -29,24 +30,23 @@ export default function Services() {
       </ServicesHero>
       <main>
         <ServicesHeader>
-          <h4>Our Services</h4>
-          <h5>Big impact, creative campaigns with small agency care. </h5>
+          <SectionHeading>Our Services</SectionHeading>
+          <SectionBlurb>
+            Big impact, creative campaigns with small agency care.{' '}
+          </SectionBlurb>
         </ServicesHeader>
-        <ServicesSummary
-          style={{
-            color: 'black',
-            background: 'var(--white)',
-            minHeight: '5rem',
-          }}
-        >
-          <p className="service-home-p">
+        <ServicesHomeSummary>
+          <p>
             Our digital marketing prowess tied to exhibition stand planning and
             delivery through to artist liaison, logistics and event promotion.
             Highlights our diverse yet in sync offering that not many other
-            agencies can boast. We have the competencies, contacts and drive to
-            provide organisers and venues a unique selection of revenue streams.
-            We create Feel good moments going Above and Beyond to ensure long
-            lasting happy memories and human impressions.
+            agencies can boast.
+            <br />
+            <br />
+            We have the competencies, contacts and drive to provide organisers
+            and venues a unique selection of revenue streams. We create Feel
+            good moments going Above and Beyond to ensure long lasting happy
+            memories and human impressions.
             <br />
             <br />
             We compliment all the live work with web site builds, ensuring your
@@ -54,8 +54,8 @@ export default function Services() {
             engagement. With our social media marketing, we use each channel to
             maximise your investment.
           </p>
-        </ServicesSummary>
-        <ServicesSquareCards margin={-4} />
+        </ServicesHomeSummary>
+        <ServicesSquareCards />
       </main>
     </ServicesPage>
   );

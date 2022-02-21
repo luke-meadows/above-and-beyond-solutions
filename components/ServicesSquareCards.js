@@ -78,16 +78,13 @@ export default function ServicesSquareCards({ margin }) {
 }
 
 const CardContainer = styled.div`
+  background: white;
   display: grid;
   grid-template-columns: var(--service-card-grid-cols);
   padding: 0 1rem 1rem 1rem;
   grid-auto-rows: 1fr;
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
-  background: white;
-  @media only screen and (max-width: 415px) {
-    padding: 0 1rem 5rem 1rem;
-  }
 `;
 const Card = styled.div`
   z-index: 2;

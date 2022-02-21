@@ -192,14 +192,13 @@ const StyledContactForm = styled.div`
   form {
     display: flex;
     flex-direction: column;
-    font-family: 'Poppins';
     input,
     select,
     textarea {
       padding: 0.5rem;
-      font-family: 'Poppins';
+      font-family: 'Nimbus Sans', sans-serif;
       margin-bottom: 1rem;
-      font-weight: 300;
+      font-weight: 100;
       box-sizing: border-box;
       @media only screen and (max-width: 415px) {
         font-size: 16px;
@@ -227,6 +226,7 @@ const StyledContactForm = styled.div`
       font-size: 0.55rem;
       color: var(--gray);
       display: block;
+      font-weight: 100;
       &.red {
         color: var(--red);
       }

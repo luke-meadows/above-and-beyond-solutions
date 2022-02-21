@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { useContext, useEffect } from 'react';
 import { Ctx } from '../lib/ctxProvider';
 import styled from 'styled-components';
+import { SectionBlurb, SectionHeading } from '../styles/GlobalStyles';
+
 import img from '../public/assets/profile-imgs/profile.png';
 
 import sam from '../public/assets/profile-imgs/sam.png';
@@ -23,7 +25,7 @@ export default function AboutUs() {
   });
   return (
     <StyledAbout>
-      <h2>About Us</h2>
+      <SectionHeading>About Us</SectionHeading>
       <AboutTheBusiness>
         <p>
           Above & Beyond Solutions love events. We are passionate about them and
@@ -32,7 +34,7 @@ export default function AboutUs() {
           client expectations.
           <br />
           <br />
-          <strong style={{ fontWeight: '500' }}>
+          <strong style={{ fontWeight: '300' }}>
             We make it our priority to understand our client&apos;s objectives,
             working alongside clients from concept to completion to create a
             unique and memorable event.
@@ -50,7 +52,7 @@ export default function AboutUs() {
           <br />
         </p>
       </AboutTheBusiness>
-      <h2>Meet the Team</h2>
+      <SectionHeading>Meet the Team</SectionHeading>
       <TeamRowsContainer>
         <TeamRow cols={2}>
           <div className="img-container">
@@ -149,27 +151,16 @@ const StyledAbout = styled.div`
   @media only screen and (max-width: 415px) {
     padding-top: 5rem;
   }
-  h2 {
-    line-height: 1;
-    font-weight: 500;
-    padding: 4rem var(--padding);
-    text-align: center;
-    font-size: var(--section-heading-text);
-    color: var(--pink);
-    @media only screen and (max-width: 415px) {
-      padding: 1rem var(--padding) 2rem var(--padding);
-    }
-  }
 `;
 
 const AboutTheBusiness = styled.div`
   p {
     font-size: 1.4rem;
     text-align: center;
-    font-weight: 300;
+    font-weight: 100;
     padding: 0 var(--padding);
     max-width: 1500px;
-    margin:auto;
+    margin-bottom:1rem;
     @media only screen and (max-width: 415px) {
       font-size: 1rem;
       margin-bottom: 1rem;

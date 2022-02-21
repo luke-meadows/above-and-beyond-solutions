@@ -38,7 +38,7 @@ const StyledPage = styled.div`
 
 const OverLay = styled.div`
   background: black;
-  height: 150%;
+  height: 1000%;
   width: 100%;
   position: absolute;
   z-index: 4;

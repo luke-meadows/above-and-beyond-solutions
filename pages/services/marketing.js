@@ -13,10 +13,11 @@ import Link from 'next/link';
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
 import Image from 'next/image';
+import { SectionBlurb, SectionHeading } from '../../styles/GlobalStyles';
 export default function MarketingPage() {
   return (
     <ServicesPage>
-      <ServicesHero size={22}>
+      <ServicesHero>
         <ServiceBackgroundImage img={Hero} position="top" brightness="0.3" />
         <h2>Marketing</h2>
         <p>
@@ -30,8 +31,8 @@ export default function MarketingPage() {
       </ServicesHero>
       <main>
         <ServicesHeader>
-          <h4>Marketing for Your Business</h4>
-          <h5>What We Can Help With:</h5>
+          <SectionHeading>Marketing for your business</SectionHeading>
+          <SectionBlurb>What We Can Help With:</SectionBlurb>
         </ServicesHeader>
         <IconCards>
           <IconCard>
@@ -107,7 +108,7 @@ export default function MarketingPage() {
           <ImageContainer>
             <Image layout="fill" objectFit="cover" src={SummaryImg} />
           </ImageContainer>
-          <h4>Why Choose Us?</h4>
+          <SectionHeading>Why choose us</SectionHeading>
           <p>
             So you&apos;re looking for a full 360 &#176; marketing agency that
             you can actually trust without having to sift through countless

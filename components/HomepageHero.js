@@ -42,6 +42,7 @@ const StyledHero = styled.div`
   min-height: 100vh;
   height: 100vh;
   position: relative;
+  background: black;
 `;
 
 const HeroVideo = styled.video`

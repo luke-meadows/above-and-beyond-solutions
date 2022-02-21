@@ -2,6 +2,7 @@ import { useContext, useEffect } from 'react';
 import styled from 'styled-components';
 import { Ctx } from '../lib/ctxProvider';
 import Partners from '../components/Partners';
+import { SectionBlurb, SectionHeading } from '../styles/GlobalStyles';
 
 export default function PartnersPage() {
   const { setShouldStick, setStickyNavCoords } = useContext(Ctx);
@@ -15,12 +16,12 @@ export default function PartnersPage() {
   });
   return (
     <StyledAbout>
-      <h2>Our Partners</h2>
+      <SectionHeading>Our Partners</SectionHeading>
       <AboutPartners>
-        <p>
+        <SectionBlurb>
           Brands who have experienced the creative impact of working with Above
           and Beyond:
-        </p>
+        </SectionBlurb>
       </AboutPartners>
       <Partners noTitle={true} />
     </StyledAbout>
@@ -28,21 +29,10 @@ export default function PartnersPage() {
 }
 
 const StyledAbout = styled.div`
-  padding: 6rem 0 3rem 0;
+  padding: 5rem 0 3rem 0;
   background: white;
-  h2 {
-    line-height: 1;
-    font-weight: 500;
-    padding: 4rem var(--padding) 2rem 4rem;
-    text-align: center;
-    font-size: var(--section-heading-text);
-    color: var(--pink);
-    @media only screen and (max-width: 415px) {
-      padding: 0 var(--padding) 1rem var(--padding);
-    }
-  }
   @media only screen and (max-width: 415px) {
-    padding: 6rem 0 0rem 0;
+    padding: 4rem 0 1rem 0;
   }
 `;
 
@@ -56,5 +46,5 @@ const AboutPartners = styled.div`
       font-size: 1rem;
     }
   }
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 `;

@@ -4,7 +4,6 @@ export default function HomeServicesSection() {
   return (
     <StyledServicesSection>
       <h2>What We Offer</h2>
-      <ServicesSquareCards />
     </StyledServicesSection>
   );
 }

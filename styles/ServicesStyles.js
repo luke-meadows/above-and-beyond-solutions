@@ -10,34 +10,17 @@ export const ServicesPage = styled.div`
 
 export const ServicesHeader = styled.div`
   background: white;
-  text-align: center;
-
-  padding: 1rem var(--padding) 0 var(--padding);
-  h4 {
-    color: var(--pink);
-    font-weight: 500;
-    font-size: var(--section-heading-text);
-    margin-bottom: 1rem;
-    padding: 0 var(--padding);
-  }
-  h5 {
-    font-weight: 500;
-    font-size: var(--service-section-tagline);
-  }
 `;
 
 export const IconCards = styled.div`
   background: white;
-
   display: grid;
   grid-template-columns: var(--microservice-grid-cols);
   grid-column-gap: 4rem;
   grid-row-gap: 4rem;
   padding: 2rem 4rem 3rem 4rem;
   @media only screen and (max-width: 415px) {
-    padding: 1rem 1rem 3rem 1rem;
-    grid-row-gap: 2rem;
-    margin-bottom: -1rem;
+    padding: 2rem 1rem 3rem 1rem;
   }
 `;
 
@@ -52,8 +35,8 @@ export const IconCard = styled.div`
   h5 {
     padding: 1rem;
     font-size: 1.2rem;
-    font-weight: 500;
-    text-align: center;
+    font-weight: 300;
+    /* text-align: center; */
     @media only screen and (max-width: 415px) {
       margin: -1rem 0 0rem 0;
     }
@@ -61,7 +44,7 @@ export const IconCard = styled.div`
   p {
     font-size: 1rem;
     text-align: center;
-    font-weight: 300;
+    font-weight: 100;
     margin: auto;
     @media only screen and (max-width: 415px) {
       margin: 0;
@@ -77,32 +60,45 @@ export const IconCard = styled.div`
   }
 `;
 
+export const ServicesHomeSummary = styled.div`
+  position: relative;
+  color: white;
+  background: var(--white);
+  color: black;
+  p {
+    max-width: 120ch;
+    font-size: var(--section-main-font-size);
+    font-weight: 100;
+    padding: 0 var(--padding) 2rem var(--padding);
+    text-align: center;
+  }
+`;
 export const ServicesSummary = styled.div`
   position: relative;
-  padding: 2rem;
   color: white;
+  padding-bottom: 2rem;
   text-align: center;
-  min-height: 45vh;
   h4 {
     color: var(--pink);
     font-weight: 500;
     font-size: 2.1rem;
+    padding: 2rem var(--padding) 1rem var(--padding);
+    @media only screen and (max-width: 415px) {
+      padding: 0rem var(--padding) 1rem var(--padding);
+      font-size: 1.5rem;
+    }
   }
   h5 {
     font-weight: 400;
     font-size: 1.5rem;
-    color: red;
   }
   p {
     max-width: 120ch;
-    margin: 0 auto;
-    font-size: 1.2rem;
-    text-align: center;
+    font-size: var(--section-main-font-size);
     font-weight: 300;
-    padding: 2rem var(--padding);
+    padding: 0rem var(--padding) 1rem var(--padding);
   }
   @media only screen and (max-width: 415px) {
-    padding: 1rem 0;
     p {
       font-size: 1rem;
     }
@@ -125,7 +121,10 @@ export const ImageContainer = styled.div`
   z-index: -1;
 
   img {
-    filter: brightness(0.3);
+    filter: brightness(0.2);
     z-index: -1;
+    @media only screen and (max-width: 415px) {
+      filter: brightness(0.3);
+    }
   }
 `;
