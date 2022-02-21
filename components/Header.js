@@ -184,9 +184,9 @@ export const Nav = styled.nav`
     align-items: center;
     li {
       list-style: none;
-      font-size: 1rem;
+      font-size: 0.9rem;
       margin: 0 1rem;
-      font-weight: 300;
+      font-weight: 100;
       display: flex;
       cursor: pointer;
       &:hover {

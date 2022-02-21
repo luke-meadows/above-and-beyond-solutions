@@ -122,7 +122,7 @@ html {
     }
 }
 body {
-  font-family: 'Nimbus Sans';
+  font-family: 'Nimbus Sans', sans-serif;
   margin: 0;
   padding: 0;
   overscroll-behavior: none;
@@ -147,7 +147,7 @@ li {
 }
 button {
   text-transform: uppercase;
-  font-family: 'Nimbus Sans';
+  font-family: 'Nimbus Sans', sans-serif;
   background: var(--pink);
   padding: 0.5rem;
   color: black;
