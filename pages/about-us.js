@@ -167,6 +167,7 @@ const AboutTheBusiness = styled.div`
   }
 `;
 const TeamRowsContainer = styled.div`
+  margin-top: 2rem;
   @media only screen and (max-width: 415px) {
     margin-top: 1rem;
   }

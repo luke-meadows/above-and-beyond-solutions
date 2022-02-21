@@ -186,8 +186,8 @@ const StyledContactForm = styled.div`
   h4 {
     font-size: 1.4rem;
     text-align: center;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
   }
   form {
     display: flex;
@@ -197,7 +197,7 @@ const StyledContactForm = styled.div`
     textarea {
       padding: 0.5rem;
       font-family: 'Nimbus Sans', sans-serif;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       font-weight: 100;
       box-sizing: border-box;
       @media only screen and (max-width: 415px) {
@@ -241,7 +241,7 @@ const StyledContactForm = styled.div`
     }
     .select-container {
       width: 100%;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       height: fit-content;
       position: relative;
     }

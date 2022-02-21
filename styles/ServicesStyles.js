@@ -80,7 +80,7 @@ export const ServicesSummary = styled.div`
   text-align: center;
   h4 {
     color: var(--pink);
-    font-weight: 500;
+    font-weight: 300;
     font-size: 2.1rem;
     padding: 2rem var(--padding) 1rem var(--padding);
     @media only screen and (max-width: 415px) {
@@ -95,7 +95,7 @@ export const ServicesSummary = styled.div`
   p {
     max-width: 120ch;
     font-size: var(--section-main-font-size);
-    font-weight: 300;
+    font-weight: 100;
     padding: 0rem var(--padding) 1rem var(--padding);
   }
   @media only screen and (max-width: 415px) {

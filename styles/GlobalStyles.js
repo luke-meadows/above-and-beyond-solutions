@@ -136,7 +136,7 @@ a {
 `;
 
 export const SectionHeading = styled.h2`
-  font-weight: 500;
+  font-weight: 300;
   font-size: var(--section-heading-text);
   color: var(--pink);
   padding: 2rem var(--padding) 1rem var(--padding);
