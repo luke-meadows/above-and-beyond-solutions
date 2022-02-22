@@ -74,6 +74,12 @@ export const ServicesHomeSummary = styled.div`
     text-align: center;
     margin: 0 auto;
   }
+  @media only screen and (max-width: 415px) {
+    padding-bottom: 0rem;
+    p {
+      padding: 0 var(--padding) 1rem var(--padding);
+    }
+  }
 `;
 export const ServicesSummary = styled.div`
   position: relative;
