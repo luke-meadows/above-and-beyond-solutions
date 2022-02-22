@@ -18,7 +18,7 @@ export default function HomepageHero() {
         loop
         webkit-playsinline="true"
         playsInline={true}
-        src={require('../public/assets/HERO-NO-SWEARING.mp4')}
+        src={require('../public/assets/HERO.mp4')}
         type="video/mp4"
       />
       <DottedOverlay>
@@ -92,6 +92,6 @@ const MainHeroContent = styled.div`
 const ImageContainer = styled.div`
   display: block;
   width: calc(100vw - 2rem);
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
   max-width: 1000px;
 `;

@@ -19,10 +19,12 @@ export default function Services() {
         <p>
           Our service offering reflects the talent within Above and Beyond
           Solutions, which is a collective of live event professionals, tech
-          specialists and social advocates. <br /> We connect the brand, the
+          specialists and social advocates. <br />
+          {/* We connect the brand, the
           artist and the audience through multi channel marketing and
-          activations. With our commercially astute team Above and Beyond
-          Solutions will maximise the return on engagement.
+          activations. */}
+          With our commercially astute team, Above and Beyond Solutions will
+          maximise the return on engagement.
         </p>
         <Link href="/contact-us">
           <button>BOOK A CALL</button>

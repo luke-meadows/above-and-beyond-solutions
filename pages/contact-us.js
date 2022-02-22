@@ -32,7 +32,7 @@ export default function ContactUs() {
 
 const StyledContact = styled.div`
   background: white;
-  padding: 5rem 0 4rem 0;
+  padding: 6rem 0 4rem 0;
   color: black;
   max-width: 100vw;
   overflow: hidden;
@@ -59,7 +59,7 @@ const ContactInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  margin-bottom: 1rem;
   .contact-row {
     flex-direction: column;
     display: flex;
