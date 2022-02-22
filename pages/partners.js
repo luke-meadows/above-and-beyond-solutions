@@ -37,6 +37,7 @@ const StyledAbout = styled.div`
 `;
 
 const AboutPartners = styled.div`
+  margin-bottom: 1rem;
   p {
     font-size: 1.5rem;
     text-align: center;
@@ -46,5 +47,4 @@ const AboutPartners = styled.div`
       font-size: 1rem;
     }
   }
-  margin-bottom: 1rem;
 `;
