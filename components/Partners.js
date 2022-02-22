@@ -20,7 +20,7 @@ export default function Partners() {
 
 const StyledPartners = styled.div`
   height: fit-content;
-  padding: 2rem var(--padding);
+  padding: 2rem var(--padding) 0rem var(--padding);
   background: white;
   .container {
     display: grid;
