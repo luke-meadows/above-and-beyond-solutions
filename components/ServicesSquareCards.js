@@ -85,7 +85,7 @@ const CardContainer = styled.div`
   grid-auto-rows: 1fr;
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 715px) {
     grid-row-gap: 1.5rem;
     padding: 1.5rem;
   }
@@ -111,7 +111,7 @@ const Card = styled.div`
       }
     }
   }
-  @media only screen and (max-width: 415px) {
+  @media only screen and (max-width: 715px) {
     &:hover {
       .img-container {
         img {

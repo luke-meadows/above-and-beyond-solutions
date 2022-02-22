@@ -165,14 +165,14 @@ const AboutTheBusiness = styled.div`
     padding: 0 var(--padding);
     max-width: 1500px;
     margin: 0 auto 1rem auto;
-    @media only screen and (max-width: 415px) {
+    @media only screen and (max-width: 715px) {
       font-size: 1rem;
       margin-bottom: 1rem;
   }
 `;
 const TeamRowsContainer = styled.div`
   margin-top: 2rem;
-  @media only screen and (max-width: 415px) {
+  @media only screen and (max-width: 715px) {
     margin-top: 1rem;
   }
 `;
@@ -187,7 +187,10 @@ const TeamRow = styled.div`
     gap: 6rem;
 
   }
-  @media only screen and (max-width: 415px) {
+  @media only screen and (min-width: 1000px) {
+    gap: 2rem;
+  }
+  @media only screen and (max-width: 715px) {
   margin-bottom: 4rem;
   gap: 4rem;
     grid-template-columns: none;
@@ -199,7 +202,11 @@ const TeamRow = styled.div`
     height: 400px;
     width: 400px;
     position: relative;
-    @media only screen and (max-width: 415px) {
+    @media only screen and (min-width: 1000px) {
+      height: 300px;
+    width: 300px;
+  }
+    @media only screen and (max-width: 715px) {
       overflow: initial;
       min-height: 350px;
     }
@@ -240,7 +247,7 @@ const TeamRow = styled.div`
         color: var(--white);
         font-weight:100;
       }
-      @media only screen and (max-width: 415px) {
+      @media only screen and (max-width: 715px) {
         position: relative;
         visibility: initial;
         height: fit-content;

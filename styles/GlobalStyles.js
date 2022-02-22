@@ -58,7 +58,7 @@ html {
   --microservice-grid-cols: repeat(3, 1fr);
 
   
-  @media only screen and (max-width: 415px) {
+  @media only screen and (max-width: 1100px) {
     --hero-header-text: 2rem;
     --hero-text: 1.1rem;
     --service-hero-header: 2rem;
