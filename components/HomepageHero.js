@@ -94,5 +94,9 @@ const ImageContainer = styled.div`
   display: block;
   width: calc(100vw - 2rem);
   margin-bottom: 1rem;
-  max-width: 1200px;
+  max-width: 1100px;
+  margin-left: -0.3rem;
+  @media only screen and (min-width: 1900px) {
+    max-width: 1200px;
+  }
 `;
