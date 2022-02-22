@@ -164,7 +164,7 @@ const AboutTheBusiness = styled.div`
     font-weight: 100;
     padding: 0 var(--padding);
     max-width: 1500px;
-    margin-bottom:1rem;
+    margin: 0 auto 1rem auto;
     @media only screen and (max-width: 415px) {
       font-size: 1rem;
       margin-bottom: 1rem;
