@@ -16,7 +16,7 @@ export default function PartnersPage() {
   });
   return (
     <StyledAbout>
-      <SectionHeading>Our Partners</SectionHeading>
+      <SectionHeading>Our partners</SectionHeading>
       <AboutPartners>
         <SectionBlurb>
           Brands who have experienced the creative impact of working with Above
@@ -29,7 +29,7 @@ export default function PartnersPage() {
 }
 
 const StyledAbout = styled.div`
-  padding: 5rem 0 3rem 0;
+  padding: 7rem 0 3rem 0;
   background: white;
   @media only screen and (max-width: 415px) {
     padding: 4rem 0 1rem 0;
