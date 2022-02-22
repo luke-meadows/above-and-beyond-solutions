@@ -94,4 +94,7 @@ const ImageContainer = styled.div`
   width: calc(100vw - 2rem);
   margin-bottom: 0rem;
   max-width: 1000px;
+  @media (max-width: 485px) {
+    margin-bottom: 1rem;
+  }
 `;
