@@ -81,8 +81,9 @@ const MainHeroContent = styled.div`
   p {
     font-weight: 300;
     font-size: var(--hero-text);
-    max-width: 800px;
+    max-width: 850px;
     line-height: 1.8;
+    padding: 0 var(--padding) 0 0;
   }
   span {
     color: var(--pink);
@@ -92,9 +93,6 @@ const MainHeroContent = styled.div`
 const ImageContainer = styled.div`
   display: block;
   width: calc(100vw - 2rem);
-  margin-bottom: 2rem;
-  max-width: 1000px;
-  @media (max-width: 485px) {
-    margin-bottom: 1rem;
-  }
+  margin-bottom: 1rem;
+  max-width: 1200px;
 `;

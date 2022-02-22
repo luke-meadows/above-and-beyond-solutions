@@ -60,11 +60,11 @@ html {
   
   @media only screen and (max-width: 415px) {
     --hero-header-text: 2rem;
-    --hero-text: 1.3rem;
+    --hero-text: 1.1rem;
     --service-hero-header: 2rem;
     --service-hero-text: 1rem;
     --section-heading-text: 1.8rem;
-  --section-main-font-size: 1rem;
+    --section-main-font-size: 1rem;
     --padding: 1rem;
     --header-height: 4rem;
     --header-nav-display: none;
