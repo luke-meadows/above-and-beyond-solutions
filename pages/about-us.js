@@ -158,7 +158,7 @@ export default function AboutUs() {
 
 const StyledAbout = styled.div`
   background: white;
-  padding-top: 4rem;
+  padding-top: 5rem;
   @media only screen and (max-width: 415px) {
     padding-top: 5rem;
   }
@@ -190,7 +190,7 @@ const TeamRow = styled.div`
   margin: auto;
   width: fit-content;
   margin-bottom: var(--team-img-col-gap);
-  row-gap: var(--team-img-grid-gap);
+  gap: var(--team-img-grid-gap);
 
   @media only screen and (max-width: 715px) {
     grid-template-columns: none;
