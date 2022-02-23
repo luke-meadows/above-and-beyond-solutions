@@ -13,11 +13,11 @@ export default function HomepageHero() {
   return (
     <StyledHero ref={heroRef}>
       <HeroVideo
-        // autoPlay
+        autoPlay
         muted
         loop
-        // webkit-playsinline="true"
-        // playsInline={true}
+        webkit-playsinline="true"
+        playsInline={true}
         src={require('../public/assets/HERO.mp4')}
         type="video/mp4"
       />
