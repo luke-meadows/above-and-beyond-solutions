@@ -105,7 +105,7 @@ html {
     --microservice-grid-cols: repeat(1, 1fr);
     --section-container-padding: 2rem 5rem 0rem 5rem;
     --team-img-grid-gap: 6rem;
-  --team-img-col-gap: 4rem;
+  --team-img-col-gap: 6rem;
 
   }
 

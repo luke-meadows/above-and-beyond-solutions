@@ -190,7 +190,7 @@ const TeamRow = styled.div`
   margin: auto;
   width: fit-content;
   margin-bottom: var(--team-img-col-gap);
-  gap: var(--team-img-grid-gap);
+  row-gap: var(--team-img-grid-gap);
 
   @media only screen and (max-width: 715px) {
     grid-template-columns: none;
