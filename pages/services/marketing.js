@@ -13,7 +13,11 @@ import Link from 'next/link';
 import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
 import Image from 'next/image';
-import { SectionBlurb, SectionHeading } from '../../styles/GlobalStyles';
+import {
+  SectionBlurb,
+  SectionContainer,
+  SectionHeading,
+} from '../../styles/GlobalStyles';
 export default function MarketingPage() {
   return (
     <ServicesPage>
@@ -30,76 +34,81 @@ export default function MarketingPage() {
         </Link>
       </ServicesHero>
       <main>
-        <ServicesHeader>
-          <SectionHeading>Marketing for your business</SectionHeading>
-          <SectionBlurb>What we can help with:</SectionBlurb>
-        </ServicesHeader>
-        <IconCards>
-          <IconCard>
-            <i className="icon-window card-icon" />
-            <h5>Web Development</h5>
-            <p>
-              Servicing 50&#43; clients across the UK, we boast an in&#45;house
-              UK based team, available 24 hours a day. We take care of the
-              design, hosting and maintenance of your business&apos;s website.
-              We provide a clean, impactful and professional digital shopfront
-              for you and your audience.
-              <br />
-            </p>
-          </IconCard>
-          <IconCard>
-            <i className="icon-video card-icon" />
-            <h5>Videography</h5>
-            <p>
-              Producing fresh ideas, impactful content and imaginative show
-              reels, we can support with any element of videography for your
-              business needs. Not only will video grab and capture the attention
-              of your customers but it can also be used as a tool to help
-              influence decision making and boost your sales&#47;conversions.
-            </p>
-          </IconCard>
-          <IconCard>
-            <i className="icon-megaphone card-icon" />
-            <h5>Branding</h5>
-            <p>
-              Ensuring that your business has a detailed and bespoke branding
-              strategy to guarantee growth and longevity for your brand,
-              supported by short term and long term goals which are focussed on
-              curating your brand image in the best way possible.
-            </p>
-            {/* <a href="/services/marketing/branding">Learn More</a> */}
-          </IconCard>
-          <IconCard>
-            <i className="icon-edit card-icon" />
-            <h5>Graphics</h5>
-            <p>
-              Our in&#45;house team can provide you with digital art and graphic
-              design services to guarantee your business has the most
-              aesthetically beneficial graphic elements such as logos, colour
-              schemes and everything you need to impress your customers.
-            </p>
-          </IconCard>
-          <IconCard>
-            <i className="icon-camera card-icon" />
-            <h5>Photography</h5>
-            <p>
-              Our in-house photographer Rich, is a master of his field. With his
-              years of experience photographing a variety of artistic genres, we
-              can offer a complete photography package that will capture the
-              very best of your events. From crowd engagement down to brand
-              placement, nothing is missed.
-            </p>
-          </IconCard>
-          <IconCard>
-            <i className="icon-money card-icon" />
-            <h5>Influencer Marketing</h5>
-            <p>
-              Connecting you with social media influencers to boost awareness of
-              your brand to entice potential customers and better engage with
-              your current customers.
-            </p>
-          </IconCard>
-        </IconCards>
+        <SectionContainer>
+          <ServicesHeader>
+            <SectionHeading align="center">
+              Marketing for your business
+            </SectionHeading>
+            <SectionBlurb align="center">What we can help with:</SectionBlurb>
+          </ServicesHeader>
+          <IconCards>
+            <IconCard>
+              <i className="icon-window card-icon" />
+              <h5>Web Development</h5>
+              <p>
+                Servicing 50&#43; clients across the UK, we boast an
+                in&#45;house UK based team, available 24 hours a day. We take
+                care of the design, hosting and maintenance of your
+                business&apos;s website. We provide a clean, impactful and
+                professional digital shopfront for you and your audience.
+                <br />
+              </p>
+            </IconCard>
+            <IconCard>
+              <i className="icon-video card-icon" />
+              <h5>Videography</h5>
+              <p>
+                Producing fresh ideas, impactful content and imaginative show
+                reels, we can support with any element of videography for your
+                business needs. Not only will video grab and capture the
+                attention of your customers but it can also be used as a tool to
+                help influence decision making and boost your
+                sales&#47;conversions.
+              </p>
+            </IconCard>
+            <IconCard>
+              <i className="icon-megaphone card-icon" />
+              <h5>Branding</h5>
+              <p>
+                Ensuring that your business has a detailed and bespoke branding
+                strategy to guarantee growth and longevity for your brand,
+                supported by short term and long term goals which are focussed
+                on curating your brand image in the best way possible.
+              </p>
+              {/* <a href="/services/marketing/branding">Learn More</a> */}
+            </IconCard>
+            <IconCard>
+              <i className="icon-edit card-icon" />
+              <h5>Graphics</h5>
+              <p>
+                Our in&#45;house team can provide you with digital art and
+                graphic design services to guarantee your business has the most
+                aesthetically beneficial graphic elements such as logos, colour
+                schemes and everything you need to impress your customers.
+              </p>
+            </IconCard>
+            <IconCard>
+              <i className="icon-camera card-icon" />
+              <h5>Photography</h5>
+              <p>
+                Our in-house photographer Rich, is a master of his field. With
+                his years of experience photographing a variety of artistic
+                genres, we can offer a complete photography package that will
+                capture the very best of your events. From crowd engagement down
+                to brand placement, nothing is missed.
+              </p>
+            </IconCard>
+            <IconCard>
+              <i className="icon-money card-icon" />
+              <h5>Influencer Marketing</h5>
+              <p>
+                Connecting you with social media influencers to boost awareness
+                of your brand to entice potential customers and better engage
+                with your current customers.
+              </p>
+            </IconCard>
+          </IconCards>
+        </SectionContainer>
         <ServicesSummary>
           <ImageContainer>
             <Image layout="fill" objectFit="cover" src={SummaryImg} />

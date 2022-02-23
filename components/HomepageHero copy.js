@@ -81,6 +81,7 @@ const MainHeroContent = styled.div`
   p {
     font-weight: 300;
     font-size: var(--hero-text);
+    max-width: 850px;
     line-height: 1.8;
     padding: 0 var(--padding) 0 0;
   }
@@ -91,7 +92,14 @@ const MainHeroContent = styled.div`
 
 const ImageContainer = styled.div`
   display: block;
+  width: calc(100vw - 2rem);
   margin-bottom: 1rem;
-  width: var(--hero-image-width);
+  max-width: 1100px;
   margin-left: -0.3rem;
+  @media only screen and (min-width: 1900px) {
+    max-width: 1200px;
+  }
+  @media only screen and (min-width: 1000px) {
+    max-width: 900px;
+  }
 `;

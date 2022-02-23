@@ -6,15 +6,15 @@ import activation from '../public/assets/servicesCardImgs/activation.png';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function ServicesSquareCards() {
+export default function ServicesSquareCards({ margin }) {
   return (
-    <CardContainer>
+    <CardContainer style={{ marginBottom: `${margin}rem` }}>
       <Card>
         <h3>Marketing</h3>
         <p>
-          Stop wasting your time and money on marketing that doesn&apos;t work.
-          Let us know your business goals and we&apos;ll create you a free
-          personalised marketing plan.
+          Stop wasting your time and money on marketing that doesn’t work. Let
+          us know your business goals and we’ll create you a free personalised
+          marketing plan.
         </p>
         <Link href="/services/marketing">
           <button>Learn More</button>
@@ -27,7 +27,7 @@ export default function ServicesSquareCards() {
         <h3>Exhibitions</h3>
         <p>
           Delivering high quality, immersive exhibition solutions that
-          successfully deliver your brand messaging, create engagement and
+          successfully deliver your brand messaging, create engagment and
           increase footfall. Our innovative and unique stand designs bring your
           brand to life and help you to engage with your customers.
         </p>
@@ -41,9 +41,9 @@ export default function ServicesSquareCards() {
       <Card>
         <h3>Live Events</h3>
         <p>
-          Our 15 years live event experience means we&apos;re proficient in not
-          only building and delivering the event but also organising everything
-          from logistics to technical delivery, promotions to talent booking,
+          Our 15 years live event experience means we’re proficient in not only
+          building and delivering the event but also organising everything from
+          logistics to technical delivery, promotions to talent booking,
           licensing to ticket sales.
         </p>
         <Link href="/services/live-events">
@@ -78,14 +78,16 @@ export default function ServicesSquareCards() {
 }
 
 const CardContainer = styled.div`
+  background: white;
   display: grid;
   grid-template-columns: var(--service-card-grid-cols);
-  padding: 2rem 1rem 0 1rem;
+  padding: 1rem;
   grid-auto-rows: 1fr;
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
-  @media only screen and (max-width: 1440px) {
-    padding: 1rem 1rem 0 1rem;
+  @media only screen and (max-width: 715px) {
+    grid-row-gap: 1.5rem;
+    padding: 1.5rem;
   }
 `;
 const Card = styled.div`
@@ -99,7 +101,9 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-
+  @media only screen and (min-width: 1600px) {
+    min-height: 25rem;
+  }
   &:hover {
     .img-container {
       img {
@@ -107,7 +111,7 @@ const Card = styled.div`
       }
     }
   }
-  /* @media only screen and (max-width: 715px) {
+  @media only screen and (max-width: 715px) {
     &:hover {
       .img-container {
         img {
@@ -115,7 +119,7 @@ const Card = styled.div`
         }
       }
     }
-  } */
+  }
 
   a {
     color: var(--white);

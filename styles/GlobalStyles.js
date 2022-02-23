@@ -2,31 +2,12 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 
-@font-face {
-  font-family: 'Nimbus Sans';
-  src: url('/static/Nimbus-Sans-D-OT-Light-Extended_32750.ttf') format('woff2');
-  font-weight: 100;
 
-} 
- 
-@font-face {
-  font-family: 'Nimbus Sans';
-  src: url('/static/Nimbus-Sans-D-OT-Regular-Extended_32755.ttf') format('woff2');
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: 'Nimbus Sans';
-  src: url('/static/Nimbus-Sans-D-OT-Bold-Extended_32745.ttf') format('woff2');
-  font-weight: 500;
-} 
 
 
 html {
   box-sizing: border-box;
   background: black;
-  min-width: 100vw;
-  min-height: 100vh;
   overscroll-behavior: none;
   --padding: 5rem;
 
@@ -37,34 +18,77 @@ html {
   --gray: #505050;
   --red: rgb(255, 81, 81);
 
-  // --- FONTSIZES --
-  --hero-header-text: 3rem;
+  // LARGE MONITOR
   --hero-text: 1.6rem;
-  --service-hero-header: 3rem;
+  --hero-image-width: 1200px;
+  --service-hero-header: 4rem;
   --service-hero-text: 1.4rem;
-  --section-heading-text: 2.5rem;
+  --section-heading-text: 3rem;
+  --section-heading-margin-bottom: 1rem;
   --section-main-font-size: 1.2rem;
+  --service-home-container-padding: 3rem 0 1rem 0;
+  --service-home-summary-padding: 2rem var(--padding) 3rem var(--padding);
   --header-height: 6rem;
   --header-nav-display: block;
   --header-contact-display: flex;
   --mobile-menu-icon-display: none;
+  --section-container-padding: 3rem 5rem 0rem 5rem;
   --section-heading-padding: 2rem 5rem;
+  --section-heading-line-height: 2;
   --service-section-tagline: 1.5rem;
-  --partners-grid-gap: 2rem;
+  --partners-grid-gap: 3rem;
   --partners-grid-template-cols: repeat(10, 1fr);
   --service-card-grid-cols: repeat(4, 1fr);
   --service-card-header: 1.5rem;
   --footer-nav-width: 60rem;
   --microservice-grid-cols: repeat(3, 1fr);
+  --microservice-card-padding: 6rem 0;
+  --microservice-card-row-gap: 6rem ;
+  --microservice-card-col-gap: 12rem ;
+  --team-img-grid-gap: 10rem;
+  --team-img-col-gap: 6rem;
 
-  
+// LAPTOP
+  @media only screen and (max-width: 1440px) {
+  --hero-text: 1.4rem;
+  --hero-image-width: 1000px;
+  --service-hero-header: 3.5rem;
+  --service-hero-text: 1.5rem;
+  --section-heading-text: 2.5rem;
+  --section-main-font-size: 1.2rem;
+  --service-section-tagline: 1.3rem;
+  --section-container-padding: 2rem 5rem 0rem 5rem;
+  --service-home-container-padding: 2rem 0 1rem 0;
+  --partners-grid-gap: 2rem;
+  --microservice-card-padding: 4rem 0;
+  --microservice-card-row-gap: 4rem ;
+  --microservice-card-col-gap: 4rem ;
+  --team-img-grid-gap: 6rem;
+  --team-img-col-gap: 4rem;
+  }
+  //IPAD
   @media only screen and (max-width: 1100px) {
-    --hero-header-text: 2rem;
-    --hero-text: 1.1rem;
-    --service-hero-header: 2rem;
-    --service-hero-text: 1rem;
+    --hero-image-width: 800px;
+    --service-card-grid-cols: repeat(2, 1fr);
+    --service-home-container-padding: 2rem 0 1rem 0;
+  --section-container-padding: 3rem 5rem 0rem 5rem;
+
+    --padding: 2rem;
+    --service-hero-header: 4rem;
+    --service-hero-text: 1.2rem;
+    --microservice-grid-cols: repeat(2, 1fr);
+    --team-img-grid-gap: 4rem;
+  --team-img-col-gap: 4rem;
+  }
+  // LARGE PHONE 
+  @media only screen and (max-width: 900px) {
+    --hero-text: 1rem;
+    --hero-image-width: 500px;
+    --service-hero-header: 2.5rem;
+    --service-hero-text: 1.2rem;
     --section-heading-text: 1.8rem;
     --section-main-font-size: 1rem;
+    --service-home-summary-padding: 2rem var(--padding) 1rem var(--padding);
     --padding: 1rem;
     --header-height: 4rem;
     --header-nav-display: none;
@@ -72,20 +96,41 @@ html {
     --mobile-menu-icon-display: initial;
     --service-section-tagline: 1rem;
     --section-heading-padding: 2rem 1rem;
+    --section-heading-line-height: 1.5;
     --partners-grid-gap: 1rem;
     --partners-grid-template-cols: repeat(5, 1fr);
     --service-card-grid-cols: repeat(1, 1fr);
     --service-card-header: 1.2rem;
     --footer-nav-width: 100%;
     --microservice-grid-cols: repeat(1, 1fr);
-    }
-    @media(max-width: 375px) and (max-height: 667px) {
+    --section-container-padding: 2rem 5rem 0rem 5rem;
+    --team-img-grid-gap: 6rem;
+  --team-img-col-gap: 4rem;
+
+  }
+
+  @media only screen and (max-width: 700px) {
+    --hero-image-width: 90vw;
+    --hero-text: 1rem;
+    --service-hero-header: 1.8rem;
+    --service-hero-text: 1rem;
+    --padding: 1rem;
+    --section-heading-margin-bottom: 1rem;
+    --section-container-padding: 1rem 1rem 0rem 1rem;
+  --service-home-container-padding: 1rem 0 1rem 0;
+  --microservice-card-row-gap: 3rem ;
+  --microservice-card-padding: 3rem 0;
+
+  }
+  
+  
+    @media(max-width: 375px) and (max-height: 660px) {
       --service-hero-header: 1.8rem;
       --service-hero-text: 0.8rem;
     }
     @media(max-width: 375px) and (max-height: 568px) {
       --service-hero-header: 1.5rem;
-    }
+    } 
 }
 body {
   font-family: 'Nimbus Sans', sans-serif;
@@ -139,27 +184,24 @@ export const SectionHeading = styled.h2`
   font-weight: 300;
   font-size: var(--section-heading-text);
   color: var(--pink);
-  padding: 1rem var(--padding) 1rem var(--padding);
   text-align: ${(props) => props.align};
-  text-align: center;
-  @media only screen and (max-width: 415px) {
-    padding: 1rem var(--padding) 1rem var(--padding);
-    line-height: 1.5;
-  }
+  margin-bottom: var(--section-heading-margin-bottom);
+  line-height: var(--section-heading-line-height);
 `;
 
 export const SectionBlurb = styled.h5`
   font-weight: 300;
   font-size: var(--service-section-tagline);
-  padding: 0 var(--padding) 2rem var(--padding);
   text-align: ${(props) => props.align};
-  text-align: center;
-  @media only screen and (max-width: 415px) {
-    padding: 0rem var(--padding) 1rem var(--padding);
-  }
+  margin: 0 auto;
 `;
 
 export const MainText = styled.p`
   font-size: var(--section-main-font-size);
   font-weight: 100;
+`;
+
+export const SectionContainer = styled.section`
+  padding: var(--section-container-padding);
+  background: var(--white);
 `;

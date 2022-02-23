@@ -12,7 +12,11 @@ import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
 import ServicesHero from '../../components/ServicesHero';
 import Image from 'next/image';
 import Link from 'next/link';
-import { SectionBlurb, SectionHeading } from '../../styles/GlobalStyles';
+import {
+  SectionBlurb,
+  SectionHeading,
+  SectionContainer,
+} from '../../styles/GlobalStyles';
 export default function Activation() {
   return (
     <ServicesPage>
@@ -30,40 +34,42 @@ export default function Activation() {
         </Link>
       </ServicesHero>
       <main>
-        <ServicesHeader>
-          <SectionHeading align="center">Brand activations</SectionHeading>
-          <SectionBlurb align="center">What we can help with:</SectionBlurb>
-        </ServicesHeader>
-        <IconCards>
-          <IconCard>
-            <i className="icon-network card-icon" />
-            <h5>Sponsorship and Partnership</h5>
-            <p>
-              Help enhance your brand&apos;s impact by partnering &#47;
-              collaborating with brands and people who share the same vision and
-              can help boost impact across campaigns.
-            </p>
-          </IconCard>
-          <IconCard>
-            <i className="icon-gauge card-icon" />
-            <h5>Sampling</h5>
-            <p>
-              Brand to hand sampling is one of the most traditional methods of
-              marketing but still to this day is one of the most impactful ways
-              to drive trial, which in turn will lead to repeat custom.
-            </p>
-          </IconCard>
-          <IconCard>
-            <i className="icon-ok card-icon" />
-            <h5>Brand Activation and WOW moments</h5>
-            <p>
-              These are defining moments that create organic growth across
-              social media campaigns. These are impactful moments or events.
-              From driving tanks to flying hot air balloons across cities, no
-              activation is too big or too crazy!
-            </p>
-          </IconCard>
-        </IconCards>
+        <SectionContainer>
+          <ServicesHeader>
+            <SectionHeading align="center">Brand activations</SectionHeading>
+            <SectionBlurb align="center">What we can help with:</SectionBlurb>
+          </ServicesHeader>
+          <IconCards>
+            <IconCard>
+              <i className="icon-network card-icon" />
+              <h5>Sponsorship and Partnership</h5>
+              <p>
+                Help enhance your brand&apos;s impact by partnering &#47;
+                collaborating with brands and people who share the same vision
+                and can help boost impact across campaigns.
+              </p>
+            </IconCard>
+            <IconCard>
+              <i className="icon-gauge card-icon" />
+              <h5>Sampling</h5>
+              <p>
+                Brand to hand sampling is one of the most traditional methods of
+                marketing but still to this day is one of the most impactful
+                ways to drive trial, which in turn will lead to repeat custom.
+              </p>
+            </IconCard>
+            <IconCard>
+              <i className="icon-ok card-icon" />
+              <h5>Brand Activation and WOW moments</h5>
+              <p>
+                These are defining moments that create organic growth across
+                social media campaigns. These are impactful moments or events.
+                From driving tanks to flying hot air balloons across cities, no
+                activation is too big or too crazy!
+              </p>
+            </IconCard>
+          </IconCards>
+        </SectionContainer>
         <ServicesSummary>
           <ImageContainer>
             <Image

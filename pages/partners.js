@@ -16,23 +16,23 @@ export default function PartnersPage() {
   });
   return (
     <StyledAbout>
-      <SectionHeading>Our partners</SectionHeading>
+      <SectionHeading align="center">Our partners</SectionHeading>
       <AboutPartners>
-        <SectionBlurb>
+        <SectionBlurb align="center">
           Brands who have experienced the creative impact of working with Above
           and Beyond:
         </SectionBlurb>
       </AboutPartners>
-      <Partners noTitle={true} />
+      <Partners />
     </StyledAbout>
   );
 }
 
 const StyledAbout = styled.div`
-  padding: 7rem 0 3rem 0;
+  padding: 7rem var(--padding) 4rem var(--padding);
   background: white;
-  @media only screen and (max-width: 415px) {
-    padding: 4rem 0 1rem 0;
+  @media only screen and (max-width: 1100px) {
+    padding: 6rem var(--padding) 2rem var(--padding);
   }
 `;
 

@@ -2,7 +2,11 @@ import styled from 'styled-components';
 import { useContext, useEffect } from 'react';
 import { Ctx } from '../lib/ctxProvider';
 import ContactForm from '../components/ContactForm';
-import { SectionBlurb, SectionHeading } from '../styles/GlobalStyles';
+import {
+  SectionBlurb,
+  SectionContainer,
+  SectionHeading,
+} from '../styles/GlobalStyles';
 
 export default function ContactUs() {
   const { setShouldStick, setStickyNavCoords } = useContext(Ctx);
@@ -16,23 +20,27 @@ export default function ContactUs() {
 
   return (
     <StyledContact>
-      <SectionHeading>Contact us</SectionHeading>
-      <ContactContainer>
-        <ContactInfoContainer>
-          <div className="contact-row">
-            <i className="icon-mail" />
-            <p className="contact-info">hello@aboveandbeyondsolutions.co.uk</p>
-          </div>
-        </ContactInfoContainer>
-        <ContactForm />
-      </ContactContainer>
+      <SectionContainer>
+        <SectionHeading align="center">Contact us</SectionHeading>
+        <ContactContainer>
+          <ContactInfoContainer>
+            <div className="contact-row">
+              <i className="icon-mail" />
+              <p className="contact-info">
+                hello@aboveandbeyondsolutions.co.uk
+              </p>
+            </div>
+          </ContactInfoContainer>
+          <ContactForm />
+        </ContactContainer>
+      </SectionContainer>
     </StyledContact>
   );
 }
 
 const StyledContact = styled.div`
   background: white;
-  padding: 6rem 0 4rem 0;
+  padding: 5rem 0 4rem 0;
   color: black;
   max-width: 100vw;
   overflow: hidden;
@@ -41,10 +49,8 @@ const StyledContact = styled.div`
 const ContactContainer = styled.div`
   margin: auto 0;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-
   padding-top: 1rem;
   @media only screen and (max-width: 768px) {
     flex-direction: column;
@@ -60,6 +66,7 @@ const ContactInfoContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-bottom: 1rem;
+  margin-right: 5rem;
   .contact-row {
     flex-direction: column;
     display: flex;

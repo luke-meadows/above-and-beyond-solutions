@@ -16,12 +16,9 @@ export const IconCards = styled.div`
   background: white;
   display: grid;
   grid-template-columns: var(--microservice-grid-cols);
-  grid-column-gap: 4rem;
-  grid-row-gap: 4rem;
-  padding: 2rem 4rem 4rem 4rem;
-  @media only screen and (max-width: 415px) {
-    padding: 2rem 1rem 3rem 1rem;
-  }
+  grid-column-gap: var(--microservice-card-col-gap);
+  grid-row-gap: var(--microservice-card-row-gap);
+  padding: var(--microservice-card-padding);
 `;
 
 export const IconCard = styled.div`
@@ -60,32 +57,12 @@ export const IconCard = styled.div`
   }
 `;
 
-export const ServicesHomeSummary = styled.div`
-  position: relative;
-  color: white;
-  background: var(--white);
-  color: black;
-  padding-bottom: 1rem;
-  p {
-    max-width: 120ch;
-    font-size: var(--section-main-font-size);
-    font-weight: 100;
-    padding: 0 var(--padding) 2rem var(--padding);
-    text-align: center;
-    margin: 0 auto;
-  }
-  @media only screen and (max-width: 415px) {
-    padding-bottom: 0rem;
-    p {
-      padding: 0 var(--padding) 1rem var(--padding);
-    }
-  }
-`;
 export const ServicesSummary = styled.div`
   position: relative;
   color: white;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
   text-align: center;
+  z-index: 4;
   h4 {
     color: var(--pink);
     font-weight: 300;

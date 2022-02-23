@@ -1,21 +1,15 @@
 import styled from 'styled-components';
 import HomepageHero from '../components/HomepageHero';
 import Partners from '../components/Partners';
-import ServicesSquareCards from '../components/ServicesSquareCards';
-import { SectionBlurb, SectionHeading } from '../styles/GlobalStyles';
+import PartnersSectionHome from '../components/PartnersSectionHome';
+import ServicesSectionHome from '../components/ServicesSectionHome';
 
 export default function Home() {
   return (
     <StyledHome>
       <HomepageHero />
-      <SectionHeading>Our partners</SectionHeading>
-      <SectionBlurb>
-        Brands who have experienced the creative impact of working with Above
-        and Beyond:
-      </SectionBlurb>
-      <Partners />
-      <SectionHeading>What we offer</SectionHeading>
-      <ServicesSquareCards />
+      <PartnersSectionHome />
+      <ServicesSectionHome />
     </StyledHome>
   );
 }
