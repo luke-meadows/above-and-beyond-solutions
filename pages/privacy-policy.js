@@ -2,16 +2,19 @@ import styled from 'styled-components';
 import { SectionHeading } from '../styles/GlobalStyles';
 import { ServicesHomeSummary } from '../styles/ServicesStyles';
 export default function PrivacyPolicy() {
+  const website1 = 'http://optout.networkadvertising.org/#!/';
+  const website2 = 'http://optout.aboutads.info/#!/';
   return (
     <StyledPrivacy>
       <SectionHeading align="center">Privacy policy</SectionHeading>
       <Summary>
         <p>
-          This Privacy Policy outlines Above and Beyond Solutions Ltd &#40;"we",
-          "our" or "the Company"&#41; practices with respect to information
-          collected from users who access our website at
-          www.aboveandbeyondsolutions.co.uk &#40;"Site"&#41; or otherwise share
-          personal information with us &#40;collectively: "Users"&#41;.
+          This Privacy Policy outlines Above and Beyond Solutions Ltd
+          &#40;&ldquo;we&ldquo;, &ldquo;our&ldquo; or &ldquo;the
+          Company&ldquo;&#41; practices with respect to information collected
+          from users who access our website at www.aboveandbeyondsolutions.co.uk
+          &#40;&ldquo;Site&ldquo;&#41; or otherwise share personal information
+          with us &#40;collectively: &ldquo;Users&ldquo;&#41;.
           <br />
           <br />
           Responsible authority within the meaning of data protection laws, in
@@ -54,11 +57,11 @@ export default function PrivacyPolicy() {
           information, at any time and at our own discretion. Grounds for data
           collection Processing of your personal information &#40;i.e. any
           information which may potentially allow your identification through
-          reasonable means; hereinafter "Personal Information"&#41; is necessary
-          for the performance of our contractual obligations towards you and
-          providing you with our services, to protect our legitimate interests
-          and for compliance with legal and financial regulatory obligations to
-          which we are subject.
+          reasonable means; hereinafter &ldquo;Personal Information&ldquo;&#41;
+          is necessary for the performance of our contractual obligations
+          towards you and providing you with our services, to protect our
+          legitimate interests and for compliance with legal and financial
+          regulatory obligations to which we are subject.
           <br />
           <br />
           When you use the Site, you consent to the collection, storage, use,
@@ -120,12 +123,12 @@ export default function PrivacyPolicy() {
           technical information and responding to any customer service issue you
           may have; To communicate with you and to keep you informed about our
           latest updates and services; To serve you advertisements when you use
-          our Site &#40;see more under "Advertisements"&#41;; To market our
-          websites and products &#40;see more under "Marketing"&#41;; For
-          statistical and analytical purposes, intended to improve the Site. In
-          addition to the different uses listed above, we may transfer or
-          disclose Personal Information to our subsidiaries, affiliated
-          companies and subcontractors.
+          our Site &#40;see more under &ldquo;Advertisements&ldquo;&#41;; To
+          market our websites and products &#40;see more under
+          &ldquo;Marketing&ldquo;&#41;; For statistical and analytical purposes,
+          intended to improve the Site. In addition to the different uses listed
+          above, we may transfer or disclose Personal Information to our
+          subsidiaries, affiliated companies and subcontractors.
           <br />
           <br />
           In addition to the purposes listed in this Privacy Policy, we may
@@ -161,13 +164,13 @@ export default function PrivacyPolicy() {
           services.
           <br />
           <br />
-          A "cookie" is a small piece of information that a website assigns to
-          your device while you are viewing a website. Cookies are very helpful
-          and can be used for various different purposes. These purposes include
-          allowing you to navigate between pages efficiently, enabling automatic
-          activation of certain features, remembering your preferences and
-          making the interaction between you and our Services quicker and
-          easier. Cookies are also used to help make sure that the
+          A &ldquo;cookie&ldquo; is a small piece of information that a website
+          assigns to your device while you are viewing a website. Cookies are
+          very helpful and can be used for various different purposes. These
+          purposes include allowing you to navigate between pages efficiently,
+          enabling automatic activation of certain features, remembering your
+          preferences and making the interaction between you and our Services
+          quicker and easier. Cookies are also used to help make sure that the
           advertisements you see are relevant to you and your interests and to
           compile statistical data on your use of our Services.
           <br />
@@ -265,17 +268,17 @@ export default function PrivacyPolicy() {
           <br />
           You may opt out of many third-party ad networks, including those
           operated by members of the Network Advertising Initiative
-          &#40;"NAI"&#41; and the Digital Advertising Alliance &#40;"DAA"&#41;.
-          For more information about this practice by NAI and DAA members, and
-          your choices regarding having this information used by these
-          companies, including how to opt-out of third-party ad networks
-          operated by NAI and DAA members, please visit their respective
-          websites: http://optout.networkadvertising.org/#!/ and
-          http://optout.aboutads.info/#!/. Marketing We may use your Personal
-          Information such as your name, email address, telephone number, etc.,
-          ourselves or by using our third-party subcontractors, for the purpose
-          of providing you with promotional materials concerning our services
-          which we believe may interest you.
+          &#40;&ldquo;NAI&ldquo;&#41; and the Digital Advertising Alliance
+          &#40;&ldquo;DAA&ldquo;&#41;. For more information about this practice
+          by NAI and DAA members, and your choices regarding having this
+          information used by these companies, including how to opt-out of
+          third-party ad networks operated by NAI and DAA members, please visit
+          their respective websites: {website1} and
+          {website2}. Marketing We may use your Personal Information such as
+          your name, email address, telephone number, etc., ourselves or by
+          using our third-party subcontractors, for the purpose of providing you
+          with promotional materials concerning our services which we believe
+          may interest you.
           <br />
           <br />
           To respect your right to privacy, within such marketing materials we
@@ -308,13 +311,13 @@ export default function PrivacyPolicy() {
           Privacy Policy We reserve the right to periodically amend or revise
           the Privacy Policy; material changes will be effective immediately
           upon the display of the revised Privacy policy. The last revision will
-          be reflected in the "Last modified" section. Your continued use of the
-          Platform, following the notification of such amendments on our
-          website, constitutes your acknowledgment and consent of such
-          amendments to the Privacy Policy and your agreement to be bound by the
-          terms of such amendments. How to contact us If you have any general
-          questions about the Site or the information we collect about you and
-          how we use it, you can contact us at
+          be reflected in the &ldquo;Last modified&ldquo; section. Your
+          continued use of the Platform, following the notification of such
+          amendments on our website, constitutes your acknowledgment and consent
+          of such amendments to the Privacy Policy and your agreement to be
+          bound by the terms of such amendments. How to contact us If you have
+          any general questions about the Site or the information we collect
+          about you and how we use it, you can contact us at
           hello@aboveandbeyondsolutions.co.uk
           <br />
           <br />
