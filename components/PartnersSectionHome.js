@@ -10,8 +10,7 @@ export default function PartnersSectionHome() {
     <SectionContainer>
       <SectionHeading align="center">Our partners</SectionHeading>
       <SectionBlurb align="center">
-        Brands who have experienced the creative impact of working with Above
-        and Beyond:
+        Brands we&apos;ve gone Above and Beyond for:
       </SectionBlurb>
       <Partners />
     </SectionContainer>

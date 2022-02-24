@@ -47,6 +47,11 @@ html {
   --microservice-card-col-gap: 12rem ;
   --team-img-grid-gap: 10rem;
   --team-img-col-gap: 6rem;
+  @media only screen and (max-width: 1600px) {
+    --microservice-card-padding: 4rem 0;
+  --microservice-card-row-gap: 4rem ;
+  --microservice-card-col-gap: 4rem ;
+  }
 
 // LAPTOP
   @media only screen and (max-width: 1440px) {
@@ -60,9 +65,6 @@ html {
   --section-container-padding: 2rem 5rem 0rem 5rem;
   --service-home-container-padding: 2rem 0 1rem 0;
   --partners-grid-gap: 2rem;
-  --microservice-card-padding: 4rem 0;
-  --microservice-card-row-gap: 4rem ;
-  --microservice-card-col-gap: 4rem ;
   --team-img-grid-gap: 6rem;
   --team-img-col-gap: 4rem;
   }

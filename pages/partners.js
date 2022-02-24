@@ -19,8 +19,7 @@ export default function PartnersPage() {
       <SectionHeading align="center">Our partners</SectionHeading>
       <AboutPartners>
         <SectionBlurb align="center">
-          Brands who have experienced the creative impact of working with Above
-          and Beyond:
+          Brands we&apos;ve gone Above and Beyond for:
         </SectionBlurb>
       </AboutPartners>
       <Partners />
