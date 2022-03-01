@@ -120,4 +120,12 @@ const ContactInfoContainer = styled.div`
       margin-left: 0rem;
     }
   }
+  @media only screen and (max-width: 320px) {
+    .contact-row {
+      font-size: 0.9rem;
+    }
+    i {
+      font-size: 1.2rem;
+    }
+  }
 `;
