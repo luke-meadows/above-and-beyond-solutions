@@ -21,9 +21,11 @@ export default function Header() {
   const onAbout = router?.router?.asPath === '/about-us';
   const onContact = router?.router?.asPath === '/contact-us';
   const onPartners = router?.router?.asPath === '/partners';
+  const onGallery = router?.router?.asPath.includes('/gallery');
 
   function isSticky() {
-    if (onAbout || onContact || onPartners) return;
+    if (onAbout || onContact || onPartners || onGallery) return;
+    console.log('hello');
     const stickPoint = stickyNavCoords - headerHeight;
     if (window.scrollY >= stickPoint) {
       setShouldStick(true);

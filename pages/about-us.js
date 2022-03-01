@@ -64,7 +64,7 @@ export default function AboutUs() {
       <SectionContainer>
         <SectionHeading align="center">Meet the team</SectionHeading>
         <TeamRowsContainer>
-          <TeamRow cols={2}>
+          <TeamRow cols={5}>
             <div className="img-container">
               <Image objectPosition="center" src={sam} />
               <div className="info">
@@ -79,8 +79,6 @@ export default function AboutUs() {
                 <p>Founder / Managing Director</p>
               </div>
             </div>
-          </TeamRow>
-          <TeamRow cols={3}>
             <div className="img-container">
               <Image objectFit="cover" objectPosition="center" src={malik} />
               <div className="info">
@@ -103,7 +101,30 @@ export default function AboutUs() {
               </div>
             </div>
           </TeamRow>
-          <TeamRow cols={3}>
+          {/* <TeamRow cols={3}>
+            <div className="img-container">
+              <Image objectFit="cover" objectPosition="center" src={malik} />
+              <div className="info">
+                <h6>Malik Mattu</h6>
+                <p>Event Activation Executive</p>
+              </div>
+            </div>
+            <div className="img-container">
+              <Image objectFit="cover" objectPosition="center" src={erin} />
+              <div className="info">
+                <h6>Erin Brown</h6>
+                <p>PR / Head of Artist Liaison</p>
+              </div>
+            </div>
+            <div className="img-container">
+              <Image objectFit="cover" objectPosition="center" src={luke} />
+              <div className="info">
+                <h6>Luke Meadows</h6>
+                <p>Web Developer</p>
+              </div>
+            </div>
+          </TeamRow> */}
+          <TeamRow cols={5}>
             <div className="img-container">
               <Image objectFit="cover" objectPosition="center" src={cam} />
               <div className="info">
@@ -126,8 +147,6 @@ export default function AboutUs() {
                 <p>Web Developer</p>
               </div>
             </div>
-          </TeamRow>
-          <TeamRow cols={3}>
             <div className="img-container">
               <Image objectFit="cover" objectPosition="center" src={frankie} />
               <div className="info">
@@ -142,6 +161,22 @@ export default function AboutUs() {
                 <p>Business Development Executive</p>
               </div>
             </div>
+          </TeamRow>
+          <TeamRow cols={5}>
+            {/* <div className="img-container">
+              <Image objectFit="cover" objectPosition="center" src={frankie} />
+              <div className="info">
+                <h6>Frankie</h6>
+                <p>Head of Customer Experience </p>
+              </div>
+            </div>
+            <div className="img-container">
+              <Image objectFit="cover" objectPosition="center" src={avatar} />
+              <div className="info">
+                <h6>Vacancy</h6>
+                <p>Business Development Executive</p>
+              </div>
+            </div> */}
             <div className="img-container">
               <Image objectFit="cover" objectPosition="center" src={avatar} />
               <div className="info">
@@ -158,7 +193,7 @@ export default function AboutUs() {
 
 const StyledAbout = styled.div`
   background: white;
-  padding-top: 5rem;
+  padding: 5rem 0;
   @media only screen and (max-width: 415px) {
     padding-top: 5rem;
   }
@@ -199,15 +234,15 @@ const TeamRow = styled.div`
   .img-container {
     border-radius: 50rem;
     overflow: hidden;
-    height: 400px;
-    width: 400px;
+    height: 250px;
+    width: 250px;
     position: relative;
     @media only screen and (max-width: 715px) {
       overflow: initial;
     }
     @media only screen and (max-width: 1500px) {
-      height: 300px;
-      width: 300px;
+      height: 200px;
+      width: 200px;
     }
     @media only screen and (max-width: 1100px) {
       height: 200px;
@@ -253,6 +288,7 @@ const TeamRow = styled.div`
       p {
         color: var(--white);
         font-weight: 100;
+        text-align: center;
       }
       @media only screen and (max-width: 715px) {
         position: relative;

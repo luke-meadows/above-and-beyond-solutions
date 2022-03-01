@@ -2,11 +2,7 @@ import styled from 'styled-components';
 import { useContext, useEffect } from 'react';
 import { Ctx } from '../lib/ctxProvider';
 import ContactForm from '../components/ContactForm';
-import {
-  SectionBlurb,
-  SectionContainer,
-  SectionHeading,
-} from '../styles/GlobalStyles';
+import { SectionContainer, SectionHeading } from '../styles/GlobalStyles';
 
 export default function ContactUs() {
   const { setShouldStick, setStickyNavCoords } = useContext(Ctx);
