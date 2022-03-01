@@ -79,8 +79,8 @@ const ContactInfoContainer = styled.div`
     margin: 0 auto;
   }
   .contact-text {
+    margin: 0 auto;
     margin-bottom: 2rem;
-    max-width: 100%;
   }
   i {
     color: var(--pink);
