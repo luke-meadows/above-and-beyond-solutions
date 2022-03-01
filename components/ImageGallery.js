@@ -1,23 +1,28 @@
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import image from '../public/assets/servicesCardImgs/activation.png';
 import styled from 'styled-components';
 export default function ImageGallery({ imgs }) {
   const [pagination, setPagination] = useState(0);
   const [visibleImgs, setVisibleImgs] = useState([]);
   useEffect(() => {
-    setVisibleImgs(imgs.slice(pagination * 12, pagination * 12 + 12));
+    setVisibleImgs(imgs.slice(pagination * 8, pagination * 8 + 8));
   }, [pagination]);
 
   return (
     <div>
-      <ButtonContainer>
-        <button onClick={() => setPagination(pagination - 1)}>Prev</button>
-        <button onClick={() => setPagination(pagination + 1)}>Next</button>
-      </ButtonContainer>
       <ImageContainer>
         {visibleImgs.map((img) => (
-          <h1 key={img}>{img}</h1>
+          <div key={img}>
+            <Image objectFit="cover" layout="responsive" src={img} />
+          </div>
         ))}
       </ImageContainer>
+      <ButtonContainer>
+        <button onClick={() => setPagination(pagination - 1)}>Prev</button>
+        <p>1/8</p>
+        <button onClick={() => setPagination(pagination + 1)}>Next</button>
+      </ButtonContainer>
     </div>
   );
 }
@@ -25,16 +30,28 @@ export default function ImageGallery({ imgs }) {
 const ImageContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  h1 {
-    border: 1px solid blue;
+  grid-gap: 1rem;
+  @media only screen and (max-width: 700px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  div {
+    img {
+      height: 100%;
+      width: 100%;
+    }
   }
 `;
 
 const ButtonContainer = styled.div`
-  border: 1px solid blue;
   display: flex;
-  justify-content: flex-end;
-  button {
-    margin-left: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  margin: 2rem auto 0 auto;
+  * {
+    margin: 0 1rem;
+  }
+  p {
+    font-weight: 300;
   }
 `;
