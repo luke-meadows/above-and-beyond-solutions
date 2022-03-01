@@ -54,14 +54,15 @@ const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
 
+  padding: 0 var(--padding);
   align-items: center;
   padding-top: 1rem;
   @media only screen and (max-width: 768px) {
     flex-direction: column;
-    padding: 0 var(--padding);
     width: 100%;
     flex-direction: column;
     justify-content: center;
+    padding-top: 0rem;
   }
 `;
 
@@ -98,9 +99,10 @@ const ContactInfoContainer = styled.div`
   @media only screen and (max-width: 900px) {
     margin: 0;
     margin-top: 1rem;
-
     .contact-text {
-      width: 25rem;
+      width: 100%;
+
+      padding: 0 var(--padding);
     }
     i {
       color: var(--pink);
@@ -114,6 +116,7 @@ const ContactInfoContainer = styled.div`
     .contact-row {
       font-size: 1rem;
       margin-right: 0rem;
+      padding: 0 var(--padding);
       width: 25rem;
     }
     .contact-info {
