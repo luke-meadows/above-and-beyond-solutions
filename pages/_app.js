@@ -3,9 +3,8 @@ import '../styles/fontello/css/fontello.css';
 import Page from '../components/Page';
 import { CtxProvider } from '../lib/ctxProvider';
 import Head from 'next/head';
-import logo from '../public/assets/logos/thumbnail-white-logo.svg';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, logo }) {
   return (
     <CtxProvider>
       <Head>
@@ -26,11 +25,12 @@ function MyApp({ Component, pageProps }) {
 
 MyApp.getInitialProps = async function ({ Component, ctx }) {
   let pageProps = {};
+  const logo = fetch('../public/assets/logos/thumbnail-white-logo.svg');
   if (Component.getInitialProps) {
     pageProps = await Component.getInitialProps(ctx);
   }
   pageProps.query = ctx.query;
-  return { pageProps };
+  return { pageProps, logo };
 };
 
 export default MyApp;

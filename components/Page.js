@@ -6,7 +6,6 @@ import MobileNav from './MobileNav';
 import { Ctx } from '../lib/ctxProvider';
 import { useContext } from 'react';
 import { GlobalStyle } from '../styles/GlobalStyles';
-import logo from '../public/assets/logos/thumbnail-white-logo.svg';
 
 export default function Page({ children }) {
   const { mobileNavActive } = useContext(Ctx);
@@ -20,7 +19,6 @@ export default function Page({ children }) {
           name="description"
           content="Small agency care, with big agency capabilities"
         />
-        <meta property="og:image" content={logo} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MobileNav />
