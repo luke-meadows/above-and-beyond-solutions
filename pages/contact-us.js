@@ -53,8 +53,6 @@ const StyledContact = styled.div`
 const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
-
-  padding: 0 var(--padding);
   align-items: center;
   padding-top: 1rem;
   @media only screen and (max-width: 768px) {
@@ -71,7 +69,7 @@ const ContactInfoContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-bottom: 1rem;
-
+  width: 100%;
   .contact-row {
     display: flex;
     font-size: 1rem;
@@ -82,6 +80,7 @@ const ContactInfoContainer = styled.div`
   }
   .contact-text {
     margin-bottom: 2rem;
+    max-width: 100%;
   }
   i {
     color: var(--pink);
@@ -101,8 +100,6 @@ const ContactInfoContainer = styled.div`
     margin-top: 1rem;
     .contact-text {
       width: 100%;
-
-      padding: 0 var(--padding);
     }
     i {
       color: var(--pink);
@@ -116,7 +113,7 @@ const ContactInfoContainer = styled.div`
     .contact-row {
       font-size: 1rem;
       margin-right: 0rem;
-      padding: 0 var(--padding);
+
       width: 25rem;
     }
     .contact-info {
