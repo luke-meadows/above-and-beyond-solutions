@@ -3,7 +3,7 @@ import '../styles/fontello/css/fontello.css';
 import Page from '../components/Page';
 import { CtxProvider } from '../lib/ctxProvider';
 import Head from 'next/head';
-import logo from '/assets/logos/thumbnail-white-logo.svg';
+import logo from 'public/assets/logos/thumbnail-white-logo.svg';
 
 function MyApp({ Component, pageProps }) {
   return (
