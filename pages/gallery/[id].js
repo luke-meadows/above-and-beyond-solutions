@@ -33,4 +33,5 @@ const StyledGallery = styled.section`
   min-height: 100vh;
   background: white;
   padding: 7rem var(--padding) 4rem var(--padding);
+  min-height: 100vh;
 `;

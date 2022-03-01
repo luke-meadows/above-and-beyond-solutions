@@ -17,7 +17,7 @@ html {
   --black: #040404;
   --gray: #505050;
   --red: rgb(255, 81, 81);
-
+  
   // LARGE MONITOR
   --hero-text: 1.6rem;
   --hero-image-width: 1200px;

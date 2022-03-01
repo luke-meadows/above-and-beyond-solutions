@@ -9,19 +9,35 @@ export default function ImageGallery({ imgs }) {
     setVisibleImgs(imgs.slice(pagination * 8, pagination * 8 + 8));
   }, [pagination]);
 
+  function handleClick(direction) {
+    window.scrollTo(0, 0);
+    if (direction === 'next') {
+      setPagination(pagination + 1);
+    } else {
+      setPagination(pagination - 1);
+    }
+  }
+
   return (
     <div>
       <ImageContainer>
         {visibleImgs.map((img) => (
           <div key={img}>
-            <Image objectFit="cover" layout="responsive" src={img} />
+            <Image
+              placeholder="blur"
+              objectFit="cover"
+              layout="responsive"
+              src={img}
+            />
           </div>
         ))}
       </ImageContainer>
       <ButtonContainer>
-        <button onClick={() => setPagination(pagination - 1)}>Prev</button>
+        <button disabled={pagination === 0} onClick={() => handleClick('prev')}>
+          Prev
+        </button>
         <p>1/8</p>
-        <button onClick={() => setPagination(pagination + 1)}>Next</button>
+        <button onClick={() => handleClick('next')}>Next</button>
       </ButtonContainer>
     </div>
   );
@@ -53,5 +69,8 @@ const ButtonContainer = styled.div`
   }
   p {
     font-weight: 300;
+  }
+  button[disabled] {
+    opacity: 0;
   }
 `;
