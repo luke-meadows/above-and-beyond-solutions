@@ -15,7 +15,7 @@ export default function ImageGallery({ imgs }) {
       </ButtonContainer>
       <ImageContainer>
         {visibleImgs.map((img) => (
-          <h1>{img}</h1>
+          <h1 key={img}>{img}</h1>
         ))}
       </ImageContainer>
     </div>
