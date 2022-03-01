@@ -2,7 +2,11 @@ import styled from 'styled-components';
 import { useContext, useEffect } from 'react';
 import { Ctx } from '../lib/ctxProvider';
 import ContactForm from '../components/ContactForm';
-import { SectionContainer, SectionHeading } from '../styles/GlobalStyles';
+import {
+  SectionBlurb,
+  SectionContainer,
+  SectionHeading,
+} from '../styles/GlobalStyles';
 
 export default function ContactUs() {
   const { setShouldStick, setStickyNavCoords } = useContext(Ctx);
@@ -20,6 +24,10 @@ export default function ContactUs() {
         <SectionHeading align="center">Contact us</SectionHeading>
         <ContactContainer>
           <ContactInfoContainer>
+            <p className="contact-text">
+              If you&apos;d like to discuss an upcoming project or campaign you
+              have in mind - send us a message, we&apos;d love to hear from you{' '}
+            </p>
             <div className="contact-row">
               <i className="icon-mail" />
               <p className="contact-info">
@@ -43,9 +51,9 @@ const StyledContact = styled.div`
 `;
 
 const ContactContainer = styled.div`
-  margin: auto 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+
   align-items: center;
   padding-top: 1rem;
   @media only screen and (max-width: 768px) {
@@ -62,43 +70,51 @@ const ContactInfoContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-bottom: 1rem;
-  margin-right: 5rem;
+
   .contact-row {
-    flex-direction: column;
     display: flex;
     font-size: 1rem;
     align-items: center;
     margin-bottom: 1rem;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .contact-text {
+    margin-bottom: 2rem;
   }
   i {
     color: var(--pink);
-    font-size: 4rem;
+    font-size: 2rem;
     text-align: center;
   }
   .icon-mobile {
     font-size: 6rem;
-    margin: 0 -1.4rem;
+    /* margin: 0 -1.4rem; */
   }
   .contact-info {
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
     font-weight: 100;
   }
   @media only screen and (max-width: 900px) {
     margin: 0;
     margin-top: 1rem;
+
+    .contact-text {
+      width: 25rem;
+    }
     i {
       color: var(--pink);
       font-size: 1.5rem;
     }
+
     .icon-mobile {
       font-size: 3rem;
       margin: 0;
-      margin-bottom: -0.5rem;
     }
     .contact-row {
       font-size: 1rem;
-      flex-direction: column;
       margin-right: 0rem;
+      width: 25rem;
     }
     .contact-info {
       margin-left: 0rem;
