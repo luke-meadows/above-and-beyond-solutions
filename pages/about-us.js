@@ -283,12 +283,14 @@ const TeamRow = styled.div`
       h6 {
         color: var(--pink);
         font-weight: 400;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
       }
       p {
         color: var(--white);
         font-weight: 100;
         text-align: center;
+        font-size: 1rem;
+        padding: 0 0.5rem;
       }
       @media only screen and (max-width: 715px) {
         position: relative;
