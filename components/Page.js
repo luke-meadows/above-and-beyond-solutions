@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Footer from './Footer';
 import Header from './Header';
 import styled from 'styled-components';
@@ -6,20 +5,30 @@ import MobileNav from './MobileNav';
 import { Ctx } from '../lib/ctxProvider';
 import { useContext } from 'react';
 import { GlobalStyle } from '../styles/GlobalStyles';
+import { NextSeo } from 'next-seo';
 
 export default function Page({ children }) {
   const { mobileNavActive } = useContext(Ctx);
 
   return (
     <StyledPage>
-      <Head>
-        <title>Above & Beyond Solutions</title>
-        <meta
-          name="description"
-          content="Small agency care, with big agency capabilities"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <NextSeo
+        openGraph={{
+          url: 'https://www.aboveandbeyondsolutions.co.uk/',
+          title: 'Above And BEYOND',
+          description: 'AA',
+          images: [
+            {
+              url: 'https://www.aboveandbeyondsolutions.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fthumbnail-white-logo.e8da362a.svg&w=1920&q=75',
+              width: 800,
+              height: 600,
+              alt: 'Og Image Alt',
+              type: 'image/jpeg',
+            },
+          ],
+          site_name: 'SiteName',
+        }}
+      />
       {mobileNavActive && <OverLay />}
 
       <MobileNav />
