@@ -79,8 +79,8 @@ export default function ServicesSquareCards() {
 
 const CardContainer = styled.div`
   display: grid;
-  grid-template-columns: var(--service-card-grid-cols);
   padding: 2rem 1rem 0 1rem;
+  grid-template-columns: var(--service-card-grid-cols);
   grid-auto-rows: 1fr;
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;

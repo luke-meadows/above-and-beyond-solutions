@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import image from '../public/assets/servicesCardImgs/activation.png';
 import styled from 'styled-components';
+import ImagePreview from './ImagePreview';
 export default function ImageGallery({ imgs }) {
   const [pagination, setPagination] = useState(0);
   const [visibleImgs, setVisibleImgs] = useState([]);
@@ -18,43 +18,74 @@ export default function ImageGallery({ imgs }) {
     }
   }
 
+  const [imgPreviewActive, setImgPreviewActive] = useState(false);
+  const [currentImgIdx, setCurrentImgIdx] = useState();
+  useEffect(() => {
+    if (imgPreviewActive) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = 'initial';
+    return () => (document.body.style.overflow = 'initial');
+  }, [imgPreviewActive]);
+
+  function handleImageClick(e) {
+    setCurrentImgIdx(e.currentTarget.dataset.img);
+    setImgPreviewActive(true);
+  }
+
   return (
     <div>
-      <ImageContainer>
-        {visibleImgs.map((img) => (
-          <div key={img}>
+      <ImagesContainer>
+        {visibleImgs.map((img, i) => (
+          <div key={i} data-img={i + pagination * 8} onClick={handleImageClick}>
             <Image
-              placeholder="blur"
               objectFit="cover"
               layout="responsive"
+              width={400}
+              height={400}
               src={img}
             />
           </div>
         ))}
-      </ImageContainer>
+      </ImagesContainer>
       <ButtonContainer>
         <button disabled={pagination === 0} onClick={() => handleClick('prev')}>
           Prev
         </button>
-        <p>1/8</p>
-        <button onClick={() => handleClick('next')}>Next</button>
+        <p>
+          {pagination + 1}/{Math.ceil(imgs.length / 8)}
+        </p>
+        <button
+          disabled={pagination > Math.ceil(imgs.length / 8) - 2}
+          onClick={() => {
+            handleClick('next');
+          }}
+        >
+          Next
+        </button>
       </ButtonContainer>
+      {imgPreviewActive && (
+        <ImagePreview
+          imgs={imgs}
+          currentImgIdx={currentImgIdx}
+          setCurrentImgIdx={setCurrentImgIdx}
+          setImgPreviewActive={setImgPreviewActive}
+        />
+      )}
     </div>
   );
 }
 
-const ImageContainer = styled.div`
+const ImagesContainer = styled.div`
+  margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-gap: 1rem;
+  div {
+    cursor: pointer;
+  }
+
   @media only screen and (max-width: 700px) {
     grid-template-columns: repeat(2, 1fr);
-  }
-  div {
-    img {
-      height: 100%;
-      width: 100%;
-    }
   }
 `;
 
@@ -63,7 +94,7 @@ const ButtonContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: fit-content;
-  margin: 2rem auto 0 auto;
+  margin: 4rem auto 0 auto;
   * {
     margin: 0 1rem;
   }
@@ -71,6 +102,13 @@ const ButtonContainer = styled.div`
     font-weight: 300;
   }
   button[disabled] {
-    opacity: 0;
+    filter: brightness(0.5);
+    pointer-events: none;
+  }
+  @media only screen and (max-width: 700px) {
+    width: 100%;
+    * {
+      margin: 0;
+    }
   }
 `;

@@ -1,5 +1,7 @@
 import '../styles/globals.css';
 import '../styles/fontello/css/fontello.css';
+import 'swiper/css/bundle';
+import 'swiper/css/navigation';
 import Page from '../components/Page';
 import { CtxProvider } from '../lib/ctxProvider';
 

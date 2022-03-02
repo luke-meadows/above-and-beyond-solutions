@@ -3,11 +3,19 @@ import { SectionHeading } from '../../styles/GlobalStyles';
 import { useContext, useEffect } from 'react';
 import { Ctx } from '../../lib/ctxProvider';
 import ImageGallery from '../../components/ImageGallery';
-import { exhibitionImgs } from '../../lib/galleryImgs';
+import {
+  exhibitionImgs,
+  eventsImgs,
+  activationsImgs,
+} from '../../lib/galleryImgs';
 
 export default function Galleries({ query }) {
   const { setShouldStick, setStickyNavCoords } = useContext(Ctx);
-
+  const galleries = {
+    exhibitions: exhibitionImgs,
+    activations: activationsImgs,
+    'live-events': eventsImgs,
+  };
   useEffect(() => {
     setShouldStick(true);
     setStickyNavCoords(0);
@@ -24,7 +32,8 @@ export default function Galleries({ query }) {
       <SectionHeading align="center">
         Gallery - {query.id[0].toUpperCase() + query.id.substring(1)}
       </SectionHeading>
-      <ImageGallery imgs={exhibitionImgs} />
+      <ImageGallery imgs={galleries[query.id]} />
+      {/* <ImagePreview imgs={exhibitionImgs} /> */}
     </StyledGallery>
   );
 }
