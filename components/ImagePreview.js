@@ -8,7 +8,6 @@ export default function ImagePreview({
   imgs,
   setImgPreviewActive,
 }) {
-  console.log(currentImgIdx);
   return (
     <StyledPreview>
       <Close onClick={() => setImgPreviewActive(false)}>
