@@ -31,6 +31,15 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en-GB">
         <Head>
+          <title>Above & Beyond Solutions</title>
+          <meta
+            name="description"
+            content="Small agency care, with big agency capabilities"
+          />
+          <meta
+            property="og:image"
+            content="https://ia.media-imdb.com/images/rock.jpg"
+          />
           <link rel="icon" href="/favicon.ico" />
           <link
             rel="preload"

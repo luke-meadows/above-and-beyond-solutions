@@ -13,20 +13,6 @@ export default function Page({ children }) {
 
   return (
     <StyledPage>
-      <Head>
-        <title>Above & Beyond Solutions</title>
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Above && Beyond Solutions" />
-        {/* <meta property="og:description" content={ogDescription} /> */}
-        <meta
-          property="og:image"
-          content="https://ia.media-imdb.com/images/rock.jpg"
-        />
-        <meta
-          name="description"
-          content="Small agency care, with big agency capabilities"
-        />
-      </Head>
       {mobileNavActive && <OverLay />}
       <MobileNav />
       <>
