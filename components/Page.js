@@ -18,7 +18,10 @@ export default function Page({ children }) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Above && Beyond Solutions" />
         {/* <meta property="og:description" content={ogDescription} /> */}
-        <meta property="og:image" content={logo} />
+        <meta
+          property="og:url"
+          content="https://www.imdb.com/title/tt0117500/"
+        />
         <meta
           name="description"
           content="Small agency care, with big agency capabilities"
