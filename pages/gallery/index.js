@@ -18,7 +18,6 @@ export default function Gallery() {
 
   return (
     <StyledGallery>
-      <Head></Head>
       <SectionHeading align="center">Gallery</SectionHeading>
       <ImageGallery imgs={allGalleryImgs} />
     </StyledGallery>
