@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import HomepageHero from '../components/HomepageHero';
-import Partners from '../components/Partners';
 import PartnersSectionHome from '../components/PartnersSectionHome';
 import ServicesSectionHome from '../components/ServicesSectionHome';
 

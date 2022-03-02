@@ -18,9 +18,7 @@ export default function Gallery() {
 
   return (
     <StyledGallery>
-      <Head>
-        <meta property="og:image" content={logo} />
-      </Head>
+      <Head></Head>
       <SectionHeading align="center">Gallery</SectionHeading>
       <ImageGallery imgs={allGalleryImgs} />
     </StyledGallery>
