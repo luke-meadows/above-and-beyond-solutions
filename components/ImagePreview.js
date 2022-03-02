@@ -22,9 +22,9 @@ export default function ImagePreview({
         onSwiper={(swiper) => console.log(swiper)}
         initialSlide={currentImgIdx}
       >
-        {imgs.map((img) => {
+        {imgs.map((img, i) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={i}>
               <ImageContainer>
                 <Image layout="fill" objectFit="cover" src={img} />
               </ImageContainer>
