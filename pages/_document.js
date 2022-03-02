@@ -1,5 +1,5 @@
 import Document, { Html, Head, NextScript, Main } from 'next/document';
-
+import logo from '/public/assets/logos/thumbnail-black-logo.svg;';
 import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
@@ -33,6 +33,10 @@ export default class MyDocument extends Document {
       <Html lang="en-GB">
         <Head>
           <title>Above & Beyond Solutions</title>
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Above && Beyond Solutions" />
+          {/* <meta property="og:description" content={ogDescription} /> */}
+          <meta property="og:image" content={logo} />
           <meta
             name="description"
             content="Small agency care, with big agency capabilities"
