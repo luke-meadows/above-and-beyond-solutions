@@ -40,6 +40,12 @@ export const Styles = styled.div`
       max-width: 100%;
     }
   }
+  span {
+    a {
+      color: var(--pink);
+      text-decoration: underline;
+    }
+  }
   button {
     margin-top: 1rem;
     width: 10rem;

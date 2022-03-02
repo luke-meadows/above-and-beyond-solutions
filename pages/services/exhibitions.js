@@ -29,6 +29,9 @@ export default function Exhibitions() {
           With over 20 years of experience in creating bespoke stands and a full
           knowledge of exhibitions, we&apos;re experts at creating a visionary
           space tailored to your needs.
+          {/* <span>
+            <Link href="/gallery/exhibitions"> View image Gallery</Link>
+          </span> */}
         </p>
         <Link href="/contact-us">
           <button>BOOK A CALL</button>

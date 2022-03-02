@@ -28,7 +28,11 @@ export default function Activation() {
           are a series of WOW moments that you deliver throughout the year. We
           are well versed in producing eye catching, high impact campaigns.
           Bringing your brand to the consumer&apos;s eye.
+          {/* <span>
+            <Link href="/gallery/activations"> View image Gallery</Link>
+          </span> */}
         </p>
+
         <Link href="/contact-us">
           <button>BOOK A CALL</button>
         </Link>

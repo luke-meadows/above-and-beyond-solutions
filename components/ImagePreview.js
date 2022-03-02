@@ -18,15 +18,18 @@ export default function ImagePreview({
         slidesPerView={1}
         navigation
         loop
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
-        initialSlide={currentImgIdx}
+        initialSlide={parseInt(currentImgIdx)}
       >
         {imgs.map((img, i) => {
           return (
             <SwiperSlide key={i}>
               <ImageContainer>
-                <Image layout="fill" objectFit="cover" src={img} />
+                <Image
+                  layout="fill"
+                  objectFit="cover"
+                  src={img}
+                  placeholder={img.blurDataURL}
+                />
               </ImageContainer>
             </SwiperSlide>
           );

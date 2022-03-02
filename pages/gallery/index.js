@@ -4,6 +4,7 @@ import { Ctx } from '../../lib/ctxProvider';
 import ImageGallery from '../../components/ImageGallery';
 import { allGalleryImgs } from '../../lib/galleryImgs';
 import styled from 'styled-components';
+import logo from '../../public/assets/logos/thumbnail-black-logo.svg';
 
 export default function Gallery() {
   const { setShouldStick, setStickyNavCoords } = useContext(Ctx);
@@ -17,6 +18,9 @@ export default function Gallery() {
 
   return (
     <StyledGallery>
+      <Head>
+        <meta property="og:image" content={logo} />
+      </Head>
       <SectionHeading align="center">Gallery</SectionHeading>
       <ImageGallery imgs={allGalleryImgs} />
     </StyledGallery>

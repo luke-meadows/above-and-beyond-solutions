@@ -30,6 +30,9 @@ export default function LiveEvents() {
           not only building and delivering the event but also organising
           everything from logistics to technical delivery, promotions to talent
           booking, licensing to ticket sales.
+          {/* <span>
+            <Link href="/gallery/live-events"> View image Gallery</Link>{' '}
+          </span> */}
         </p>
         <Link href="/contact-us">
           <button>BOOK A CALL</button>
