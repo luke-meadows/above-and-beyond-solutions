@@ -17,28 +17,26 @@ export default function Page({ children }) {
         title="Above & Beyond Solutions"
         description="Small agency care, with big agency capabilities."
         openGraph={{
-          url: 'https://www.url.ie/a',
-          title: 'Open Graph Title',
-          description: 'Open Graph Description',
+          url: 'https://www.aboveandbeyondsolutions.co.uk',
+          title: 'Above & Beyond Solutions',
+          description: 'Small agency care, with big agency capabilities',
           images: [
             {
-              url: 'https://scontent-lhr8-2.xx.fbcdn.net/v/t1.6435-9/144375383_10159109711442148_8884310596273802723_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHXbBoknZxF3LPAe06GIAyZjS-FR8Dfn0WNL4VHwN-fRR2o6CrDU2JH57-11EgkVw8&_nc_ohc=2JTK0WIWo6MAX8RlbUt&_nc_ht=scontent-lhr8-2.xx&oh=00_AT-Lzm-db4iEtkwjWviXrSAOjz7utm1TwhUcG9GoId63Gw&oe=62437B05',
+              url: 'https://scontent-lhr8-1.xx.fbcdn.net/v/t39.30808-6/274350683_1927936664045430_534546427638794204_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeGsVoDENZlT_2q41vjJzJ-it9KB2ar3lFS30oHZqveUVM1S1ZoPGOeEij_Lt_NOtNw&_nc_ohc=BTmBts3LQtEAX_N4q5j&_nc_ht=scontent-lhr8-1.xx&oh=00_AT-omvtYIBEy_afCwhTGjzeUyqQ-MoR7qsJbeWbuGqHGLg&oe=62258348',
               width: 800,
               height: 600,
-              alt: 'Og Image Alt',
+              alt: 'Above & Beyond Solution',
               type: 'image/jpeg',
             },
             {
-              url: 'https://scontent-lhr8-2.xx.fbcdn.net/v/t1.6435-9/144375383_10159109711442148_8884310596273802723_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHXbBoknZxF3LPAe06GIAyZjS-FR8Dfn0WNL4VHwN-fRR2o6CrDU2JH57-11EgkVw8&_nc_ohc=2JTK0WIWo6MAX8RlbUt&_nc_ht=scontent-lhr8-2.xx&oh=00_AT-Lzm-db4iEtkwjWviXrSAOjz7utm1TwhUcG9GoId63Gw&oe=62437B05',
+              url: 'https://scontent-lhr8-1.xx.fbcdn.net/v/t39.30808-6/274350683_1927936664045430_534546427638794204_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeGsVoDENZlT_2q41vjJzJ-it9KB2ar3lFS30oHZqveUVM1S1ZoPGOeEij_Lt_NOtNw&_nc_ohc=BTmBts3LQtEAX_N4q5j&_nc_ht=scontent-lhr8-1.xx&oh=00_AT-omvtYIBEy_afCwhTGjzeUyqQ-MoR7qsJbeWbuGqHGLg&oe=62258348',
               width: 900,
               height: 800,
-              alt: 'Og Image Alt Second',
+              alt: 'Above & Beyond Solution',
               type: 'image/jpeg',
             },
-            { url: 'https://www.example.ie/og-image-03.jpg' },
-            { url: 'https://www.example.ie/og-image-04.jpg' },
           ],
-          site_name: 'SiteName',
+          site_name: 'Above & Beyond Solutions',
         }}
         twitter={{
           handle: '@handle',
