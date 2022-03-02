@@ -32,6 +32,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en-GB">
         <Head>
+          <link rel="icon" href="/favicon.ico" />
           <link
             rel="preload"
             src="/static/Nimbus-Sans-D-OT-Light-Extended_32750.ttf"

@@ -12,7 +12,6 @@ export default function Page({ children }) {
 
   return (
     <StyledPage>
-      {mobileNavActive && <OverLay />}
       <Head>
         <title>Above & Beyond Solutions</title>
         <meta
@@ -21,6 +20,8 @@ export default function Page({ children }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {mobileNavActive && <OverLay />}
+
       <MobileNav />
       <>
         <GlobalStyle />
