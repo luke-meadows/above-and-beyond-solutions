@@ -64,6 +64,9 @@ const StyledPreview = styled.div`
   .swiper-button-prev {
     padding: 0 60px;
     color: var(--pink) !important;
+    @media only screen and (max-width: 1200px) {
+      display: none;
+    }
   }
 `;
 

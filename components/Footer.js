@@ -62,7 +62,7 @@ const StyledFooter = styled.div`
     margin-bottom: 1.5rem;
     .social {
       color: var(--pink);
-      margin-right: 1rem;
+      margin: 0.5rem;
       cursor: pointer;
       &:hover {
         color: var(--white);
