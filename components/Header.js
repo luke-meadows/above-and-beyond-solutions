@@ -8,21 +8,21 @@ import { Ctx } from '../lib/ctxProvider';
 import Router from 'next/router';
 
 export default function Header() {
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [DropdownCoords, setDropdownCoords] = useState(0);
   const [headerHeight, setHeaderHeight] = useState(0);
   const headerRef = useRef();
-  const {
-    stickyNavCoords,
-    shouldStick,
-    setShouldStick,
-    setMobileNavActive,
-    mobileNavActive,
-  } = useContext(Ctx);
+  const servicesRef = useRef();
+
+  const { stickyNavCoords, shouldStick, setShouldStick } = useContext(Ctx);
+
   const router = Router;
   const onAbout = router?.router?.asPath === '/about-us';
   const onContact = router?.router?.asPath === '/contact-us';
   const onPartners = router?.router?.asPath === '/partners';
   const onGallery = router?.router?.asPath.includes('/gallery');
 
+  // Sticky Menu
   function isSticky() {
     if (onAbout || onContact || onPartners || onGallery) return;
     console.log('hello');
@@ -34,7 +34,6 @@ export default function Header() {
     }
   }
 
-  // Sticky Menu Area
   useEffect(() => {
     window.addEventListener('scroll', isSticky);
     return () => {
@@ -44,8 +43,10 @@ export default function Header() {
 
   useEffect(() => {
     const rectHeight = headerRef.current.getBoundingClientRect().height;
+    const dropdownLeft = servicesRef.current.getBoundingClientRect().x;
     setHeaderHeight(rectHeight);
-  }, []);
+    setDropdownCoords(dropdownLeft);
+  }, [shouldStick]);
 
   return (
     <StyledHeader shouldStick={shouldStick} ref={headerRef}>
@@ -62,9 +63,17 @@ export default function Header() {
         </Link>
         <Nav>
           <ul>
-            <Link href="/services">
-              <li>Services</li>
-            </Link>
+            <ServicesContainer>
+              <Link href="/services">
+                <li ref={servicesRef} className="no-margin">
+                  Services
+                </li>
+              </Link>
+              <i
+                className="icon-down-open-big"
+                onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+              />
+            </ServicesContainer>
             <Link href="/about-us">
               <li>About Us</li>
             </Link>
@@ -75,6 +84,29 @@ export default function Header() {
               <li>Contact Us</li>
             </Link>
           </ul>
+          {servicesDropdownOpen && (
+            <ServicesDropdown
+              left={DropdownCoords}
+              onMouseLeave={() => setServicesDropdownOpen(false)}
+              onClick={() => setServicesDropdownOpen(false)}
+            >
+              <ul>
+                <Link href="/services/marketing">
+                  <li>Marketing</li>
+                </Link>
+                <Link href="/services/exhibitions">
+                  <li>Exhibitions</li>
+                </Link>
+                <Link href="/services/live-events">
+                  <li>Live Events</li>
+                </Link>
+                <Link href="/services/brand-activations">
+                  <li>Activations</li>
+                </Link>
+              </ul>
+              <div className="overlay"></div>
+            </ServicesDropdown>
+          )}
         </Nav>
       </div>
 
@@ -100,14 +132,7 @@ export default function Header() {
           hello@aboveandbeyondsolutions.co.uk
         </div>
       </div>
-      {!mobileNavActive && (
-        <div
-          className="mobile-menu"
-          onClick={() => setMobileNavActive(!mobileNavActive)}
-        >
-          <i className="icon-menu" />
-        </div>
-      )}
+      {}
     </StyledHeader>
   );
 }
@@ -127,7 +152,6 @@ const StyledHeader = styled.header`
   width: 100vw;
   max-width: 100vw;
   padding: 0 var(--padding);
-  overflow: hidden;
   a {
     line-height: 0;
     color: white;
@@ -195,5 +219,50 @@ export const Nav = styled.nav`
         color: var(--pink);
       }
     }
+    .no-margin {
+      margin: 0;
+    }
+  }
+`;
+
+const ServicesContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 0rem;
+
+  i {
+    font-size: 0.7rem;
+    margin: 0.2rem 0 0 0.5rem;
+    &:hover {
+      color: var(--pink);
+      cursor: pointer;
+    }
+  }
+`;
+
+const ServicesDropdown = styled.div`
+  position: absolute;
+  top: 0;
+  left: ${(props) => `${props.left - 15}px`};
+  z-index: 1;
+  ul {
+    z-index: 0;
+    margin-top: 4rem;
+    padding: 0.5rem;
+    align-items: flex-start;
+    flex-direction: column;
+    background: black;
+    li {
+      text-align: left;
+      margin: 0.5rem;
+      padding: 0;
+    }
+  }
+  .overlay {
+    height: 5rem;
+    width: 6.5rem;
+    position: absolute;
+    top: 2rem;
+    z-index: -2;
   }
 `;

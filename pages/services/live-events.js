@@ -29,13 +29,10 @@ export default function LiveEvents() {
           Our 15 years of live event experience means we&apos;re proficient in
           not only building and delivering the event but also organising
           everything from logistics to technical delivery, promotions to talent
-          booking, licensing to ticket sales.
-          {/* <span>
-            <Link href="/gallery/live-events"> View image Gallery</Link>{' '}
-          </span> */}
+          booking, licensing to ticket sales.{' '}
         </p>
-        <Link href="/contact-us">
-          <button>BOOK A CALL</button>
+        <Link href="/gallery/live-events">
+          <button>View Gallery</button>
         </Link>
       </ServicesHero>
       <main>

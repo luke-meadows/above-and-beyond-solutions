@@ -90,8 +90,6 @@ const CardContainer = styled.div`
 `;
 const Card = styled.div`
   z-index: 2;
-  min-height: 20rem;
-  min-width: 10rem;
   padding: 1rem;
   position: relative;
   color: white;
@@ -99,15 +97,28 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-
+  align-items: center;
   &:hover {
+    h3 {
+      color: black;
+    }
+    p {
+      display: none;
+    }
     .img-container {
       img {
         filter: brightness(0.8);
       }
     }
   }
-  /* @media only screen and (max-width: 715px) {
+  @media only screen and (max-width: 715px) {
+    h3 {
+      color: white;
+      background: none;
+    }
+    p {
+      display: initial;
+    }
     &:hover {
       .img-container {
         img {
@@ -115,7 +126,7 @@ const Card = styled.div`
         }
       }
     }
-  } */
+  }
 
   a {
     color: var(--white);
@@ -123,6 +134,9 @@ const Card = styled.div`
 
   h3 {
     font-weight: 300;
+    width: fit-content;
+    padding: 0 1.5rem;
+
     font-size: var(--service-card-header);
     @media only screen and (min-width: 1600px) {
       font-size: 2rem;

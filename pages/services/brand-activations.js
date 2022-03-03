@@ -27,14 +27,11 @@ export default function Activation() {
           From huge PR stunts to UK wide sampling campaigns. Brand activations
           are a series of WOW moments that you deliver throughout the year. We
           are well versed in producing eye catching, high impact campaigns.
-          Bringing your brand to the consumer&apos;s eye.
-          {/* <span>
-            <Link href="/gallery/activations"> View image Gallery</Link>
-          </span> */}
+          Bringing your brand to the consumer&apos;s eye.{' '}
         </p>
 
         <Link href="/contact-us">
-          <button>BOOK A CALL</button>
+          <button>View Gallery</button>
         </Link>
       </ServicesHero>
       <main>

@@ -5,8 +5,8 @@ import MobileNav from './MobileNav';
 import { Ctx } from '../lib/ctxProvider';
 import { useContext } from 'react';
 import { GlobalStyle } from '../styles/GlobalStyles';
-
 import { NextSeo } from 'next-seo';
+import Script from 'next/script';
 
 export default function Page({ children }) {
   const { mobileNavActive } = useContext(Ctx);
@@ -52,6 +52,13 @@ export default function Page({ children }) {
         {children}
       </>
       <Footer withNav={true} />
+      <Script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js-eu1.hs-scripts.com/25614110.js"
+      />
     </StyledPage>
   );
 }

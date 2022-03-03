@@ -23,17 +23,14 @@ export default function Galleries({ query }) {
       setShouldStick(false);
     };
   });
-  // useEffect(()=> {
 
-  //   const imgs = exhibitions
-  // },[query])
   return (
     <StyledGallery>
       <SectionHeading align="center">
-        Gallery - {query.id[0].toUpperCase() + query.id.substring(1)}
+        Gallery -{' '}
+        {query.id[0].toUpperCase() + query.id.substring(1).replace('-', ' ')}
       </SectionHeading>
       <ImageGallery imgs={galleries[query.id]} />
-      {/* <ImagePreview imgs={exhibitionImgs} /> */}
     </StyledGallery>
   );
 }

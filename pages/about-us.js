@@ -64,12 +64,12 @@ export default function AboutUs() {
       <SectionContainer>
         <SectionHeading align="center">Meet the team</SectionHeading>
         <TeamRowsContainer>
-          <TeamRow cols={5}>
+          <TeamRow cols={4}>
             <div className="img-container">
               <Image objectPosition="center" src={sam} />
               <div className="info">
                 <h6>Sam Stockmans</h6>
-                <p>Founder / CEO</p>
+                <p>Founder / Head of Events</p>
               </div>
             </div>
             <div className="img-container">
@@ -93,29 +93,8 @@ export default function AboutUs() {
                 <p>PR / Head of Artist Liaison</p>
               </div>
             </div>
-            <div className="img-container">
-              <Image objectFit="cover" objectPosition="center" src={luke} />
-              <div className="info">
-                <h6>Luke Meadows</h6>
-                <p>Web Developer</p>
-              </div>
-            </div>
           </TeamRow>
-          {/* <TeamRow cols={3}>
-            <div className="img-container">
-              <Image objectFit="cover" objectPosition="center" src={malik} />
-              <div className="info">
-                <h6>Malik Mattu</h6>
-                <p>Event Activation Executive</p>
-              </div>
-            </div>
-            <div className="img-container">
-              <Image objectFit="cover" objectPosition="center" src={erin} />
-              <div className="info">
-                <h6>Erin Brown</h6>
-                <p>PR / Head of Artist Liaison</p>
-              </div>
-            </div>
+          <TeamRow cols={4}>
             <div className="img-container">
               <Image objectFit="cover" objectPosition="center" src={luke} />
               <div className="info">
@@ -123,8 +102,6 @@ export default function AboutUs() {
                 <p>Web Developer</p>
               </div>
             </div>
-          </TeamRow> */}
-          <TeamRow cols={5}>
             <div className="img-container">
               <Image objectFit="cover" objectPosition="center" src={cam} />
               <div className="info">
@@ -147,23 +124,9 @@ export default function AboutUs() {
                 <p>Web Developer</p>
               </div>
             </div>
-            <div className="img-container">
-              <Image objectFit="cover" objectPosition="center" src={frankie} />
-              <div className="info">
-                <h6>Frankie</h6>
-                <p>Head of Customer Experience </p>
-              </div>
-            </div>
-            <div className="img-container">
-              <Image objectFit="cover" objectPosition="center" src={avatar} />
-              <div className="info">
-                <h6>Vacancy</h6>
-                <p>Business Development Executive</p>
-              </div>
-            </div>
           </TeamRow>
-          <TeamRow cols={5}>
-            {/* <div className="img-container">
+          <TeamRow cols={4}>
+            <div className="img-container">
               <Image objectFit="cover" objectPosition="center" src={frankie} />
               <div className="info">
                 <h6>Frankie</h6>
@@ -176,12 +139,19 @@ export default function AboutUs() {
                 <h6>Vacancy</h6>
                 <p>Business Development Executive</p>
               </div>
-            </div> */}
+            </div>
             <div className="img-container">
               <Image objectFit="cover" objectPosition="center" src={avatar} />
               <div className="info">
                 <h6>Vacancy</h6>
                 <p>Social Media Marketing Executive </p>
+              </div>
+            </div>
+            <div className="img-container">
+              <Image objectFit="cover" objectPosition="center" src={avatar} />
+              <div className="info">
+                <h6>Vacancy</h6>
+                <p>Account Manager </p>
               </div>
             </div>
           </TeamRow>

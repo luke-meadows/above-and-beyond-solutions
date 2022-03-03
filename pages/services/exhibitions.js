@@ -28,13 +28,10 @@ export default function Exhibitions() {
         <p>
           With over 20 years of experience in creating bespoke stands and a full
           knowledge of exhibitions, we&apos;re experts at creating a visionary
-          space tailored to your needs.
-          {/* <span>
-            <Link href="/gallery/exhibitions"> View image Gallery</Link>
-          </span> */}
+          space tailored to your needs.{' '}
         </p>
-        <Link href="/contact-us">
-          <button>BOOK A CALL</button>
+        <Link href="/gallery/exhibitions">
+          <button>View Gallery</button>
         </Link>
       </ServicesHero>
       <main>

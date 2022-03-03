@@ -3,23 +3,27 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import ImagePreview from './ImagePreview';
 export default function ImageGallery({ imgs }) {
-  const [pagination, setPagination] = useState(0);
+  const [pagination, setPagination] = useState(8);
   const [visibleImgs, setVisibleImgs] = useState([]);
-  useEffect(() => {
-    setVisibleImgs(imgs.slice(pagination * 8, pagination * 8 + 8));
-  }, [pagination]);
+  const [loadMoreDisabled, setLoadMoreDisabled] = useState(false);
 
-  function handleClick(direction) {
-    window.scrollTo(0, 0);
-    if (direction === 'next') {
-      setPagination(pagination + 1);
+  useEffect(() => {
+    if (imgs.length < 8 || imgs.length - pagination < 8) {
+      setVisibleImgs(imgs);
+      setLoadMoreDisabled(true);
     } else {
-      setPagination(pagination - 1);
+      setVisibleImgs(imgs.slice(0, pagination));
+      setLoadMoreDisabled(false);
     }
+  }, [pagination, imgs]);
+
+  function handleClick() {
+    setPagination(pagination + 8);
   }
 
   const [imgPreviewActive, setImgPreviewActive] = useState(false);
   const [currentImgIdx, setCurrentImgIdx] = useState();
+
   useEffect(() => {
     if (imgPreviewActive) document.body.style.overflow = 'hidden';
     else document.body.style.overflow = 'initial';
@@ -35,7 +39,7 @@ export default function ImageGallery({ imgs }) {
     <div>
       <ImagesContainer>
         {visibleImgs.map((img, i) => (
-          <div key={i} data-img={i + pagination * 8} onClick={handleImageClick}>
+          <div key={i} data-img={8} onClick={handleImageClick}>
             <Image
               objectFit="cover"
               layout="responsive"
@@ -48,19 +52,8 @@ export default function ImageGallery({ imgs }) {
         ))}
       </ImagesContainer>
       <ButtonContainer>
-        <button disabled={pagination === 0} onClick={() => handleClick('prev')}>
-          Prev
-        </button>
-        <p>
-          {pagination + 1}/{Math.ceil(imgs.length / 8)}
-        </p>
-        <button
-          disabled={pagination > Math.ceil(imgs.length / 8) - 2}
-          onClick={() => {
-            handleClick('next');
-          }}
-        >
-          Next
+        <button disabled={loadMoreDisabled} onClick={() => handleClick('prev')}>
+          Load More
         </button>
       </ButtonContainer>
       {imgPreviewActive && (
@@ -76,10 +69,9 @@ export default function ImageGallery({ imgs }) {
 }
 
 const ImagesContainer = styled.div`
-  margin-top: 3rem;
+  margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   grid-gap: 1rem;
   div {
     cursor: pointer;
@@ -103,8 +95,7 @@ const ButtonContainer = styled.div`
     font-weight: 300;
   }
   button[disabled] {
-    filter: brightness(0.5);
-    pointer-events: none;
+    opacity: 0;
   }
   @media only screen and (max-width: 700px) {
     width: 100%;
