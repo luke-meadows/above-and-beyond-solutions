@@ -30,7 +30,7 @@ export default function Activation() {
           Bringing your brand to the consumer&apos;s eye.{' '}
         </p>
 
-        <Link href="/contact-us">
+        <Link href="/gallery/activations">
           <button>View Gallery</button>
         </Link>
       </ServicesHero>

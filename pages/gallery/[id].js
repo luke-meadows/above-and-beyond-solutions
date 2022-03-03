@@ -26,7 +26,7 @@ export default function Galleries({ query }) {
 
   return (
     <StyledGallery>
-      <SectionHeading align="center">
+      <SectionHeading align="center" style={{ marginBottom: '2rem' }}>
         Gallery -{' '}
         {query.id[0].toUpperCase() + query.id.substring(1).replace('-', ' ')}
       </SectionHeading>

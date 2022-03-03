@@ -38,7 +38,9 @@ export default function Gallery() {
   console.log(activeGallery);
   return (
     <StyledGallery>
-      <SectionHeading align="center">Gallery</SectionHeading>
+      <SectionHeading align="center" style={{ marginBottom: '2rem' }}>
+        Gallery
+      </SectionHeading>
       <select onChange={handleDropdown}>
         <option value="all">All</option>
         <option value="activations">Activations</option>
