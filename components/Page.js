@@ -17,6 +17,7 @@ export default function Page({ children }) {
         title="Above & Beyond Solutions"
         description="Small agency care, with big agency capabilities."
         canonical="https://www.aboveandbeyondsolutions.co.uk"
+        keywords="above and beyond solutions, above and beyond, marketing, live events, events, branding, brand activation, exhibitions, web development, photography, videography, sam stockmans"
         openGraph={{
           url: 'https://www.aboveandbeyondsolutions.co.uk',
           title: 'Above & Beyond Solutions',
