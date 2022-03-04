@@ -54,12 +54,19 @@ export default function Header() {
         <Link href="/">
           <ImageContainer shouldStick={shouldStick}>
             {shouldStick && (
-              <Image priority alt="logo" layout="responsive" src={logo} />
+              <Image
+                priority
+                alt="logo"
+                title="logo"
+                layout="responsive"
+                src={logo}
+              />
             )}
             {!shouldStick && (
               <Image
                 priority
                 alt="logo"
+                title="logo"
                 layout="responsive"
                 src={thumbnailLogo}
               />

@@ -47,6 +47,8 @@ export default function ImageGallery({ imgs }) {
               height={400}
               src={img}
               placeholder={img.blurDataURL}
+              alt="gallery img"
+              title="gallery img"
             />
           </div>
         ))}

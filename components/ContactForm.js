@@ -75,7 +75,7 @@ export default function ContactForm() {
         <i className="icon-ok" />
         <p>Success</p>
       </div>
-      <h4>Say Hello! 👋</h4>
+      <h2>Say Hello! 👋</h2>
       <form action="submit" onSubmit={handleSubmit}>
         <input
           className={outlineRed.name}
@@ -184,7 +184,7 @@ const StyledContactForm = styled.div`
       color: var(--red);
     }
   }
-  h4 {
+  h2 {
     font-size: 1.4rem;
     text-align: center;
     font-weight: 300;

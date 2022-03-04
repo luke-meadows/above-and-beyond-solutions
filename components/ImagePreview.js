@@ -29,6 +29,8 @@ export default function ImagePreview({
                   objectFit="cover"
                   src={img}
                   placeholder={img.blurDataURL}
+                  alt="preview image"
+                  title="preview image"
                 />
               </ImageContainer>
             </SwiperSlide>

@@ -20,6 +20,7 @@ export default function MobileNav() {
               layout="responsive"
               src={thumbnailLogo}
               alt="logo"
+              title="logo"
             />
           </ImageContainer>
           <div
