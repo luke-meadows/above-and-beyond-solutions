@@ -17,6 +17,7 @@ import {
   SectionBlurb,
   SectionContainer,
   SectionHeading,
+  SectionHeading2,
 } from '../../styles/GlobalStyles';
 export default function MarketingPage() {
   return (
@@ -50,7 +51,7 @@ export default function MarketingPage() {
           <IconCards>
             <IconCard>
               <i className="icon-window card-icon" />
-              <h5>Web Development</h5>
+              <h3>Web Development</h3>
               <p>
                 Servicing 50&#43; clients across the UK, we boast an
                 in&#45;house UK based team, available 24 hours a day. We take
@@ -62,7 +63,7 @@ export default function MarketingPage() {
             </IconCard>
             <IconCard>
               <i className="icon-video card-icon" />
-              <h5>Videography</h5>
+              <h3>Videography</h3>
               <p>
                 Producing fresh ideas, impactful content and imaginative show
                 reels, we can support with any element of videography for your
@@ -74,7 +75,7 @@ export default function MarketingPage() {
             </IconCard>
             <IconCard>
               <i className="icon-megaphone card-icon" />
-              <h5>Branding</h5>
+              <h3>Branding</h3>
               <p>
                 Ensuring that your business has a detailed and bespoke branding
                 strategy to guarantee growth and longevity for your brand,
@@ -85,7 +86,7 @@ export default function MarketingPage() {
             </IconCard>
             <IconCard>
               <i className="icon-edit card-icon" />
-              <h5>Graphics</h5>
+              <h3>Graphics</h3>
               <p>
                 Our in&#45;house team can provide you with digital art and
                 graphic design services to guarantee your business has the most
@@ -95,7 +96,7 @@ export default function MarketingPage() {
             </IconCard>
             <IconCard>
               <i className="icon-camera card-icon" />
-              <h5>Photography</h5>
+              <h3>Photography</h3>
               <p>
                 Our in-house photographer Rich, is a master of his field. With
                 his years of experience photographing a variety of artistic
@@ -106,7 +107,7 @@ export default function MarketingPage() {
             </IconCard>
             <IconCard>
               <i className="icon-money card-icon" />
-              <h5>Influencer Marketing</h5>
+              <h3>Influencer Marketing</h3>
               <p>
                 Connecting you with social media influencers to boost awareness
                 of your brand to entice potential customers and better engage
@@ -125,7 +126,7 @@ export default function MarketingPage() {
               src={SummaryImg}
             />
           </ImageContainer>
-          <SectionHeading>Why choose us?</SectionHeading>
+          <SectionHeading2>Why choose us?</SectionHeading2>
           <p>
             So you&apos;re looking for a full 360 &#176; marketing agency that
             you can actually trust without having to sift through countless

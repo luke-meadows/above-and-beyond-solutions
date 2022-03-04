@@ -11,7 +11,7 @@ export default function MobileNav() {
   const { mobileNavActive, setMobileNavActive } = useContext(Ctx);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
-    <StyledMobileNav className={mobileNavActive ? 'mobile-nav-active' : ''}>
+    <StyledMobileNav>
       <div className="top-section">
         <MobileHeader>
           <ImageContainer>
@@ -78,7 +78,6 @@ export default function MobileNav() {
 }
 
 const StyledMobileNav = styled.div`
-  pointer-events: none;
   position: fixed;
   background: none;
   color: white;
@@ -90,16 +89,6 @@ const StyledMobileNav = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  * {
-    opacity: 0;
-  }
-  &.mobile-nav-active {
-    opacity: 1;
-    pointer-events: all;
-    * {
-      opacity: 1;
-    }
-  }
   .top-section {
     ul {
       margin-top: 3rem;
@@ -123,14 +112,14 @@ const StyledMobileNav = styled.div`
     }
   }
   .mobile-menu {
-    opacity: 0;
+    opacity: 1;
     i {
       font-size: 1.8rem;
     }
-    &.mobile-nav-active {
+    /* &.mobile-nav-active {
       opacity: 1;
       transition: all 0s ease;
-    }
+    } */
   }
   .rotate {
     transform: rotate(-180deg);

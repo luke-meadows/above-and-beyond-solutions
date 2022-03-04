@@ -14,7 +14,13 @@ export default function Header() {
   const headerRef = useRef();
   const servicesRef = useRef();
 
-  const { stickyNavCoords, shouldStick, setShouldStick } = useContext(Ctx);
+  const {
+    stickyNavCoords,
+    shouldStick,
+    setShouldStick,
+    setMobileNavActive,
+    mobileNavActive,
+  } = useContext(Ctx);
 
   const router = Router;
   const onAbout = router?.router?.asPath === '/about-us';
@@ -129,6 +135,7 @@ export default function Header() {
             target="blank"
             href="https://www.linkedin.com/company/aboveandbeyondsolutions/"
           >
+            _
             <span>
               <i className="icon icon-linkedin" />
             </span>
@@ -138,17 +145,25 @@ export default function Header() {
             target="blank"
             href="https://www.instagram.com/aboveandbeyond_solutions/"
           >
+            _
             <i className="icon icon-instagram" />
           </a>
         </div>
         <div className="right">
           <span>
             <i className="icon-mail" />
-          </span>{' '}
+          </span>
           hello@aboveandbeyondsolutions.co.uk
         </div>
       </div>
-      {}
+      {!mobileNavActive && (
+        <div
+          className="mobile-menu"
+          onClick={() => setMobileNavActive(!mobileNavActive)}
+        >
+          <i className="icon-menu" />
+        </div>
+      )}
     </StyledHeader>
   );
 }
@@ -163,7 +178,7 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   top: 0;
-  left:0;
+  left: 0;
   z-index: 3;
   width: 100vw;
   max-width: 100vw;
@@ -184,7 +199,6 @@ const StyledHeader = styled.header`
     display: var(--header-contact-display);
     .icon {
       font-size: 1.2rem;
-      rgb(157, 157, 157);
       cursor: pointer;
       &:hover {
         color: var(--pink);
@@ -193,19 +207,21 @@ const StyledHeader = styled.header`
     .left {
       margin-right: 1rem;
       display: flex;
-      a{
-        display: flex; 
+      a {
+        display: flex;
         align-items: center;
+        color: transparent;
+        i {
+          color: white;
+        }
       }
     }
   }
-  .mobile-menu{
-
+  .mobile-menu {
     display: var(--mobile-menu-icon-display);
-    i{
+    i {
       font-size: 1.8rem;
     }
-
   }
 `;
 

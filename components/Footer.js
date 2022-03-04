@@ -10,16 +10,16 @@ export default function Footer({ withNav }) {
           target="blank"
           href="https://www.linkedin.com/company/aboveandbeyondsolutions/"
         >
+          -
           <i className="icon social icon-linkedin" />
         </a>
-        {/* <a target="blank" href="">
-          <i className="icon social icon-facebook" />
-        </a> */}
+
         <a
           aria-label="instagram"
           target="blank"
           href="https://www.instagram.com/aboveandbeyond_solutions/"
         >
+          -
           <i className="icon social icon-instagram" />
         </a>
       </div>
@@ -57,6 +57,7 @@ const StyledFooter = styled.div`
   background: black;
   padding: 3rem 0;
   .social-media {
+    margin-right: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,6 +99,7 @@ const FooterNav = styled(Nav)`
   flex-direction: row;
   color: white;
   display: block;
+
   ul {
     align-items: center;
     justify-content: center;

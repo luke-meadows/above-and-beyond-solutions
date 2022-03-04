@@ -16,6 +16,7 @@ import {
   SectionBlurb,
   SectionHeading,
   SectionContainer,
+  SectionHeading2,
 } from '../../styles/GlobalStyles';
 
 export default function LiveEvents() {
@@ -52,7 +53,7 @@ export default function LiveEvents() {
           <IconCards>
             <IconCard>
               <i className="icon-tools card-icon" />
-              <h5>Design and Build</h5>
+              <h3>Design and Build</h3>
               <p>
                 Using an elite team of designers and event builders, no project
                 is too big or small for us to deliver. From large scale
@@ -62,7 +63,7 @@ export default function LiveEvents() {
             </IconCard>
             <IconCard>
               <i className="icon-calendar card-icon" />
-              <h5>Artist Booking</h5>
+              <h3>Artist Booking</h3>
               <p>
                 We can help secure you some of the biggest names in the industry
                 to really add the wow factor to your line&#45;up of
@@ -73,7 +74,7 @@ export default function LiveEvents() {
             </IconCard>
             <IconCard>
               <i className="icon-users card-icon" />
-              <h5>Artist Liaison</h5>
+              <h3>Artist Liaison</h3>
               <p>
                 Artist liaison is a key part in ensuring your event runs
                 successfully. We can support with artist transportation, green
@@ -83,7 +84,7 @@ export default function LiveEvents() {
             </IconCard>
             <IconCard>
               <i className="icon-truck card-icon" />
-              <h5>Transport and Logistics</h5>
+              <h3>Transport and Logistics</h3>
               <p>
                 Let us take the headache out of transport and logistics for your
                 event. With approved suppliers we can support with the movement
@@ -92,7 +93,7 @@ export default function LiveEvents() {
             </IconCard>
             <IconCard>
               <i className="icon-retweet card-icon" />
-              <h5>Production and Back of House</h5>
+              <h3>Production and Back of House</h3>
               <p>
                 Back of house&#47;festival management takes the &apos;on the
                 day&apos; stress away from the organiser. We can manage
@@ -102,7 +103,7 @@ export default function LiveEvents() {
             </IconCard>
             <IconCard>
               <i className="icon-megaphone card-icon" />
-              <h5>Marketing and Promotion</h5>
+              <h3>Marketing and Promotion</h3>
               <p>
                 Creating high impact visual marketing campaigns that resonate
                 with your customers to enhance and uplift ticket sales. We are
@@ -122,7 +123,7 @@ export default function LiveEvents() {
               src={SummaryImg}
             />
           </ImageContainer>
-          <h4>Why choose us?</h4>
+          <SectionHeading2>Why choose us?</SectionHeading2>
           <p>
             Live brand experiences are more capable of engaging audiences
             effectively in a big world which is full of digital, sometimes

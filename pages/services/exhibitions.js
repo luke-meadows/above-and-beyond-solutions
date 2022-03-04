@@ -17,6 +17,7 @@ import {
   SectionBlurb,
   SectionHeading,
   SectionContainer,
+  SectionHeading2,
 } from '../../styles/GlobalStyles';
 
 export default function Exhibitions() {
@@ -51,7 +52,7 @@ export default function Exhibitions() {
           <IconCards>
             <IconCard>
               <i className="icon-edit card-icon" />
-              <h5>Design</h5>
+              <h3>Design</h3>
               <p>
                 We listen to what you wish to achieve. If it is general brand
                 activation you require, we excel at working with a blank page as
@@ -61,7 +62,7 @@ export default function Exhibitions() {
             </IconCard>
             <IconCard>
               <i className="icon-tools card-icon" />
-              <h5>Build</h5>
+              <h3>Build</h3>
               <p>
                 We know how the stand&apos;s exhibit should be constructed. We
                 have modular systems to ensure green credentials. We also have
@@ -71,7 +72,7 @@ export default function Exhibitions() {
             </IconCard>
             <IconCard>
               <i className="icon-brush card-icon" />
-              <h5>Graphics</h5>
+              <h3>Graphics</h3>
               <p>
                 An important element to any stand. Your graphics backdrop is
                 your infographic, the photo backdrop, the intrigue. We will take
@@ -82,7 +83,7 @@ export default function Exhibitions() {
             </IconCard>
             <IconCard>
               <i className="icon-opentable card-icon" />
-              <h5>Floor Plan</h5>
+              <h3>Floor Plan</h3>
               <p>
                 Most think the floorplan is the organiser&apos;s duty, but for
                 those with a larger stand space it is imperative to recognise
@@ -93,7 +94,7 @@ export default function Exhibitions() {
             </IconCard>
             <IconCard>
               <i className="icon-users card-icon" />
-              <h5>Staffing</h5>
+              <h3>Staffing</h3>
               <p>
                 Your staff should be maximised to promote the brand and the
                 exhibit, but you may want a DJ, a hostess, a barista, an
@@ -104,7 +105,7 @@ export default function Exhibitions() {
             </IconCard>
             <IconCard>
               <i className="icon-ticket card-icon" />
-              <h5>Ticketing</h5>
+              <h3>Ticketing</h3>
               <p>
                 We have the first NFT ticketing platform as a principle partner.
                 This is new technology which we have embraced and it will be the
@@ -125,7 +126,7 @@ export default function Exhibitions() {
               src={SummaryImg}
             />
           </ImageContainer>
-          <SectionHeading>Why choose us?</SectionHeading>
+          <SectionHeading2>Why choose us?</SectionHeading2>
           <p>
             Our innovative and unique stand designs bring your brand to life and
             help you to engage with your customers.

@@ -29,7 +29,7 @@ export const IconCard = styled.div`
     color: var(--pink);
     font-size: 6rem;
   }
-  h5 {
+  h3 {
     padding: 1rem;
     font-size: 1.2rem;
     font-weight: 300;

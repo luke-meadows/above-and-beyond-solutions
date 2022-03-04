@@ -15,6 +15,7 @@ import Link from 'next/link';
 import {
   SectionBlurb,
   SectionHeading,
+  SectionHeading2,
   SectionContainer,
 } from '../../styles/GlobalStyles';
 export default function Activation() {
@@ -49,7 +50,7 @@ export default function Activation() {
           <IconCards>
             <IconCard>
               <i className="icon-network card-icon" />
-              <h5>Sponsorship and Partnership</h5>
+              <h3>Sponsorship and Partnership</h3>
               <p>
                 Help enhance your brand&apos;s impact by partnering &#47;
                 collaborating with brands and people who share the same vision
@@ -58,7 +59,7 @@ export default function Activation() {
             </IconCard>
             <IconCard>
               <i className="icon-gauge card-icon" />
-              <h5>Sampling</h5>
+              <h3>Sampling</h3>
               <p>
                 Brand to hand sampling is one of the most traditional methods of
                 marketing but still to this day is one of the most impactful
@@ -67,7 +68,7 @@ export default function Activation() {
             </IconCard>
             <IconCard>
               <i className="icon-ok card-icon" />
-              <h5>Brand Activation and WOW moments</h5>
+              <h3>Brand Activation and WOW moments</h3>
               <p>
                 These are defining moments that create organic growth across
                 social media campaigns. These are impactful moments or events.
@@ -88,7 +89,7 @@ export default function Activation() {
               title="brand activations footer"
             />
           </ImageContainer>
-          <SectionHeading>Why choose us?</SectionHeading>
+          <SectionHeading2>Why choose us?</SectionHeading2>
 
           <p>
             We are well versed in producing eye catching, high impact, creative

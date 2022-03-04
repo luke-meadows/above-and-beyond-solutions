@@ -47,7 +47,8 @@ export default function Page({ children }) {
         }}
       />
       {mobileNavActive && <OverLay />}
-      <MobileNav />
+      {mobileNavActive && <MobileNav />}
+
       <>
         <GlobalStyle />
         <Header />
