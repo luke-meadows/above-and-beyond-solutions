@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { SectionHeading } from '../styles/GlobalStyles';
-import { ServicesHomeSummary } from '../styles/ServicesStyles';
 export default function PrivacyPolicy() {
   const website1 = 'http://optout.networkadvertising.org/#!/';
   const website2 = 'http://optout.aboutads.info/#!/';

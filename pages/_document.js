@@ -31,11 +31,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en-GB">
         <Head>
-          <title>Above & Beyond Solutions</title>
-          <meta
-            name="description"
-            content="Small agency care, with big agency capabilities"
-          />
           <link rel="icon" href="/favicon.ico" />
           <link
             rel="preload"

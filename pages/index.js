@@ -6,6 +6,7 @@ import ServicesSectionHome from '../components/ServicesSectionHome';
 export default function Home() {
   return (
     <StyledHome>
+      <h1>Above and Beyond Solutions</h1>
       <HomepageHero />
       <PartnersSectionHome />
       <ServicesSectionHome />
@@ -14,4 +15,8 @@ export default function Home() {
 }
 const StyledHome = styled.div`
   background: var(--white);
+  h1 {
+    position: absolute;
+    opacity: 0;
+  }
 `;

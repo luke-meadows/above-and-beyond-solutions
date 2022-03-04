@@ -21,7 +21,13 @@ export default function Activation() {
   return (
     <ServicesPage>
       <ServicesHero size={25}>
-        <ServiceBackgroundImage img={Hero} position="center" brightness="0.3" />
+        <ServiceBackgroundImage
+          alt="brand activations"
+          title="brand activations"
+          img={Hero}
+          position="center"
+          brightness="0.3"
+        />
         <h2>Brand Activations</h2>
         <p>
           From huge PR stunts to UK wide sampling campaigns. Brand activations
@@ -78,6 +84,8 @@ export default function Activation() {
               objectPosition="bottom"
               objectFit="cover"
               src={SummaryImg}
+              alt="brand activations footer"
+              title="brand activations footer"
             />
           </ImageContainer>
           <SectionHeading>Why choose us?</SectionHeading>

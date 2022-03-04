@@ -22,7 +22,13 @@ export default function MarketingPage() {
   return (
     <ServicesPage>
       <ServicesHero>
-        <ServiceBackgroundImage img={Hero} position="top" brightness="0.3" />
+        <ServiceBackgroundImage
+          alt="marketing"
+          title="marketing"
+          img={Hero}
+          position="top"
+          brightness="0.3"
+        />
         <h2>Marketing</h2>
         <p>
           Stop wasting your time and money on marketing that doesn&apos;t work.
@@ -111,7 +117,13 @@ export default function MarketingPage() {
         </SectionContainer>
         <ServicesSummary>
           <ImageContainer>
-            <Image layout="fill" objectFit="cover" src={SummaryImg} />
+            <Image
+              alt="marketing footer"
+              title="marketing footer"
+              layout="fill"
+              objectFit="cover"
+              src={SummaryImg}
+            />
           </ImageContainer>
           <SectionHeading>Why choose us?</SectionHeading>
           <p>

@@ -20,7 +20,12 @@ export default function ServicesSquareCards() {
           <button>Learn More</button>
         </Link>
         <div className="img-container">
-          <Image layout="fill" src={marketing} alt="" />
+          <Image
+            layout="fill"
+            src={marketing}
+            alt="marketing"
+            title="marketing"
+          />
         </div>
       </Card>
       <Card>
@@ -35,7 +40,12 @@ export default function ServicesSquareCards() {
           <button>Learn More</button>
         </Link>
         <div className="img-container">
-          <Image layout="fill" src={exhibition} alt="" />
+          <Image
+            layout="fill"
+            src={exhibition}
+            alt="exhibitions"
+            title="exhibitions"
+          />
         </div>
       </Card>
       <Card>
@@ -50,7 +60,13 @@ export default function ServicesSquareCards() {
           <button>Learn More</button>
         </Link>
         <div className="img-container">
-          <Image layout="fill" objectPosition="bottom" src={event} alt="" />
+          <Image
+            layout="fill"
+            objectPosition="bottom"
+            src={event}
+            alt="live events"
+            title="live events"
+          />
         </div>
       </Card>
       <Card>
@@ -69,7 +85,8 @@ export default function ServicesSquareCards() {
             layout="fill"
             objectPosition="bottom"
             src={activation}
-            alt=""
+            alt="brand activation"
+            title="brand activation"
           />
         </div>
       </Card>

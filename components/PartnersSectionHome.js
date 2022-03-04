@@ -1,14 +1,13 @@
-import styled from 'styled-components';
 import {
   SectionBlurb,
   SectionContainer,
-  SectionHeading,
+  SectionHeading2,
 } from '../styles/GlobalStyles';
 import Partners from './Partners';
 export default function PartnersSectionHome() {
   return (
     <SectionContainer>
-      <SectionHeading align="center">Our partners</SectionHeading>
+      <SectionHeading2 align="center">Our partners</SectionHeading2>
       <SectionBlurb align="center">
         Brands we&apos;ve gone Above and Beyond for:
       </SectionBlurb>

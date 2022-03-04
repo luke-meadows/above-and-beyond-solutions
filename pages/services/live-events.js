@@ -22,7 +22,13 @@ export default function LiveEvents() {
   return (
     <ServicesPage>
       <ServicesHero>
-        <ServiceBackgroundImage img={Hero} position="center" brightness="0.3" />
+        <ServiceBackgroundImage
+          alt="live events"
+          title="live events"
+          img={Hero}
+          position="center"
+          brightness="0.3"
+        />
 
         <h2>Live Events</h2>
         <p>
@@ -108,7 +114,13 @@ export default function LiveEvents() {
         </SectionContainer>
         <ServicesSummary>
           <ImageContainer>
-            <Image layout="fill" objectFit="cover" src={SummaryImg} />
+            <Image
+              alt="live events footer"
+              title="live events footer"
+              layout="fill"
+              objectFit="cover"
+              src={SummaryImg}
+            />
           </ImageContainer>
           <h4>Why choose us?</h4>
           <p>

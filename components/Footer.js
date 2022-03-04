@@ -6,6 +6,7 @@ export default function Footer({ withNav }) {
     <StyledFooter>
       <div className="social-media">
         <a
+          aria-label="linked in"
           target="blank"
           href="https://www.linkedin.com/company/aboveandbeyondsolutions/"
         >
@@ -15,6 +16,7 @@ export default function Footer({ withNav }) {
           <i className="icon social icon-facebook" />
         </a> */}
         <a
+          aria-label="instagram"
           target="blank"
           href="https://www.instagram.com/aboveandbeyond_solutions/"
         >

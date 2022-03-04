@@ -190,8 +190,22 @@ export const SectionHeading = styled.h1`
   margin-bottom: var(--section-heading-margin-bottom);
   line-height: var(--section-heading-line-height);
 `;
+export const SectionHeading2 = styled.h2`
+  font-weight: 300;
+  font-size: var(--section-heading-text);
+  color: var(--pink);
+  text-align: ${(props) => props.align};
+  margin-bottom: var(--section-heading-margin-bottom);
+  line-height: var(--section-heading-line-height);
+`;
 
 export const SectionBlurb = styled.h2`
+  font-weight: 300;
+  font-size: var(--service-section-tagline);
+  text-align: ${(props) => props.align};
+  margin: 0 auto;
+`;
+export const SectionBlurb2 = styled.h3`
   font-weight: 300;
   font-size: var(--service-section-tagline);
   text-align: ${(props) => props.align};

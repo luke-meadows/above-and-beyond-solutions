@@ -9,7 +9,12 @@ export default function Partners() {
         {partnerImgs.map((img, i) => (
           <div key={i} className="img-container">
             <div data-number={i + 1} className="image-container">
-              <Image src={img} />
+              <Image
+                title="Our Partner"
+                alt="partner image"
+                layout="intrinsic"
+                src={img}
+              />
             </div>
           </div>
         ))}

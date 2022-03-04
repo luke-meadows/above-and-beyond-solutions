@@ -15,7 +15,12 @@ export default function MobileNav() {
       <div className="top-section">
         <MobileHeader>
           <ImageContainer>
-            <Image priority layout="responsive" src={thumbnailLogo} alt="" />
+            <Image
+              priority
+              layout="responsive"
+              src={thumbnailLogo}
+              alt="logo"
+            />
           </ImageContainer>
           <div
             className={

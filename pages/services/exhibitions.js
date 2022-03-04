@@ -23,7 +23,13 @@ export default function Exhibitions() {
   return (
     <ServicesPage>
       <ServicesHero>
-        <ServiceBackgroundImage img={Hero} position="center" brightness="0.4" />
+        <ServiceBackgroundImage
+          alt="exhibitions"
+          title="exhibitions"
+          img={Hero}
+          position="center"
+          brightness="0.4"
+        />
         <h2>Exhibitions</h2>
         <p>
           With over 20 years of experience in creating bespoke stands and a full
@@ -111,7 +117,13 @@ export default function Exhibitions() {
         </SectionContainer>
         <ServicesSummary>
           <ImageContainer>
-            <Image layout="fill" objectFit="cover" src={SummaryImg} />
+            <Image
+              alt="exhibitions footer"
+              title="exhibitions footer"
+              layout="fill"
+              objectFit="cover"
+              src={SummaryImg}
+            />
           </ImageContainer>
           <SectionHeading>Why choose us?</SectionHeading>
           <p>

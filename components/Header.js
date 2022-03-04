@@ -54,10 +54,15 @@ export default function Header() {
         <Link href="/">
           <ImageContainer shouldStick={shouldStick}>
             {shouldStick && (
-              <Image priority layout="responsive" src={logo} alt="" />
+              <Image priority alt="logo" layout="responsive" src={logo} />
             )}
             {!shouldStick && (
-              <Image priority layout="responsive" src={thumbnailLogo} alt="" />
+              <Image
+                priority
+                alt="logo"
+                layout="responsive"
+                src={thumbnailLogo}
+              />
             )}
           </ImageContainer>
         </Link>
@@ -113,12 +118,16 @@ export default function Header() {
       <div className="contact">
         <div className="left">
           <a
+            aria-label="linked in"
             target="blank"
             href="https://www.linkedin.com/company/aboveandbeyondsolutions/"
           >
-            <i className="icon icon-linkedin" />
+            <span>
+              <i className="icon icon-linkedin" />
+            </span>
           </a>
           <a
+            aria-label="instagram"
             target="blank"
             href="https://www.instagram.com/aboveandbeyond_solutions/"
           >

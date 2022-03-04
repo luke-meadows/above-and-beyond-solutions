@@ -3,9 +3,9 @@ import { useContext, useEffect } from 'react';
 import { Ctx } from '../lib/ctxProvider';
 import styled from 'styled-components';
 import {
-  SectionBlurb,
   SectionContainer,
   SectionHeading,
+  SectionHeading2,
 } from '../styles/GlobalStyles';
 
 import img from '../public/assets/profile-imgs/profile.png';
@@ -62,95 +62,166 @@ export default function AboutUs() {
         </AboutTheBusiness>
       </SectionContainer>
       <SectionContainer>
-        <SectionHeading align="center">Meet the team</SectionHeading>
+        <SectionHeading2 align="center">Meet the team</SectionHeading2>
         <TeamRowsContainer>
           <TeamRow cols={4}>
             <div className="img-container">
-              <Image objectPosition="center" src={sam} />
+              <Image
+                alt="Sam Stockmans"
+                title="Sam Stockmans"
+                objectPosition="center"
+                src={sam}
+              />
               <div className="info">
-                <h6>Sam Stockmans</h6>
+                <h2>Sam Stockmans</h2>
                 <p>Founder / Head of Events</p>
               </div>
             </div>
             <div className="img-container">
-              <Image objectFit="cover" objectPosition="center" src={mark} />
+              <Image
+                alt="Mark Haverly"
+                title="Mark Haverly"
+                objectFit="cover"
+                objectPosition="center"
+                src={mark}
+              />
               <div className="info">
-                <h6>Mark Haverly</h6>
+                <h2>Mark Haverly</h2>
                 <p>Founder / Managing Director</p>
               </div>
             </div>
             <div className="img-container">
-              <Image objectFit="cover" objectPosition="center" src={malik} />
+              <Image
+                alt="Malik Mattu"
+                title="Malik Mattu"
+                objectFit="cover"
+                objectPosition="center"
+                src={malik}
+              />
               <div className="info">
-                <h6>Malik Mattu</h6>
+                <h2>Malik Mattu</h2>
                 <p>Event Activation Executive</p>
               </div>
             </div>
             <div className="img-container">
-              <Image objectFit="cover" objectPosition="center" src={erin} />
+              <Image
+                alt="Erin Brown"
+                title="Erin Brown"
+                objectFit="cover"
+                objectPosition="center"
+                src={erin}
+              />
               <div className="info">
-                <h6>Erin Brown</h6>
+                <h2>Erin Brown</h2>
                 <p>PR / Head of Artist Liaison</p>
               </div>
             </div>
           </TeamRow>
           <TeamRow cols={4}>
             <div className="img-container">
-              <Image objectFit="cover" objectPosition="center" src={luke} />
+              <Image
+                alt="Luke Meadows"
+                title="Luke Meadows"
+                objectFit="cover"
+                objectPosition="center"
+                src={luke}
+              />
               <div className="info">
-                <h6>Luke Meadows</h6>
+                <h2>Luke Meadows</h2>
                 <p>Web Developer</p>
               </div>
             </div>
             <div className="img-container">
-              <Image objectFit="cover" objectPosition="center" src={cam} />
+              <Image
+                alt="Cameron Cox"
+                title="Cameron Cox"
+                objectFit="cover"
+                objectPosition="center"
+                src={cam}
+              />
               <div className="info">
-                <h6>Cameron Cox</h6>
+                <h2>Cameron Cox</h2>
                 <p>Videographer</p>
               </div>
             </div>
             <div className="img-container">
-              <Image objectFit="cover" objectPosition="center" src={rich} />
+              <Image
+                alt="Rich Phillips"
+                title="Rich Phillips"
+                objectFit="cover"
+                objectPosition="center"
+                src={rich}
+              />
               <div className="info">
-                <h6>Rich Phillips</h6>
+                <h2>Rich Phillips</h2>
                 <p>Photographer</p>
               </div>
             </div>
 
             <div className="img-container">
-              <Image objectFit="cover" objectPosition="center" src={dan} />
+              <Image
+                alt="Dan Connolly"
+                title="Dan Connolly"
+                objectFit="cover"
+                objectPosition="center"
+                src={dan}
+              />
               <div className="info">
-                <h6>Dan Connolly</h6>
+                <h2>Dan Connolly</h2>
                 <p>Web Developer</p>
               </div>
             </div>
           </TeamRow>
           <TeamRow cols={4}>
             <div className="img-container">
-              <Image objectFit="cover" objectPosition="center" src={frankie} />
+              <Image
+                alt="Frankie"
+                title="Frankie"
+                objectFit="cover"
+                objectPosition="center"
+                src={frankie}
+              />
               <div className="info">
-                <h6>Frankie</h6>
+                <h2>Frankie</h2>
                 <p>Head of Customer Experience </p>
               </div>
             </div>
             <div className="img-container">
-              <Image objectFit="cover" objectPosition="center" src={avatar} />
+              <Image
+                alt="Vacancy"
+                title="Vacancy"
+                objectFit="cover"
+                objectPosition="center"
+                src={avatar}
+              />
               <div className="info">
-                <h6>Vacancy</h6>
+                <h2>Vacancy</h2>
                 <p>Business Development Executive</p>
               </div>
             </div>
             <div className="img-container">
-              <Image objectFit="cover" objectPosition="center" src={avatar} />
+              <Image
+                alt="Vacancy"
+                title="Vacancy"
+                objectFit="cover"
+                objectPosition="center"
+                src={avatar}
+              />
               <div className="info">
-                <h6>Vacancy</h6>
+                <h2>Vacancy</h2>
                 <p>Social Media Marketing Executive </p>
               </div>
             </div>
             <div className="img-container">
-              <Image objectFit="cover" objectPosition="center" src={avatar} />
+              <Image
+                alt="Vacancy"
+                title="Vacancy"
+                objectFit="cover"
+                objectPosition="center"
+                src={avatar}
+              />
               <div className="info">
-                <h6>Vacancy</h6>
+                <h2>Vacancy</h2>
                 <p>Account Manager </p>
               </div>
             </div>
@@ -211,10 +282,10 @@ const TeamRow = styled.div`
       overflow: initial;
     }
     @media only screen and (max-width: 1500px) {
-      height: 200px;
-      width: 200px;
+      height: 250px;
+      width: 250px;
     }
-    @media only screen and (max-width: 1100px) {
+    @media only screen and (max-width: 1300px) {
       height: 200px;
       width: 200px;
     }
@@ -250,7 +321,7 @@ const TeamRow = styled.div`
       align-items: center;
       justify-content: center;
       background: rgba(0, 0, 0, 0.8);
-      h6 {
+      h2 {
         color: var(--pink);
         font-weight: 400;
         font-size: 1.2rem;
