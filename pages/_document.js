@@ -31,6 +31,10 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en-GB">
         <Head>
+          <meta
+            name="google-site-verification"
+            content="gQIh5NhrodmW9E8bJemSH2R1jB42DWs_0HM-WKzmIGI"
+          />
           <link rel="icon" href="/favicon.ico" />
           <link
             rel="preload"

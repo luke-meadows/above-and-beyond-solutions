@@ -14,7 +14,7 @@ export default function Page({ children }) {
   return (
     <StyledPage>
       <NextSeo
-        title="Above & Beyond Solutions"
+        title="Above and Beyond Solutions"
         description="Small agency care, with big agency capabilities."
         canonical="https://www.aboveandbeyondsolutions.co.uk"
         keywords="above and beyond solutions, above and beyond, marketing, live events, events, branding, brand activation, exhibitions, web development, photography, videography, sam stockmans"
