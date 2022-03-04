@@ -16,10 +16,12 @@ export default function Page({ children }) {
       <NextSeo
         title="Above & Beyond Solutions"
         description="Small agency care, with big agency capabilities."
+        canonical="https://www.aboveandbeyondsolutions.co.uk"
         openGraph={{
           url: 'https://www.aboveandbeyondsolutions.co.uk',
           title: 'Above & Beyond Solutions',
           description: 'Small agency care, with big agency capabilities',
+          type: 'website',
           images: [
             {
               url: 'https://scontent-lhr8-1.xx.fbcdn.net/v/t39.30808-6/274350683_1927936664045430_534546427638794204_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeGsVoDENZlT_2q41vjJzJ-it9KB2ar3lFS30oHZqveUVM1S1ZoPGOeEij_Lt_NOtNw&_nc_ohc=BTmBts3LQtEAX_N4q5j&_nc_ht=scontent-lhr8-1.xx&oh=00_AT-omvtYIBEy_afCwhTGjzeUyqQ-MoR7qsJbeWbuGqHGLg&oe=62258348',

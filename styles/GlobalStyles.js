@@ -182,7 +182,7 @@ a {
 
 `;
 
-export const SectionHeading = styled.h2`
+export const SectionHeading = styled.h1`
   font-weight: 300;
   font-size: var(--section-heading-text);
   color: var(--pink);
@@ -191,7 +191,7 @@ export const SectionHeading = styled.h2`
   line-height: var(--section-heading-line-height);
 `;
 
-export const SectionBlurb = styled.h5`
+export const SectionBlurb = styled.h2`
   font-weight: 300;
   font-size: var(--service-section-tagline);
   text-align: ${(props) => props.align};
