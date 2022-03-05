@@ -26,6 +26,7 @@ export default function ImagePreview({
               <ImageContainer>
                 <Image
                   objectFit="contain"
+                  layout="fill"
                   src={img}
                   placeholder={img.blurDataURL}
                   alt="preview image"
@@ -45,23 +46,16 @@ const StyledPreview = styled.div`
   top: var(--header-height);
   left: 0;
   background: rgba(0, 0, 0, 0.9);
-  height: 100vh;
   width: 100%;
+  height: calc(100vh - var(--header-height));
 
   // Swiper Styles
 
-  .swiper-container {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-  }
-
   .swiper-slide {
+    position: relative;
     color: white;
-    height: 100vh;
-    max-width: 100vw;
-
-    /* border: 3px solid blue; */
+    height: calc(100vh - var(--header-height));
+    width: 100vw;
   }
 
   .swiper-button-next,
@@ -75,11 +69,6 @@ const StyledPreview = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
   @media only screen and (max-width: 1200px) {
     min-width: 80%;
   }
