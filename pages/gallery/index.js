@@ -32,10 +32,10 @@ export default function Gallery() {
   const [activeGallery, setActiveGallery] = useState(allGalleryImgs);
 
   function handleDropdown(e) {
+    setActiveGallery([]);
     setActiveGallery(galleries[e.target.value]);
   }
 
-  console.log(activeGallery);
   return (
     <StyledGallery>
       <SectionHeading align="center" style={{ marginBottom: '2rem' }}>
