@@ -39,7 +39,7 @@ export default function ImageGallery({ imgs }) {
     <div>
       <ImagesContainer>
         {visibleImgs.map((img, i) => (
-          <div key={i} data-img={8} onClick={handleImageClick}>
+          <div key={i} data-img={i} onClick={handleImageClick}>
             <Image
               objectFit="cover"
               layout="responsive"
