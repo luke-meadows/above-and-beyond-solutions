@@ -26,7 +26,7 @@ export default function ImagePreview({
               <ImageContainer>
                 <Image
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="contain"
                   src={img}
                   placeholder={img.blurDataURL}
                   alt="preview image"
