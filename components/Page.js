@@ -79,5 +79,5 @@ const OverLay = styled.div`
   height: 1000%;
   width: 100%;
   position: absolute;
-  z-index: 4;
+  z-index: 5;
 `;

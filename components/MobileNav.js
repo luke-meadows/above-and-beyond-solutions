@@ -79,7 +79,7 @@ export default function MobileNav() {
 
 const StyledMobileNav = styled.div`
   position: fixed;
-  background: none;
+  background: black;
   color: white;
   height: 100%;
   overflow-y: scroll;
