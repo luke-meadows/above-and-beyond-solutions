@@ -50,7 +50,6 @@ const StyledPreview = styled.div`
   height: calc(100vh - var(--header-height));
 
   // Swiper Styles
-
   .swiper-slide {
     position: relative;
     color: white;
