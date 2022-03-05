@@ -129,14 +129,13 @@ const Card = styled.div`
     }
   }
   @media only screen and (max-width: 715px) {
-    h3 {
-      color: white;
-      background: none;
-    }
-    p {
-      display: initial;
-    }
     &:hover {
+      h3 {
+        color: white;
+      }
+      p {
+        display: initial;
+      }
       .img-container {
         img {
           filter: brightness(0.2);
