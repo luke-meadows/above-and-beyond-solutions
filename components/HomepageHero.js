@@ -24,7 +24,12 @@ export default function HomepageHero() {
       <DottedOverlay>
         <MainHeroContent>
           <ImageContainer>
-            <Image layout="responsive" src={WhiteTextLogo} priority />
+            <Image
+              layout="responsive"
+              src={WhiteTextLogo}
+              priority
+              alt="hero"
+            />
           </ImageContainer>
           <p>
             Small agency care, with <span>big agency capabilities</span>.

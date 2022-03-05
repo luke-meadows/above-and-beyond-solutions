@@ -71,8 +71,8 @@ export default function Header() {
             {!shouldStick && (
               <Image
                 priority
-                alt="logo"
-                title="logo"
+                alt="logo2"
+                title="logo2"
                 layout="responsive"
                 src={thumbnailLogo}
               />

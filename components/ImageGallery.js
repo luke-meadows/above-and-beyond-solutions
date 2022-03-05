@@ -17,6 +17,10 @@ export default function ImageGallery({ imgs }) {
     }
   }, [pagination, imgs]);
 
+  useEffect(() => {
+    setPagination(8);
+  }, [imgs]);
+
   function handleClick() {
     setPagination(pagination + 8);
   }
