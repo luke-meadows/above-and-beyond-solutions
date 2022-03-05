@@ -14,11 +14,12 @@ export default function ImagePreview({
         <i className="icon-cancel" />
       </Close>
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, A11y]}
         slidesPerView={1}
         navigation
         loop
         initialSlide={parseInt(currentImgIdx)}
+        loopPreventsSlide={true}
       >
         {imgs.map((img, i) => {
           return (
@@ -50,6 +51,7 @@ const StyledPreview = styled.div`
   height: calc(100vh - var(--header-height));
 
   // Swiper Styles
+
   .swiper-slide {
     position: relative;
     color: white;
