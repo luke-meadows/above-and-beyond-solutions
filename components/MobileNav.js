@@ -70,6 +70,14 @@ export default function MobileNav() {
               Contact Us
             </li>
           </Link>
+          <Link href="/gallery">
+            <li
+              style={{ marginTop: '1px' }}
+              onClick={() => setMobileNavActive(false)}
+            >
+              Gallery
+            </li>
+          </Link>
         </ul>
       </div>
       <Footer />

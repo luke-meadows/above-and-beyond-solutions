@@ -83,6 +83,7 @@ html {
   --team-img-col-gap: 4rem;
   }
   // LARGE PHONE 
+  
   @media only screen and (max-width: 900px) {
     --hero-text: 1rem;
     --hero-image-width: 500px;
@@ -92,10 +93,6 @@ html {
     --section-main-font-size: 1rem;
     --service-home-summary-padding: 2rem var(--padding) 1rem var(--padding);
     --padding: 1rem;
-    --header-height: 4rem;
-    --header-nav-display: none;
-    --header-contact-display: none;
-    --mobile-menu-icon-display: initial;
     --service-section-tagline: 1rem;
     --section-heading-padding: 2rem 1rem;
     --section-heading-line-height: 1.5;
@@ -109,6 +106,13 @@ html {
     --team-img-grid-gap: 6rem;
       --team-img-col-gap: 6rem;
 
+  }
+
+  @media only screen and (max-width: 1200px) {
+    --header-height: 4rem;
+    --header-nav-display: none;
+    --header-contact-display: none;
+    --mobile-menu-icon-display: initial;
   }
 
   @media only screen and (max-width: 700px) {

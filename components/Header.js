@@ -101,6 +101,9 @@ export default function Header() {
             <Link href="/contact-us">
               <li>Contact Us</li>
             </Link>
+            <Link href="/gallery">
+              <li>Gallery</li>
+            </Link>
           </ul>
           {servicesDropdownOpen && (
             <ServicesDropdown
