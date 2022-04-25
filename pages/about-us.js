@@ -96,7 +96,7 @@ export default function AboutUs() {
       <SectionContainer>
         <SectionHeading2 align="center">Vacancies</SectionHeading2>
         <TeamRowsContainer>
-          <TeamRow cols={6}>
+          <TeamRow cols={5}>
             <div className="img-container">
               <Image
                 alt="Vacancy"
@@ -160,19 +160,6 @@ export default function AboutUs() {
               <div className="info vacancy">
                 <h2>Vacancy</h2>
                 <p>Freelance / Temporary Event Coordinators</p>
-              </div>
-            </div>
-            <div className="img-container">
-              <Image
-                alt="Vacancy"
-                title="Vacancy"
-                objectFit="cover"
-                objectPosition="center"
-                src={avatar}
-              />
-              <div className="info vacancy">
-                <h2>Vacancy</h2>
-                <p>Account Manager</p>
               </div>
             </div>
           </TeamRow>
