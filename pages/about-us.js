@@ -64,7 +64,7 @@ export default function AboutUs() {
       <SectionContainer>
         <SectionHeading2 align="center">Meet the team</SectionHeading2>
         <TeamRowsContainer>
-          <TeamRow cols={4}>
+          <TeamRow cols={2}>
             <div className="img-container">
               <Image
                 alt="Sam Stockmans"
@@ -74,7 +74,7 @@ export default function AboutUs() {
               />
               <div className="info">
                 <h2>Sam Stockmans</h2>
-                <p>Founder / Head of Events</p>
+                <p>Co-Founder / Business Development Director</p>
               </div>
             </div>
             <div className="img-container">
@@ -87,10 +87,98 @@ export default function AboutUs() {
               />
               <div className="info">
                 <h2>Mark Haverly</h2>
-                <p>Founder / Managing Director</p>
+                <p>Co-Founder / Managing Director</p>
+              </div>
+            </div>
+          </TeamRow>
+        </TeamRowsContainer>
+      </SectionContainer>
+      <SectionContainer>
+        <SectionHeading2 align="center">Vacancies</SectionHeading2>
+        <TeamRowsContainer>
+          <TeamRow cols={6}>
+            <div className="img-container">
+              <Image
+                alt="Vacancy"
+                title="Vacancy"
+                objectFit="cover"
+                objectPosition="center"
+                src={avatar}
+              />
+              <div className="info vacancy">
+                <h2>Vacancy</h2>
+                <p>Business Development Executive</p>
               </div>
             </div>
             <div className="img-container">
+              <Image
+                alt="Vacancy"
+                title="Vacancy"
+                objectFit="cover"
+                objectPosition="center"
+                src={avatar}
+              />
+              <div className="info vacancy">
+                <h2>Vacancy</h2>
+                <p>Business Development Manager</p>
+              </div>
+            </div>
+            <div className="img-container">
+              <Image
+                alt="Vacancy"
+                title="Vacancy"
+                objectFit="cover"
+                objectPosition="center"
+                src={avatar}
+              />
+              <div className="info vacancy">
+                <h2>Vacancy</h2>
+                <p>Account Manager </p>
+              </div>
+            </div>
+            <div className="img-container">
+              <Image
+                alt="Vacancy"
+                title="Vacancy"
+                objectFit="cover"
+                objectPosition="center"
+                src={avatar}
+              />
+              <div className="info vacancy">
+                <h2>Vacancy</h2>
+                <p>Junior Account Manager </p>
+              </div>
+            </div>
+            <div className="img-container">
+              <Image
+                alt="Vacancy"
+                title="Vacancy"
+                objectFit="cover"
+                objectPosition="center"
+                src={avatar}
+              />
+              <div className="info vacancy">
+                <h2>Vacancy</h2>
+                <p>Freelance / Temporary Event Coordinators</p>
+              </div>
+            </div>
+            <div className="img-container">
+              <Image
+                alt="Vacancy"
+                title="Vacancy"
+                objectFit="cover"
+                objectPosition="center"
+                src={avatar}
+              />
+              <div className="info vacancy">
+                <h2>Vacancy</h2>
+                <p>Account Manager</p>
+              </div>
+            </div>
+          </TeamRow>
+        </TeamRowsContainer>
+      </SectionContainer>
+      {/* <div className="img-container">
               <Image
                 alt="Malik Mattu"
                 title="Malik Mattu"
@@ -115,9 +203,9 @@ export default function AboutUs() {
                 <h2>Erin Brown</h2>
                 <p>PR / Head of Artist Liaison</p>
               </div>
-            </div>
-          </TeamRow>
-          <TeamRow cols={4}>
+            </div> */}
+
+      {/* <TeamRow cols={4}>
             <div className="img-container">
               <Image
                 alt="Luke Meadows"
@@ -225,9 +313,7 @@ export default function AboutUs() {
                 <p>Account Manager </p>
               </div>
             </div>
-          </TeamRow>
-        </TeamRowsContainer>
-      </SectionContainer>
+          </TeamRow> */}
     </StyledAbout>
   );
 }
@@ -251,6 +337,7 @@ const AboutTheBusiness = styled.div`
     @media only screen and (max-width: 715px) {
       font-size: 1rem;
       margin-bottom: 1rem;
+    }
   }
 `;
 const TeamRowsContainer = styled.div`
@@ -275,8 +362,9 @@ const TeamRow = styled.div`
   .img-container {
     border-radius: 50rem;
     overflow: hidden;
-    height: 250px;
-    width: 250px;
+    max-height: 250px;
+    max-width: 250px;
+    aspect-ratio: 1;
     position: relative;
     @media only screen and (max-width: 715px) {
       overflow: initial;
@@ -321,6 +409,7 @@ const TeamRow = styled.div`
       align-items: center;
       justify-content: center;
       background: rgba(0, 0, 0, 0.8);
+
       h2 {
         color: var(--pink);
         font-weight: 400;
@@ -345,6 +434,9 @@ const TeamRow = styled.div`
           color: black;
         }
       }
+    }
+    .vacancy {
+      visibility: initial;
     }
   }
 `;

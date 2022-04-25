@@ -37,7 +37,7 @@ html {
   --section-heading-line-height: 2;
   --service-section-tagline: 1.5rem;
   --partners-grid-gap: 3rem;
-  --partners-grid-template-cols: repeat(10, 1fr);
+  --partners-grid-template-cols: repeat(11, 1fr);
   --service-card-grid-cols: repeat(4, 1fr);
   --service-card-header: 1.5rem;
   --footer-nav-width: 60rem;
