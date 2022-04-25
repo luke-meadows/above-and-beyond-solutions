@@ -4,26 +4,26 @@ import Link from 'next/link';
 export default function ServicesSquareCards() {
   return (
     <CardContainer>
-      <Card>
-        <Link href="/services/exhibitions">
+      <Link href="/services/exhibitions">
+        <Card>
           <h3>Exhibitions</h3>
-        </Link>
-      </Card>
-      <Card>
-        <Link href="/services/live-events">
+        </Card>
+      </Link>
+      <Link href="/services/live-events">
+        <Card>
           <h3>Live Events</h3>
-        </Link>
-      </Card>
-      <Card>
-        <Link href="/services/brand-activations">
+        </Card>
+      </Link>
+      <Link href="/services/brand-activations">
+        <Card>
           <h3>Brand Activations</h3>
-        </Link>
-      </Card>
-      <Card>
-        <Link href="/services/marketing">
+        </Card>
+      </Link>
+      <Link href="/services/marketing">
+        <Card>
           <h3>Marketing</h3>
-        </Link>
-      </Card>
+        </Card>
+      </Link>
     </CardContainer>
   );
 }
@@ -52,6 +52,9 @@ const Card = styled.div`
   text-align: center;
   align-items: center;
   cursor: pointer;
+  a {
+    border: 1px solid blue;
+  }
   &:hover {
     border: 2px solid var(--pink);
 

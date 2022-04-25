@@ -7,6 +7,7 @@ import {
   SectionHeading,
   SectionHeading2,
 } from '../styles/GlobalStyles';
+import Link from 'next/link';
 
 import img from '../public/assets/profile-imgs/profile.png';
 
@@ -65,31 +66,38 @@ export default function AboutUs() {
         <SectionHeading2 align="center">Meet the team</SectionHeading2>
         <TeamRowsContainer>
           <TeamRow cols={2}>
-            <div className="img-container">
-              <Image
-                alt="Sam Stockmans"
-                title="Sam Stockmans"
-                objectPosition="center"
-                src={sam}
-              />
-              <div className="info">
-                <h2>Sam Stockmans</h2>
-                <p>Co-Founder / Business Development Director</p>
+            <a target="_blank" href="https://www.linkedin.com/in/samstockmans/">
+              <div className="img-container" style={{ cursor: 'pointer' }}>
+                <Image
+                  alt="Sam Stockmans"
+                  title="Sam Stockmans"
+                  objectPosition="center"
+                  src={sam}
+                />
+                <div className="info">
+                  <h2>Sam Stockmans</h2>
+                  <p>Co-Founder / Business Development Director</p>
+                </div>
               </div>
-            </div>
-            <div className="img-container">
-              <Image
-                alt="Mark Haverly"
-                title="Mark Haverly"
-                objectFit="cover"
-                objectPosition="center"
-                src={mark}
-              />
-              <div className="info">
-                <h2>Mark Haverly</h2>
-                <p>Co-Founder / Managing Director</p>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/mark-haverly-864238126/"
+            >
+              <div className="img-container" style={{ cursor: 'pointer' }}>
+                <Image
+                  alt="Mark Haverly"
+                  title="Mark Haverly"
+                  objectFit="cover"
+                  objectPosition="center"
+                  src={mark}
+                />
+                <div className="info">
+                  <h2>Mark Haverly</h2>
+                  <p>Co-Founder / Managing Director</p>
+                </div>
               </div>
-            </div>
+            </a>
           </TeamRow>
         </TeamRowsContainer>
       </SectionContainer>
