@@ -382,7 +382,7 @@ const TeamRow = styled.div`
     }
     img {
       height: 100%;
-      weight: 100%;
+      width: 100%;
       border-radius: 50rem;
     }
     &:hover {

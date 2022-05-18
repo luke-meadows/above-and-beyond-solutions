@@ -31,12 +31,6 @@ export default function HomepageHero() {
               alt="hero"
             />
           </ImageContainer>
-          <p>
-            Small agency care, with <span>big agency capabilities</span>.
-            <br />
-            Always delivering and going the <span>extra mile</span> to impress,
-            impact and stand out.
-          </p>
         </MainHeroContent>
       </DottedOverlay>
     </StyledHero>
@@ -95,8 +89,7 @@ const MainHeroContent = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  display: block;
-  margin-bottom: 1rem;
+  display: relative;
   width: var(--hero-image-width);
   margin-left: -0.3rem;
 `;

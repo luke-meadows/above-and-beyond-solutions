@@ -9,12 +9,12 @@ export default function Home() {
       <h1>Above and Beyond Solutions</h1>
       <HomepageHero />
       <PartnersSectionHome />
-      <ServicesSectionHome />
     </StyledHome>
   );
 }
 const StyledHome = styled.div`
   background: var(--white);
+  padding-bottom: 4rem;
   h1 {
     position: absolute;
     opacity: 0;

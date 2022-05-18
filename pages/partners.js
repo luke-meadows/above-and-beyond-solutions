@@ -16,7 +16,7 @@ export default function PartnersPage() {
   });
   return (
     <StyledAbout>
-      <SectionHeading align="center">Our partners</SectionHeading>
+      <SectionHeading align="center">Our Family of Clients</SectionHeading>
       <AboutPartners>
         <SectionBlurb align="center">
           Brands we&apos;ve gone Above and Beyond for:

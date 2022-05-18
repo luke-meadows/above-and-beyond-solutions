@@ -32,7 +32,7 @@ export default function Header() {
   function isSticky() {
     if (onAbout || onContact || onPartners || onGallery) return;
     console.log('hello');
-    const stickPoint = stickyNavCoords - headerHeight;
+    const stickPoint = 6;
     if (window.scrollY >= stickPoint) {
       setShouldStick(true);
     } else {
