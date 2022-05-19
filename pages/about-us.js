@@ -66,7 +66,11 @@ export default function AboutUs() {
         <SectionHeading2 align="center">Meet the team</SectionHeading2>
         <TeamRowsContainer>
           <TeamRow cols={2}>
-            <a target="_blank" href="https://www.linkedin.com/in/samstockmans/">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/samstockmans/"
+            >
               <div className="img-container" style={{ cursor: 'pointer' }}>
                 <Image
                   alt="Sam Stockmans"
@@ -82,6 +86,7 @@ export default function AboutUs() {
             </a>
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.linkedin.com/in/mark-haverly-864238126/"
             >
               <div className="img-container" style={{ cursor: 'pointer' }}>
