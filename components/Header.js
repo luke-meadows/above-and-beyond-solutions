@@ -136,7 +136,6 @@ export default function Header() {
           <a
             aria-label="linked in"
             target="blank"
-            rel="noopener noreferrer"
             href="https://www.linkedin.com/company/aboveandbeyondsolutions/"
           >
             _
@@ -147,7 +146,6 @@ export default function Header() {
           <a
             aria-label="instagram"
             target="blank"
-            rel="noopener noreferrer"
             href="https://www.instagram.com/aboveandbeyond_solutions/"
           >
             _
