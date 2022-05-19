@@ -8,6 +8,7 @@ export default function Footer({ withNav }) {
         <a
           aria-label="linked in"
           target="blank"
+          rel="noreferrer"
           href="https://www.linkedin.com/company/aboveandbeyondsolutions/"
         >
           -
@@ -17,6 +18,7 @@ export default function Footer({ withNav }) {
         <a
           aria-label="instagram"
           target="blank"
+          rel="noreferrer"
           href="https://www.instagram.com/aboveandbeyond_solutions/"
         >
           -
@@ -116,4 +118,5 @@ const FooterNav = styled(Nav)`
   margin: 0 auto;
   width: var(--footer-nav-width);
   padding-left: 0;
+  padding-right: 0;
 `;
