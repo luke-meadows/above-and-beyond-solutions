@@ -31,7 +31,7 @@ export default function MobileNav() {
             }
             onClick={() => setMobileNavActive(!mobileNavActive)}
           >
-            <i className="icon-cancel-1" />
+            <i className="icon-cancel" />
           </div>
         </MobileHeader>
         <ul>
@@ -53,14 +53,6 @@ export default function MobileNav() {
           />
           <Link href="/about-us">
             <li onClick={() => setMobileNavActive(false)}>About Us</li>
-          </Link>
-          <Link href="/partners">
-            <li
-              style={{ marginTop: '1px' }}
-              onClick={() => setMobileNavActive(false)}
-            >
-              Partners
-            </li>
           </Link>
           <Link href="/contact-us">
             <li
@@ -87,7 +79,7 @@ export default function MobileNav() {
 
 const StyledMobileNav = styled.div`
   position: fixed;
-  background: black;
+  background: var(--black);
   color: white;
   height: 100%;
   overflow-y: scroll;
