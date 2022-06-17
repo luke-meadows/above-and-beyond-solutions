@@ -12,8 +12,10 @@ html {
   --padding: 5rem;
 
   // --- COLORS ---
-  --white: white;
-  --pink: #e4526f;
+  --white: #eaeaea;
+  --pink: #E04B6A;
+  --pink2:  #e04b6997;
+;
   --black: #040404;
   --gray: #505050;
   --red: rgb(255, 81, 81);
@@ -153,11 +155,6 @@ body {
   padding: 0;
 }
 
-h1,
-h2,
-h3 {
-  line-height: 2;
-}
 
 li {
   list-style: none;
@@ -186,20 +183,22 @@ a {
 
 `;
 
-export const SectionHeading = styled.h1`
-  font-weight: 300;
-  font-size: var(--section-heading-text);
+export const SectionHeading = styled.h3`
+  font-weight: 500;
   color: var(--pink);
   text-align: ${(props) => props.align};
-  margin-bottom: var(--section-heading-margin-bottom);
   line-height: var(--section-heading-line-height);
+  z-index: 2;
+  @media only screen and (max-width: 800px) {
+    font-size: 2rem;
+  }
 `;
 export const SectionHeading2 = styled.h2`
-  font-weight: 300;
+  font-weight: 500;
   font-size: var(--section-heading-text);
   color: var(--pink);
   text-align: ${(props) => props.align};
-  margin-bottom: var(--section-heading-margin-bottom);
+  margin-bottom: 0;
   line-height: var(--section-heading-line-height);
 `;
 
@@ -222,6 +221,19 @@ export const MainText = styled.p`
 `;
 
 export const SectionContainer = styled.section`
-  padding: var(--section-container-padding);
+  padding: 2rem 6rem;
   background: var(--white);
+  @media only screen and (max-width: 1050px) {
+    padding: 0rem 3rem;
+  }
+  @media only screen and (max-width: 800px) {
+    padding: 0rem 1.5rem;
+  }
+`;
+export const Container = styled.section`
+  padding: 10rem 6rem 6rem 6rem;
+  background: var(--white);
+  @media only screen and (max-width: 1200px) {
+    padding: 6rem 1.5rem 3rem 1.5rem;
+  }
 `;
