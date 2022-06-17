@@ -43,17 +43,6 @@ export default function MobileServicesDropdown({
           Live Events
         </div>
       </Link>
-      <Link href="/services/brand-activations">
-        <div
-          className="link-container"
-          onClick={() => {
-            setMobileNavActive(false);
-            setDropdownOpen(false);
-          }}
-        >
-          Brand Activations
-        </div>
-      </Link>
     </StyledDropdown>
   );
 }
