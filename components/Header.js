@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState, useContext } from 'react';
 import styled from 'styled-components';
-import thumbnailLogo from '../public/assets/logos/thumbnail-white-logo.svg';
 import logo from '../public/assets/logos/white-text-logo.svg';
 import { Ctx } from '../lib/ctxProvider';
 import Router from 'next/router';
@@ -27,11 +26,11 @@ export default function Header() {
   const onContact = router?.router?.asPath === '/contact-us';
   const onPartners = router?.router?.asPath === '/partners';
   const onGallery = router?.router?.asPath.includes('/gallery');
+  const onServices = router?.router?.asPath.includes('/services');
 
   // Sticky Menu
   function isSticky() {
     if (onAbout || onContact || onPartners || onGallery) return;
-    console.log('hello');
     const stickPoint = 6;
     if (window.scrollY >= stickPoint) {
       setShouldStick(true);
@@ -59,24 +58,13 @@ export default function Header() {
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <Link href="/">
           <ImageContainer shouldStick={shouldStick}>
-            {shouldStick && (
-              <Image
-                priority
-                alt="logo"
-                title="logo"
-                layout="responsive"
-                src={logo}
-              />
-            )}
-            {!shouldStick && (
-              <Image
-                priority
-                alt="logo2"
-                title="logo2"
-                layout="responsive"
-                src={thumbnailLogo}
-              />
-            )}
+            <Image
+              priority
+              alt="logo"
+              title="logo"
+              layout="responsive"
+              src={logo}
+            />
           </ImageContainer>
         </Link>
         <Nav>
@@ -92,11 +80,9 @@ export default function Header() {
                 onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
               />
             </ServicesContainer>
+
             <Link href="/about-us">
               <li>About Us</li>
-            </Link>
-            <Link href="/partners">
-              <li>Partners</li>
             </Link>
             <Link href="/contact-us">
               <li>Contact Us</li>
@@ -112,17 +98,14 @@ export default function Header() {
               onClick={() => setServicesDropdownOpen(false)}
             >
               <ul>
-                <Link href="/services/marketing">
-                  <li>Marketing</li>
+                <Link href="/services/live-events">
+                  <li>Live Events</li>
                 </Link>
                 <Link href="/services/exhibitions">
                   <li>Exhibitions</li>
                 </Link>
-                <Link href="/services/live-events">
-                  <li>Live Events</li>
-                </Link>
-                <Link href="/services/brand-activations">
-                  <li>Activations</li>
+                <Link href="/services/marketing">
+                  <li> Brand Marketing</li>
                 </Link>
               </ul>
               <div className="overlay"></div>
@@ -152,19 +135,19 @@ export default function Header() {
             <i className="icon icon-instagram" />
           </a>
         </div>
-        <div className="right">
+        <a href="mailto:hello@aboveandbeyondsolutions.co.uk" className="right">
           <span>
             <i className="icon-mail" />
           </span>
           hello@aboveandbeyondsolutions.co.uk
-        </div>
+        </a>
       </div>
       {!mobileNavActive && (
         <div
           className="mobile-menu"
           onClick={() => setMobileNavActive(!mobileNavActive)}
         >
-          <i className="icon-menu" />
+          <i className="icon-menu-1" />
         </div>
       )}
     </StyledHeader>
@@ -173,8 +156,9 @@ export default function Header() {
 
 const StyledHeader = styled.header`
   position: ${(props) => (props.shouldStick ? 'fixed' : 'absolute')};
-  background: ${(props) => (props.shouldStick ? 'black' : 'none')};
-  transition: all 0.1s ease-out;
+  background: ${(props) => (props.shouldStick ? 'rgba(0,0,0,0.9)' : 'none')};
+
+  transition: background 0.5s ease-in-out;
   color: var(--white);
   height: var(--header-height);
   display: flex;
@@ -229,7 +213,7 @@ const StyledHeader = styled.header`
 `;
 
 const ImageContainer = styled.div`
-  width: ${(props) => (props.shouldStick ? '10rem' : '3rem')};
+  width: ${(props) => (props.shouldStick ? '10rem' : '10rem')};
   img {
     object-fit: cover;
     margin: 0;
@@ -277,7 +261,7 @@ const ServicesContainer = styled.div`
 
 const ServicesDropdown = styled.div`
   position: absolute;
-  top: 0;
+  top: 2rem;
   left: ${(props) => `${props.left - 15}px`};
   z-index: 1;
   ul {
@@ -286,7 +270,9 @@ const ServicesDropdown = styled.div`
     padding: 0.5rem;
     align-items: flex-start;
     flex-direction: column;
-    background: black;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     li {
       text-align: left;
       margin: 0.5rem;
