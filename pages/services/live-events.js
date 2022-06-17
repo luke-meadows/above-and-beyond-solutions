@@ -1,147 +1,48 @@
 import {
   IconCard,
   IconCards,
-  ImageContainer,
   ServicesHeader,
-  ServicesPage,
-  ServicesSummary,
 } from '../../styles/ServicesStyles';
 import Hero from '../../public/assets/service-heros/live-events-hero.png';
-import SummaryImg from '../../public/assets/service-summary-imgs/events-summary-img.png';
-import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
-import ServicesHero from '../../components/ServicesHero';
-import Image from 'next/image';
-import Link from 'next/link';
-import {
-  SectionBlurb,
-  SectionHeading,
-  SectionContainer,
-  SectionHeading2,
-} from '../../styles/GlobalStyles';
+
+import { SectionHeading, SectionContainer } from '../../styles/GlobalStyles';
+import { servicesContent } from '../../lib/servicesContent';
+import ServiceHero from '../../components/services/ServiceHero';
+import CallToAction from '../../components/services/CallToAction';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function LiveEvents() {
+  const data = servicesContent.liveEvents;
   return (
-    <ServicesPage>
-      <ServicesHero>
-        <ServiceBackgroundImage
-          alt="live events"
-          title="live events"
-          img={Hero}
-          position="center"
-          brightness="0.3"
-        />
-
-        <h2>Live Events</h2>
-        <p>
-          Our 15 years of live event experience means we&apos;re proficient in
-          not only building and delivering the event but also organising
-          everything from logistics to technical delivery, promotions to talent
-          booking, licensing to ticket sales.{' '}
-        </p>
-        <Link href="/gallery/live-events">
-          <button>View Gallery</button>
-        </Link>
-      </ServicesHero>
+    <div>
+      <ServiceHero title="Live Events" img={Hero} />
       <main>
         <SectionContainer>
           <ServicesHeader>
-            <SectionHeading align="center">
-              Host an amazing event
-            </SectionHeading>
-            <SectionBlurb align="center">What we can help with:</SectionBlurb>
+            <SectionHeading align="left">Host an amazing event</SectionHeading>
+            {data.blurb.map((blurb) => {
+              const rando = uuidv4();
+              <p key={rando}>{blurb}</p>;
+            })}
           </ServicesHeader>
+          <h4>What we offer:</h4>
           <IconCards>
-            <IconCard>
-              <i className="icon-tools card-icon" />
-              <h3>Design and Build</h3>
-              <p>
-                Using an elite team of designers and event builders, no project
-                is too big or small for us to deliver. From large scale
-                festivals of up to 100k people to smaller scale events up to
-                1000 &#45; we can help with a solution.
-              </p>
-            </IconCard>
-            <IconCard>
-              <i className="icon-calendar card-icon" />
-              <h3>Artist Booking</h3>
-              <p>
-                We can help secure you some of the biggest names in the industry
-                to really add the wow factor to your line&#45;up of
-                entertainment. Whether it&apos;s a guest speaker for an
-                exhibition or an A list artist to headline a festival &#45; we
-                can support.
-              </p>
-            </IconCard>
-            <IconCard>
-              <i className="icon-users card-icon" />
-              <h3>Artist Liaison</h3>
-              <p>
-                Artist liaison is a key part in ensuring your event runs
-                successfully. We can support with artist transportation, green
-                rooms, purchasing riders, liaising with management and sending
-                out advance packs with full event details.
-              </p>
-            </IconCard>
-            <IconCard>
-              <i className="icon-truck card-icon" />
-              <h3>Transport and Logistics</h3>
-              <p>
-                Let us take the headache out of transport and logistics for your
-                event. With approved suppliers we can support with the movement
-                of your stock, goods, and staff across the UK and Europe.
-              </p>
-            </IconCard>
-            <IconCard>
-              <i className="icon-retweet card-icon" />
-              <h3>Production and Back of House</h3>
-              <p>
-                Back of house&#47;festival management takes the &apos;on the
-                day&apos; stress away from the organiser. We can manage
-                everything back of house from crew catering, to artist riders,
-                to stage managers and security.
-              </p>
-            </IconCard>
-            <IconCard>
-              <i className="icon-megaphone card-icon" />
-              <h3>Marketing and Promotion</h3>
-              <p>
-                Creating high impact visual marketing campaigns that resonate
-                with your customers to enhance and uplift ticket sales. We are
-                experts in this field and would love to share some previous
-                successes with you.
-              </p>
-            </IconCard>
+            {data.microServices.map((microService, i) => {
+              const rando = uuidv4();
+              return (
+                <IconCard key={rando}>
+                  <div className="icon-title">
+                    <i className={`${microService.icon} card-icon`} />
+                    <h3>{microService.title}</h3>
+                  </div>
+                  <p>{microService.description}</p>
+                </IconCard>
+              );
+            })}
           </IconCards>
+          <CallToAction />
         </SectionContainer>
-        <ServicesSummary>
-          <ImageContainer>
-            <Image
-              alt="live events footer"
-              title="live events footer"
-              layout="fill"
-              objectFit="cover"
-              src={SummaryImg}
-            />
-          </ImageContainer>
-          <SectionHeading2>Why choose us?</SectionHeading2>
-          <p>
-            Live brand experiences are more capable of engaging audiences
-            effectively in a big world which is full of digital, sometimes
-            impersonal marketing.
-            <br />
-            <br />
-            Pulling off a music festival, concert tour, or small scale gig takes
-            knowhow, expertise and the right industry contacts.
-            <br />
-            <br />
-            Our 15 years live event experience means were proficient in not only
-            building and delivering the event but also organising everything
-            from logistics to technical delivery, promotions to talent booking,
-            licensing to ticket sales. To put it simply; we&apos;ll take care of
-            everything and put your music festival, concert or event on the map.
-          </p>
-        </ServicesSummary>
       </main>
-    </ServicesPage>
+    </div>
   );
 }

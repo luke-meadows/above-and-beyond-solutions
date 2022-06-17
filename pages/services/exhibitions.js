@@ -1,147 +1,47 @@
 import {
   IconCard,
   IconCards,
-  ImageContainer,
   ServicesHeader,
-  ServicesPage,
-  ServicesSummary,
 } from '../../styles/ServicesStyles';
 import Hero from '../../public/assets/service-heros/exhibitions-hero.png';
-import SummaryImg from '../../public/assets/service-summary-imgs/exhibitions-summary-img.png';
-
-import ServiceBackgroundImage from '../../components/ServiceBackgroundImage';
-import ServicesHero from '../../components/ServicesHero';
-import Image from 'next/image';
-import Link from 'next/link';
-import {
-  SectionBlurb,
-  SectionHeading,
-  SectionContainer,
-  SectionHeading2,
-} from '../../styles/GlobalStyles';
-
+import { SectionHeading, SectionContainer } from '../../styles/GlobalStyles';
+import { servicesContent } from '../../lib/servicesContent';
+import ServiceHero from '../../components/services/ServiceHero';
+import CallToAction from '../../components/services/CallToAction';
+import { v4 as uuidv4 } from 'uuid';
 export default function Exhibitions() {
+  const data = servicesContent.exhibitions;
   return (
-    <ServicesPage>
-      <ServicesHero>
-        <ServiceBackgroundImage
-          alt="exhibitions"
-          title="exhibitions"
-          img={Hero}
-          position="center"
-          brightness="0.4"
-        />
-        <h2>Exhibitions</h2>
-        <p>
-          With over 20 years of experience in creating bespoke stands and a full
-          knowledge of exhibitions, we&apos;re experts at creating a visionary
-          space tailored to your needs.{' '}
-        </p>
-        <Link href="/gallery/exhibitions">
-          <button>View Gallery</button>
-        </Link>
-      </ServicesHero>
+    <div>
+      <ServiceHero title="Exhibitions" img={Hero} />
       <main>
         <SectionContainer>
           <ServicesHeader>
-            <SectionHeading align="center">
+            <SectionHeading align="left">
               Capture attention at an exhibition
             </SectionHeading>
-            <SectionBlurb align="center">What we can help with:</SectionBlurb>
+            {data.blurb.map((blurb) => {
+              const rando = uuidv4();
+              <p key={rando}>{blurb}</p>;
+            })}
           </ServicesHeader>
+          <h4>What we offer:</h4>
           <IconCards>
-            <IconCard>
-              <i className="icon-edit card-icon" />
-              <h3>Design</h3>
-              <p>
-                We listen to what you wish to achieve. If it is general brand
-                activation you require, we excel at working with a blank page as
-                we will know more about your brand and target market from our
-                unique experiences and reach capabilities.
-              </p>
-            </IconCard>
-            <IconCard>
-              <i className="icon-tools card-icon" />
-              <h3>Build</h3>
-              <p>
-                We know how the stand&apos;s exhibit should be constructed. We
-                have modular systems to ensure green credentials. We also have
-                the capability to use other materials so that the stand is
-                tactile, welcoming and representative.
-              </p>
-            </IconCard>
-            <IconCard>
-              <i className="icon-brush card-icon" />
-              <h3>Graphics</h3>
-              <p>
-                An important element to any stand. Your graphics backdrop is
-                your infographic, the photo backdrop, the intrigue. We will take
-                YOUR important elements for that particular event and showcase
-                them in an eye-catching way to ensure you have a populated stand
-                and the visitors have memorable experiences.
-              </p>
-            </IconCard>
-            <IconCard>
-              <i className="icon-opentable card-icon" />
-              <h3>Floor Plan</h3>
-              <p>
-                Most think the floorplan is the organiser&apos;s duty, but for
-                those with a larger stand space it is imperative to recognise
-                the flow of the attendees through your stand. You are there to
-                tell a story. We can bring that story to life through careful
-                planning and strategic placement of your exhibits.
-              </p>
-            </IconCard>
-            <IconCard>
-              <i className="icon-users card-icon" />
-              <h3>Staffing</h3>
-              <p>
-                Your staff should be maximised to promote the brand and the
-                exhibit, but you may want a DJ, a hostess, a barista, an
-                entertainer. We can arrange these for you if it is not your
-                usual forte. Let us handle the logistics, training and be the
-                knowledge giver so they complement your brand.
-              </p>
-            </IconCard>
-            <IconCard>
-              <i className="icon-ticket card-icon" />
-              <h3>Ticketing</h3>
-              <p>
-                We have the first NFT ticketing platform as a principle partner.
-                This is new technology which we have embraced and it will be the
-                future of ticket sales putting the promoter and event organiser
-                back in control of who has tickets to your event, the resale
-                value and thus preventing fraud.
-              </p>
-            </IconCard>
+            {data.microServices.map((microService, i) => {
+              return (
+                <IconCard key={microService.title}>
+                  <div className="icon-title">
+                    <i className={`${microService.icon} card-icon`} />
+                    <h3>{microService.title}</h3>
+                  </div>
+                  <p>{microService.description}</p>
+                </IconCard>
+              );
+            })}
           </IconCards>
+          <CallToAction />
         </SectionContainer>
-        <ServicesSummary>
-          <ImageContainer>
-            <Image
-              alt="exhibitions footer"
-              title="exhibitions footer"
-              layout="fill"
-              objectFit="cover"
-              src={SummaryImg}
-            />
-          </ImageContainer>
-          <SectionHeading2>Why choose us?</SectionHeading2>
-          <p>
-            Our innovative and unique stand designs bring your brand to life and
-            help you to engage with your customers.
-            <br /> <br />
-            Our key focus is to deliver high quality, immersive exhibition
-            solutions that successfully deliver your brand messaging, create
-            engagment and increase footfall.
-            <br /> <br />
-            At Above and Beyond Solutions, we believe in forming a strong
-            partnership. We advise you on the best solution for your project, be
-            that a bespoke or modular solution. Then we will work with you all
-            the way from concept to realisation of your exhibition stand.
-          </p>
-        </ServicesSummary>
       </main>
-    </ServicesPage>
+    </div>
   );
 }

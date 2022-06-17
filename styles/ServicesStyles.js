@@ -1,58 +1,62 @@
 import styled from 'styled-components';
 
-export const ServicesPage = styled.div`
-  main {
-    @media only screen and (max-width: 415px) {
-      padding-top: 0;
-    }
-  }
-`;
-
 export const ServicesHeader = styled.div`
-  background: white;
+  background: var(--white);
+  margin-bottom: 4rem;
+  p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
 `;
 
 export const IconCards = styled.div`
-  background: white;
-  display: grid;
-  grid-template-columns: var(--microservice-grid-cols);
-  grid-column-gap: var(--microservice-card-col-gap);
-  grid-row-gap: var(--microservice-card-row-gap);
-  padding: var(--microservice-card-padding);
+  background: var(--white);
+  margin-bottom: 4rem;
+  border-radius: 10px;
 `;
 
 export const IconCard = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  padding: 2rem 0;
   align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   i {
     color: var(--pink);
-    font-size: 6rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-left: -6px;
+    margin-right: 1.6rem;
   }
   h3 {
-    padding: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 300;
-    /* text-align: center; */
-    @media only screen and (max-width: 415px) {
-      margin: -1rem 0 0rem 0;
-    }
+    margin: 0;
   }
   p {
     font-size: 1rem;
-    text-align: center;
     font-weight: 100;
-    margin: auto;
     @media only screen and (max-width: 415px) {
       margin: 0;
     }
   }
-  a {
-    margin-top: 0.5rem;
-    color: var(--pink);
-    font-size: 1rem;
-    @media only screen and (max-width: 415px) {
-      margin-top: 0rem;
+
+  .icon-title {
+    display: flex;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: 100%;
+
+    p {
+      margin-bottom: 1rem;
+    }
+    .icon-title {
+      margin-bottom: 1.5rem;
     }
   }
 `;
@@ -84,6 +88,7 @@ export const ServicesSummary = styled.div`
     padding: 0rem var(--padding) 1rem var(--padding);
     margin: 0 auto;
     line-height: 1.5;
+    text-align: left;
   }
   @media only screen and (max-width: 415px) {
     p {
@@ -114,4 +119,12 @@ export const ImageContainer = styled.div`
       filter: brightness(0.3);
     }
   }
+`;
+
+export const LogoContainer = styled.div`
+  width: 8rem;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  opacity: 0.8;
 `;
