@@ -22,7 +22,7 @@ export default function LiveEvents() {
             <SectionHeading align="left">Host an amazing event</SectionHeading>
             {data.blurb.map((blurb) => {
               const rando = uuidv4();
-              <p key={rando}>{blurb}</p>;
+              return <p key={rando}>{blurb}</p>;
             })}
           </ServicesHeader>
           <h4>What we offer:</h4>

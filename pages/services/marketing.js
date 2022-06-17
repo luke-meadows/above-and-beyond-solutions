@@ -23,14 +23,13 @@ export default function MarketingPage() {
             </SectionHeading>
             {data.blurb.map((blurb) => {
               const rando = uuidv4();
-              <p key={rando}>{blurb}</p>;
+              return <p key={rando}>{blurb}</p>;
             })}
           </ServicesHeader>
           <h4>What we offer:</h4>
           <IconCards>
             {data.microServices.map((microService, i) => {
               const rando = uuidv4();
-
               return (
                 <IconCard key={rando}>
                   <div className="icon-title">
