@@ -161,15 +161,20 @@ const StyledContactForm = styled.div`
   .done {
     opacity: 0;
     pointer-events: none;
-    background: var(--white);
+    background: var(--black);
     position: absolute;
+    left: 0;
+    top: 0;
     height: 100%;
     width: 100%;
     z-index: 2;
     display: flex;
+    border-top-left-radius: 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--white);
+    font-size: 2rem;
     i {
       color: var(--pink);
       font-size: 6rem;
