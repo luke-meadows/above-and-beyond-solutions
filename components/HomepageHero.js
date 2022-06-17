@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import WhiteTextLogo from '../public/assets/logos/white-text-logo.svg';
+import WhiteThumbnail from '../public/assets/logos/thumbnail-white-logo.svg';
 import { useContext, useEffect, useRef } from 'react';
 import { Ctx } from '../lib/ctxProvider';
 export default function HomepageHero() {
@@ -23,14 +24,22 @@ export default function HomepageHero() {
       />
       <DottedOverlay>
         <MainHeroContent>
-          <ImageContainer>
+          <ThumbnailContainer>
+            <Image
+              layout="responsive"
+              src={WhiteThumbnail}
+              priority
+              alt="hero"
+            />
+          </ThumbnailContainer>
+          <LogoContainer>
             <Image
               layout="responsive"
               src={WhiteTextLogo}
               priority
               alt="hero"
             />
-          </ImageContainer>
+          </LogoContainer>
         </MainHeroContent>
       </DottedOverlay>
     </StyledHero>
@@ -65,31 +74,26 @@ const DottedOverlay = styled.div`
 const MainHeroContent = styled.div`
   position: absolute;
   top: 50%;
-  left: var(--padding);
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
+  align-items: center;
   flex-direction: column;
   color: white;
-  h2 {
-    font-size: 7rem;
-    font-weight: 800;
-    line-height: initial;
-    padding: 0;
-    margin-left: -0.8rem;
-  }
-  p {
-    font-weight: 300;
-    font-size: var(--hero-text);
-    line-height: 1.8;
-    padding: 0 var(--padding) 0 0;
-  }
-  span {
-    color: var(--pink);
-  }
 `;
 
-const ImageContainer = styled.div`
-  display: relative;
-  width: var(--hero-image-width);
-  margin-left: -0.3rem;
+const ThumbnailContainer = styled.div`
+  position: relative;
+  width: 20rem;
+  opacity: 0.8;
+  @media only screen and (max-width: 700px) {
+    width: 10rem;
+  }
+`;
+const LogoContainer = styled.div`
+  position: relative;
+  width: 40rem;
+  @media only screen and (max-width: 700px) {
+    width: 20rem;
+  }
 `;
