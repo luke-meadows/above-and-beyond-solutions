@@ -54,8 +54,9 @@ export default function Footer({ withNav }) {
 
 const StyledFooter = styled.div`
   color: white;
-  background: black;
+  background: var(--black);
   padding: 3rem 0;
+  z-index: 1;
   .social-media {
     margin-right: 1rem;
     display: flex;
@@ -99,18 +100,18 @@ const FooterNav = styled(Nav)`
   flex-direction: row;
   color: white;
   display: block;
-
   ul {
     align-items: center;
     justify-content: center;
     li {
-      margin: 0 2rem;
-      @media only screen and (max-width: 415px) {
+      @media only screen and (max-width: 500px) {
         margin: 0 0.5rem;
       }
       @media only screen and (max-width: 325px) {
         margin: 0 0.3rem;
       }
+
+      margin: 0 2rem;
     }
   }
   margin: 0 auto;
