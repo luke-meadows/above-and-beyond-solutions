@@ -31,7 +31,7 @@ export default function TeamMember({ teamMember }) {
 const Member = styled.a`
   cursor: pointer;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 
   .image-container {
     position: relative;
