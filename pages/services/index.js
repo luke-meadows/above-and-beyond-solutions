@@ -27,8 +27,8 @@ export default function Services() {
                 What <span>we</span> can do <span>for you</span>
               </h1>
               <p>
-                We will always go Above Beyond to deliver and take the stress
-                out of your event planning process.
+                We will always go Above and Beyond to deliver and take the
+                stress out of your event planning process.
               </p>
             </Text>
             <div>
@@ -63,6 +63,9 @@ const ServicesPage = styled.section`
       margin-bottom: 0.5rem;
     }
     @media only screen and (max-width: 1300px) {
+      align-items: center;
+    }
+    @media only screen and (max-width: 800px) {
       flex-direction: column;
     }
     @media only screen and (max-width: 800px) {
@@ -73,7 +76,7 @@ const ServicesPage = styled.section`
   }
   .graphic-container {
     width: 70%;
-    @media only screen and (max-width: 1300px) {
+    @media only screen and (max-width: 800px) {
       width: 100%;
       margin-top: 2rem;
     }
