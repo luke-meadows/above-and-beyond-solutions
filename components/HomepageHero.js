@@ -84,8 +84,9 @@ const MainHeroContent = styled.div`
 
 const ThumbnailContainer = styled.div`
   position: relative;
-  width: 20rem;
+  width: 15rem;
   opacity: 0.8;
+  margin-bottom: 1rem;
   @media only screen and (max-width: 700px) {
     width: 10rem;
   }

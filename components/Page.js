@@ -15,20 +15,21 @@ export default function Page({ children }) {
     <StyledPage>
       <NextSeo
         title="Above and Beyond Solutions"
-        description="Small agency care, with big agency capabilities."
+        description="From event activation to sponsorship acquisition, from exhibitions to ticketing, from festivals to photo shoots... we showcase your brand and elevate your business."
         canonical="https://www.aboveandbeyondsolutions.co.uk"
         keywords="above and beyond solutions, above and beyond, marketing, live events, events, branding, brand activation, exhibitions, web development, photography, videography, sam stockmans"
         openGraph={{
           url: 'https://www.aboveandbeyondsolutions.co.uk',
           title: 'Above & Beyond Solutions',
-          description: 'Small agency care, with big agency capabilities',
+          description:
+            'From event activation to sponsorship acquisition, from exhibitions to ticketing, from festivals to photo shoots... we showcase your brand and elevate your business.',
           type: 'website',
           images: [
             {
               url: 'https://scontent-lhr8-1.xx.fbcdn.net/v/t39.30808-6/274350683_1927936664045430_534546427638794204_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeGsVoDENZlT_2q41vjJzJ-it9KB2ar3lFS30oHZqveUVM1S1ZoPGOeEij_Lt_NOtNw&_nc_ohc=BTmBts3LQtEAX_N4q5j&_nc_ht=scontent-lhr8-1.xx&oh=00_AT-omvtYIBEy_afCwhTGjzeUyqQ-MoR7qsJbeWbuGqHGLg&oe=62258348',
               width: 800,
               height: 600,
-              alt: 'Above & Beyond Solution',
+              alt: 'Above & Beyond Solutions',
               type: 'image/jpeg',
             },
             {
