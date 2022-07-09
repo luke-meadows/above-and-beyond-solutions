@@ -19,7 +19,7 @@ export default function TeamMember({ teamMember }) {
         </div>
         <div className="text-container">
           <h5>
-            {teamMember.name} / <span>{teamMember.role}</span>
+            {teamMember.name} - <span>{teamMember.role}</span>
           </h5>
           <p>{teamMember.description}</p>
         </div>
