@@ -41,4 +41,5 @@ export default function GalleryOptions({
 
 const StyledGalleryOptions = styled.div`
   display: flex;
+  margin-bottom: 1.6rem;
 `;
