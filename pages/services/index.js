@@ -1,4 +1,4 @@
-import ServicesGraphic from '../../public/assets/service-heros/services-graphic.png';
+import ServicesGraphic from '../../public/assets/service-heros/services-graphic.svg';
 import styled from 'styled-components';
 import { Container } from '../../styles/GlobalStyles';
 import Image from 'next/image';
