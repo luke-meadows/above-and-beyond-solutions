@@ -7,7 +7,11 @@ export default function ImagePreview({
   currentImgIdx,
   imgs,
   setImgPreviewActive,
+  increasePagination,
 }) {
+  function handleSwipe(idx) {
+    if (imgs.length - 1 === idx) increasePagination();
+  }
   return (
     <StyledPreview>
       <Close onClick={() => setImgPreviewActive(false)}>
@@ -20,16 +24,23 @@ export default function ImagePreview({
         loop
         initialSlide={parseInt(currentImgIdx)}
         loopPreventsSlide={true}
+        className="Swiper"
+        onSlideChange={(swiper) => handleSwipe(swiper.realIndex)}
       >
         {imgs.map((img, i) => {
+          const large =
+            img.attributes.image.data.attributes.formats?.large?.url;
+          const medium =
+            img.attributes.image.data.attributes.formats?.medium?.url;
+          const small =
+            img.attributes.image.data.attributes.formats?.small?.url;
           return (
             <SwiperSlide key={i}>
               <ImageContainer>
                 <Image
                   objectFit="contain"
                   layout="fill"
-                  src={img}
-                  placeholder={img.blurDataURL}
+                  src={large ? large : medium ? medium : small}
                   alt="preview image"
                   title="preview image"
                 />
@@ -51,11 +62,10 @@ const StyledPreview = styled.div`
   height: calc(100vh - var(--header-height));
 
   // Swiper Styles
-
   .swiper-slide {
     position: relative;
     color: white;
-    height: calc(100vh - var(--header-height));
+    height: calc(95vh - var(--header-height));
     width: 100vw;
   }
 

@@ -4,17 +4,23 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/bundle';
 import 'swiper/css/grid';
-
 import Page from '../components/Page';
 import { CtxProvider } from '../lib/ctxProvider';
+import { Provider, createClient } from 'urql';
+
+const client = createClient({
+  url: 'https://glacial-forest-62872.herokuapp.com/graphql',
+});
 
 function MyApp({ Component, pageProps }) {
   return (
-    <CtxProvider>
-      <Page>
-        <Component {...pageProps} />
-      </Page>
-    </CtxProvider>
+    <Provider value={client}>
+      <CtxProvider>
+        <Page>
+          <Component {...pageProps} />
+        </Page>
+      </CtxProvider>
+    </Provider>
   );
 }
 

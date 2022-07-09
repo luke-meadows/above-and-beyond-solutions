@@ -9,15 +9,16 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
-    "firebase": "^9.6.7",
     "framer-motion": "^6.2.6",
     "next": "^12.0.9",
     "next-seo": "^5.1.0",
     "next-videos": "^1.4.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-intersection-observer": "^9.3.5",
     "styled-components": "^5.3.3",
     "swiper": "^8.0.0",
+    "urql": "^2.2.2",
     "use-font-face-observer": "^1.1.77",
     "uuid": "^8.3.2"
   },

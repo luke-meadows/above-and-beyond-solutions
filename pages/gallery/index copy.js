@@ -2,14 +2,44 @@ import { Container } from '../../styles/GlobalStyles';
 import { useContext, useEffect, useState } from 'react';
 import { Ctx } from '../../lib/ctxProvider';
 import ImageGallery from '../../components/ImageGallery';
+import {
+  activationsImgs,
+  allGalleryImgs,
+  eventsImgs,
+  exhibitionImgs,
+} from '../../lib/galleryImgs';
 import styled from 'styled-components';
+
 import { useQuery } from 'urql';
-import GalleryOptions from '../../components/gallery/GalleryOptions';
-import { IMAGE_QUERY } from '../../lib/queries';
 
 export default function Gallery() {
-  // STICKY NAV
   const { setShouldStick, setStickyNavCoords } = useContext(Ctx);
+
+  const imageQuery = `query{
+    images(pagination:{limit:20}){
+  meta{
+    pagination{
+      total
+    }
+  }    
+      data{
+        attributes{
+          image{
+            data{
+              attributes{
+              formats
+              }
+            }
+          }
+        }
+      }
+    }
+  }`;
+
+  const [results] = useQuery({ query: imageQuery });
+
+  console.log(results.data);
+
   useEffect(() => {
     setShouldStick(true);
     setStickyNavCoords(0);
@@ -18,23 +48,19 @@ export default function Gallery() {
     };
   });
 
-  // GALLERY
-  const [galleryImgs, setGalleryImgs] = useState();
+  const galleries = {
+    all: allGalleryImgs,
+    exhibitions: exhibitionImgs,
+    activations: activationsImgs,
+    'live-events': eventsImgs,
+  };
 
-  const [activeOption, setActiveOption] = useState(undefined);
-  const [pagination, setPagination] = useState(12);
-  const [total, setTotal] = useState(12);
+  const [activeGallery, setActiveGallery] = useState(allGalleryImgs);
 
-  const [results] = useQuery({
-    query: IMAGE_QUERY,
-    variables: { pagination, activeOption },
-  });
-
-  const data = results.data?.images;
-  useEffect(() => {
-    setGalleryImgs(data?.data);
-    setTotal(data?.meta.pagination.total);
-  }, [data]);
+  function handleDropdown(e) {
+    setActiveGallery([]);
+    setActiveGallery(galleries[e.target.value]);
+  }
 
   return (
     <Container>
@@ -42,17 +68,13 @@ export default function Gallery() {
         <GalleryHeader>
           <h1>Gallery</h1>
         </GalleryHeader>
-        <GalleryOptions
-          activeOption={activeOption}
-          setActiveOption={setActiveOption}
-          setPagination={setPagination}
-        />
-        <ImageGallery
-          imgs={galleryImgs}
-          total={total}
-          pagination={pagination}
-          setPagination={setPagination}
-        />
+        <select onChange={handleDropdown}>
+          <option value="all">All</option>
+          <option value="activations">Activations</option>
+          <option value="exhibitions">Exhibitions</option>
+          <option value="live-events">Live Events</option>
+        </select>
+        <ImageGallery imgs={activeGallery} />
       </StyledGallery>
     </Container>
   );
@@ -74,9 +96,6 @@ const StyledGallery = styled.section`
       outline: none;
       border: 1px solid black;
     }
-  }
-  .controls {
-    display: flex;
   }
 `;
 

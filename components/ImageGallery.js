@@ -2,29 +2,13 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import ImagePreview from './ImagePreview';
-export default function ImageGallery({ imgs }) {
-  const [pagination, setPagination] = useState(8);
-  const [visibleImgs, setVisibleImgs] = useState([]);
-  const [loadMoreDisabled, setLoadMoreDisabled] = useState(false);
-
-  useEffect(() => {
-    if (imgs.length < 8 || imgs.length - pagination < 8) {
-      setVisibleImgs(imgs);
-      setLoadMoreDisabled(true);
-    } else {
-      setVisibleImgs(imgs.slice(0, pagination));
-      setLoadMoreDisabled(false);
-    }
-  }, [pagination, imgs]);
-
-  useEffect(() => {
-    setPagination(8);
-  }, [imgs]);
-
-  function handleClick() {
-    setPagination(pagination + 8);
-  }
-
+import { useInView } from 'react-intersection-observer';
+export default function ImageGallery({
+  imgs,
+  setPagination,
+  total,
+  pagination,
+}) {
   const [imgPreviewActive, setImgPreviewActive] = useState(false);
   const [currentImgIdx, setCurrentImgIdx] = useState();
 
@@ -39,37 +23,48 @@ export default function ImageGallery({ imgs }) {
     setImgPreviewActive(true);
   }
 
+  // MORE PAGINATION WHEN SCROLL TO BOTTOM
+  const { ref: paginationRef, inView } = useInView({
+    threshold: 1,
+  });
+
+  function increasePagination() {
+    if (imgs.length === total) return;
+    console.log('more-loaded');
+    setPagination(pagination + 12);
+  }
+
+  useEffect(() => {
+    if (!imgs) return;
+    if (inView) increasePagination();
+  }, [inView]);
+
   return (
     <div>
       <ImagesContainer>
-        {visibleImgs.map((img, i) => (
-          <div key={i} data-img={i} onClick={handleImageClick}>
+        {imgs?.map((img, i) => (
+          <ImageContainer key={i} data-img={i} onClick={handleImageClick}>
             <Image
               objectFit="cover"
-              layout="responsive"
-              width={400}
-              height={400}
-              src={img}
-              placeholder={img.blurDataURL}
+              layout="fill"
+              src={img.attributes.image.data.attributes.formats.small.url}
               alt="gallery img"
               title="gallery img"
             />
-          </div>
+          </ImageContainer>
         ))}
       </ImagesContainer>
-      <ButtonContainer>
-        <button disabled={loadMoreDisabled} onClick={() => handleClick('prev')}>
-          Load More
-        </button>
-      </ButtonContainer>
+
       {imgPreviewActive && (
         <ImagePreview
           imgs={imgs}
           currentImgIdx={currentImgIdx}
           setCurrentImgIdx={setCurrentImgIdx}
           setImgPreviewActive={setImgPreviewActive}
+          increasePagination={increasePagination}
         />
       )}
+      <MorePagination ref={paginationRef} />
     </div>
   );
 }
@@ -88,19 +83,11 @@ const ImagesContainer = styled.div`
   }
 `;
 
-const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: fit-content;
-  margin: 4rem auto 0 auto;
-  * {
-    margin: 0 1rem;
-  }
-  p {
-    font-weight: 300;
-  }
-  button[disabled] {
-    opacity: 0;
-  }
+const ImageContainer = styled.div`
+  position: relative;
+  aspect-ratio: 1;
+`;
+
+const MorePagination = styled.div`
+  height: 2rem;
 `;
