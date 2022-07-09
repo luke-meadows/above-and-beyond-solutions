@@ -41,4 +41,7 @@ const StyledOption = styled.button`
   &.button-active {
     color: var(--black);
   }
+  @media only screen and (max-width: 1000px) {
+    margin-right: 1rem;
+  }
 `;
