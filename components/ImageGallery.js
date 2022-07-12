@@ -30,7 +30,6 @@ export default function ImageGallery({
 
   function increasePagination() {
     if (imgs.length === total) return;
-    console.log('more-loaded');
     setPagination(pagination + 12);
   }
 
