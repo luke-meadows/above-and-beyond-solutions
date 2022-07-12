@@ -41,6 +41,7 @@ const Member = styled.a`
     border-bottom-right-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.25);
+    z-index: 0;
   }
   .text-container {
     h5 {
