@@ -16,17 +16,8 @@ export default function ServiceLink({ img, title, link }) {
 
 const Container = styled.div`
   position: relative;
-
   border-radius: 3px;
   overflow: hidden;
-  img {
-    filter: brightness(0.3) grayscale(0.5);
-  }
-  &:hover {
-    img {
-      filter: brightness(0.8) grayscale(0);
-    }
-  }
 `;
 
 const LinkText = styled.div`
@@ -50,6 +41,14 @@ const LinkText = styled.div`
     p,
     i {
       color: var(--pink);
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    &:hover {
+      p,
+      i {
+        color: var(--black);
+      }
     }
   }
 `;
