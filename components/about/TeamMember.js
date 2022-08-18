@@ -14,7 +14,7 @@ export default function TeamMember({ teamMember }) {
     >
       <>
         <div className="image-container">
-          <Image src={teamMember.img} layout="responsive" objectFit="cover" />
+          <Image src={teamMember.img} layout="fill" objectFit="cover" />
           <LinkedIn active={active} />
         </div>
         <div className="text-container">
@@ -36,6 +36,7 @@ const Member = styled.a`
   .image-container {
     position: relative;
     min-width: 12rem;
+    min-height: 12rem;
     margin-right: 2rem;
     border-top-left-radius: 8px;
     border-bottom-right-radius: 8px;
