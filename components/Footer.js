@@ -32,9 +32,9 @@ export default function Footer({ withNav }) {
             <Link href="/about-us">
               <li>About Us</li>
             </Link>
-            <Link href="/partners">
-              <li>Partners</li>
-            </Link>
+            // <Link href="/partners">
+            //   <li>Partners</li>
+            // </Link>
             <Link href="/contact-us">
               <li>Contact Us</li>
             </Link>
