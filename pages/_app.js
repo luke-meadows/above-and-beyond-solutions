@@ -19,14 +19,14 @@ function MyApp({ Component, pageProps }) {
       <Script
         id="googletagmanager"
         strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-7RHZ1Y430Y`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-0XQDQYLL2Z`}
       />
       <Script strategy="lazyOnload" id="dataLayer">
         {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-7RHZ1Y430Y', {
+        gtag('config', 'G-0XQDQYLL2Z', {
         page_path: window.location.pathname,
         });
     `}
