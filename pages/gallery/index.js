@@ -7,6 +7,8 @@ import { useQuery } from 'urql';
 import GalleryOptions from '../../components/gallery/GalleryOptions';
 import { IMAGE_QUERY } from '../../lib/queries';
 
+import { imgs } from '../../lib/galleryImgs';
+
 export default function Gallery() {
   // STICKY NAV
   const { setShouldStick, setStickyNavCoords } = useContext(Ctx);
@@ -20,21 +22,26 @@ export default function Gallery() {
 
   // GALLERY
   const [galleryImgs, setGalleryImgs] = useState();
-
   const [activeOption, setActiveOption] = useState(undefined);
   const [pagination, setPagination] = useState(12);
   const [total, setTotal] = useState(12);
 
-  const [results] = useQuery({
-    query: IMAGE_QUERY,
-    variables: { pagination, activeOption },
-  });
-
-  const data = results.data?.images;
   useEffect(() => {
-    setGalleryImgs(data?.data);
-    setTotal(data?.meta.pagination.total);
-  }, [data]);
+    console.log(pagination);
+    if (activeOption === 'all' || !activeOption) {
+      setGalleryImgs(imgs.slice(0, pagination));
+      setTotal(imgs.length);
+    } else {
+      const filteredImgs = imgs.filter((img) => img.cat === activeOption);
+      setGalleryImgs(filteredImgs.slice(0, pagination));
+      setTotal(filteredImgs.length);
+    }
+  }, [activeOption, pagination]);
+
+  useEffect(() => {
+    setPagination(12);
+    return () => setPagination(12);
+  }, [activeOption]);
 
   return (
     <Container>

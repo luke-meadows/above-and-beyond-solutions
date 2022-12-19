@@ -28,19 +28,13 @@ export default function ImagePreview({
         onSlideChange={(swiper) => handleSwipe(swiper.realIndex)}
       >
         {imgs.map((img, i) => {
-          const large =
-            img.attributes.image.data.attributes.formats?.large?.url;
-          const medium =
-            img.attributes.image.data.attributes.formats?.medium?.url;
-          const small =
-            img.attributes.image.data.attributes.formats?.small?.url;
           return (
             <SwiperSlide key={i}>
               <ImageContainer>
                 <Image
                   objectFit="contain"
                   layout="fill"
-                  src={large ? large : medium ? medium : small}
+                  src={img.large}
                   alt="preview image"
                   title="preview image"
                 />

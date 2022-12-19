@@ -15,7 +15,7 @@ export default function GalleryOptions({
         setPagination={setPagination}
       />
       <GalleryOption
-        tag="brand-activations"
+        tag="activations"
         title="Brand Activations"
         activeOption={activeOption}
         setActiveOption={setActiveOption}
@@ -29,7 +29,7 @@ export default function GalleryOptions({
         setPagination={setPagination}
       />
       <GalleryOption
-        tag="live-events"
+        tag="events"
         title="Live Events"
         activeOption={activeOption}
         setActiveOption={setActiveOption}

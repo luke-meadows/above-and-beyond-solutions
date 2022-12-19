@@ -46,7 +46,7 @@ export default function ImageGallery({
             <Image
               objectFit="cover"
               layout="fill"
-              src={img.attributes.image.data.attributes.formats.small.url}
+              src={img.thumbnail}
               alt="gallery img"
               title="gallery img"
             />
@@ -71,12 +71,15 @@ export default function ImageGallery({
 const ImagesContainer = styled.div`
   margin-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 1rem;
   div {
     cursor: pointer;
   }
 
+  @media only screen and (max-width: 1800px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
   @media only screen and (max-width: 700px) {
     grid-template-columns: repeat(2, 1fr);
   }
