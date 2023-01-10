@@ -134,6 +134,14 @@ export default function Header() {
             _
             <i className="icon icon-instagram" />
           </a>
+          <a
+            aria-label="facebook"
+            target="blank"
+            href="https://www.facebook.com/aboveandbeyondsol"
+          >
+            _
+            <i className="icon icon-facebook" />
+          </a>
         </div>
         <a href="mailto:hello@aboveandbeyondsolutions.co.uk" className="right">
           <span>

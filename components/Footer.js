@@ -22,6 +22,14 @@ export default function Footer({ withNav }) {
           -
           <i className="icon social icon-instagram" />
         </a>
+        <a
+          aria-label="facebook"
+          target="blank"
+          href="https://www.facebook.com/aboveandbeyondsol"
+        >
+          -
+          <i className="icon social icon-facebook" />
+        </a>
       </div>
       {withNav && (
         <FooterNav>
