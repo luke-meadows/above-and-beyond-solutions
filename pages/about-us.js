@@ -22,7 +22,6 @@ export default function AboutUs() {
         <TeamMember teamMember={teamData.sam} />
         <TeamMember teamMember={teamData.jenny} />
         <TeamMember teamMember={teamData.callum} />
-        <TeamMember teamMember={teamData.sarina} />
         <TeamMember teamMember={teamData.luke} />
         <TeamMember teamMember={teamData.rich} />
         <TeamMember teamMember={teamData.cam} />
