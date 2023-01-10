@@ -20,16 +20,12 @@ export default function AboutUs() {
       <AboutHeader />
       <TeamContainer>
         <TeamMember teamMember={teamData.sam} />
-        <TeamMember teamMember={teamData.mark} />
         <TeamMember teamMember={teamData.jenny} />
         <TeamMember teamMember={teamData.callum} />
         <TeamMember teamMember={teamData.sarina} />
-        <TeamMember teamMember={teamData.hannah} />
         <TeamMember teamMember={teamData.luke} />
         <TeamMember teamMember={teamData.rich} />
         <TeamMember teamMember={teamData.cam} />
-        <TeamMember teamMember={teamData.frankie} />
-        <TeamMember teamMember={teamData.brogan} />
       </TeamContainer>
     </Container>
   );
