@@ -209,6 +209,24 @@
       "css": "cancel",
       "code": 59410,
       "src": "entypo"
+    },
+    {
+      "uid": "589ae2cbc6d95cc74eb2dbd3fa9c9bcd",
+      "css": "shekel",
+      "code": 61963,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "0259fec71de1f22e70877ca024b634fd",
+      "css": "linode",
+      "code": 62136,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "5278ef7773e948d56c4d442c8c8c98cf",
+      "css": "lightbulb",
+      "code": 61675,
+      "src": "fontawesome"
     }
   ]
 }
