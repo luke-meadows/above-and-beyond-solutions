@@ -49,6 +49,17 @@ const StyledContactInfo = styled.div`
     }
     padding-bottom: 1rem;
   }
+  @media only screen and (max-width: 900px) {
+    h2 {
+      font-size: 0.7rem;
+      font-weight: 400;
+    }
+    i {
+      font-size: 1.2rem;
+      margin-right: 0.5rem;
+    }
+    padding-bottom: 1rem;
+  }
   @media only screen and (max-width: 800px) {
     width: 100%;
     a {

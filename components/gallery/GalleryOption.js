@@ -43,5 +43,6 @@ const StyledOption = styled.button`
   }
   @media only screen and (max-width: 1000px) {
     margin-right: 1rem;
+    font-size: 0.7rem;
   }
 `;

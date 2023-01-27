@@ -41,7 +41,7 @@ const StyledContact = styled.div`
   border-bottom-right-radius: 2rem;
   border-bottom-left-radius: 0.5rem;
   @media only screen and (max-width: 800px) {
-    padding: 2rem;
+    padding: 1.6rem;
   }
 `;
 

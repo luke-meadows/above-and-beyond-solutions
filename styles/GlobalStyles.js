@@ -240,4 +240,7 @@ export const Container = styled.section`
     padding: 10rem 2rem 4rem 2rem;
     width: 100%;
   }
+  @media only screen and (max-width: 900px) {
+    padding: 5rem 1rem 1rem 1rem;
+  }
 `;

@@ -131,7 +131,7 @@ const StyledTeamCard = styled.div`
     }
   }
   @media only screen and (max-width: 900px) {
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .image-container {
