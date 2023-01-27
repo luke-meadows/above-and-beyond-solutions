@@ -221,19 +221,23 @@ export const MainText = styled.p`
 `;
 
 export const SectionContainer = styled.section`
-  padding: 2rem 6rem;
+  max-width: 1600px;
+  width: 1600px;
+  margin: 0 auto;
+  padding: 2rem 2rem 2rem 2rem;
   background: var(--white);
-  @media only screen and (max-width: 1050px) {
-    padding: 0rem 3rem;
-  }
   @media only screen and (max-width: 800px) {
     padding: 0rem 1.5rem;
   }
 `;
 export const Container = styled.section`
-  padding: 10rem 6rem 6rem 6rem;
+  max-width: 1600px;
+  width: 1600px;
+  margin: 0 auto;
+  padding: 10rem 2rem 4rem 2rem;
   background: var(--white);
-  @media only screen and (max-width: 1200px) {
-    padding: 6rem 1.5rem 3rem 1.5rem;
+  @media only screen and (max-width: 1700px) {
+    padding: 10rem 2rem 4rem 2rem;
+    width: 100%;
   }
 `;

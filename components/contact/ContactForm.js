@@ -152,12 +152,12 @@ export default function ContactForm() {
 }
 
 const StyledContactForm = styled.div`
-  border-bottom-left-radius: 2px;
-  border-top-left-radius: 15px;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 12px;
   width: 50%;
   position: relative;
   background: var(--black);
-  padding: 3rem;
+  padding: 0rem;
   .done {
     opacity: 0;
     pointer-events: none;
@@ -202,7 +202,7 @@ const StyledContactForm = styled.div`
     input,
     select,
     textarea {
-      background: rgba(0, 0, 0, 0.9);
+      background: var(--white);
       border: 1px solid var(--white);
       border-radius: 0.3rem;
       padding: 0.5rem;
@@ -210,10 +210,10 @@ const StyledContactForm = styled.div`
       margin-bottom: 0.8rem;
       font-weight: 100;
       box-sizing: border-box;
-      color: var(--white);
+      color: var(--black);
 
       &::-webkit-input-placeholder {
-        color: var(--white);
+        color: var(--black);
       }
       @media only screen and (max-width: 415px) {
         font-size: 16px;
@@ -255,10 +255,10 @@ const StyledContactForm = styled.div`
       height: 2.3rem;
       border: 1px solid var(--white);
       border-radius: 0.3rem;
-      color: var(--white);
+      color: var(--black);
       width: 100%;
       margin-bottom: 0.3rem;
-      padding: 0.2rem;
+      padding: 0.2rem 0.4rem;
       -webkit-appearance: none;
       -moz-appearance: none;
     }
@@ -278,7 +278,7 @@ const StyledContactForm = styled.div`
       transform: translate(-50%, -50%);
       i {
         font-size: 0.8rem;
-        color: #757575;
+        color: black;
       }
     }
   }
@@ -296,5 +296,6 @@ const StyledContactForm = styled.div`
   }
   @media only screen and (max-width: 800px) {
     width: 100%;
+    padding: 0;
   }
 `;

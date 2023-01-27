@@ -41,6 +41,7 @@ export const IconCard = styled.div`
     font-weight: 100;
     @media only screen and (max-width: 415px) {
       margin: 0;
+      max-width: 100%;
     }
   }
 
@@ -51,9 +52,10 @@ export const IconCard = styled.div`
 
   @media only screen and (max-width: 800px) {
     grid-template-columns: 100%;
-
+    max-width: 100vw;
+    padding-right: 3rem;
     p {
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
     }
     .icon-title {
       margin-bottom: 1.5rem;

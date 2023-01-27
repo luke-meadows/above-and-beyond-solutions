@@ -31,9 +31,18 @@ export default function ContactUs() {
 }
 
 const StyledContact = styled.div`
-  background: var(--white);
+  background: var(--black);
   color: var(--black);
   overflow: hidden;
+  /* aspect-ratio: 1; */
+  padding: 4rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 0.5rem;
+  @media only screen and (max-width: 800px) {
+    padding: 2rem;
+  }
 `;
 
 const Main = styled.div`

@@ -22,6 +22,9 @@ const StyledContactHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4rem;
+  color: var(--white);
+  h1 {
+  }
   span {
     color: var(--pink);
   }

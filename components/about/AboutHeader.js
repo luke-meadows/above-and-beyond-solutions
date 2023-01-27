@@ -16,7 +16,7 @@ export default function AboutHeader() {
           to photo shoots… we are your one stop solution.
         </p>
       </div>
-      <PageLogo />
+      <PageLogo variant="black" />
     </StyledAboutHeader>
   );
 }

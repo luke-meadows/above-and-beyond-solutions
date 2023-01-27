@@ -9,7 +9,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default function PartnersCarousel() {
   return (
-    <Container2>
+    <CarouselContainer>
       <Partners>
         <h4>
           Brands we&apos;ve gone <span> Above & Beyond </span> for...
@@ -79,15 +79,14 @@ export default function PartnersCarousel() {
           </Swiper>
         </MobileContainerSwiper>
       </Partners>
-    </Container2>
+    </CarouselContainer>
   );
 }
 
-const Container2 = styled(Container)`
-  padding: 4rem 6rem;
-  @media only screen and (max-width: 1250px) {
-    padding: 1rem 2rem 2rem 2rem;
-  }
+const CarouselContainer = styled.div`
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
 `;
 const MobileContainerSwiper = styled.div`
   display: none;
@@ -98,7 +97,7 @@ const MobileContainerSwiper = styled.div`
 `;
 const ContainerSwiper = styled.div`
   height: 18rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
   @media only screen and (max-width: 1250px) {
     margin-top: 2rem;
   }
@@ -108,6 +107,7 @@ const ContainerSwiper = styled.div`
 `;
 const Partners = styled.div`
   h4 {
+    margin: 0rem;
     font-size: 1.777rem;
     color: var(--black);
     span {
@@ -118,7 +118,7 @@ const Partners = styled.div`
   @media only screen and (max-width: 850px) {
     h4 {
       font-size: 1rem;
-      margin-top: 1rem;
+      margin-bottom: 2rem;
     }
   }
 

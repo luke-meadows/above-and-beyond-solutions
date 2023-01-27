@@ -15,13 +15,14 @@ export default function ContactInfo() {
 
 const StyledContactInfo = styled.div`
   width: 50%;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 15px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: var(--black);
+
   h2 {
     font-size: 1.2rem;
     font-weight: 500;
@@ -50,5 +51,8 @@ const StyledContactInfo = styled.div`
   }
   @media only screen and (max-width: 800px) {
     width: 100%;
+    a {
+      margin-top: 1rem;
+    }
   }
 `;

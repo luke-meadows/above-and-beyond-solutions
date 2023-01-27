@@ -55,109 +55,115 @@ export default function Header() {
 
   return (
     <StyledHeader shouldStick={shouldStick} ref={headerRef}>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <Link href="/">
-          <ImageContainer shouldStick={shouldStick}>
-            <Image
-              priority
-              alt="logo"
-              title="logo"
-              layout="responsive"
-              src={logo}
-            />
-          </ImageContainer>
-        </Link>
-        <Nav>
-          <ul>
-            <ServicesContainer>
-              <Link href="/services">
-                <li ref={servicesRef} className="no-margin">
-                  Services
-                </li>
-              </Link>
-              <i
-                className="icon-down-open-big"
-                onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+      <div className="inner-header">
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <Link href="/">
+            <ImageContainer shouldStick={shouldStick}>
+              <Image
+                priority
+                alt="logo"
+                title="logo"
+                layout="responsive"
+                src={logo}
               />
-            </ServicesContainer>
+            </ImageContainer>
+          </Link>
+          <Nav>
+            <ul>
+              <ServicesContainer>
+                <Link href="/services">
+                  <li ref={servicesRef} className="no-margin">
+                    Services
+                  </li>
+                </Link>
+                <i
+                  className="icon-down-open-big"
+                  onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                />
+              </ServicesContainer>
 
-            <Link href="/about-us">
-              <li>About Us</li>
-            </Link>
-            <Link href="/contact-us">
-              <li>Contact Us</li>
-            </Link>
-            <Link href="/gallery">
-              <li>Gallery</li>
-            </Link>
-          </ul>
-          {servicesDropdownOpen && (
-            <ServicesDropdown
-              left={DropdownCoords}
-              onMouseLeave={() => setServicesDropdownOpen(false)}
-              onClick={() => setServicesDropdownOpen(false)}
+              <Link href="/about-us">
+                <li>About Us</li>
+              </Link>
+              <Link href="/contact-us">
+                <li>Contact Us</li>
+              </Link>
+              <Link href="/gallery">
+                <li>Gallery</li>
+              </Link>
+            </ul>
+            {servicesDropdownOpen && (
+              <ServicesDropdown
+                left={DropdownCoords}
+                onMouseLeave={() => setServicesDropdownOpen(false)}
+                onClick={() => setServicesDropdownOpen(false)}
+                shouldStick={shouldStick}
+              >
+                <ul>
+                  <Link href="/services/live-events">
+                    <li>Live Events</li>
+                  </Link>
+                  <Link href="/services/exhibitions">
+                    <li>Exhibitions</li>
+                  </Link>
+                  <Link href="/services/marketing">
+                    <li> Brand Marketing</li>
+                  </Link>
+                </ul>
+                <div className="overlay"></div>
+              </ServicesDropdown>
+            )}
+          </Nav>
+        </div>
+
+        <div className="contact">
+          <div className="left">
+            <a
+              aria-label="linked in"
+              target="blank"
+              href="https://www.linkedin.com/company/aboveandbeyondsolutions/"
             >
-              <ul>
-                <Link href="/services/live-events">
-                  <li>Live Events</li>
-                </Link>
-                <Link href="/services/exhibitions">
-                  <li>Exhibitions</li>
-                </Link>
-                <Link href="/services/marketing">
-                  <li> Brand Marketing</li>
-                </Link>
-              </ul>
-              <div className="overlay"></div>
-            </ServicesDropdown>
-          )}
-        </Nav>
-      </div>
-
-      <div className="contact">
-        <div className="left">
-          <a
-            aria-label="linked in"
-            target="blank"
-            href="https://www.linkedin.com/company/aboveandbeyondsolutions/"
-          >
-            _
-            <span>
-              <i className="icon icon-linkedin" />
-            </span>
-          </a>
-          <a
-            aria-label="instagram"
-            target="blank"
-            href="https://www.instagram.com/aboveandbeyond_solutions/"
-          >
-            _
-            <i className="icon icon-instagram" />
-          </a>
-          <a
-            aria-label="facebook"
-            target="blank"
-            href="https://www.facebook.com/aboveandbeyondsol"
-          >
-            _
-            <i className="icon icon-facebook" />
-          </a>
+              _
+              <span>
+                <i className="icon icon-linkedin" />
+              </span>
+            </a>
+            <a
+              aria-label="instagram"
+              target="blank"
+              href="https://www.instagram.com/aboveandbeyond_solutions/"
+            >
+              _
+              <i className="icon icon-instagram" />
+            </a>
+            <a
+              aria-label="facebook"
+              target="blank"
+              href="https://www.facebook.com/aboveandbeyondsol"
+            >
+              _
+              <i className="icon icon-facebook" />
+            </a>
+            <a
+              href="mailto:hello@aboveandbeyondsolutions.co.uk"
+              className="right"
+            >
+              <span>
+                <i className="icon icon-mail" />
+              </span>
+              {/* hello@aboveandbeyondsolutions.co.uk */}
+            </a>
+          </div>
         </div>
-        <a href="mailto:hello@aboveandbeyondsolutions.co.uk" className="right">
-          <span>
-            <i className="icon-mail" />
-          </span>
-          hello@aboveandbeyondsolutions.co.uk
-        </a>
+        {!mobileNavActive && (
+          <div
+            className="mobile-menu"
+            onClick={() => setMobileNavActive(!mobileNavActive)}
+          >
+            <i className="icon-menu-1" />
+          </div>
+        )}
       </div>
-      {!mobileNavActive && (
-        <div
-          className="mobile-menu"
-          onClick={() => setMobileNavActive(!mobileNavActive)}
-        >
-          <i className="icon-menu-1" />
-        </div>
-      )}
     </StyledHeader>
   );
 }
@@ -169,15 +175,24 @@ const StyledHeader = styled.header`
   transition: background 0.5s ease-in-out;
   color: var(--white);
   height: var(--header-height);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   top: 0;
   left: 0;
   z-index: 3;
   width: 100vw;
   max-width: 100vw;
-  padding: 0 var(--padding);
+  .inner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0rem 2rem;
+  }
+  .icon-mail {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+  }
   a {
     line-height: 0;
     color: white;
@@ -200,7 +215,6 @@ const StyledHeader = styled.header`
       }
     }
     .left {
-      margin-right: 1rem;
       display: flex;
       a {
         display: flex;
@@ -278,7 +292,7 @@ const ServicesDropdown = styled.div`
     padding: 0.5rem;
     align-items: flex-start;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.9);
+    background: ${(props) => (props.shouldStick ? 'rgba(0,0,0,0.9)' : 'none')};
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     li {
