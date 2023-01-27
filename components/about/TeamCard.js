@@ -23,10 +23,10 @@ export default function TeamCard({ member }) {
           <p>{member.role}</p>
           <div className="team-card-buttons">
             <a className="icon-container" href={member.linkedIn}>
-              <i className="icon-linkedin" />
+              <i className="icon icon-linkedin" />
             </a>
             <a className="icon-container" href={`mailto:${member.email}`}>
-              <i className="icon-mail" />
+              <i className="icon icon-mail" />
             </a>
           </div>
         </div>
@@ -132,6 +132,10 @@ const StyledTeamCard = styled.div`
   }
   @media only screen and (max-width: 900px) {
     padding: 1rem;
+    .top-info {
+      justify-content: flex-start;
+      gap: 0.5rem;
+    }
   }
 
   .image-container {
@@ -149,7 +153,7 @@ const StyledTeamCard = styled.div`
   }
   @media only screen and (max-width: 600px) {
     h6 {
-      font-size: 1.3rem !important;
+      font-size: 1rem !important;
     }
     p {
       font-size: 0.9rem;
