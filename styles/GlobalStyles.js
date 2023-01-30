@@ -222,7 +222,6 @@ export const MainText = styled.p`
 
 export const SectionContainer = styled.section`
   max-width: 1600px;
-  width: 1600px;
   margin: 0 auto;
   padding: 2rem 2rem 2rem 2rem;
   background: var(--white);
